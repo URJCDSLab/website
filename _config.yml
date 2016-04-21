@@ -1,0 +1,27 @@
+# General info
+name:             Data Science Lab - CETINIA - URJC
+highlighter:      rouge
+baseurl:          /
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Server
+host:             0.0.0.0
+port:             4002
+url:              http://www.datasciencelab.es
+encoding:         UTF-8
+
+# Custom variables
+license:          Copyright URJC Data Science Lab - CETINIA
+theme:            The Project
+theme_by:         HtmlCoder
+theme_by_url:     http://htmlcoder.me/
+theme_url:        https://wrapbootstrap.com/theme/the-project-multipurpose-template-WB0F82581
+
+website:          http://www.datasciencelab.es
+blog:             http://www.datasciencelab.es/blog
+twitter:          https://twitter.com/URJCDScLab
+twitter_user:     URJCDScLab
+github_org:       URJCDataScience
