@@ -14,14 +14,13 @@ url:              http://www.datasciencelab.es
 encoding:         UTF-8
 
 #Build settings
-theme:            minima
 
 # Custom variables
 license:          Copyright URJC Data Science Lab - CETINIA
-theme_name:       The Project
-theme_by:         HtmlCoder
-theme_by_url:     http://htmlcoder.me/
-theme_url:        https://wrapbootstrap.com/theme/the-project-multipurpose-template-WB0F82581
+my_theme:    The Project
+my_theme_by:      HtmlCoder
+my_theme_by_url:  http://htmlcoder.me/
+my_theme_url:     https://wrapbootstrap.com/theme/the-project-multipurpose-template-WB0F82581
 
 website:          http://www.datasciencelab.es
 blog:             http://www.datasciencelab.es/blog
