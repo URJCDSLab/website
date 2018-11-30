@@ -1,7 +1,6 @@
 # General info
 name:             Data Science Lab - CETINIA - URJC
 highlighter:      rouge
-baseurl:          /
 
 gems:
   - jekyll-redirect-from
