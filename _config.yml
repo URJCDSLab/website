@@ -17,7 +17,7 @@ encoding:         UTF-8
 theme:            minima
 
 # Custom variables
-license:          Copyright URJC Data Science Lab - CETINIA
+license:          CC-BY-SA 4.0
 my_theme:    The Project
 my_theme_by:      HtmlCoder
 my_theme_by_url:  http://htmlcoder.me/
