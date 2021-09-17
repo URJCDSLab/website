@@ -23,8 +23,8 @@ my_theme_by:      HtmlCoder
 my_theme_by_url:  http://htmlcoder.me/
 my_theme_url:     https://wrapbootstrap.com/theme/the-project-multipurpose-template-WB0F82581
 
-website:          http://www.datasciencelab.es
-blog:             http://www.datasciencelab.es/blog
+website:          https://www.datasciencelab.es
+blog:             https://www.datasciencelab.es/blog
 twitter:          https://twitter.com/URJCDScLab
 twitter_user:     URJCDScLab
 github_org:       URJCDataScience
