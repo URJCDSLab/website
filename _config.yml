@@ -10,7 +10,7 @@ plugins:
 # Server
 host:             0.0.0.0
 port:             4002
-url:              http://www.datasciencelab.es
+url:              https://www.datasciencelab.es
 encoding:         UTF-8
 
 #Build settings
