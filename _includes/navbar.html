@@ -113,11 +113,11 @@
 		<!-- "full-width": mandatory class for the full-width menu layout -->
 		<!-- "centered": mandatory class for the centered logo layout -->
 		<!-- ================ -->
-		<header class="header  fixed   clearfix">
+		<header class="header fixed clearfix">
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3 ">
+					<div class="col-md-3">
 						<!-- header-left start -->
 						<!-- ================ -->
 						<div class="header-left clearfix">
@@ -128,7 +128,7 @@
 							</div>
 
 							<!-- name-and-slogan -->
-							<div class="site-slogan">
+							<div class="site-slogan my-1">
 								Universidad Rey Juan Carlos
 							</div>
 
@@ -136,7 +136,7 @@
 						<!-- header-left end -->
 
 					</div>
-					<div class="col-md-9 ">
+					<div class="col-md-9">
 
 						<!-- header-right start -->
 						<!-- ================ -->
@@ -148,20 +148,17 @@
 							<!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
 							<!-- "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns -->
 							<!-- ================ -->
-							<div class="main-navigation  animated with-dropdown-buttons">
+							<div class="main-navigation animated with-dropdown-buttons">
 
 								<!-- navbar start -->
 								<!-- ================ -->
-								<nav class="navbar navbar-default" role="navigation">
+								<nav class="navbar navbar-expand-lg navbar-light" role="navigation">
 									<div class="container-fluid">
 
 										<!-- Toggle get grouped for better mobile display -->
 										<div class="navbar-header">
-											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-												<span class="sr-only">Toggle navigation</span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
+											<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+												<span class="navbar-toggler-icon"></span>
 											</button>
 
 										</div>
@@ -169,77 +166,77 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse" id="navbar-collapse-1">
 											<!-- main-menu -->
-											<ul class="nav navbar-nav ">
+											<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 												<!-- menu start Home -->
-												<li class="active">
-													<a href="{{ site.url }}/">Home</a>
+												<li class="nav-item active">
+													<a class="nav-link" href="{{ site.url }}/">Home</a>
 												</li>
 												<!-- menu end -->
 												<!-- menu start About-->
-												<li class="dropdown ">
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
-													<ul class="dropdown-menu">
+												<li class="nav-item dropdown">
+													<a href="{{ site.url }}/about" class="nav-link dropdown-toggle" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+													<ul class="dropdown-menu" aria-labelledby="aboutDropdown">
 														<li>
-															<a href="{{ site.url }}/about">About Us</a>
+															<a class="dropdown-item" href="{{ site.url }}/about">About Us</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/about/people">People</a>
+															<a class="dropdown-item" href="{{ site.url }}/about/people">People</a>
 														</li>
 													</ul>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Education -->
-												<li class="dropdown ">
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">Education</a>
-													<ul class="dropdown-menu">
+												<li class="nav-item dropdown">
+													<a href="{{ site.url }}/education/courses" class="nav-link dropdown-toggle" id="educationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Education</a>
+													<ul class="dropdown-menu" aria-labelledby="educationDropdown">
 														<li>
-															<a href="http://www.masterdatascience.es">Master in Data Science</a>
+															<a class="dropdown-item" href="http://www.masterdatascience.es">Master in Data Science</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/education/courses">Courses</a>
+															<a class="dropdown-item" href="{{ site.url }}/education/courses">Courses</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/teaching_innovation">Teaching Innovation</a>
+															<a class="dropdown-item" href="{{ site.url }}/teaching_innovation">Teaching Innovation</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/teaching_innovation/noticias">News</a>
+															<a class="dropdown-item" href="{{ site.url }}/teaching_innovation/noticias">News</a>
 														</li>
 													</ul>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Research -->
-												<li class="dropdown ">
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research</a>
-													<ul class="dropdown-menu">
+												<li class="nav-item dropdown">
+													<a href="{{ site.url }}/research" class="nav-link dropdown-toggle" id="researchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Research</a>
+													<ul class="dropdown-menu" aria-labelledby="researchDropdown">
 														<li>
-															<a href="{{ site.url }}/research">Research lines</a>
+															<a class="dropdown-item" href="{{ site.url }}/research">Research lines</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/research/projects">Projects</a>
+															<a class="dropdown-item" href="{{ site.url }}/research/projects">Projects</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/research/publications">Publications</a>
+															<a class="dropdown-item" href="{{ site.url }}/research/publications">Publications</a>
 														</li>
 													</ul>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Consulting -->
-												<li>
-													<a href="{{ site.url }}/consulting">Consulting</a>
+												<li class="nav-item">
+													<a class="nav-link" href="{{ site.url }}/consulting">Consulting</a>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Parnters -->
-												<li>
-													<a href="{{ site.url }}/partners">Partners</a>
+												<li class="nav-item">
+													<a class="nav-link" href="{{ site.url }}/partners">Partners</a>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Blog -->
-												<li class="dropdown ">
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
-													<ul class="dropdown-menu">
+												<li class="nav-item dropdown">
+													<a href="{{ site.url }}/blog" class="nav-link dropdown-toggle" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+													<ul class="dropdown-menu" aria-labelledby="blogDropdown">
 														<li>
-															<a href="{{ site.url }}/blog" class="dropdown-toggle" data-toggle="dropdown">Blog Home</a>
+															<a class="dropdown-item" href="{{ site.url }}/blog" data-toggle="dropdown">Blog Home</a>
 														</li>
 <!--
 														<li>

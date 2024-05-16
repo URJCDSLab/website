@@ -16,12 +16,12 @@
 		<!-- "dark": dark version of header top e.g. class="header-top dark" -->
 		<!-- "colored": colored version of header top e.g. class="header-top colored" -->
 		<!-- ================ -->
-		<div class="header-top dark ">
+		<!--<div class="header-top dark ">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2 col-sm-5">
-						<!-- header-top-first start -->
-						<!-- ================ -->
+						<!- - header-top-first start - ->
+						<!- - ================ - ->
 						<div class="header-top-first clearfix">
 							<ul class="social-links circle small clearfix hidden-xs">
 								<li class="twitter">
@@ -83,12 +83,12 @@
 								</div>
 							</div>
 						</div>
-						<!-- header-top-first end -->
+						<!- - header-top-first end - ->
 					</div>
 					<div class="col-xs-10 col-sm-7">
 
-						<!-- header-top-second start -->
-						<!-- ================ -->
+						<!- - header-top-second start - ->
+						<!- - ================ - ->
 						<div id="header-top-second"  class="clearfix text-right">
 							<ul class="list-inline">
 								<li>
@@ -99,11 +99,11 @@
 								</li>
 							</ul>
 						</div>
-						<!-- header-top-second end -->
+						<!- - header-top-second end - ->
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<!-- header-top end -->
 
 		<!-- header start -->
@@ -113,11 +113,11 @@
 		<!-- "full-width": mandatory class for the full-width menu layout -->
 		<!-- "centered": mandatory class for the centered logo layout -->
 		<!-- ================ -->
-		<header class="header  fixed   clearfix">
+		<header class="header fixed clearfix">
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-2 ">
+					<div class="col-md-2">
 						<!-- header-left start -->
 						<!-- ================ -->
 						<div class="header-left clearfix">
@@ -128,7 +128,7 @@
 							</div>
 
 							<!-- name-and-slogan -->
-							<div class="site-slogan">
+							<div class="site-slogan my-1">
 								Universidad Rey Juan Carlos
 							</div>
 
@@ -148,22 +148,18 @@
 							<!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
 							<!-- "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns -->
 							<!-- ================ -->
-							<div class="main-navigation  animated with-dropdown-buttons">
+							<div class="main-navigation animated with-dropdown-buttons">
 
 								<!-- navbar start -->
 								<!-- ================ -->
-								<nav class="navbar navbar-default" role="navigation">
+								<nav class="navbar navbar-expand-lg navbar-light" role="navigation">
 									<div class="container-fluid">
 
 										<!-- Toggle get grouped for better mobile display -->
 										<div class="navbar-header">
-											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-												<span class="sr-only">Toggle navigation</span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
+											<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+												<span class="navbar-toggler-icon"></span>
 											</button>
-
 										</div>
 
 										<!-- Collect the nav links, forms, and other content for toggling -->
@@ -173,100 +169,100 @@
 											{% capture maincat %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
 											<!-- capture current page -->
 
-											<ul class="nav navbar-nav ">
+											<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 												<!-- menu start Home -->
-												<li>
+												<li class="nav-item">
 													<a href="{{ site.url }}/">Home</a>
 												</li>
 												<!-- menu end -->
 												<!-- menu start About-->
 												{% if page.title == 'About' or maincat == 'about' %}
-												<li class="dropdown active">
+												<li class="nav-item dropdown active">
 												{% else %}
-												<li class="dropdown ">
+												<li class="nav-item dropdown">
 												{% endif %}
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
-													<ul class="dropdown-menu">
+													<a href="{{ site.url }}/about" class="nav-link dropdown-toggle" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+													<ul class="dropdown-menu" aria-labelledby="aboutDropdown">
 														<li>
-															<a href="{{ site.url }}/about">About Us</a>
+															<a class="dropdown-item" href="{{ site.url }}/about">About Us</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/about/people">People</a>
+															<a class="dropdown-item" href="{{ site.url }}/about/people">People</a>
 														</li>
 													</ul>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Education -->
 												{% if maincat == 'education' %}
-												<li class="dropdown active">
+												<li class="nav-item dropdown active">
 												{% else %}
-												<li class="dropdown ">
+												<li class="nav-item dropdown">
 												{% endif %}
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">Education</a>
-													<ul class="dropdown-menu">
+													<a href="{{ site.url }}/education/courses" class="nav-link dropdown-toggle" id="educationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Education</a>
+													<ul class="dropdown-menu" aria-labelledby="educationDropdown">
 														<li>
-															<a href="http://www.masterdatascience.es">Master in Data Science</a>
+															<a class="dropdown-item" href="http://www.masterdatascience.es">Master in Data Science</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/education/courses">Courses</a>
+															<a class="dropdown-item" href="{{ site.url }}/education/courses">Courses</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/teaching_innovation">Teaching Innovation</a>
+															<a class="dropdown-item" href="{{ site.url }}/teaching_innovation">Teaching Innovation</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/teaching_innovation/noticias">News</a>
+															<a class="dropdown-item" href="{{ site.url }}/teaching_innovation/noticias">News</a>
 														</li>
 													</ul>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Research -->
 												{% if maincat == 'research' %}
-												<li class="dropdown active">
+												<li class="nav-item dropdown active">
 												{% else %}
-												<li class="dropdown ">
+												<li class="nav-item dropdown">
 												{% endif %}
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research</a>
+													<a href="{{ site.url }}/research" class="nav-link dropdown-toggle" id="researchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Research</a>
 													<ul class="dropdown-menu">
 														<li>
-															<a href="{{ site.url }}/research">Research lines</a>
+															<a class="dropdown-item" href="{{ site.url }}/research">Research lines</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/research/projects">Projects</a>
+															<a class="dropdown-item" href="{{ site.url }}/research/projects">Projects</a>
 														</li>
 														<li>
-															<a href="{{ site.url }}/research/publications">Publications</a>
+															<a class="dropdown-item" href="{{ site.url }}/research/publications">Publications</a>
 														</li>
 													</ul>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Consulting -->
 												{% if page.title == 'Consulting' %}
-												<li class="active">
+												<li class="nav-item active">
 												{% else %}
-												<li>
+												<li class="nav-item">
 												{% endif %}
-													<a href="{{ site.url }}/consulting">Consulting</a>
+													<a class="nav-link"  href="{{ site.url }}/consulting">Consulting</a>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Parnters -->
 												{% if page.title == 'Partners' %}
-												<li class="active">
-												{% else %}
-												<li>
+												<li class="nav-item active">
+													{% else %}
+												<li class="nav-item">
 												{% endif %}
-													<a href="{{ site.url }}/partners">Partners</a>
+													<a class="nav-link" href="{{ site.url }}/partners">Partners</a>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Blog -->
 												{% if page.title == 'Blog' or maincat == 'blog' %}
-												<li class="dropdown active">
+												<li class="nav-item dropdown active">
 												{% else %}
-												<li class="dropdown">
+												<li class="nav-item dropdown">
 												{% endif %}
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
-													<ul class="dropdown-menu">
+													<a href="{{ site.url }}/blog" class="nav-link dropdown-toggle" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+													<ul class="dropdown-menu" aria-labelledby="blogDropdown">
 														<li>
-															<a href="{{ site.url }}/blog" class="dropdown-toggle" data-toggle="dropdown">Blog Home</a>
+															<a class="dropdown-item" href="{{ site.url }}/blog" class="dropdown-toggle" data-bs-toggle="dropdown">Blog Home</a>
 														</li>
 <!--
 														<li>
@@ -303,18 +299,18 @@
 	<!-- header-container end -->
 	<!-- breadcrumb start -->
 	<!-- ================ -->
-	<div class="breadcrumb-container">
+	<div class="breadcrumb">
 		<div class="container">
 			<ol class="breadcrumb">
-				<li>
-					<i class="fa fa-home pr-10"></i><a href="{{ site.url }}/">Home</a>
+				<li class="breadcrumb-item">
+					<i class="fa fa-home pr-1"></i><a href="{{ site.url }}/">Home</a>
 				</li>
 				{% if page.parent_cat %}
-				<li>
+				<li class="breadcrumb-item">
 					<a href="{{ site.url }}/{{ page.parent_cat | downcase }}">{{ page.parent_cat }}</a>
 				</li>
 				{% endif %}
-				<li class="active">
+				<li class="breadcrumb-item active" aria-current="page">
 					{{ page.title }}
 				</li>
 			</ol>
