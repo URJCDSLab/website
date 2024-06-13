@@ -6168,7 +6168,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
 .btn.github {
   background-color: #fff;
   border-color: #fff;
-  color: #2b3137;
+  color: #2b3137!important;
 }
 .social-links .dropdown > button {
   padding: 1px 15px 0px;
