@@ -13,39 +13,39 @@ author: URJCDataScience
             <!-- ================ -->
             <div class="main col-md-12">
                 <div class="row">
-                    <h1 class="title">Contact DSLAB</h1>
-                    <div class="col-md-3">
+                    <h1 class="title mb-3">Contact DSLAB</h1>
+                    <div class="col-md-3 text-center">
                         <i class="fa fa-building pr-10 text-default"></i>
                         <h4>Building</h4>
                         <p>Department Building II, Móstoles Campus, URJC</p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 text-center">
                         <i class="fa fa-map-marker pr-10 text-default"></i>
                         <h4>Address</h4>
                         <p>Tulipán s/n, 28933, Móstoles, Madrid, Spain</p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 text-center">
                         <i class="fa fa-phone pr-10 text-default"></i>
                         <h4>Phone</h4>
                         <p>+34 914 884 630</p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 text-center">
                         <i class="fa fa-envelope pr-10 text-default"></i>
                         <h4>Email</h4>
                         <p>{{ site.info_mail }}</p>
                     </div>
                 </div>
                 <div class="row">
-                    <h2 class="subtitle">Don't forget to follow us!</h2>
-                    <div class="col-md-4">
+                    <h2 class="subtitle mt-5 mb-3">Don't forget to follow us!</h2>
+                    <div class="col-md-4 text-center">
                         <i class="fa-brands fa-x-twitter"></i>
                         <h4><a target="_blank" href="https://twitter.com/DSLAB_URJC">@DSLAB_URJC</a></h4>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 text-center">
                         <i class="fa-brands fa-linkedin"></i>
                         <h4><a target="_blank" href="https://www.linkedin.com/company/dslab">DSLAB</a></h4>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 text-center">
                         <i class="fa-brands fa-github"></i>
                         <h4><a target="_blank" href="https://github.com/URJCDSLab">@URJCDSLab</a></h4>
                     </div>
@@ -59,6 +59,9 @@ author: URJCDataScience
         <!-- main end -->
     </div>
 </section>
+
+<link href="{{ site.url }}/plugins/leaflet/leaflet.css" rel="stylesheet"/>
+<script type="text/javascript" src="{{ site.url }}/plugins/leaflet/leaflet.js"></script>
 
 <script>
     var map = L.map('map').setView([40.33597, -3.87690], 17);
@@ -84,6 +87,3 @@ author: URJCDataScience
 
     L.control.scale({imperial: false,}).addTo(map);
 </script>
-
-<link href="{{ site.url }}/plugins/leaflet/leaflet.css" rel="stylesheet"/>
-<script type="text/javascript" src="{{ site.url }}/plugins/leaflet/leaflet.js"></script>
