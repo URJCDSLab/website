@@ -36,3 +36,9 @@ File Description: Place here your custom CSS styles
     transform: translateY(50%);
     text-align: center;
 }
+
+.under-construction-image {
+    background-image: url('{{ site.url }}/images/banners/under_construction.jpg') no-repeat center;
+    width: auto;
+    height: 70%;
+}
