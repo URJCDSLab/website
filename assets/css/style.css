@@ -6195,6 +6195,17 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   border-color: #2b3137;
   color: #fff;
 }
+.dark.social-links.animated-effect-1 li.contact a:hover {
+  border-color: #3697d9;
+}
+.dark.social-links:not(.animated-effect-1) li.contact a:hover,
+.dark.colored.social-links li.contact a,
+.dark.social-links.animated-effect-1 li.contact a:after,
+.dark.btn.contact {
+  background-color: #3697d9;
+  border-color: #3697d9;
+  color: #fff;
+}
 .social-links .dropdown > button {
   padding: 1px 15px 0px;
   font-size: 16px;
