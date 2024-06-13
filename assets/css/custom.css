@@ -38,7 +38,7 @@ File Description: Place here your custom CSS styles
 }
 
 .under-construction-image {
-    background: url('/images/banners/under_construction.jpg') no-repeat center;
+    background: url('/assets/images/banners/under_construction.jpg') no-repeat center;
     background-size: contain;
     width: auto;
     height: 70%;
