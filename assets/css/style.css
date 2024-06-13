@@ -6161,6 +6161,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
 }
 .social-links.animated-effect-1 li.github a:hover {
   border-color: #fff;
+  color: #2b3137!important;
 }
 .social-links:not(.animated-effect-1) li.github a:hover,
 .colored.social-links li.github a,
