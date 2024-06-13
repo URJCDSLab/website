@@ -44,3 +44,10 @@ File Description: Place here your custom CSS styles
     height: 70%;
     min-height: 400px;
 }
+
+.list-icons.nav-pills > li > a {
+    text-decoration: none;
+    text-transform: none;
+    font-weight: 300;
+    color: #777777;
+}
