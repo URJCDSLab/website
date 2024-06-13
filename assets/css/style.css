@@ -5823,6 +5823,18 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+.social-links .dark li a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #e7e7e7;
+  color: #cdcdcd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
 .social-links li a i {
   line-height: 40px;
 }
@@ -6170,6 +6182,18 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   background-color: #fff;
   border-color: #fff;
   color: #2b3137!important;
+}
+.dark.social-links.animated-effect-1 li.github a:hover {
+  border-color: #2b3137;
+  color: #fff!important;
+}
+.dark.social-links:not(.animated-effect-1) li.github a:hover,
+.dark.colored.social-links li.github a,
+.dark.social-links.animated-effect-1 li.github a:after,
+.dark.btn.github {
+  background-color: #2b3137;
+  border-color: #2b3137;
+  color: #fff;
 }
 .social-links .dropdown > button {
   padding: 1px 15px 0px;
