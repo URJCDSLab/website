@@ -1,0 +1,89 @@
+---
+layout: page
+title: Contact
+author: URJCDataScience
+---
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+    <div class="container">
+        <div class="row">
+
+            <!-- main start -->
+            <!-- ================ -->
+            <div class="main col-md-12">
+                <div class="row">
+                    <h1 class="title">Contact DSLAB</h1>
+                    <div class="col-md-3">
+                        <i class="fa fa-building pr-10 text-default"></i>
+                        <h4>Building</h4>
+                        <p>Department Building II, Móstoles Campus, URJC</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fa fa-map-marker pr-10 text-default"></i>
+                        <h4>Address</h4>
+                        <p>Tulipán s/n, 28933, Móstoles, Madrid, Spain</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fa fa-phone pr-10 text-default"></i>
+                        <h4>Phone</h4>
+                        <p>+34 914 884 630</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fa fa-envelope pr-10 text-default"></i>
+                        <h4>Email</h4>
+                        <p>{{ site.info_mail }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 class="subtitle">Don't forget to follow us!</h2>
+                    <div class="col-md-4">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <h4><a target="_blank" href="https://twitter.com/DSLAB_URJC">@DSLAB_URJC</a></h4>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <h4><a target="_blank" href="https://www.linkedin.com/company/dslab">DSLAB</a></h4>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa-brands fa-github"></i>
+                        <h4><a target="_blank" href="https://github.com/URJCDSLab">@URJCDSLab</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-0">
+                <div id="map" style="height: 350px"></div>
+            </div>
+        </div>
+        <!-- main end -->
+    </div>
+</section>
+
+<script>
+    var map = L.map('map').setView([40.33597, -3.87690], 17);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?lang=en', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        fullscreenControl: true,
+    }).addTo(map);
+
+    var dslabIcon = L.icon({
+        iconUrl: '/images/favicon-96x96.png',
+
+        iconSize:     [30, 30], // size of the icon
+        iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -15] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var marker = L.marker([40.33583, -3.87796], {icon: dslabIcon}).addTo(map);
+    marker.bindPopup("Data Science Laboratory", {
+        closeButton: false
+    });
+
+    L.control.scale({imperial: false,}).addTo(map);
+</script>
+
+<link href="{{ site.url }}/plugins/leaflet/leaflet.css" rel="stylesheet"/>
+<script type="text/javascript" src="{{ site.url }}/plugins/leaflet/leaflet.js"></script>
