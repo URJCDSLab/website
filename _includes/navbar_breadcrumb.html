@@ -236,21 +236,20 @@
 												</li>
 												<!-- menu end -->
 												<!-- menu start Consulting -->
-												{% if page.title == 'Consulting' %}
-												<li class="nav-item active">
-												{% else %}
-												<li class="nav-item">
-												{% endif %}
-													<a class="nav-link"  href="{{ site.url }}/consulting">Consulting</a>
-												</li>
-												<!-- menu end -->
-												<!-- menu start Parnters -->
-												{% if page.title == 'Partners' %}
-												<li class="nav-item active">
+												{% if maincat == 'consulting' %}
+												<li class="nav-item dropdown active">
 													{% else %}
-												<li class="nav-item">
-												{% endif %}
-													<a class="nav-link" href="{{ site.url }}/partners">Partners</a>
+												<li class="nav-item dropdown">
+													{% endif %}
+													<a href="{{ site.url }}/consulting" class="nav-link dropdown-toggle" id="consultingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Consulting</a>
+													<ul class="dropdown-menu">
+														<li>
+															<a class="dropdown-item" href="{{ site.url }}/consulting">Projects</a>
+														</li>
+														<li>
+															<a class="dropdown-item" href="{{ site.url }}/partners">Partners</a>
+														</li>
+													</ul>
 												</li>
 												<!-- menu end -->
 												<!-- menu start Contact -->
