@@ -6195,11 +6195,14 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   border-color: #2b3137;
   color: #fff;
 }
-.dark.social-links.animated-effect-1 li.contact a:hover {
+.dark.social-links.animated-effect-1 li.contact a:hover,
+.dark.social-links.animated-effect-1 li.contact i:hover {
   border-color: #3697d9;
 }
 .dark.social-links:not(.animated-effect-1) li.contact a:hover,
+.dark.social-links:not(.animated-effect-1) li.contact i:hover,
 .dark.colored.social-links li.contact a,
+.dark.colored.social-links li.contact i,
 .dark.social-links.animated-effect-1 li.contact a:after,
 .dark.btn.contact {
   background-color: #3697d9;
