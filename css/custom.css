@@ -42,4 +42,5 @@ File Description: Place here your custom CSS styles
     background-size: contain;
     width: auto;
     height: 70%;
+    min-height: 400px;
 }
