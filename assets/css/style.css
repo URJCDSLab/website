@@ -5843,20 +5843,23 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   border-color: #0c9ec7;
   color: #0c9ec7;
 }
-.social-links.animated-effect-1 li a {
+.social-links.animated-effect-1 li a,
+.social-links.animated-effect-1 li span {
   -webkit-transition: color 0.4s;
   -o-transition: color 0.4s;
   transition: color 0.4s;
   position: relative;
   z-index: 1;
 }
-.social-links.animated-effect-1 li a:hover {
+.social-links.animated-effect-1 li a:hover,
+.social-links.animated-effect-1 li span:hover {
   color: #ffffff!important;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
 }
-.social-links.animated-effect-1 li a:after {
+.social-links.animated-effect-1 li a:after,
+.social-links.animated-effect-1 li span:after {
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -5881,6 +5884,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   opacity: 0;
   filter: alpha(opacity=0);
 }
+.social-links.animated-effect-1 li span:hover:after,
 .social-links.animated-effect-1 li a:hover:after {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -6200,10 +6204,11 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   border-color: #3697d9;
 }
 .dark.social-links:not(.animated-effect-1) li.contact a:hover,
-.dark.social-links:not(.animated-effect-1) li.contact i:hover,
+.dark.social-links:not(.animated-effect-1) li.contact span:hover,
 .dark.colored.social-links li.contact a,
-.dark.colored.social-links li.contact i,
+.dark.colored.social-links li.contact span,
 .dark.social-links.animated-effect-1 li.contact a:after,
+.dark.social-links.animated-effect-1 li.contact spam:after,
 .dark.btn.contact {
   background-color: #3697d9;
   border-color: #3697d9;
