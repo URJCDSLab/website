@@ -163,30 +163,28 @@ author: URJCDataScience
 						<article class="blogpost shadow light-gray-bg bordered">
 							<div id="carousel-blog-post-dsgame" class="carousel slide">
 								<!-- Indicators -->
-								<ol class="carousel-indicators bottom margin-clear">
-									<li data-bs-target="#carousel-blog-post-dsgame" data-bs-slide-to="0" class="active"></li>
-									<li data-bs-target="#carousel-blog-post-dsgame" data-bs-slide-to="1"></li>
-									<li data-bs-target="#carousel-blog-post-dsgame" data-bs-slide-to="2"></li>
-								</ol>
+								<div class="carousel-indicators">
+									<button type="button" data-bs-target="#carousel-blog-post-dsgame" data-bs-slide-to="0" class="active" aria-current="true"
+										aria-label="Slide 1"></button>
+									<button type="button" data-bs-target="#carousel-blog-post-dsgame" data-bs-slide-to="1" aria-label="Slide 2"></button>
+									<button type="button" data-bs-target="#carousel-blog-post-dsgame" data-bs-slide-to="2" aria-label="Slide 3"></button>
+								</div>
 
 								<!-- Wrapper for slides -->
 								<div class="carousel-inner" role="listbox">
 									<div class="carousel-item active">
 										<div class="overlay-container">
 											<img src="{{ site.url }}/assets/images/TI/dsgame1.jpg" alt="Foto 1 del post">
-											<a class="overlay-link" href="blog-post.html"><i class="fa-solid fa-link"></i></a>
 										</div>
 									</div>
 									<div class="carousel-item">
 										<div class="overlay-container">
 											<img src="{{ site.url }}/assets/images/TI/dsgame2.jpg" alt="Foto 2 del post">
-											<a class="overlay-link" href="blog-post.html"><i class="fa-solid fa-link"></i></a>
 										</div>
 									</div>
 									<div class="carousel-item">
 										<div class="overlay-container">
 											<img src="{{ site.url }}/assets/images/TI/dsgame3.jpg" alt="Foto 3 del post">
-											<a class="overlay-link" href="blog-post.html"><i class="fa-solid fa-link"></i></a>
 										</div>
 									</div>
 								</div>
@@ -313,7 +311,7 @@ author: URJCDataScience
 					<div class="timeline-date-label clearfix">2018</div>
 
 					<!-- timeline grid item start -->
-					<div class="timeline-item pull-right">
+					<div class="timeline-item">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered"
 							data-animation-effect="fadeInUpSmall" data-effect-delay="100">
@@ -386,7 +384,7 @@ author: URJCDataScience
 					<div class="timeline-date-label clearfix">2017</div>
 
 					<!-- timeline grid item start -->
-					<div class="timeline-item">
+					<div class="timeline-item pull-right">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered"
 							data-animation-effect="fadeInUpSmall" data-effect-delay="100">
