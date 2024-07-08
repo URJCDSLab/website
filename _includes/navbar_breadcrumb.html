@@ -266,24 +266,11 @@
 												<!-- menu end -->
 												<!-- menu start Blog -->
 												{% if page.title == 'Blog' or maincat == 'blog' %}
-												<li class="nav-item dropdown active">
+												<li class="nav-item active">
 												{% else %}
-												<li class="nav-item dropdown">
+												<li class="nav-item">
 												{% endif %}
-													<a href="{{ site.url }}/blog" class="nav-link dropdown-toggle" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-													<ul class="dropdown-menu" aria-labelledby="blogDropdown">
-														<li>
-															<a class="dropdown-item" href="{{ site.url }}/blog">Blog Home</a>
-														</li>
-<!--
-														<li>
-															<a href="{{ site.url }}/blog/masonry">Masonry</a>
-														</li>
-														<li>
-															<a href="{{ site.url }}/blog/timeline">Timeline</a>
-														</li>
--->
-													</ul>
+													<a href="{{ site.url }}/blog">Blog</a>
 												</li>
 												<!-- menu end -->
 											
