@@ -6,7 +6,13 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>{{ page.title | default: site.title }}</title>
+		<title>
+			{% if page.title %}
+			  {{ page.title }} | {{ site.title }}
+			{% else %}
+			  {{ site.title }}
+			{% endif %}
+		</title>
 		<meta name="description" content="This is the {{ page.title }} webpage in the website of the Data Science Laboratory, University Rey Juan Carlos">
 		<meta name="author" content="Felipe Ortega">
 
