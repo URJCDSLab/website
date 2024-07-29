@@ -8,6 +8,10 @@ License URI:http://support.wrapbootstrap.com/
 File Description: Place here your custom CSS styles
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
 .main-navigation .navbar-nav>li {
     margin: 0 0 0 0;
 }
