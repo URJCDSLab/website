@@ -59,3 +59,21 @@ html {
     font-weight: 300;
     color: #777777!important;
 }
+
+.list-icons > li:before {
+    content: "\f138"; /* FontAwesome Icon Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    padding-right: 2em;
+    width: 1.3em;
+}
+
+/* Nested list (only 2nd level) */
+.list-icons > .list-icons {
+    padding-left: 2rem;
+}
+
+.list-icons > .list-icons > li:before {
+    content: "\f054"; /* FontAwesome Icon Unicode*/
+    color: #3697d9;
+}
