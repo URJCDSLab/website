@@ -12,16 +12,31 @@ html {
     scroll-behavior: smooth;
 }
 
-.main-navigation .navbar-nav>li {
+.main-navigation .navbar-nav > li {
     margin: 0 0 0 0;
 }
 
-.dropdown>a:before {
+.dropdown > a:before {
     display: none;
 }
 
 .text-justify {
     text-align: justify;
+}
+
+.dark .footer h1 a:active,
+.dark .footer h2 a:active,
+.dark .footer h3 a:active,
+.dark .footer h4 a:active,
+.dark .footer h5 a:active,
+.dark .footer h6 a:active,
+.dark .footer h1 a:hover,
+.dark .footer h2 a:hover,
+.dark .footer h3 a:hover,
+.dark .footer h4 a:hover,
+.dark .footer h5 a:hover,
+.dark .footer h6 a:hover {
+    color: #3697d9;
 }
 
 .carousel-item {
@@ -83,6 +98,7 @@ html {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: block;
 }
 
 .list-footer > li {
@@ -90,6 +106,7 @@ html {
     align-items: flex-start; /* Asegura que los íconos se alineen al inicio */
     gap: 10px; /* Espacio entre el icono y el texto */
     padding: 10px 0; /* Espaciado vertical */
+    margin-left: 5px;
 }
 
 .list-footer > li i {
@@ -101,17 +118,15 @@ html {
     line-height: 1.5; /* Mejora la legibilidad del texto */
 }
 
-.list-footer > li div span {
-    margin-left: 25px; /* Alinea el texto secundario bajo el principal */
-    display: block; /* Fuerza el salto de línea */
-}
-
 .list-footer > li div a {
     text-decoration: none;
     color: inherit; /* Usa el color de texto definido */
     transition: color 0.3s ease;
+    border-radius: var(--bs-nav-pills-border-radius);
+    padding: 4px 0;
 }
 
 .list-footer > li div a:hover {
-    color: #007bff; /* Cambia el color al pasar el ratón */
+    color: #3697d9;
+    border-bottom: 1px solid #777777;
 }
