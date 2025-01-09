@@ -77,3 +77,41 @@ html {
     content: "\f054"; /* FontAwesome Icon Unicode*/
     color: #3697d9;
 }
+
+/* List with address and contact in footer */
+.list-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-footer > li {
+    display: flex;
+    align-items: flex-start; /* Asegura que los íconos se alineen al inicio */
+    gap: 10px; /* Espacio entre el icono y el texto */
+    padding: 10px 0; /* Espaciado vertical */
+}
+
+.list-footer > li i {
+    font-size: 1.2rem; /* Tamaño del ícono */
+    flex-shrink: 0; /* Evita que el ícono cambie de tamaño */
+}
+
+.list-footer > li div {
+    line-height: 1.5; /* Mejora la legibilidad del texto */
+}
+
+.list-footer > li div span {
+    margin-left: 25px; /* Alinea el texto secundario bajo el principal */
+    display: block; /* Fuerza el salto de línea */
+}
+
+.list-footer > li div a {
+    text-decoration: none;
+    color: inherit; /* Usa el color de texto definido */
+    transition: color 0.3s ease;
+}
+
+.list-footer > li div a:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+}
