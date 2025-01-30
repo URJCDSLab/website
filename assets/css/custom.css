@@ -165,3 +165,8 @@ html {
 .orcid-icon i {
     color: #a6ce39;
 }
+
+/* Cambiar color a elementos strong (negrita) */
+strong {
+    color: #3697d9;
+}
