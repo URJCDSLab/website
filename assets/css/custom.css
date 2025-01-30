@@ -166,7 +166,9 @@ html {
     color: #a6ce39;
 }
 
-/* Cambiar color a elementos strong (negrita) */
+/* Cambiar color a elementos <strong> (negrita) */
+/* Se puede usar <b> para no aplicar estos cambios */
 strong {
     color: #3697d9;
+    font-weight: 300;
 }
