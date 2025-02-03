@@ -172,3 +172,13 @@ strong {
     color: #3697d9;
     font-weight: 300;
 }
+
+/* Cambiar color para logo bluesky*/
+.social-links:not(.animated-effect-1) li.bluesky a:hover,
+.colored.social-links li.bluesky a,
+.social-links.animated-effect-1 li.bluesky a:after,
+.btn.bluesky {
+    background-color: #0886fe;
+    border-color: #0886fe;
+    color: #fff;
+}
