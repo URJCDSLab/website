@@ -309,6 +309,11 @@
 				<li class="breadcrumb-item">
 					<a href="{{ site.url }}/{{ page.parent_cat | downcase }}">{{ page.parent_cat }}</a>
 				</li>
+					{% if page.parent_subcat %}
+					<li class="breadcrumb-item">
+						<a href="{{ site.url }}/{{ page.parent_cat | downcase }}/{{ page.parent_subcat | downcase }}">{{ page.parent_subcat }}</a>
+					</li>
+					{% endif %}
 				{% endif %}
 				<li class="breadcrumb-item active" aria-current="page">
 					{{ page.title }}
