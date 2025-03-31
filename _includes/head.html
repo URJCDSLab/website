@@ -13,8 +13,30 @@
 			  {{ site.title }}
 			{% endif %}
 		</title>
-		<meta name="description" content="This is the {{ page.title }} webpage in the website of the Data Science Laboratory, University Rey Juan Carlos">
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Welcome to the Data Science Lab page, a hub for data science insights, research, and innovation at the Rey Juan Carlos University.{% endif %}">
 		<meta name="author" content="Felipe Ortega">
+
+		<!-- Open Graph / Facebook / WhatsApp -->
+		<meta property="og:locale" content="en">
+		<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+		<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Explore data science projects, research, and tools developed at the Data Science Lab, Universidad Rey Juan Carlos.{% endif %}">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+		<meta property="og:site_name" content="{{ site.title }">
+		<meta property="og:image" content="{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/og-default.jpg{% endif %}">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:type" content="image/jpg">
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+		<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Discover cutting-edge data science work at Universidad Rey Juan Carlos.{% endif %}">
+		<meta name="twitter:image" content="{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/og-default.jpg{% endif %}">
+		<meta name="twitter:image:alt" content="URJC Data Science Laboratory logo">
+		<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+		<meta name="twitter:site" content="@DSLAB_URJC">
+		<meta name="twitter:creator" content="@DSLAB_URJC">
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
