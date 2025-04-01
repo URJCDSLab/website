@@ -91,7 +91,7 @@ author: URJCDataScience
 <script type="text/javascript" src="{{ site.url }}/assets/plugins/leaflet/leaflet.js"></script>
 
 <script>
-    var map = L.map('map').setView([40.33597, -3.87690], 17);
+    var map = L.map('map').setView([40.335993, -3.878040], 17);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?lang=en', {
         maxZoom: 19,
@@ -101,15 +101,13 @@ author: URJCDataScience
 
     var dslabIcon = L.icon({
         iconUrl: '{{ site.url }}/assets/images/favicon-96x96.png',
-        shadowUrl: '{{ site.url }}/assets/plugins/leaflet/images/marker-shadow.png',
 
-        iconSize:     [40, 40], // size of the icon
-        shadowSize:   [40, 40], // size of the shadow
-        iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
-        popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
+        iconSize:     [60, 60], // size of the icon
+        iconAnchor:   [30, 30], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
     });
 
-    var marker = L.marker([40.33583, -3.87796], {icon: dslabIcon, opacity: 0.8}).addTo(map);
+    var marker = L.marker([40.33583, -3.87796], {icon: dslabIcon}).addTo(map);
     marker.bindPopup("Data Science Laboratory", {
         closeButton: false
     });
