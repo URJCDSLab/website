@@ -206,3 +206,13 @@ strong {
     border-color: #0886fe;
     color: #fff;
 }
+
+/* Cambiar estilo de botones */
+.btn {
+    border-radius: 10px;
+}
+
+.btn-carousel {
+    font-size: 16px;
+    font-weight: 300;
+}
