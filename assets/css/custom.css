@@ -211,6 +211,29 @@ strong {
 .btn {
     border-radius: 10px;
 }
+.btn-hvr {
+    &.hvr-fade::before,
+    &.hvr-back::before,
+    &.hvr-pulse::before,
+    &.hvr-sweep-to-right::before,
+    &.hvr-sweep-to-left::before,
+    &.hvr-sweep-to-bottom::before,
+    &.hvr-sweep-to-top::before,
+    &.hvr-bounce-to-right::before,
+    &.hvr-bounce-to-left::before,
+    &.hvr-bounce-to-bottom::before,
+    &.hvr-bounce-to-top::before,
+    &.hvr-radial-out::before,
+    &.hvr-radial-in::before,
+    &.hvr-rectangle-in::before,
+    &.hvr-rectangle-out::before,
+    &.hvr-shutter-in-horizontal::before,
+    &.hvr-shutter-out-horizontal::before,
+    &.hvr-shutter-in-vertical::before,
+    &.hvr-shutter-out-vertical::before {
+        border-radius: 8px;
+    }
+}
 
 
 .btn-carousel {
