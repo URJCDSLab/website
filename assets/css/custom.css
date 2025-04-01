@@ -175,6 +175,10 @@ html {
     opacity: 0.8;
 }
 
+.mail-icon i {
+    color: #cb0017;
+}
+
 .scholar-icon i {
     color: #4086f4;
 }
