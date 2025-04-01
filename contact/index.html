@@ -100,14 +100,16 @@ author: URJCDataScience
     }).addTo(map);
 
     var dslabIcon = L.icon({
-        iconUrl: '/assets/images/favicon-96x96.png',
+        iconUrl: '{{ site.url }}/assets/images/favicon-96x96.png',
+        shadowUrl: '{{ site.url }}/assets/plugins/leaflet/images/marker-shadow.png',
 
-        iconSize:     [30, 30], // size of the icon
-        iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
-        popupAnchor:  [0, -15] // point from which the popup should open relative to the iconAnchor
+        iconSize:     [40, 40], // size of the icon
+        shadowSize:   [40, 40], // size of the shadow
+        iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
     });
 
-    var marker = L.marker([40.33583, -3.87796], {icon: dslabIcon}).addTo(map);
+    var marker = L.marker([40.33583, -3.87796], {icon: dslabIcon, opacity: 0.8}).addTo(map);
     marker.bindPopup("Data Science Laboratory", {
         closeButton: false
     });
