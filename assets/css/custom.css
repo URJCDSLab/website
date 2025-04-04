@@ -41,6 +41,7 @@ html {
     text-align: justify;
 }
 
+/* Change link colors in dark footer */
 .dark .footer a,
 .dark .footer h1 a,
 .dark .footer h2 a,
@@ -68,12 +69,12 @@ html {
     color: #3697d9;
 }
 
+/* Adjust carousel */
 .carousel-item {
     height: 450px;
 }
 
 .carousel-item img {
-    height: 100%;
     width: 100%;
     object-fit: cover;
     filter: brightness(90%);
@@ -85,6 +86,16 @@ html {
     text-align: center;
 }
 
+/* Fix styles for group photos carousel to keep aspect-ratio & brightness */
+#carouselGroup .carousel-item img {
+    filter: brightness(100%);
+    aspect-ratio: 4 / 3;
+}
+
+#carouselGroup .carousel-item {
+    height: auto;
+}
+
 .under-construction-image {
     background: url('/assets/images/banners/under_construction.jpg') no-repeat center;
     background-size: contain;
@@ -93,6 +104,7 @@ html {
     min-height: 400px;
 }
 
+/* Customize list-icons list class */
 .list-icons {
     margin-bottom: 0;
 }
@@ -214,7 +226,7 @@ strong {
     font-weight: 300;
 }
 
-/* Cambiar color para logo bluesky*/
+/* Cambiar color para logo bluesky */
 .social-links.animated-effect-1 li.bluesky a:hover {
     border-color: #0886fe;
 }
