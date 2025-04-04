@@ -41,12 +41,24 @@ html {
     text-align: justify;
 }
 
+.dark .footer a,
+.dark .footer h1 a,
+.dark .footer h2 a,
+.dark .footer h3 a,
+.dark .footer h4 a,
+.dark .footer h5 a,
+.dark .footer h6 a {
+    color: #999999;
+}
+
+.dark .footer a:active,
 .dark .footer h1 a:active,
 .dark .footer h2 a:active,
 .dark .footer h3 a:active,
 .dark .footer h4 a:active,
 .dark .footer h5 a:active,
 .dark .footer h6 a:active,
+.dark .footer a:hover,
 .dark .footer h1 a:hover,
 .dark .footer h2 a:hover,
 .dark .footer h3 a:hover,
