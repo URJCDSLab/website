@@ -81,6 +81,10 @@ html {
     min-height: 400px;
 }
 
+.list-icons {
+    margin-bottom: 0;
+}
+
 .list-icons.nav-pills {
     display: block;
 }
@@ -152,9 +156,13 @@ html {
 .image-box {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    border-radius: 10px;
 }
 .image-box:hover {
     transform: translateY(-5px);
+}
+.image-box > div > img {
+    border-radius: 10px 10px 0 0;
 }
 
 /* Social icons for team */
