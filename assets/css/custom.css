@@ -75,6 +75,7 @@ html {
 }
 
 .carousel-item img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
     filter: brightness(90%);
@@ -90,6 +91,7 @@ html {
 #carouselGroup .carousel-item img {
     filter: brightness(100%);
     aspect-ratio: 4 / 3;
+    height: auto;
 }
 
 #carouselGroup .carousel-item {
