@@ -276,7 +276,8 @@ strong {
 
 /* Logos de research partners */
 .image-box-logo {
-    aspect-ratio: 4/2;
+    aspect-ratio: 4/1.5;
     width: 100%;
     padding: 1.5rem;
+    object-fit: contain;
 }
