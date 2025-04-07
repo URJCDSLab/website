@@ -269,8 +269,14 @@ strong {
     }
 }
 
-
 .btn-carousel {
     font-size: 16px;
     font-weight: 300;
+}
+
+/* Logos de research partners */
+.image-box-logo {
+    aspect-ratio: 4/2;
+    width: 100%;
+    padding: 1.5rem;
 }
