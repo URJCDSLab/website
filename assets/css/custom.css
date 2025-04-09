@@ -281,3 +281,8 @@ strong {
     padding: 1.5rem;
     object-fit: contain;
 }
+
+/* Bordes del link en las imágenes de las targetas image-box */
+.overlay-link {
+    border-radius: 10px 10px 0 0;
+}
