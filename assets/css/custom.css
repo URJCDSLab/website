@@ -298,6 +298,10 @@ a.badge.default-bg:hover {
 }
 
 /* Añadir efecto cuando se va a un team-member desde research-lines */
+.team-member {
+    scroll-margin-top: 30vh;
+}
+
 .team-member:target {
     animation: highlight 5s ease-in-out;
 }
