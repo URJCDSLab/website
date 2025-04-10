@@ -287,16 +287,6 @@ strong {
     border-radius: 10px 10px 0 0;
 }
 
-/* Estilo de badges usados en research lines */
-a.badge.default-bg {
-    padding: 6px 8px;
-}
-a.badge.default-bg:hover {
-    color: var(--bs-dark-text-emphasis);
-    background-color: rgba(54, 151, 217, 0.5); /* Mismo que .default-bg-50 */
-    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.2);
-}
-
 /* Añadir efecto cuando se va a un team-member desde research-lines */
 .team-member {
     scroll-margin-top: 30vh;
