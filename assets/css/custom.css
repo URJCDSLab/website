@@ -320,3 +320,8 @@ a.badge.default-bg:hover {
         background-color: transparent;
     }
 }
+
+/* Añadir sombra a imágenes */
+.img-shadow {
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
+}
