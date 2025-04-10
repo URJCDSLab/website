@@ -299,7 +299,7 @@ a.badge.default-bg:hover {
 
 /* Añadir efecto cuando se va a un team-member desde research-lines */
 .team-member:target {
-    animation: highlight 2s ease-in-out;
+    animation: highlight 5s ease-in-out;
 }
 
 @keyframes highlight {
@@ -316,4 +316,3 @@ a.badge.default-bg:hover {
         background-color: transparent;
     }
 }
-
