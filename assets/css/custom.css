@@ -296,3 +296,24 @@ a.badge.default-bg:hover {
     background-color: rgba(54, 151, 217, 0.5); /* Mismo que .default-bg-50 */
     box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.2);
 }
+
+/* Añadir efecto cuando se va a un team-member desde research-lines */
+.team-member:target {
+    animation: highlight 2s ease-in-out;
+}
+
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        background-color: transparent;
+    }
+    20% {
+        box-shadow: 0 0 20px rgba(0,123,255,0.7);
+        background-color: rgba(0,123,255,0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        background-color: transparent;
+    }
+}
+
