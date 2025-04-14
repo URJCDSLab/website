@@ -19,6 +19,7 @@ theme:            minima
 
 # Exclude files and folders from build
 exclude:
+  - assets/plugins/academicons-1.9.4/README.md
   - research/projects/covid19/informes_ejecutivos
   - research/projects/covid19/informes_semanales
   - research/projects/covid19/summaries
