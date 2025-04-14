@@ -17,6 +17,14 @@ encoding:         UTF-8
 #Build settings
 theme:            minima
 
+# Exclude files and folders from build
+exclude:
+  - research/projects/covid19/informes_ejecutivos
+  - research/projects/covid19/informes_semanales
+  - research/projects/covid19/summaries
+  - research/projects/covid19/reports/map.html
+  - research/projects/covid19/historico_iss.csv
+
 # Custom variables
 license:          CC-BY-SA 4.0
 my_theme:         The Project
