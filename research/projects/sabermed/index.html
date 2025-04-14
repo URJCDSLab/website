@@ -11,8 +11,13 @@ author: URJCDataScience
 		<!-- main start -->
 		<!-- ================ -->
 		<div class="main">
-			<img src="{{ site.url }}/assets/images/projects/sabermed/logotipo.png" alt="SABERMED logo" class="mx-auto"
-				style='max-width: 500px;' />
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-6 text-center">
+					<img src="{{ site.url }}/assets/images/projects/sabermed/logotipo.png"
+						 alt="SABERMED logo"
+						 class="img-fluid" />
+				</div>
+			</div>
 			<div class="mt-5 text-justify">
 				<p>
 					El objetivo fundamental del proyecto SABERMED consiste en encontrar una solución al problema que
@@ -22,32 +27,32 @@ author: URJCDataScience
 					contenido y en caso de ser determinado como fraudulento, detectarlo y comunicarlo.
 				</p>
 				<p>
-					Este objetivo funcional, se alcanzará mediante la consecución de los siguientes objetivos
+					Este objetivo funcional se alcanzará mediante la consecución de los siguientes objetivos
 					tecnológicos:
-				<ul>
-					<li>Desarrollo de un sistema inteligente de Recuperación de la Información, que permita extraer
-						contenido selectivamente de aquellas direcciones que podamos considerar susceptibles de
-						fraude, bien por estar en las listas internacionales de webs fraudulentas o bien por estar
-						en nuestra base de datos, por haber detectado pistas de que el contenido puede ser
-						fraudulento con el analizador social web previamente descrito. Dicho contenido puede
-						presentarse de formas muy heterogéneas, imágenes, textos no estructurados, etc. En general
-						hablaremos de datos estructurados y datos no estructurados. Para llevar a cabo este sistema
-						necesitaremos aplicar tecnologías de Big Data para la extracción, el procesamiento y la
-						indexación de la información.</li>
-					<li>Desarrollo de un módulo de Consolidación del Conocimiento que permita trabajar en tiempo
-						real con toda la información capturada. Este módulo será el encargado de almacenar la
-						información adquirida en el Módulo de Recuperación de la Información. </li>
-					<li>Desarrollo de un módulo de Inteligencia Artificial que realice el análisis de los datos
-						almacenados de manera distribuida y escalable. Para ello, el objetivo es desarrollar un
-						componente de Aprendizaje Máquina, basado en Aprendizaje Profundo, que entrene los múltiples
-						modelos de identificación de características fraudulentas. Así mismo, se desarrollará un
-						componente de Inteligencia de Enjambre que permita la generación de indicadores clave que
-						nos ayude a entender la actividad fraudulenta mejorando nuestras labores de búsqueda y
-						detección de fraude en el futuro.</li>
-					<li>Desarrollo de una Interfaz Gráfica que una vez encontrados contenidos posiblemente
-						fraudulentos automatice el envío de avisos y/o denuncias tanto a las webs que los alojan
-						como a los buscadores más relevantes para que procedan a su eliminación.</li>
-				</ul>
+					<ul class="list-icons">
+						<li>Desarrollo de un sistema inteligente de Recuperación de la Información, que permita extraer
+							contenido selectivamente de aquellas direcciones que podamos considerar susceptibles de
+							fraude, bien por estar en las listas internacionales de webs fraudulentas o bien por estar
+							en nuestra base de datos, por haber detectado pistas de que el contenido puede ser
+							fraudulento con el analizador social web previamente descrito. Dicho contenido puede
+							presentarse de formas muy heterogéneas, imágenes, textos no estructurados, etc. En general
+							hablaremos de datos estructurados y datos no estructurados. Para llevar a cabo este sistema
+							necesitaremos aplicar tecnologías de Big Data para la extracción, el procesamiento y la
+							indexación de la información.</li>
+						<li>Desarrollo de un módulo de Consolidación del Conocimiento que permita trabajar en tiempo
+							real con toda la información capturada. Este módulo será el encargado de almacenar la
+							información adquirida en el Módulo de Recuperación de la Información. </li>
+						<li>Desarrollo de un módulo de Inteligencia Artificial que realice el análisis de los datos
+							almacenados de manera distribuida y escalable. Para ello, el objetivo es desarrollar un
+							componente de Aprendizaje Máquina, basado en Aprendizaje Profundo, que entrene los múltiples
+							modelos de identificación de características fraudulentas. Así mismo, se desarrollará un
+							componente de Inteligencia de Enjambre que permita la generación de indicadores clave que
+							nos ayude a entender la actividad fraudulenta mejorando nuestras labores de búsqueda y
+							detección de fraude en el futuro.</li>
+						<li>Desarrollo de una Interfaz Gráfica que una vez encontrados contenidos posiblemente
+							fraudulentos automatice el envío de avisos y/o denuncias tanto a las webs que los alojan
+							como a los buscadores más relevantes para que procedan a su eliminación.</li>
+					</ul>
 				</p>
 				<p>
 					Asimismo, la evaluación automática de reputación web de contenidos web relacionados con la
@@ -55,50 +60,72 @@ author: URJCDataScience
 					sigue:
 					<img src="{{ site.url }}/assets/images/projects/sabermed.jpg" class="float-end py-4 ps-4 mx-auto"
 						alt="SABERMED background" style="max-width: 500px;" />
-				<ul>
-					<li>Recolección e integración de datos heterogéneos procedentes de distintas fuentes de
-						información en un repositorio integrado que facilite su preparación, análisis y gestión.
-					</li>
-					<li>Diseño y validación de un sistema de caracterización de los recursos detectados a partir de
-						la combinación de múltiples factores descriptivos, utilizando técnicas de Inteligencia
-						Artificial para facilitar su clasificación, así como la creación de métricas y factores
-						sintéticos para detección de casos que requieran una actuación.</li>
-					<li>Desarrollo de sistemas de Procesamiento de Lenguaje Natural que sean capaces de recuperar la
-						información que se presente en formato texto, de modo eficaz y eficiente. </li>
-					<li>Desarrollo de un componente de Aprendizaje Máquina Dinámico que permita la clasificación
-						progresiva de los datos a partir de flujos continuos de recolección de información,
-						adaptando dinámicamente los resultados de dicha clasificación para detectar cambios en las
-						relaciones subyacentes que sean detectadas. Se entrenarán modelos basados en Aprendizaje
-						Profundo para el desarrollo de estos sistemas.</li>
-					<li>Desarrollo de un componente de Inteligencia en Enjambre capaz de combinar las tareas
-						llevadas a cabo por una batería de agentes inteligentes autónomos que cumplan la misión de
-						evaluar aspectos concretos de la reputación del contenido web y la probabilidad de que un
-						recurso detectado sea fraudulento, a partir de las métricas y factores sintéticos
-						previamente definidos.</li>
-					<li>Desarrollo de un componente Controlador que gestione la comunicación y toma de decisiones
-						dinámicas relativas a la relación entre las componentes de Aprendizaje Máquina e
-						Inteligencia de Enjambre. Este componente tomará las decisiones de reentrenar los modelos de
-						Aprendizaje Máquina en base a los resultados proporcionados por la Inteligencia en Enjambre.
-					</li>
-					<li>Diseño y validación de una Interfaz Gráfica que proporcione información, tanto gráfica como
-						numérica, sobre la reputación web de los contenidos analizados.</li>
-				</ul>
+					<ul class="list-icons">
+						<li>Recolección e integración de datos heterogéneos procedentes de distintas fuentes de
+							información en un repositorio integrado que facilite su preparación, análisis y gestión.
+						</li>
+						<li>Diseño y validación de un sistema de caracterización de los recursos detectados a partir de
+							la combinación de múltiples factores descriptivos, utilizando técnicas de Inteligencia
+							Artificial para facilitar su clasificación, así como la creación de métricas y factores
+							sintéticos para detección de casos que requieran una actuación.</li>
+						<li>Desarrollo de sistemas de Procesamiento de Lenguaje Natural que sean capaces de recuperar la
+							información que se presente en formato texto, de modo eficaz y eficiente. </li>
+						<li>Desarrollo de un componente de Aprendizaje Máquina Dinámico que permita la clasificación
+							progresiva de los datos a partir de flujos continuos de recolección de información,
+							adaptando dinámicamente los resultados de dicha clasificación para detectar cambios en las
+							relaciones subyacentes que sean detectadas. Se entrenarán modelos basados en Aprendizaje
+							Profundo para el desarrollo de estos sistemas.</li>
+						<li>Desarrollo de un componente de Inteligencia en Enjambre capaz de combinar las tareas
+							llevadas a cabo por una batería de agentes inteligentes autónomos que cumplan la misión de
+							evaluar aspectos concretos de la reputación del contenido web y la probabilidad de que un
+							recurso detectado sea fraudulento, a partir de las métricas y factores sintéticos
+							previamente definidos.</li>
+						<li>Desarrollo de un componente Controlador que gestione la comunicación y toma de decisiones
+							dinámicas relativas a la relación entre las componentes de Aprendizaje Máquina e
+							Inteligencia de Enjambre. Este componente tomará las decisiones de reentrenar los modelos de
+							Aprendizaje Máquina en base a los resultados proporcionados por la Inteligencia en Enjambre.
+						</li>
+						<li>Diseño y validación de una Interfaz Gráfica que proporcione información, tanto gráfica como
+							numérica, sobre la reputación web de los contenidos analizados.</li>
+					</ul>
 				</p>
 			</div>
-			<div class="mt-2">
-				<h2>Colaboran</h2>
-				<div class="row">
-					<div class="col-sm-3"><img src="{{ site.url }}/assets/images/projects/sabermed/ue_spain_logo.png"
-							class="mx-auto" alt="European Union & Spain" /></div>
-					<div class="col-sm-3"><img src="{{ site.url }}/assets/images/projects/sabermed/medlab_logo.png"
-							class="mx-auto" alt="Medlab Logo" /></div>
-					<div class="col-sm-3"><img src="{{ site.url }}/assets/images/projects/sabermed/urjc_logo.png"
-							class="mx-auto" alt="University ReyJuan Carlos Logo" /></div>
-					<div class="col-sm-3"><img src="{{ site.url }}/assets/images/projects/sabermed/ibsal_logo.png"
-							class="mx-auto" alt="IBSAL Logo" /></div>
-					<!-- main end -->
+		</div>
+	</div>
+</section>
+
+<!-- section start -->
+<!-- ================ -->
+<section class="section light-gray-bg clearfix">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="call-to-action text-center">
+
+					<p class="fw-semibold text-uppercase text-secondary mb-5">Colaboradores</p>
+
+					<div class="row text-center justify-content-evenly">
+
+						<div class="col-md-3 mb-5 mb-md-0 d-flex flex-column align-items-center">
+							<img src="{{ site.url }}/assets/images/projects/sabermed/ue_spain_logo.png" alt="European Union & Spain" style="height: 80px;">
+						</div>
+
+						<div class="col-md-3 mb-5 mb-md-0 d-flex flex-column align-items-center">
+							<img src="{{ site.url }}/assets/images/projects/sabermed/medlab_logo.png" alt="Medlab Logo" style="height: 80px;">
+						</div>
+
+						<div class="col-md-3 mb-5 mb-md-0 d-flex flex-column align-items-center">
+							<img src="{{ site.url }}/assets/images/projects/sabermed/urjc.svg" alt="University Rey Juan Carlos Logo" style="height: 80px;">
+						</div>
+
+						<div class="col-md-3 mb-5 mb-md-0 d-flex flex-column align-items-center">
+							<img src="{{ site.url }}/assets/images/projects/sabermed/ibsal.svg" alt="IBSAL Logo" style="height: 80px;">
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+<!-- section end -->
