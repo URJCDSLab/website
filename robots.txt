@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/images/team/
+Disallow: /assets/images/research_partners/
+Disallow: /assets/images/consulting_partners/
+
+Sitemap: https://www.datasciencelab.es/sitemap.xml
