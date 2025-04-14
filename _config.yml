@@ -21,7 +21,7 @@ theme:            minima
 license:          CC-BY-SA 4.0
 my_theme:         The Project
 my_theme_by:      HtmlCoder
-my_theme_by_url:  http://htmlcoder.me/
+#my_theme_by_url:  http://htmlcoder.me/
 my_theme_url:     https://wrapbootstrap.com/theme/the-project-multipurpose-template-WB0F82581
 
 website:          https://www.datasciencelab.es
