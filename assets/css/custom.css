@@ -315,3 +315,8 @@ strong {
 .img-shadow {
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
 }
+
+/* Añadir espacio encima de las tarjetas que llevan antes un párrafo con clase "lead" (intro de página) */
+p.lead + div.row.justify-content-evenly {
+    margin-top: 2rem;
+}
