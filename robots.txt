@@ -1,8 +1,16 @@
 User-agent: *
 Allow: /
 
-Disallow: /assets/images/team/
+Disallow: /assets/images/banners/
+Disallow: /assets/images/blog/
+Disallow: /assets/images/conecta/
+Disallow: /assets/images/consulting_clients/
+Disallow: /assets/images/consulting_projects/
+Disallow: /assets/images/group/
+Disallow: /assets/images/practicum/
 Disallow: /assets/images/research_partners/
-Disallow: /assets/images/consulting_partners/
+Disallow: /assets/images/research_projects/
+Disallow: /assets/images/team/
+Disallow: /assets/images/training/
 
 Sitemap: https://www.datasciencelab.es/sitemap.xml
