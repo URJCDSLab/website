@@ -191,6 +191,11 @@ html {
     border-radius: 10px 10px 0 0;
 }
 
+.btn-animated:hover:after {
+    opacity: 0 !important;
+    /*border-radius: 0 10px 10px 0 !important;*/
+}
+
 /* Social icons for team */
 .social-icons {
     display: flex;
