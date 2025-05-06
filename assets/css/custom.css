@@ -329,7 +329,9 @@ p.lead + div.row.justify-content-evenly {
 /* Modificar el estilo de las tarjetas */
 .card {
     --bs-card-color: #777777;
+    background-color: #fafafa;
     transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .card:hover {
