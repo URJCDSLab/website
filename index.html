@@ -135,34 +135,26 @@ author: URJCDataScience
 			</div>
 			<div class="col-md-6 mt-5 mt-md-0">
 				<div id="carouselGroup" class="carousel slide" data-bs-ride="carousel">
+
+					{% assign group_images = site.static_files | where_exp: "file", "file.path contains '/assets/images/group/group'" %}
+					{% assign group_images_sorted = group_images | sort: "name" %}
+
 					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselGroup" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Group 1"></button>
-						<button type="button" data-bs-target="#carouselGroup" data-bs-slide-to="1" aria-label="Group 2"></button>
-						<button type="button" data-bs-target="#carouselGroup" data-bs-slide-to="2" aria-label="Group 3"></button>
-						<button type="button" data-bs-target="#carouselGroup" data-bs-slide-to="3" aria-label="Group 4"></button>
-						<button type="button" data-bs-target="#carouselGroup" data-bs-slide-to="4" aria-label="Group 5"></button>
-						<button type="button" data-bs-target="#carouselGroup" data-bs-slide-to="5" aria-label="Group 6"></button>
+						{% for image in group_images_sorted %}
+						<button type="button" data-bs-target="#carouselGroup" data-bs-slide-to="{{ forloop.index0 }}"
+								{% if forloop.first %}class="active" aria-current="true"{% endif %}
+								aria-label="Group {{ forloop.index }}"></button>
+						{% endfor %}
 					</div>
+
 					<div class="carousel-inner" style="border-radius: 10px;">
-						<div class="carousel-item active" data-bs-interval="8000">
-							<img src="{{ site.url }}/assets/images/group/group1.jpg" class="d-block w-100" alt="Group 1">
+						{% for image in group_images_sorted %}
+						<div class="carousel-item{% if forloop.first %} active{% endif %}" data-bs-interval="8000">
+							<img src="{{ image.path }}" class="d-block w-100" alt="Group {{ forloop.index }}">
 						</div>
-						<div class="carousel-item" data-bs-interval="8000">
-							<img src="{{ site.url }}/assets/images/group/group2.jpg" class="d-block w-100" alt="Group 2">
-						</div>
-						<div class="carousel-item" data-bs-interval="8000">
-							<img src="{{ site.url }}/assets/images/group/group3.jpg" class="d-block w-100" alt="Group 3">
-						</div>
-						<div class="carousel-item" data-bs-interval="8000">
-							<img src="{{ site.url }}/assets/images/group/group4.jpg" class="d-block w-100" alt="Group 4">
-						</div>
-						<div class="carousel-item" data-bs-interval="8000">
-							<img src="{{ site.url }}/assets/images/group/group5.jpg" class="d-block w-100" alt="Group 5">
-						</div>
-						<div class="carousel-item" data-bs-interval="8000">
-							<img src="{{ site.url }}/assets/images/group/group6.jpg" class="d-block w-100" alt="Group 6">
-						</div>
+						{% endfor %}
 					</div>
+
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselGroup" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
@@ -171,8 +163,11 @@ author: URJCDataScience
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
+
 				</div>
 			</div>
+
+
 		</div>
 	</div>
 	<br>
