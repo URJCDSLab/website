@@ -325,3 +325,31 @@ strong {
 p.lead + div.row.justify-content-evenly {
     margin-top: 2rem;
 }
+
+/* Modificar el estilo de las tarjetas */
+.card {
+    --bs-card-color: #777777;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.border-1 {
+    border-width: 1px !important;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.card > .card-body > .card-title {
+    padding-bottom: 0.25rem !important;
+}
+
+.card > .card-footer {
+    background-color: #fafafa;
+    border: 0 !important;
+}
+
+.card > .card-footer > .separator-2 {
+    margin-bottom: 10px;
+}
