@@ -331,7 +331,7 @@ p.lead + div.row.justify-content-evenly {
     --bs-card-color: #777777;
     background-color: #fafafa;
     transition: transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
@@ -340,7 +340,7 @@ p.lead + div.row.justify-content-evenly {
 
 .card.border-1 {
     border-width: 1px !important;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.05);
 }
 
 .card > .card-body > .card-title {
