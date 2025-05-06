@@ -358,6 +358,9 @@ p.lead + div.row.justify-content-evenly {
 
 /* Colores cuando la tarjeta usa el fondo azul default-bg-50 */
 .card.default-bg {
+    --bs-card-color: #fff;
     --bs-secondary-color: #ededed;
     --bs-code-color: #ffcdce;
+    background-color: #3697d9;
+    color: #fff;
 }
