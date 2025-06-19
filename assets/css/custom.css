@@ -89,13 +89,24 @@ html {
 
 /* Fix styles for group photos carousel to keep aspect-ratio & brightness */
 #carouselGroup .carousel-item img {
-    filter: brightness(100%);
     aspect-ratio: 4 / 3;
     height: auto;
 }
 
-#carouselGroup .carousel-item {
-    height: auto;
+/* Fix styles for prev & next buttons in blog carousels */
+.carousel-blog .carousel-control-prev,
+.carousel-blog .carousel-control-next {
+    position: absolute;
+    width: 7%;
+}
+
+.carousel-blog .carousel-control-prev-icon,
+.carousel-blog .carousel-control-next-icon {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+}
+
+.carousel-blog .carousel-indicators {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
 }
 
 .under-construction-image {
