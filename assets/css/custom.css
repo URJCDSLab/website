@@ -69,19 +69,19 @@ html {
     color: #3697d9;
 }
 
-/* Adjust carousel */
-.carousel-item {
+/* Adjust index & DSLAB-TI carousels */
+#carouselCaptions .carousel-item {
     height: 450px;
 }
 
-.carousel-item img {
+#carouselCaptions .carousel-item img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     filter: brightness(90%);
 }
 
-.carousel-caption {
+#carouselCaptions .carousel-caption {
     bottom: 50%;
     transform: translateY(50%);
     text-align: center;
