@@ -263,15 +263,24 @@
 													</ul>
 												</li>
 												<!-- menu end -->
-												<!-- menu start Contact -->
-												{% if page.title == 'Contact' %}
-												<li class="nav-item active">
-													{% else %}
-												<li class="nav-item">
-													{% endif %}
-													<a class="nav-link" href="{{ site.url }}/contact">Contact</a>
-												</li>
-												<!-- menu end -->
+                                                <!-- menu start Apps -->
+                                                {% if page.title == 'Apps' %}
+                                                <li class="nav-item active">
+                                                    {% else %}
+                                                <li class="nav-item">
+                                                    {% endif %}
+                                                    <a class="nav-link" href="https://dslabapps.es/">Apps</a>
+                                                </li>
+                                                <!-- menu end -->
+                                                <!-- menu start Contact -->
+                                                {% if page.title == 'Contact' %}
+                                                <li class="nav-item active">
+                                                    {% else %}
+                                                <li class="nav-item">
+                                                    {% endif %}
+                                                    <a class="nav-link" href="{{ site.url }}/contact">Contact</a>
+                                                </li>
+                                                <!-- menu end -->
 												<!-- menu start Blog -->
 												{% if page.title == 'Blog' or maincat == 'blog' %}
 												<li class="nav-item active">
