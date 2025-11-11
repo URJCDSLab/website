@@ -26,8 +26,92 @@ author: URJCDataScience
 
 					<div class="timeline-date-label clearfix">2025</div>
 
+                    <!-- timeline grid item start -->
+                    <div class="timeline-item" id="2025-ideal-ss">
+                        <!-- blogpost start -->
+                        <article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
+                                 data-effect-delay="100">
+                            <div class="overlay-container position-relative overflow-hidden">
+                                <!-- Capa de degradado -->
+                                <div class="position-absolute top-0 start-0 w-100 h-100"
+                                     style="background: linear-gradient(145deg, rgb(5, 74, 117) 0%, rgb(41, 170, 144) 100%); opacity: 0.8; z-index: 1;">
+                                </div>
+
+                                <!-- Imagen de fondo -->
+                                <img src="{{ site.url }}/assets/images/blog/jaen.jpg"
+                                     alt="Panorámica de Jaén"
+                                     class="w-100 img-fluid"
+                                     style="object-fit: cover; aspect-ratio: 3/1.5; filter: brightness(0.6); z-index: 0">
+
+                                <!-- Capa superpuesta con logo + textos -->
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center p-3">
+                                    <img src="https://ideal2025.ujaen.es/wp-content/uploads/2025/10/cropped-logo-transparente.png"
+                                         alt="Logo IDEAL 2025"
+                                         class="img-fluid mb-3"
+                                         style="max-height: 50%; filter: brightness(100); aspect-ratio: 1/1; object-fit: cover;">
+
+                                    <h3 class="fw-bold mb-3 text-light d-none d-lg-block">The 26th International
+                                        Conference on Intelligent Data Engineering and Automated Learning</h3>
+
+                                    <h4 class="fs-5 text-light">Del 13 al 15 de Noviembre – Jaén</h4>
+                                </div>
+                            </div>
+                            <header>
+                                <h2>El DSLAB impulsa la investigación en <abbr title="Inteligencia Articial">IA</abbr>
+                                    generativa en el congreso internacional <abbr
+                                            title="International Conference on Intelligent Data Engineering and Automated Learning">IDEAL</abbr>
+                                    2025</h2>
+                                <div class="post-info">
+									<span class="post-date">
+										<i class="icon-calendar"></i>
+										<span class="day">11</span>
+										<span class="month">Nov 2025</span>
+									</span>
+                                    <span class="submitted"><i class="icon-user-1"></i> by Isaac Martín de Diego</span>
+                                    <!--<span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>-->
+                                </div>
+                            </header>
+                            <div class="blogpost-content">
+                                <p>El congreso <abbr
+                                        title="International Conference on Intelligent Data Engineering and Automated Learning">IDEAL</abbr>
+                                    2025, que se celebrará en Jaén del 13 al 15 de Noviembre, presenta una sesión
+                                    especial bajo el título <em>“Recent
+                                        Advances in Generative Artificial Intelligence”</em>, centrada en los avances
+                                    más recientes en inteligencia artificial generativa, incluyendo modelado profundo,
+                                    generación de datos sintéticos, personalización, explicabilidad, equidad y
+                                    aplicaciones en ámbitos como la bioinformática o los sistemas de recomendación.</p>
+
+                                <p>Entre los <em>chairs</em> de esta sesión destacan dos miembros de nuestro grupo,
+                                    Alberto Fernández-Isabel y Rubén Rodríguez Fernández, investigadores activos en el
+                                    ámbito de la <abbr title="Inteligencia Articial">IA</abbr> generativa. Su
+                                    participación refuerza la presencia del DSLAB en la comunidad científica
+                                    internacional y consolida su papel como referente en el estudio, diseño y aplicación
+                                    de modelos generativos avanzados, en sintonía con las <a
+                                            href="https://www.datasciencelab.es/research">líneas de investigación del
+                                        grupo</a>.</p>
+
+                                <p>La sesión invita a presentar contribuciones que aborden los desafíos más recientes de
+                                    la <abbr title="Inteligencia Articial">IA</abbr> generativa, tales como el
+                                    desarrollo de modelos profundos, la generación y control de datos sintéticos, la
+                                    mitigación de sesgos, la mejora de la explicabilidad y la aplicación de estas
+                                    tecnologías en dominios reales. La organización de esta sesión por parte de miembros
+                                    del DSLAB supone una oportunidad para investigadores y estudiantes interesados en la
+                                    materia, que podrán compartir sus resultados, intercambiar ideas y establecer nuevas
+                                    colaboraciones en un entorno científico de alto nivel.</p>
+                            </div>
+                            <footer class="clearfix">
+                                <div class="tags pull-left"><i class="icon-tags"></i> Divulgación científica</div>
+                                <div class="link pull-right"><i class="icon-link"></i><a
+                                        href="https://ideal2025.ujaen.es/recent-advances-in-generative-artificial-intelligence/">Sitio
+                                    web de la sesión especial</a></div>
+                            </footer>
+                        </article>
+                        <!-- blogpost end -->
+                    </div>
+                    <!-- timeline grid item end -->
+
 					<!-- timeline grid item start -->
-					<div class="timeline-item" id="2025-tfg">
+					<div class="timeline-item pull-right" id="2025-tfg">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
 								 data-effect-delay="100">
@@ -62,7 +146,7 @@ author: URJCDataScience
 
                                 <ol>
                                     <li>Sistemas de recomendación en el ámbito deportivo</li>
-                                    <li>Modelos de retorno a la práctica deportiva tras una lesión (Return to Play)</li>
+                                    <li>Modelos de retorno a la práctica deportiva tras una lesión (<em>Return to Play</em>)</li>
                                     <li>Predicción del riesgo de lesión en deportistas</li>
                                     <li>Detección temprana de talento deportivo</li>
                                     <li>Evaluación y seguimiento de la carga de entrenamiento</li>
@@ -72,10 +156,15 @@ author: URJCDataScience
                                         sanitario
                                     </li>
                                     <li>Modelos predictivos aplicados al turismo sostenible</li>
-                                    <li>Sistema de tutoría inteligente basado en agentes con LLMs</li>
-                                    <li>Agente autónomo para asistencia en investigación científica con LLMs</li>
-                                    <li>Interpretación automática de dashboards con LLMs e IA Generativa</li>
-                                    <li>Optimización automática de prompts para LLMs</li>
+                                    <li>Sistema de tutoría inteligente basado en agentes con <abbr
+                                            title="Large Language Models">LLMs</abbr></li>
+                                    <li>Agente autónomo para asistencia en investigación científica con <abbr
+                                            title="Large Language Models">LLMs</abbr></li>
+                                    <li>Interpretación automática de dashboards con <abbr title="Large Language Models">LLMs</abbr>
+                                        e <abbr title="Inteligencia Articial">IA</abbr> generativa
+                                    </li>
+                                    <li>Optimización automática de prompts para <abbr
+                                            title="Large Language Models">LLMs</abbr></li>
                                     <li>Plataforma de análisis de datos de una liga de pádel</li>
                                     <li>Sistema de detección de patrones en video para tenis individual</li>
                                     <li>Dashboard de medidas de complejidad</li>
@@ -105,7 +194,7 @@ author: URJCDataScience
 					<!-- timeline grid item end -->
 
                     <!-- timeline grid item start -->
-                    <div class="timeline-item pull-right" id="2025-ceforum">
+                    <div class="timeline-item" id="2025-ceforum">
                         <!-- blogpost start -->
                         <article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
                                  data-effect-delay="100">
@@ -196,7 +285,7 @@ author: URJCDataScience
                     <!-- timeline grid item end -->
 
 					<!-- timeline grid item start -->
-					<div class="timeline-item" id="2025-seio">
+					<div class="timeline-item pull-right" id="2025-seio">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
 								 data-effect-delay="100">
@@ -215,7 +304,7 @@ author: URJCDataScience
 								<!-- Capa superpuesta con logo + textos -->
 								<div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center p-3">
 									<img src="https://seio2025.com/files/attachments/logoseio-white-nobackground.png"
-										 alt="Logo JNIC"
+										 alt="Logo XLI SEIO"
 										 class="img-fluid mb-3" style="max-height: 50%;">
 
 									<h3 class="fw-bold mb-3 text-light d-none d-lg-block">XLI Congreso Nacional de
@@ -271,7 +360,7 @@ author: URJCDataScience
 					<!-- timeline grid item end -->
 
 					<!-- timeline grid item start -->
-					<div class="timeline-item pull-right" id="2025-jnic">
+					<div class="timeline-item" id="2025-jnic">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
 								 data-effect-delay="100">
@@ -296,7 +385,7 @@ author: URJCDataScience
 									<h3 class="fw-bold mb-3 text-light d-none d-lg-block">X Jornadas Nacionales de
 										Investigación en Ciberseguridad</h3>
 
-									<h4 class="fs-5 text-light">4, 5 y 6 de Junio – Zaragoza</h4>
+									<h4 class="fs-5 text-light">Del 4 al 6 de Junio – Zaragoza</h4>
 								</div>
 							</div>
 
@@ -358,7 +447,7 @@ author: URJCDataScience
 					<!-- timeline grid item end -->
 
 					<!-- timeline grid item start -->
-					<div class="timeline-item" id="2025-dataciber">
+					<div class="timeline-item pull-right" id="2025-dataciber">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
 								 data-effect-delay="100">
@@ -413,7 +502,7 @@ author: URJCDataScience
 					<!-- timeline grid item end -->
 
 					<!-- timeline grid item start -->
-					<div class="timeline-item pull-right" id="2025-conecta">
+					<div class="timeline-item" id="2025-conecta">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
 								 data-effect-delay="100">
@@ -467,7 +556,7 @@ author: URJCDataScience
 					<!-- timeline grid item end -->
 
 					<!-- timeline grid item start -->
-					<div class="timeline-item" id="2025-musa">
+					<div class="timeline-item pull-right" id="2025-musa">
 						<!-- blogpost start -->
 						<article class="blogpost shadow light-gray-bg bordered" data-animation-effect="fadeInUpSmall"
 								 data-effect-delay="100">
