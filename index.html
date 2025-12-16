@@ -137,7 +137,7 @@ author: URJCDataScience
 				<div id="carouselGroup" class="carousel slide" data-bs-ride="carousel">
 
 					{% assign group_images = site.static_files | where_exp: "file", "file.path contains '/assets/images/group/group'" %}
-					{% assign group_images_sorted = group_images | sort: "name" %}
+					{% assign group_images_sorted = group_images | sort: "name" | reverse %}
 
 					<div class="carousel-indicators">
 						{% for image in group_images_sorted %}
