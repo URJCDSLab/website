@@ -150,7 +150,7 @@ author: URJCDataScience
 					<div class="carousel-inner" style="border-radius: 10px;">
 						{% for image in group_images_sorted %}
 						<div class="carousel-item{% if forloop.first %} active{% endif %}" data-bs-interval="8000">
-							<img src="{{ image.path }}" class="d-block w-100" alt="Group {{ forloop.index }}">
+							<img src="{{ site.url }}{{ image.path }}" class="d-block w-100" alt="Group {{ forloop.index }}">
 						</div>
 						{% endfor %}
 					</div>
