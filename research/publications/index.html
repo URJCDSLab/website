@@ -13,523 +13,337 @@ author: URJCDataScience
 			<!-- main start -->
 			<!-- ================ -->
 			<div class="main col-md-12">
-				<div class="row">
-					<div class="col-md-8 pl-30">
+				<div class="row mb-3">
+					<div class="col-md-12 pl-30">
 						<h1 class="title">Publications</h1>
-
+						<p class="text-muted">
+							Scientific articles, conference proceedings, book chapters, and doctoral dissertations
+							produced by members of the Data Science Lab (URJC) since 2016.
+						</p>
 					</div>
-					<!--
-					<div class="col-md-4">
-						<div class="col-side-pad">
-							YOU HAVE A SIDE AREA HERE TO ADJUST ADDITIONAL CONTENT
-						</div>
-					</div>
-					-->
 				</div>
 
-				<h3 class="title">2025</h3>
-				<ul class="list-icons">
-					<li>A. Fernández-Isabel, C. Lancho, I. Martín de Diego, A. Udías, A. Alonso-Ayuso, C. Alfaro, E.
-						López, F. Ortega, J. Gómez, J. M. Moguerza, M.J. Algar (2025) Using an LLM-based framework to
-						analyze the student performance, INTED2025 Proceedings, pp. 3359-3367. <a
-								href="https://doi.org/10.21125/inted.2025.0862">https://doi.org/10.21125/inted.2025.0862</a>
-					</li>
+				{% assign total_count = site.data.publications.size %}
+				{% assign q1_count = 0 %}
+				{% assign journal_count = 0 %}
+				{% assign conf_count = 0 %}
+				{% for p in site.data.publications %}
+					{% if p.quartile == 'Q1' %}
+						{% assign q1_count = q1_count | plus: 1 %}
+					{% endif %}
+					{% if p.work_type == 'journal' %}
+						{% assign journal_count = journal_count | plus: 1 %}
+					{% elsif p.work_type == 'conference' %}
+						{% assign conf_count = conf_count | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+
+				<!-- Stats Overview Start -->
+				<div class="row pub-stats-row mb-4">
+					<div class="col-6 col-md-3 mb-3">
+						<div class="pub-stat-card text-center p-3 light-gray-bg rounded shadow-sm h-100">
+							<div class="pub-stat-number text-primary h2 font-weight-bold mb-1">{{ total_count }}</div>
+							<div class="pub-stat-label font-weight-bold">Total Publications</div>
+							<small class="text-muted">Since 2016</small>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 mb-3">
+						<div class="pub-stat-card text-center p-3 light-gray-bg rounded shadow-sm h-100">
+							<div class="pub-stat-number text-warning h2 font-weight-bold mb-1">
+								<i class="fa-solid fa-award"></i> {{ q1_count }}
+							</div>
+							<div class="pub-stat-label font-weight-bold">Q1 Ranked Papers</div>
+							<small class="text-muted">Top Quartile</small>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 mb-3">
+						<div class="pub-stat-card text-center p-3 light-gray-bg rounded shadow-sm h-100">
+							<div class="pub-stat-number text-success h2 font-weight-bold mb-1">
+								<i class="fa-solid fa-book-open"></i> {{ journal_count }}
+							</div>
+							<div class="pub-stat-label font-weight-bold">Journal Articles</div>
+							<small class="text-muted">Peer Reviewed</small>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 mb-3">
+						<div class="pub-stat-card text-center p-3 light-gray-bg rounded shadow-sm h-100">
+							<div class="pub-stat-number text-info h2 font-weight-bold mb-1">
+								<i class="fa-solid fa-users"></i> {{ conf_count }}
+							</div>
+							<div class="pub-stat-label font-weight-bold">Conferences</div>
+							<small class="text-muted">Proceedings & Congresses</small>
+						</div>
+					</div>
+				</div>
+				<!-- Stats Overview End -->
+
+				<!-- Filter and Search Toolbar Start -->
+				<div class="pub-filter-toolbar mb-4 p-3 bg-light rounded border">
+					<div class="row align-items-center g-2">
+						<div class="col-lg-5 col-md-12 mb-2 mb-lg-0">
+							<div class="input-group">
+								<span class="input-group-text bg-white border-end-0">
+									<i class="fa-solid fa-magnifying-glass text-muted"></i>
+								</span>
+								<input type="text" id="pub-search-input" class="form-control border-start-0 ps-0" placeholder="Search by title, author, keyword, or journal..." aria-label="Search publications">
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-12">
+							<div class="d-flex flex-wrap gap-2 justify-content-lg-end" id="pub-filter-buttons">
+								<button class="btn btn-sm btn-primary active" data-filter="all">All</button>
+								<button class="btn btn-sm btn-outline-warning text-dark" data-filter="q1">
+									<i class="fa-solid fa-star"></i> Q1 Only
+								</button>
+								<button class="btn btn-sm btn-outline-primary" data-filter="journal">
+									<i class="fa-solid fa-book-open"></i> Journals
+								</button>
+								<button class="btn btn-sm btn-outline-info" data-filter="conference">
+									<i class="fa-solid fa-users"></i> Conferences
+								</button>
+								<button class="btn btn-sm btn-outline-secondary" data-filter="thesis,book,chapter">
+									<i class="fa-solid fa-graduation-cap"></i> Theses & Books
+								</button>
+								<button class="btn btn-sm btn-outline-dark" data-filter="preprint">
+									<i class="fa-solid fa-clock"></i> Preprints
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="mt-2 text-muted small d-flex justify-content-between align-items-center">
+						<span>Showing <strong id="visible-count">{{ total_count }}</strong> of {{ total_count }} publications</span>
+					</div>
+				</div>
+				<!-- Filter and Search Toolbar End -->
+
+				<!-- No Results Message -->
+				<div id="no-results-message" class="alert alert-info text-center py-4" style="display: none;">
+					<i class="fa-solid fa-circle-info fa-2x mb-2 d-block"></i>
+					No publications found matching your search or filter criteria.
+				</div>
+
+				<!-- Publications Container Start -->
+				<div id="publications-container">
+					{% assign current_year = 0 %}
+					{% for pub in site.data.publications %}
+						{% if pub.year != current_year %}
+							{% if current_year != 0 %}
+								</div><!-- .year-group -->
+							{% endif %}
+							{% assign current_year = pub.year %}
+							<div class="year-group mb-4" data-year="{{ current_year }}">
+								<h3 class="title border-bottom pb-2 mb-3 mt-4 text-primary">
+									<i class="fa-regular fa-calendar-days me-2"></i>{{ current_year }}
+								</h3>
+						{% endif %}
+
+						<div class="publication-item mb-3 pb-3 border-bottom"
+						     data-year="{{ pub.year }}"
+						     data-type="{{ pub.work_type | default: 'other' }}"
+						     data-quartile="{{ pub.quartile | default: 'none' }}"
+						     data-search="{{ pub.title | downcase }} {{ pub.authors | join: ' ' | downcase }} {{ pub.journal | downcase }} {{ pub.keywords | join: ' ' | downcase }}">
+
+							<!-- Badges Row -->
+							<div class="pub-badges mb-1">
+								{% if pub.quartile == 'Q1' %}
+									<span class="badge bg-warning text-dark me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-star"></i> Q1</span>
+								{% elsif pub.quartile == 'Q2' %}
+									<span class="badge bg-primary text-white me-1" style="font-size: 0.75rem;">Q2</span>
+								{% elsif pub.quartile == 'Q3' %}
+									<span class="badge bg-info text-dark me-1" style="font-size: 0.75rem;">Q3</span>
+								{% elsif pub.quartile == 'Q4' %}
+									<span class="badge bg-secondary text-white me-1" style="font-size: 0.75rem;">Q4</span>
+								{% endif %}
+
+								{% if pub.work_type == 'journal' %}
+									<span class="badge bg-light text-dark border me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-book-open"></i> Journal</span>
+								{% elsif pub.work_type == 'conference' %}
+									<span class="badge bg-light text-dark border me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-users"></i> Conference</span>
+								{% elsif pub.work_type == 'thesis' %}
+									<span class="badge bg-info text-dark me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-graduation-cap"></i> PhD Thesis</span>
+								{% elsif pub.work_type == 'chapter' %}
+									<span class="badge bg-light text-dark border me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-bookmark"></i> Book Chapter</span>
+								{% elsif pub.work_type == 'preprint' %}
+									<span class="badge bg-secondary text-white me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-clock"></i> Preprint</span>
+								{% elsif pub.work_type == 'editorial' %}
+									<span class="badge bg-light text-dark border me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-pen-nib"></i> Editorial</span>
+								{% endif %}
+
+								{% if pub.is_oa %}
+									<span class="badge bg-success text-white me-1" style="font-size: 0.75rem;"><i class="fa-solid fa-lock-open"></i> Open Access</span>
+								{% endif %}
+							</div>
+
+							<!-- Title -->
+							<h5 class="pub-title mb-1" style="line-height: 1.4;">
+								{% if pub.landing_page_url %}
+									<a href="{{ pub.landing_page_url }}" target="_blank" rel="noopener" class="text-dark hover-primary" style="text-decoration: none;">{{ pub.title }}</a>
+								{% else %}
+									{{ pub.title }}
+								{% endif %}
+							</h5>
+
+							<!-- Authors -->
+							<p class="pub-authors mb-1 text-muted small">
+								{{ pub.authors | join: ", " }}
+							</p>
+
+							<!-- Journal / Venue -->
+							<p class="pub-venue mb-2 small">
+								{% if pub.journal %}
+									<span class="text-secondary font-italic"><em>{{ pub.journal }}</em></span>{% if pub.year %}, {{ pub.year }}{% endif %}.
+								{% elsif pub.year %}
+									{{ pub.year }}.
+								{% endif %}
+							</p>
+
+							<!-- Keywords -->
+							{% if pub.keywords and pub.keywords.size > 0 %}
+								<div class="pub-keywords mb-2">
+									{% for kw in pub.keywords limit:5 %}
+										<span class="badge bg-white text-muted border me-1 py-1 px-2" style="font-weight: normal; font-size: 0.75rem;">#{{ kw }}</span>
+									{% endfor %}
+								</div>
+							{% endif %}
+
+							<!-- Action Buttons -->
+							<div class="pub-links d-flex flex-wrap gap-2 mt-1">
+								{% if pub.doi %}
+									<a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener" class="btn btn-xs btn-outline-primary py-0 px-2" style="font-size: 0.8rem; border-radius: 4px;">
+										<i class="fa-solid fa-arrow-up-right-from-square me-1"></i> DOI: {{ pub.doi }}
+									</a>
+								{% endif %}
+								{% if pub.pdf_url %}
+									<a href="{{ pub.pdf_url }}" target="_blank" rel="noopener" class="btn btn-xs btn-outline-success py-0 px-2" style="font-size: 0.8rem; border-radius: 4px;">
+										<i class="fa-solid fa-file-pdf me-1"></i> PDF
+									</a>
+								{% endif %}
+								{% if pub.landing_page_url and pub.doi == null and pub.landing_page_url != pub.pdf_url %}
+									<a href="{{ pub.landing_page_url }}" target="_blank" rel="noopener" class="btn btn-xs btn-outline-secondary py-0 px-2" style="font-size: 0.8rem; border-radius: 4px;">
+										<i class="fa-solid fa-link me-1"></i> Link
+									</a>
+								{% endif %}
+							</div>
+
+						</div><!-- .publication-item -->
+					{% endfor %}
+					{% if current_year != 0 %}
+						</div><!-- .year-group -->
+					{% endif %}
+				</div>
+				<!-- Publications Container End -->
 
-					<li>Criado, J. M., Gutiérrez, G., Cano, E. L., Garzás, J., González de Lena, M. T., Moguerza, J. M.,
-						& Fernández Muñoz, J. J. (2025). Effects of Personality Types on the Performance of Educational
-						Teams. Behavioral Sciences, 15(3), 312. <a
-								href="https://doi.org/10.3390/bs15030312">https://doi.org/10.3390/bs15030312</a>
-					</li>
-				</ul>
-
-				<h3 class="title">2024</h3>
-				<ul class="list-icons">
-					<li>Udias, A., Alonso-Ayuso, A., Alfaro, C., Algar, M. J., Cuesta, M., Fernández-Isabel, A., Gómez,
-						J., Lancho, C., Cano, E. L., Martín de Diego, I., & Ortega, F. (2024). ChatGPT’s performance in
-						university admissions tests in mathematics. International Electronic Journal of Mathematics
-						Education, 19(4), em0795. <a
-								href="https://doi.org/10.29333/iejme/15517">https://doi.org/10.29333/iejme/15517</a>
-					</li>
-
-					<li>Novillo, Á., Aceña, V., Lancho, C., Cuesta, M., Martín de Diego, I. (2025). Padel Two-Dimensional
-						Tracking Extraction from Monocular Video Recordings. In: Julian, V., et al. Intelligent Data
-						Engineering and Automated Learning – IDEAL 2024. IDEAL 2024. Lecture Notes in Computer Science,
-						vol 15346. Springer, Cham. <a
-								href="https://doi.org/10.1007/978-3-031-77731-8_11">https://doi.org/10.1007/978-3-031-77731-8_11</a>
-					</li>
-
-					<li>Saugar, J., Lancho, C., Cuesta, M., Cano, E.L., Martín de Diego, I., Amado, A. (2025). Counterfactual
-						Explanations for Sustainable Tourism Indicators. In: Julian, V., et al. Intelligent Data
-						Engineering and Automated Learning – IDEAL 2024. IDEAL 2024. Lecture Notes in Computer Science,
-						vol 15346. Springer, Cham. <a
-								href="https://doi.org/10.1007/978-3-031-77731-8_20">https://doi.org/10.1007/978-3-031-77731-8_20</a>
-					</li>
-
-					<li>Alonso Barriuso, A., Fernández-Isabel, A., Martín de Diego, I., Ardoiz, A., & Viseu Pinheiro, J. F. (2024).
-						Recommendation system of scientific articles from discharge summaries. Engineering Applications of Artificial
-						Intelligence, 136, 109028. <a
-							href="https://doi.org/10.1016/j.engappai.2024.109028">https://doi.org/10.1016/j.engappai.2024.109028</a>
-					</li>
-
-					<li>Cuesta, M., Lancho, C., Fernández-Isabel, A., Cano, E. L., & Martín De Diego, I. (2024). CSViz:
-						Class Separability Visualization for high-dimensional datasets. Applied Intelligence, 54(1),
-						924-946. Springer US. <a
-							href="https://www.doi.org/10.1007/s10489-023-05149-4">https://www.doi.org/10.1007/s10489-023-05149-4</a>
-					</li>
-
-					<li>Aceña, V., Lancho, C., Martín de Diego, I., Moguerza, J. M., & Lee, D.-J. (2024). Dynamic
-						Disagreeing Neighbors: A complexity measure for instance selection. <a
-								href="https://doi.org/10.21203/rs.3.rs-3914969/v1">https://doi.org/10.21203/rs.3.rs-3914969/v1</a>
-					</li>
-
-					<li>Martín de Diego, I., Prieto, J. C., Fernández-Isabel, A., Gomez, J., & Alfaro, C. (2024).
-						Framework for scoring the scientific reputation of researchers. Knowledge and Information
-						Systems, 1-23. Springer London. <a
-							href="https://www.doi.org/10.1007/s10115-024-02071-0">https://www.doi.org/10.1007/s10115-024-02071-0</a>
-					</li>
-
-					<li>Navarro, J., Fernández, R. R., Aceña, V., Fernández-Isabel, A., Lancho, C., & Martín de Diego,
-						I. (2024, April). Real-time classification of cattle behavior using Wireless Sensor Networks.
-						Internet of Things, 25, 101008. Elsevier.<a
-							href="https://doi.org/10.1016/j.iot.2023.101008">https://doi.org/10.1016/j.iot.2023.101008</a>
-					</li>
-				</ul>
-				<h3 class="title">2023</h3>
-				<ul class="list-icons">
-					<li>Ortega, F., Algar, M. J., Martín de Diego, I., & Moguerza, J. M. (2023). Unconventional
-						application of k-means for distributed approximate similarity search. Information Sciences, 619,
-						208-234. Elsevier.</li>
-
-					<li>Fernández-Isabel, A., Martín de Diego, I., Cuesta, M., Lancho, C., & Moguerza, J.M. (2023).
-						DSGAME KIDS: Learning Data Science Projects Through a Storytelling Board Game. In INTED2023
-						Proceedings (pp. 908-917). IATED.</li>
-
-					<li>López Cano, E., Cuesta, M., Lancho, C., Alfaro, C., Algar, M.J., Alonso-Ayuso, A.,
-						Fernández-Isabel, A., Gomez, J., Martin de Diego, I., Moguerza, J., Ortega, F., & Udias, A.
-						(2023). DSEXAMS: Massive and Automated Generation of Randomized Multipurpose Questionnaires. In
-						EDULEARN23 Proceedings (pp. 1620-1627). IATED.</li>
-
-					<li>Cuesta, M., Lancho, C., Martín de Diego, I., Fernández-Isabel, A., Cano, E. L., & Moguerza, J.
-						M. (2023). Empowering Academic Performance: Data-Driven Mentoring for Personalized Education
-						Through Learning Analytics. In ICERI2023 Proceedings (pp. 1833-1840). IATED.</li>
-
-					<li>Lancho, C., Martín de Diego, I., Cuesta, M., Aceña, V., & Moguerza, J. M. (2023, July).
-						Hostility measure for multi-level study of data complexity. Applied Intelligence, 53(7),
-						8073-8096. Springer US. <a
-							href="https://doi.org/10.1007/s10489-022-03793-w">https://doi.org/10.1007/s10489-022-03793-w</a>
-					</li>
-
-					<li>Aceña Gil, V. C. (2023, May). Métodos de muestreo para la mejora de rendimiento en
-						clasificadores de aprendizaje automático. Universidad Rey Juan Carlos. <a
-							href="https://hdl.handle.net/10115/30399">https://hdl.handle.net/10115/30399</a></li>
-
-					<li>Fernández-Isabel, A., Cabezas, J., Moctezuma, D., & Martín de Diego, I. (2023). Improving
-						sentiment classification performance through coaching architectures. Cognitive Computation,
-						15(3), 1065-1081. Springer US. <a
-							href="https://www.doi.org/10.1007/s12559-022-10018-2">https://www.doi.org/10.1007/s12559-022-10018-2</a>
-					</li>
-
-					<li>Peribáñez, A. D., Fernández-Isabel, A., Martín de Diego, I., Condado, A., & Moguerza, J. M.
-						(2023). Extracting Knowledge from Incompletely Known Models. In International Conference on
-						Intelligent Data Engineering and Automated Learning (pp. 257-268). Springer Nature Switzerland.
-					</li>
-
-					<li>Lancho, C., de Souto, M. C. P., Lorena, A. C., & Martín de Diego, I. (2023). Complexity-Driven
-						Sampling for Bagging. In International Conference on Intelligent Data Engineering and Automated
-						Learning (pp. 15-21). Springer Nature Switzerland.</li>
-
-					<li>González Fernández, C., Martín De Diego, I., Ferández-Isabel, A., Viseu Pinheiro, J. F. J., &
-						Alonso, A. (2023). Detecting Low-Credibility Medical Websites through Semi-Supervised Learning
-						Techniques. IEEE Access. IEEE. <a
-							href="https://www.doi.org/10.1109/ACCESS.2023.3341756">https://www.doi.org/10.1109/ACCESS.2023.3341756</a>
-					</li>
-
-					<li>Castro-Olmo, F. J., Morales-Fernández, P., Alcaide-Martín, M. J., & otros. (2023, March). Is
-						minimising waste volume for drawing blood samples in critically ill patients feasible?.
-						Enfermería Intensiva (English ed.), 34(1), 19-26. <a
-							href="https://doi.org/10.1016/j.enfie.2022.06.002">https://doi.org/10.1016/j.enfie.2022.06.002</a>
-					</li>
-
-					<li>Castro-Olmo, F. J., Morales-Fernández, P., Alcaide-Martín, M. J., & otros. (2023, March).
-						Minimizar el volumen de descarte para la extracción de muestras sanguíneas en los pacientes
-						críticos: ¿es factible?. Enfermería Intensiva, 34(1), 19-26. <a
-							href="https://doi.org/10.1016/j.enfi.2022.06.004">https://doi.org/10.1016/j.enfi.2022.06.004</a>
-					</li>
-
-					<li>Aceña, V., Martín de Diego, I., Fernández, R. R., & Moguerza, J. M. (2023, February). Support
-						subsets estimation for support vector machines retraining. Pattern Recognition, 134, 109117.
-						Pergamon. <a
-							href="https://doi.org/10.1016/j.patcog.2022.109117">https://doi.org/10.1016/j.patcog.2022.109117</a>
-					</li>
-				</ul>
-				<h3 class="title">2022</h3>
-				<ul class="list-icons">
-					<li>Lancho, C., Cuesta, M., Martín de Diego, I., Cano, E. L., Fernández-Isabel, A., & Gómez Miguel,
-						J. (2022). Early student detection for improvement of academic results using machine learning
-						models. In EDULEARN22 Proceedings (pp. 6177-6185).</li>
-
-					<li>Navarro, J., Martín de Diego, I., & Redondo, A. R. (2022). Time series representation for
-						information gathering via low resolution wireless sensor networks. International Journal of
-						Sensor Networks, 40(1), 57-66. Inderscience Publishers (IEL).</li>
-
-					<li>Martín de Diego, I., Fernández-Isabel, A., San Román, I., Conde, C., & Cabello, E. (2022). Novel
-						context-aware methodology for risk assessment in intelligent video-surveillance systems.
-						International Journal of Sensor Networks, 40(3), 145-159. <a
-							href="https://www.doi.org/10.1504/IJSNET.2022.127121">https://www.doi.org/10.1504/IJSNET.2022.127121</a>
-					</li>
-
-					<li>Cuenca, W., González-Fernández, C., Fernández-Isabel, A., Martín de Diego, I., & Martín, A. G.
-						(2022). Combining conceptual graphs and sentiment analysis for fake news detection. In
-						Computational Intelligence and Mathematics for Tackling Complex Problems 2 (pp. 129-138).
-						Springer International Publishing.</li>
-
-					<li>Navarro, J., Martín de Diego, I., Fernández, R. R., & Moguerza, J. M. (2022). Triangle-based
-						outlier detection. Pattern Recognition Letters, 156, 152-159.</li>
-
-					<li>Martín, A. G., Martín de Diego, I., Fernández-Isabel, A., Beltrán, M., & Fernández, R. R.
-						(2022). Combining user behavioural information at the feature level to enhance continuous
-						authentication systems. Knowledge-Based Systems, 244, 108544. <a
-							href="https://www.doi.org/10.1016/j.knosys.2022.108544">https://www.doi.org/10.1016/j.knosys.2022.108544</a>
-					</li>
-
-					<li>Martín De Diego, I., Redondo, A. R., Fernández, R. R., Navarro, J., & Moguerza, J. M. (2022).
-						General Performance Score for classification problems. Applied Intelligence, 52, 12049-12063.
-					</li>
-
-					<li>Moreno, R., Viajes, M., Fernández-Isabel, A., Martín de Diego, I., Moguerza, J. M., Lancho, C.,
-						& Cuesta, M. (2022). Automatic detection of potential customers by opinion mining and
-						intelligent agents. In 2022 17th Conference on Computer Science and Intelligence Systems
-						(FedCSIS) (pp. 93-101). IEEE.</li>
-
-					<li>Martín de Diego, I., Riera-Arnau, J., Bots, S., Belitser, S., Messina, D., Schultze, A.,
-						Douglas, I., Duran, C., Poza, P. G., Gini, R., Herings, R. M. C., Sisay, M. M., Martin, I.,
-						Villalobos, F., Klungel, O. H., & Sturkenboom, M. (2022). Association between SARS-CoV-2
-						Vaccines and Myoand Pericarditis; a Large Observational Study Using Electronic Healthcare Data
-						from Four European Countries. Drug Safety, 45(10), 1305-1306. Springer Nature BV.</li>
-
-					<li>Aceña, V., Martín de Diego, I., Fernández, R. R., & Moguerza, J. M. (2022, October). Minimally
-						overfitted learners: a general framework for ensemble learning. Knowledge-Based Systems, 254,
-						109669. <a
-							href="https://doi.org/10.1016/j.knosys.2022.109669">https://doi.org/10.1016/j.knosys.2022.109669</a>
-					</li>
-
-					<li>Fernández, R. R., Martín de Diego, I., Moguerza, J. M., & Herrera, F. (2022). Explanation sets: A general framework
-						for machine learning explainability. Information Sciences, 617, 464-481. <a
-							href="https://doi.org/10.1016/j.ins.2022.10.084">https://doi.org/10.1016/j.ins.2022.10.084</a>
-					</li>
-				</ul>
-				<h3 class="title">2021</h3>
-				<ul class="list-icons">
-					<li>Lancho, C., Martín de Diego, I., Cuesta, M., Aceña, V., & Moguerza, J. M. (2021, November). A
-						complexity measure for binary classification problems based on lost points. In Intelligent Data
-						Engineering and Automated Learning―IDEAL 2021: 22nd (pp. 137-146). Springer. <a
-							href="https://doi.org/10.1007/978-3-030-91608-4_14">https://doi.org/10.1007/978-3-030-91608-4_14</a>
-					</li>
-
-					<li>Cuesta, M., Martín de Diego, I., Lancho, C., Aceña, V., & Moguerza, J. M. (2021, November). From
-						Classification to Visualization: A Two Way Trip. In Intelligent Data Engineering and Automated
-						Learning―IDEAL 2021: 22nd (pp. 289-299). Springer. <a
-							href="https://doi.org/10.1007/978-3-030-91608-4_29">https://doi.org/10.1007/978-3-030-91608-4_29</a>
-					</li>
-
-					<li>González-Fernández, C., Fernández-Isabel, A., Martín de Diego, I., Fernández, R. R., & Viseu
-						Pinheiro, J. F. J. (2021). Experts perception-based system to detect misinformation in health
-						websites. Pattern Recognition Letters, 152, 333-339. <a
-							href="https://www.doi.org/10.1016/j.patrec.2021.11.008">https://www.doi.org/10.1016/j.patrec.2021.11.008</a>
-					</li>
-
-					<li>Navarro, J., Martín de Diego, I., Carballo Pérez, P., & Ortega, F. (2021). Outlier detection in
-						animal multivariate trajectories. Computers and Electronics in Agriculture, 190, 106401.</li>
-
-					<li>González de Villaumbrosia, C., Sáez López, P., Martín de Diego, I., Lancho Martín, C., Cuesta
-						Santa Teresa, M., Alarcón, T., ... & González-Montalvo, J. I. (2021). Predictive model of gait
-						recovery at one month after hip fracture from a national cohort of 25,607 patients: the Hip
-						Fracture Prognosis (HF-Prognosis) tool. International journal of environmental research and
-						public health, 18(7), 3809.</li>
-
-					<li>Moguerza, J. M., Perelló Oliver, S., Martín de Diego, I., Aceña, V., Lancho, C., Cuesta, M., &
-						González Fernández, C. (2021, May). Health Sufficiency Indicators for Pandemic Monitoring.
-						International Journal of Environmental Research and Public Health, 18(10), 5358. <a
-							href="https://doi.org/10.3390/ijerph18105358">https://doi.org/10.3390/ijerph18105358</a>
-					</li>
-
-					<li>Prieto, J. C., Fernández-Isabel, A., Martín de Diego, I., Ortega, F., & Moguerza, J. M. (2021).
-						Knowledge-Based Approach to Detect Potentially Risky Websites. IEEE Access, 9, 11633-11643. <a
-							href="https://www.doi.org/10.1109/ACCESS.2021.3051374">https://www.doi.org/10.1109/ACCESS.2021.3051374</a>
-					</li>
-
-					<li>Martín, A. G., Fernández-Isabel, A., Martín de Diego, I., & Beltrán, M. (2021). A survey for
-						user behavior analysis based on machine learning techniques: current models and applications.
-						Applied Intelligence, 1-27. <a
-							href="https://www.doi.org/10.1007/s10489-020-02160-x">https://www.doi.org/10.1007/s10489-020-02160-x</a>
-					</li>
-
-					<li>Martín, A. G., Fernández-Isabel, A., González-Fernández, C., Lancho, C., Cuesta, M., & Martín de
-						Diego, I. (2021). Suspicious news detection through semantic and sentiment measures. Engineering
-						Applications of Artificial Intelligence, 101, 104230. <a
-							href="https://www.doi.org/10.1016/j.engappai.2021.104230">https://www.doi.org/10.1016/j.engappai.2021.104230</a>
-					</li>
-
-					<li>Martín, A. G., Beltrán, M., Fernández-Isabel, A., & Martín de Diego, I. (2021). An approach to
-						detect user behaviour anomalies within identity federations. Computers & Security, 102356. <a
-							href="https://www.doi.org/10.1016/j.cose.2021.102356">https://www.doi.org/10.1016/j.cose.2021.102356</a>
-					</li>
-
-					<li>Martín de Diego, I., González-Fernández, C., Fernández-Isabel, A., Fernández, R. R., & Cabezas,
-						J. (2021). System for evaluating the reliability and novelty of medical scientific papers.
-						Journal of Informetrics, 15(4), 101188. <a
-							href="https://www.doi.org/10.1016/j.joi.2021.101188">https://www.doi.org/10.1016/j.joi.2021.101188</a>
-					</li>
-
-					<li>Cabezas, J., Moctezuma, D., Fernández-Isabel, A., & Martín de Diego, I. (2021). Detecting
-						Emotional Evolution on Twitter during the COVID-19 Pandemic Using Text Analysis. International
-						Journal of Environmental Research and Public Health, 18(13), 6981. <a
-							href="https://www.doi.org/10.3390/ijerph18136981">https://www.doi.org/10.3390/ijerph18136981</a>
-					</li>
-
-					<li>Cano, E. L., García-Camús, J. M., Garzás, J., Moguerza, J. M., & Sánchez, N. N. (2021). A
-						Scrum-based framework for new product development in the non-software industry. Journal of
-						Engineering and Technology Management, 61, 101634.</li>
-
-					<li>Alonso Ayuso, A., Laguna, M., Molina Ferragut, E., & García Heredia, D. (2020). A solution
-						method for the shared Resource Constrained Multi-Shortest Path Problem (No. 30793). Universidad
-						Carlos III de Madrid. Departamento de Estadística.</li>
-
-					<li>Gil-Borrás, S., Pardo, E. G., Alonso-Ayuso, A., & Duarte, A. (2021). A heuristic approach for
-						the online order batching problem with multiple pickers. Computers & Industrial Engineering,
-						107517.</li>
-
-					<li>Escudero, L. F., Alonso-Ayuso, A., & Maculan, N. (2021). Essays on OR in ALIO country members
-						(part 2). Top, 29(1), 1-4.</li>
-
-					<li>Sierra-Paradinas, M., Soto-Sánchez, Ó., Alonso-Ayuso, A., Martín-Campo, F. J., & Gallego, M.
-						(2021). An exact model for a slitting problem in the steel industry. European Journal of
-						Operational Research.</li>
-
-					<li>Escudero, L. F., Alonso-Ayuso, A., & Nelson Maculan, F. (Eds.). (2021). Special Issue on Essays
-						in Operations Research from ALIO, the Latin Ibero-American Association of Operations Research
-						(part 2). Springer.</li>
-				</ul>
-				<h3 class="title">2020</h3>
-				<ul class="list-icons">
-					<li>Fernández-Isabel, A., Fuentes-Fernández, R., & de Diego, I. M. (2020). Modeling multi-agent
-						systems to simulate
-						sensor-based Smart Roads. Simulation Modelling Practice and Theory, 99, 101994. <a
-							href="https://www.doi.org/10.1016/j.simpat.2019.101994">https://www.doi.org/10.1016/j.simpat.2019.101994</a>
-					</li>
-
-					<li>Moguerza, J. M., Oliver, S. P., Martín de Diego, I., Aceña, V., Cuesta, M., Lancho, C., &
-						Fernández, C. G. (2020, April). Suficiencia sanitaria y COVID-19. methaodos. revista de ciencias
-						sociales, 8(1), 140-168. <a
-							href="https://doi.org/10.17502/m.rcs.v8i1.349">https://doi.org/10.17502/m.rcs.v8i1.349</a>
-					</li>
-
-					<li>Ortega, D., Fernández-Isabel, A., Martín de Diego, I., Conde, C., & Cabello, E. (2020). Dynamic
-						facial presentation attack detection for automated border control systems. Computers & Security,
-						92, 101744. <a
-							href="https://www.doi.org/10.1016/j.cose.2020.101744">https://www.doi.org/10.1016/j.cose.2020.101744</a>
-					</li>
-
-					<li>González-Fernández, C., Cabezas, J., Fernández-Isabel, A., & Martín de Diego, I. (2020, June).
-						Combining Multi-Agent Systems and Subjective Logic to Develop Decision Support Systems. In
-						International Conference on Information Processing and Management of Uncertainty in
-						Knowledge-Based Systems (pp. 143-157). Springer, Cham.</li>
-
-					<li>Cabezas, J., Fernandez-Isabel, A., Fernández, R. R., González-Fernández, C., Alonso, A., &
-						Martín de Diego, I. (2020, August). Bio-Inspired Agent-Based Architecture for Fraud Detection.
-						In Proceedings of the 2020 3rd International Conference on Information Management and Management
-						Science (pp. 67-71).</li>
-
-					<li>Fernández, R. R., Martín de Diego, I., Aceña, V., Fernández-Isabel, A., & Moguerza, J. M. (2020,
-						November). Random forest explainability using counterfactual sets. Information Fusion, 63,
-						196-207. <a
-							href="https://www.doi.org/10.1016/j.inffus.2020.07.001">https://www.doi.org/10.1016/j.inffus.2020.07.001</a>
-					</li>
-
-					<li>Fernández-Isabel, A., Barriuso, A. A., Cabezas, J., Martín de Diego, I., & Pinheiro, J. V.
-						(2020). Knowledge-based framework for estimating the relevance of scientific articles. Expert
-						Systems with Applications, 161, 113692. <a
-							href="https://www.doi.org/10.1016/j.eswa.2020.113692">https://www.doi.org/10.1016/j.eswa.2020.113692</a>
-					</li>
-
-					<li>Redondo, A. R., Navarro, J., Fernández, R. R., Martín de Diego, I., Moguerza, J. M., &
-						Fernández-Muñoz, J. J. (2020, November). Unified Performance Measure for Binary Classification
-						Problems. In International Conference on Intelligent Data Engineering and Automated Learning
-						(pp. 104-112). Springer, Cham.</li>
-
-					<li>Alfaro-Navarro, J. L., Cano, E. L., Alfaro-Cortés, E., García, N., Gámez, M., & Larraz, B.
-						(2020). A fully automated adjustment of ensemble methods in machine learning for modeling
-						complex real estate systems. Complexity, 2020.</li>
-
-					<li>Vara, J. A. D. L., Berruga, M. I., Serrano, M. P., Cano, E. L., García, A. J.,
-						Landete-Castillejos, T., ... & Molina, A. (2020). Red deer (Cervus elaphus) colostrum during its
-						transition to milk.</li>
-
-					<li>Gil-Borrás, S., Pardo, E. G., Alonso-Ayuso, A., & Duarte, A. (2020). Fixed versus variable time
-						window warehousing strategies in real time. Progress in Artificial Intelligence, 9(4), 315-324.
-					</li>
-
-					<li>Sierra-Paradinas, M., Alonso-Ayuso, A., Martín-Campo, F. J., Rodríguez-Calo, F., & Lasso, E.
-						(2020). Facilities Delocation in the Retail Sector: A Mixed 0-1 Nonlinear Optimization Model and
-						Its Linear Reformulation. Mathematics, 8(11), 1986.</li>
-
-					<li>Escudero, L. F., Alonso-Ayuso, A., & Maculan, N. (2020). Essays on OR in ALIO country members
-						(part 1). Top, 28(3), 545-548.</li>
-
-					<li>Gil-Borrás, S., Pardo, E. G., Alonso-Ayuso, A., & Duarte, A. (2020). GRASP with Variable
-						Neighborhood Descent for the online order batching problem. Journal of Global Optimization,
-						78(2).</li>
-
-					<li>García-Heredia, D., Molina, E., Laguna, M., & Alonso-Ayuso, A. (2021). A solution method for the
-						shared resource-constrained multi-shortest path problem. Expert Systems with Applications, 182,
-						115193.</li>
-
-					<li>Alonso-Ayuso, A., Escudero, L. F., Guignard, M., & Weintraub, A. (2020). On dealing with
-						strategic and tactical decision levels in forestry planning under uncertainty. Computers &
-						Operations Research, 115, 104836.</li>
-				</ul>
-				<h3 class="title">2019</h3>
-				<ul class="list-icons">
-					<li>Martín de Diego, I., Siordia, O. S., Fernández-Isabel, A., Conde, C., & Cabello, E. (2019).
-						Subjective data arrangement using clustering techniques for training expert systems. Expert
-						Systems with Applications, 115, 1-15. <a
-							href="https://www.doi.org/10.1016/j.eswa.2018.07.058">https://www.doi.org/10.1016/j.eswa.2018.07.058</a>
-					</li>
-
-					<li>Algar, M. J., Martín de Diego, I., Fernández-Isabel, A., Monjas, M. Á., Ortega, F., Moguerza, J.
-						M., & Jacynycz, H. (2019). A quality of experience management framework for mobile users.
-						Wireless Communications and Mobile Computing, 2019. <a
-							href="https://www.doi.org/10.1155/2019/2352941">https://www.doi.org/10.1155/2019/2352941</a>
-					</li>
-
-					<li>Navarro, J., Martín de Diego, I., Fernández-Isabel, A., & Ortega, F. (2019, January). Fusion of
-						GPS and accelerometer information for anomalous trajectories detection. In Proceedings of the
-						2019 the 5th International Conference on e-Society, e-Learning and e-Technologies (pp. 52-57).
-					</li>
-
-					<li>Pérez, P. C., Ortega, F., García, J. N., & Martín de Diego, I. (2019, January). Combining
-						Machine Learning and Symbolic Representation of Time Series for Classification of Behavioural
-						Patterns. In Proceedings of the 2019 the 5th International Conference on e-Society, e-Learning
-						and e-Technologies (pp. 93-97).</li>
-
-					<li>Martín de Diego, I., San Román, I., Montero, J. C., Conde, C., & Cabello, E. (2019). Scalable
-						and flexible wireless distributed architecture for intelligent video surveillance systems.
-						Multimedia Tools and Applications, 78(13), 17437-17459.</li>
-
-					<li>San Román, I., Martín de Diego, I., Conde, C., & Cabello, E. (2019). Outlier trajectory
-						detection through a context-aware distance. Pattern Analysis and Applications, 22(3), 831-839.
-					</li>
-
-					<li>Fernández-Isabel, A., Peixoto, P., Martín de Diego, I., Conde, C., & Cabello, E. (2019).
-						Combining dynamic finite state machines and text-based similarities to represent human behavior.
-						Engineering Applications of Artificial Intelligence, 85, 504-516. <a
-							href="https://www.doi.org/10.1016/j.engappai.2019.07.006">https://www.doi.org/10.1016/j.engappai.2019.07.006</a>
-					</li>
-
-					<li>Aceña, V., Moguerza, J. M., Martín de Diego, I., & Fernández, R. R. (2019, October). Weighted
-						Nearest Centroid Neighbourhood. In Intelligent Data Engineering and Automated Learning―IDEAL
-						2019: 20th (pp. 94-101). Springer, Cham. <a
-							href="https://doi.org/10.1007/978-3-030-33607-3_11">https://doi.org/10.1007/978-3-030-33607-3_11</a>
-					</li>
-
-					<li>Fernández, R. R., Martín de Diego, I., Aceña, V., Moguerza, J. M., & Fernández-Isabel, A. (2019,
-						October). Relevance metric for counterfactuals selection in decision trees. In Intelligent Data
-						Engineering and Automated Learning―IDEAL 2019: 20th (pp. 85-93). Springer, Cham. <a
-							href="https://doi.org/10.1007/978-3-030-33607-3_10">https://doi.org/10.1007/978-3-030-33607-3_10</a>
-					</li>
-
-					<li>Muñoz-Tébar, N., De la Vara, J. A., de Elguea-Culebras, G. O., Cano, E. L., Molina, A., Carmona,
-						M., & Berruga, M. I. (2019). Enrichment of sheep cheese with chia (Salvia hispanica L.) oil as a
-						source of omega-3. LWT, 108, 407-415.</li>
-
-					<li>Garcia-Heredia, D., Alonso-Ayuso, A., & Molina, E. (2019). A Combinatorial model to optimize air
-						traffic flow management problems. Computers & Operations Research, 112, 104768.</li>
-
-					<li>Gil-Borrás, S., Pardo, E. G., Alonso-Ayuso, A., & Duarte, A. (2019, October). Basic VNS for a
-						variant of the online order batching problem. In International Conference on Variable
-						Neighborhood Search (pp. 17-36). Springer, Cham.</li>
-
-					<li>Nadal-Roig, E., Plà-Aragonès, L. M., & Alonso-Ayuso, A. (2019). Production planning of supply
-						chains in the pig industry. Computers and Electronics in Agriculture, 161, 72-78.</li>
-				</ul>
-
-				<h3 class="title">2018</h3>
-				<ul class="list-icons">
-					<li>Fernández-Isabel, A., Prieto, J. C., Ortega, F., Martín de Diego, I., Moguerza, J. M., Mena, J.,
-						... & Napalkova, L. (2018). A unified knowledge compiler to provide support the scientific
-						community. Knowledge-Based Systems, 161, 157-171. <a
-							href="https://www.doi.org/10.1016/j.knosys.2018.07.044">https://www.doi.org/10.1016/j.knosys.2018.07.044</a>
-					</li>
-
-					<li>Martín de Diego, I., Fernández-Isabel, A., Ortega, F., & Moguerza, J. M. (2018). A visual
-						framework for dynamic emotional web analysis. Knowledge-Based Systems, 145, 264-273. <a
-							href="https://www.doi.org/10.1016/j.knosys.2018.01.023">https://www.doi.org/10.1016/j.knosys.2018.01.023</a>
-					</li>
-
-					<li>Prieto, J. C., Fernández-Isabel, A., Martín de Diego, I., & Ortega, F. (2018, January). A
-						supervised learning approach to detect copyright infrigments. In Information Management and
-						Processing (ICIMP), 2018 International Conference on (pp. 100-106). IEEE.</li>
-
-					<li>Martos, G., Hernández, N., Muñoz, A., & Moguerza, J. M. (2018). Entropy Measures for Stochastic
-						Processes with Applications in Functional Anomaly Detection. Entropy, 20(1), 33.</li>
-
-					<li>Alonso-Ayuso, A., Escudero, L. F., Guignard, M., & Weintraub, A. (2018). Risk management for
-						forestry planning under uncertainty in demand and prices. European Journal of Operational
-						Research, 267(3), 1051-1074.</li>
-
-					<li>San Román, I., Martín de Diego, I., Conde, C., & Cabello, E. Outlier trajectory detection
-						through a context-aware distance. Pattern Analysis and Applications, 1-9.</li>
-				</ul>
-
-				<h3 class="title">2017</h3>
-				<ul class="list-icons">
-					<li>Cano, J., Moguerza, J. M., & Prieto, F. J. (2017). Using Improved Directions of Negative
-						Curvature for the Solution of Bound-Constrained Nonconvex Problems. Journal of Optimization
-						Theory and Applications, 174(2), 474-499.</li>
-
-					<li>Menéndez, B., Pardo, E. G., Alonso-Ayuso, A., Molina, E., & Duarte, A. (2017). Variable
-						neighborhood search strategies for the order batching problem. Computers & Operations Research,
-						78, 500-512.</li>
-
-					<li>Convertino, G., Zancanaro, M., Piccardi, T., & Ortega, F. (2017). Toward a mixed-initiative QA
-						system: from studying predictors in Stack Exchange to building a mixed-initiative tool.
-						International Journal of Human-Computer Studies, 99, 1-20.</li>
-				</ul>
-				<h3 class="title">2016</h3>
-				<ul class="list-icons">
-					<li>Alonso-Ayuso, A., Escudero, L. F., & Martín-Campo, F. J. (2016). Multiobjective optimization for
-						aircraft conflict resolution. A metaheuristic approach. European Journal of Operational
-						Research, 248(2), 691-702.</li>
-
-					<li>Gomez, J., Insua, D. R., & Alfaro, C. (2016). A participatory budget model under uncertainty.
-						European Journal of Operational Research, 249(1), 351-358.</li>
-
-					<li>Alfaro, C., Cano-Montero, J., Gómez, J., Moguerza, J. M., & Ortega, F. (2016). A multi-stage
-						method for content classification and opinion mining on weblog comments. Annals of Operations
-						Research, 236(1), 197-213.</li>
-
-					<li>del Rio, J. S., Moctezuma, D., Conde, C., Martín de Diego, I., & Cabello, E. (2016). Automated
-						border control e-gates and facial recognition systems. computers & security, 62, 49-72.</li>
-
-					<li>Baidyk, T., Kussul, E., Monterrosas, Z. C., Gallardo, A. I., Serrato, K. R., Conde, C., ... &
-						Cabello, E. (2016). Face recognition using a permutation coding neural classifier. Neural
-						Computing and Applications, 27(4), 973-987.</li>
-
-					<li>Salazar, A. M., Martín de Diego, I., Conde, C., & Pardos, E. C. (2016). Evaluation of Keypoint
-						Descriptors Applied in the Pedestrian Detection in Low Quality Images. IEEE Latin America
-						Transactions, 14(3), 1401-1407.</li>
-				</ul>
-				<h3 class="title">2015</h3>
-				<ul class="list-icons">
-					<li>Alonso-Ayuso, A., Escudero, L. F., Martín-Campo, F. J., & Mladenović, N. (2015). A VNS
-						metaheuristic for solving the aircraft conflict detection and resolution problem by performing
-						turn changes. Journal of Global Optimization, 63(3), 583-596.</li>
-
-					<li>Moctezuma, D., Conde, C., Martín de Diego, I., & Cabello, E. (2015). Soft-biometrics evaluation
-						for people re-identification in uncontrolled multi-camera environments. EURASIP Journal on Image
-						and Video Processing, 2015(1), 28.</li>
-				</ul>
-				<!-- main end -->
 			</div>
+			<!-- main end -->
+
 		</div>
+	</div>
 </section>
+<!-- section,main-container: end -->
+
+<!-- Publications Interactive Search and Filtering Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	var searchInput = document.getElementById('pub-search-input');
+	var filterButtons = document.querySelectorAll('#pub-filter-buttons button');
+	var items = document.querySelectorAll('.publication-item');
+	var yearGroups = document.querySelectorAll('.year-group');
+	var visibleCountEl = document.getElementById('visible-count');
+	var noResultsEl = document.getElementById('no-results-message');
+
+	var currentFilter = 'all';
+	var searchQuery = '';
+
+	function applyFilters() {
+		var visibleCount = 0;
+		var yearCounts = {};
+
+		for (var i = 0; i < items.length; i++) {
+			var item = items[i];
+			var year = item.getAttribute('data-year');
+			var type = item.getAttribute('data-type');
+			var quartile = item.getAttribute('data-quartile');
+			var searchData = item.getAttribute('data-search') || '';
+
+			if (!yearCounts[year]) {
+				yearCounts[year] = 0;
+			}
+
+			// Filter category logic
+			var matchesFilter = false;
+			if (currentFilter === 'all') {
+				matchesFilter = true;
+			} else if (currentFilter === 'q1') {
+				matchesFilter = (quartile === 'Q1');
+			} else {
+				var allowedTypes = currentFilter.split(',');
+				matchesFilter = allowedTypes.indexOf(type) !== -1;
+			}
+
+			// Search query logic
+			var matchesSearch = true;
+			if (searchQuery.trim().length > 0) {
+				var tokens = searchQuery.toLowerCase().trim().split(/\s+/);
+				for (var t = 0; t < tokens.length; t++) {
+					if (searchData.indexOf(tokens[t]) === -1) {
+						matchesSearch = false;
+						break;
+					}
+				}
+			}
+
+			if (matchesFilter && matchesSearch) {
+				item.style.display = '';
+				visibleCount++;
+				yearCounts[year]++;
+			} else {
+				item.style.display = 'none';
+			}
+		}
+
+		// Update year groups visibility
+		for (var y = 0; y < yearGroups.length; y++) {
+			var group = yearGroups[y];
+			var groupYear = group.getAttribute('data-year');
+			if (yearCounts[groupYear] && yearCounts[groupYear] > 0) {
+				group.style.display = '';
+			} else {
+				group.style.display = 'none';
+			}
+		}
+
+		if (visibleCountEl) {
+			visibleCountEl.textContent = visibleCount;
+		}
+
+		if (noResultsEl) {
+			noResultsEl.style.display = (visibleCount === 0) ? 'block' : 'none';
+		}
+	}
+
+	if (searchInput) {
+		searchInput.addEventListener('input', function(e) {
+			searchQuery = e.target.value;
+			applyFilters();
+		});
+	}
+
+	filterButtons.forEach(function(btn) {
+		btn.addEventListener('click', function() {
+			filterButtons.forEach(function(b) {
+				b.classList.remove('active');
+				if (b.classList.contains('btn-primary')) {
+					b.classList.remove('btn-primary');
+					b.classList.add('btn-outline-primary');
+				}
+			});
+			this.classList.add('active');
+			if (this.classList.contains('btn-outline-primary')) {
+				this.classList.remove('btn-outline-primary');
+				this.classList.add('btn-primary');
+			}
+			currentFilter = this.getAttribute('data-filter');
+			applyFilters();
+		});
+	});
+});
+</script>

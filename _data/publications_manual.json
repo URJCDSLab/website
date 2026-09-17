@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Métodos de muestreo para la mejora de rendimiento en clasificadores de aprendizaje automático",
+    "year": 2023,
+    "publication_date": "2023-05-01",
+    "authors": [
+      "Víctor C. Aceña Gil"
+    ],
+    "dslab_authors": [
+      "Víctor Aceña Gil"
+    ],
+    "journal": "Universidad Rey Juan Carlos",
+    "work_type": "thesis",
+    "source_type": "repository",
+    "quartile": null,
+    "keywords": [
+      "Machine Learning",
+      "Sampling Methods",
+      "Classification",
+      "Data Complexity"
+    ],
+    "landing_page_url": "https://hdl.handle.net/10115/30399",
+    "pdf_url": "https://hdl.handle.net/10115/30399",
+    "is_oa": true,
+    "doi": null
+  },
+  {
+    "title": "Special Issue on Essays in Operations Research from ALIO, the Latin Ibero-American Association of Operations Research (part 2)",
+    "year": 2021,
+    "publication_date": "2021-04-01",
+    "authors": [
+      "Laureano F. Escudero",
+      "Antonio Alonso-Ayuso",
+      "Nelson Maculan"
+    ],
+    "dslab_authors": [
+      "Laureano Escudero Bueno",
+      "Antonio Alonso Ayuso"
+    ],
+    "journal": "Top",
+    "work_type": "editorial",
+    "source_type": "journal",
+    "quartile": "Q2",
+    "keywords": [
+      "Operations Research",
+      "Optimization",
+      "Mathematical Programming"
+    ],
+    "landing_page_url": "https://doi.org/10.1007/s11750-021-00595-y",
+    "pdf_url": null,
+    "is_oa": false,
+    "doi": "10.1007/s11750-021-00595-y"
+  },
+  {
+    "title": "Association between SARS-CoV-2 Vaccines and Myoand Pericarditis; a Large Observational Study Using Electronic Healthcare Data from Four European Countries",
+    "year": 2022,
+    "publication_date": "2022-10-01",
+    "authors": [
+      "Isaac Martín de Diego",
+      "J. Riera-Arnau",
+      "S. Bots",
+      "S. Belitser",
+      "D. Messina",
+      "A. Schultze",
+      "I. Douglas",
+      "C. Duran",
+      "P. G. Poza",
+      "R. Gini",
+      "R. M. C. Herings",
+      "M. M. Sisay",
+      "I. Martin",
+      "F. Villalobos",
+      "O. H. Klungel",
+      "M. Sturkenboom"
+    ],
+    "dslab_authors": [
+      "Isaac Martín de Diego"
+    ],
+    "journal": "Drug Safety",
+    "work_type": "conference",
+    "source_type": "journal",
+    "quartile": "Q1",
+    "keywords": [
+      "Pharmacovigilance",
+      "COVID-19 Vaccines",
+      "Observational Study"
+    ],
+    "landing_page_url": "https://doi.org/10.1007/s40264-022-01227-2",
+    "pdf_url": null,
+    "is_oa": false,
+    "doi": "10.1007/s40264-022-01227-2"
+  }
+]

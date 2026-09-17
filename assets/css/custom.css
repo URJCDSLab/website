@@ -375,3 +375,45 @@ p.lead + div.row.justify-content-evenly {
     background-color: #3697d9;
     color: #fff;
 }
+
+/* Publications Page Styles */
+.pub-stat-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pub-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+.pub-stat-number {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.pub-stat-label {
+    font-size: 0.95rem;
+    color: #333333;
+}
+.publication-item {
+    transition: background-color 0.15s ease;
+    padding-left: 6px;
+    border-left: 3px solid transparent;
+}
+.publication-item:hover {
+    background-color: #fcfcfc;
+    border-left-color: #3697d9;
+}
+.pub-title a:hover {
+    color: #3697d9 !important;
+}
+.pub-filter-toolbar {
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+#pub-filter-buttons button {
+    border-radius: 20px;
+    font-size: 0.82rem;
+    padding: 4px 12px;
+}
+
