@@ -4,8 +4,8 @@ scripts/update_publications.py
 Data Science Lab (DSLab) - URJC
 Automated publication scraper and enrichment pipeline.
 Fetches publications from OpenAlex and ORCID for all active lab members,
-deduplicates across co-authors, enriches with journal quartiles and keywords,
-merges manual entries, and saves to _data/publications.json.
+deduplicates across co-authors, enriches with year-specific SCImago (SJR) quartiles,
+preserves only genuine source keywords, merges manual entries, and saves to _data/publications.json.
 """
 
 import argparse
@@ -58,6 +58,12 @@ def normalize_title(title):
     t = str(title).lower()
     t = re.sub(r"[^a-z0-9]", "", t)
     return t
+
+
+def clean_issn(issn_str):
+    if not issn_str:
+        return []
+    return re.findall(r"[0-9]{4}[0-9X]{4}", issn_str.replace("-", "").upper())
 
 
 def extract_active_members(team_html_path="about/team/index.html"):
@@ -136,9 +142,62 @@ def load_existing_publications(path="_data/publications.json"):
     return []
 
 
-def determine_work_type(raw_work_type, source_title, source_type, rankings_entry):
-    if rankings_entry and rankings_entry.get("type"):
-        return rankings_entry.get("type")
+def find_ranking_for_journal(journal_name, issn, year, rankings):
+    """
+    Finds the journal entry and extracts the exact quartile for the publication year.
+    Ties the quartile directly to the publication year.
+    """
+    if not journal_name and not issn:
+        return None, None
+
+    clean_issns = clean_issn(issn)
+    target_entry = None
+
+    # 1. Try matching by ISSN
+    if clean_issns and rankings:
+        for venue_name, entry in rankings.items():
+            entry_issns = entry.get("issns", [])
+            if any(i in entry_issns for i in clean_issns):
+                target_entry = entry
+                break
+
+    # 2. Try matching by Title
+    if not target_entry and journal_name and rankings:
+        if journal_name in rankings:
+            target_entry = rankings[journal_name]
+        else:
+            norm_j = normalize_title(journal_name)
+            for venue_name, entry in rankings.items():
+                if normalize_title(venue_name) == norm_j:
+                    target_entry = entry
+                    break
+
+    if not target_entry:
+        return None, None
+
+    work_type = target_entry.get("type", "journal")
+    quartiles = target_entry.get("quartiles", {})
+
+    quartile = None
+    if quartiles and year:
+        year_str = str(year)
+        if year_str in quartiles:
+            quartile = quartiles[year_str]
+        else:
+            # Fallback to the closest available year (e.g. latest available 2024 for 2025/2026 papers)
+            avail_years = sorted([int(y) for y in quartiles.keys()])
+            if avail_years:
+                if year > avail_years[-1]:
+                    quartile = quartiles[str(avail_years[-1])]
+                elif year < avail_years[0]:
+                    quartile = quartiles[str(avail_years[0])]
+
+    return quartile, work_type
+
+
+def determine_work_type(raw_work_type, source_title, source_type, ranked_type):
+    if ranked_type:
+        return ranked_type
 
     s_title = (source_title or "").lower()
     w_type = (raw_work_type or "").lower()
@@ -213,18 +272,6 @@ def fetch_orcid_works(orcid, min_year):
     return results
 
 
-def find_ranking_for_journal(journal_name, rankings):
-    if not journal_name or not rankings:
-        return None
-    if journal_name in rankings:
-        return rankings[journal_name]
-    j_lower = journal_name.lower().strip()
-    for name, data in rankings.items():
-        if name.lower().strip() == j_lower:
-            return data
-    return None
-
-
 def is_dslab_member(author_name, active_members):
     """Check if an author string matches an active member."""
     if not author_name:
@@ -232,10 +279,8 @@ def is_dslab_member(author_name, active_members):
     a_clean = author_name.lower()
     for m in active_members:
         m_name = m["name"].lower()
-        # Direct substring
         if m_name in a_clean or a_clean in m_name:
             return m["name"]
-        # Split tokens
         m_tokens = [t for t in m_name.split() if len(t) > 2]
         matches = sum(1 for t in m_tokens if t in a_clean)
         if matches >= 2:
@@ -251,7 +296,6 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
     manual_pubs = load_manual_publications()
     existing_pubs = load_existing_publications()
 
-    # Decide start date
     today = datetime.date.today()
     if is_full or not existing_pubs:
         from_date_str = f"{start_year}-01-01"
@@ -309,11 +353,22 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             source_type = source.get("type") if source else None
             issn = source.get("issn_l") if source else None
 
-            rank_info = find_ranking_for_journal(journal, journal_rankings)
-            work_type = determine_work_type(w.get("type"), journal, source_type, rank_info)
-            quartile = rank_info.get("quartile") if rank_info else None
+            # Get year-specific quartile from SCImago rankings
+            quartile, ranked_type = find_ranking_for_journal(journal, issn, year, journal_rankings)
+            work_type = determine_work_type(w.get("type"), journal, source_type, ranked_type)
 
-            keywords = [k.get("display_name") for k in w.get("keywords", []) if k.get("display_name")][:8]
+            # Keywords: DO NOT make up keywords. Only include if explicitly provided by source.
+            # Filter to real topic keywords if available from source, or keep empty
+            raw_kws = w.get("keywords", [])
+            keywords = []
+            if raw_kws and isinstance(raw_kws, list):
+                for k in raw_kws:
+                    kw_name = k.get("display_name") if isinstance(k, dict) else str(k)
+                    kw_score = k.get("score", 1.0) if isinstance(k, dict) else 1.0
+                    # Avoid noisy low-confidence tags
+                    if kw_name and kw_score >= 0.5:
+                        keywords.append(kw_name)
+            keywords = keywords[:6]
 
             landing_url = w.get("doi") or (
                 w.get("primary_location", {}).get("landing_page_url") if w.get("primary_location") else None
@@ -352,11 +407,9 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             if doi:
                 if doi in pubs_by_doi:
                     existing = pubs_by_doi[doi]
-                    # Merge dslab_authors
                     for da in dslab_authors:
                         if da not in existing.setdefault("dslab_authors", []):
                             existing["dslab_authors"].append(da)
-                    # Update fields if richer
                     if quartile and not existing.get("quartile"):
                         existing["quartile"] = quartile
                     if keywords and not existing.get("keywords"):
@@ -399,9 +452,8 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
                 continue
 
             # New DOI or title found in ORCID
-            rank_info = find_ranking_for_journal(ow["journal"], journal_rankings)
-            work_type = determine_work_type(ow["type"], ow["journal"], "journal", rank_info)
-            quartile = rank_info.get("quartile") if rank_info else None
+            quartile, ranked_type = find_ranking_for_journal(ow["journal"], None, y, journal_rankings)
+            work_type = determine_work_type(ow["type"], ow["journal"], "journal", ranked_type)
 
             item = {
                 "title": title,
@@ -427,7 +479,6 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             elif norm_t:
                 pubs_by_title[norm_t] = item
 
-        # Polite delay to prevent rate-limiting
         time.sleep(0.2)
 
     # 3. Merge Manual Publications
@@ -443,12 +494,10 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             target = pubs_by_title[norm_t]
 
         if target:
-            # Update target with manual overrides
             for k, v in mp.items():
                 if v is not None:
                     target[k] = v
         else:
-            # Append manual publication
             if doi:
                 pubs_by_doi[doi] = mp
             elif norm_t:
@@ -463,7 +512,7 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             all_works.append(w)
             seen_titles.add(norm_t)
 
-    # Filter >= start_year and ensure required fields
+    # Clean, validate, and update year-specific quartiles for all works
     clean_works = []
     for w in all_works:
         if not w.get("title"):
@@ -471,14 +520,23 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
         y = w.get("year")
         if not y or y < start_year:
             continue
-        # Ensure work_type is clean
         if not w.get("work_type"):
             w["work_type"] = "journal"
-        # Re-check journal quartile if missing
-        if not w.get("quartile") and w.get("journal"):
-            rank = find_ranking_for_journal(w["journal"], journal_rankings)
-            if rank and rank.get("quartile"):
-                w["quartile"] = rank["quartile"]
+
+        # Re-verify year-specific quartile from SCImago rankings
+        q_year, ranked_type = find_ranking_for_journal(w.get("journal"), w.get("issn"), y, journal_rankings)
+        if q_year:
+            w["quartile"] = q_year
+        elif not w.get("quartile"):
+            w["quartile"] = None
+
+        if ranked_type and w.get("work_type") != "thesis":
+            w["work_type"] = ranked_type
+
+        # Ensure keywords are a clean list or omitted
+        if not w.get("keywords") or not isinstance(w["keywords"], list):
+            w["keywords"] = []
+
         clean_works.append(w)
 
     # Sort descending by year, then publication_date, then title
@@ -491,7 +549,7 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
         reverse=True
     )
 
-    # Write output to _data/publications.json
+    # Save to _data/publications.json
     out_dir = "_data"
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "publications.json")
@@ -501,7 +559,7 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
 
     log(f"Successfully saved {len(clean_works)} publications to {out_path}!")
 
-    # Print summary statistics
+    # Summary Stats
     years = {}
     quartiles = {}
     types = {}
@@ -513,7 +571,7 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
         wt = w.get("work_type") or "other"
         types[wt] = types.get(wt, 0) + 1
 
-    log("Summary Statistics:")
+    log("Summary Statistics (Year-Specific SCImago Quartiles):")
     log(f"  Total Publications: {len(clean_works)}")
     log(f"  By Type: {types}")
     log(f"  By Quartile: {quartiles}")

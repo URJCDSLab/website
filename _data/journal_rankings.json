@@ -1,71 +1,3340 @@
 {
-  "European Journal of Operational Research": { "quartile": "Q1", "type": "journal" },
-  "Knowledge-Based Systems": { "quartile": "Q1", "type": "journal" },
-  "Information Sciences": { "quartile": "Q1", "type": "journal" },
-  "Applied Intelligence": { "quartile": "Q1", "type": "journal" },
-  "Expert Systems with Applications": { "quartile": "Q1", "type": "journal" },
-  "Computers & Operations Research": { "quartile": "Q1", "type": "journal" },
-  "Engineering Applications of Artificial Intelligence": { "quartile": "Q1", "type": "journal" },
-  "Information Fusion": { "quartile": "Q1", "type": "journal" },
-  "Pattern Recognition": { "quartile": "Q1", "type": "journal" },
-  "Computers & Security": { "quartile": "Q1", "type": "journal" },
-  "Computers and Electronics in Agriculture": { "quartile": "Q1", "type": "journal" },
-  "Computers & Industrial Engineering": { "quartile": "Q1", "type": "journal" },
-  "Scientific Reports": { "quartile": "Q1", "type": "journal" },
-  "The Science of The Total Environment": { "quartile": "Q1", "type": "journal" },
-  "Science of The Total Environment": { "quartile": "Q1", "type": "journal" },
-  "International Journal of Production Research": { "quartile": "Q1", "type": "journal" },
-  "Annals of Operations Research": { "quartile": "Q1", "type": "journal" },
-  "Journal of Optimization Theory and Applications": { "quartile": "Q1", "type": "journal" },
-  "Journal of Global Optimization": { "quartile": "Q1", "type": "journal" },
-  "Journal of Informetrics": { "quartile": "Q1", "type": "journal" },
-  "Simulation Modelling Practice and Theory": { "quartile": "Q1", "type": "journal" },
-  "The Journal of Headache and Pain": { "quartile": "Q1", "type": "journal" },
-  "Nutrients": { "quartile": "Q1", "type": "journal" },
-  "Journal of Dairy Science": { "quartile": "Q1", "type": "journal" },
-  "LWT": { "quartile": "Q1", "type": "journal" },
-  "Drug Safety": { "quartile": "Q1", "type": "journal" },
-  "Cognitive Computation": { "quartile": "Q1", "type": "journal" },
-  "Internet of Things": { "quartile": "Q1", "type": "journal" },
-  "Behavioral Sciences": { "quartile": "Q2", "type": "journal" },
-  "IEEE Access": { "quartile": "Q2", "type": "journal" },
-  "Pattern Recognition Letters": { "quartile": "Q2", "type": "journal" },
-  "Top": { "quartile": "Q2", "type": "journal" },
-  "Entropy": { "quartile": "Q2", "type": "journal" },
-  "Neural Computing and Applications": { "quartile": "Q2", "type": "journal" },
-  "Mathematics": { "quartile": "Q1", "type": "journal" },
-  "Pattern Analysis and Applications": { "quartile": "Q2", "type": "journal" },
-  "Sustainability": { "quartile": "Q2", "type": "journal" },
-  "PLoS ONE": { "quartile": "Q1", "type": "journal" },
-  "Multimedia Tools and Applications": { "quartile": "Q2", "type": "journal" },
-  "International Journal of Environmental Research and Public Health": { "quartile": "Q2", "type": "journal" },
-  "Computer Science and Information Systems": { "quartile": "Q2", "type": "journal" },
-  "Clínica y Salud": { "quartile": "Q2", "type": "journal" },
-  "Anales de Psicología": { "quartile": "Q2", "type": "journal" },
-  "Clinical Gerontologist": { "quartile": "Q2", "type": "journal" },
-  "Healthcare": { "quartile": "Q2", "type": "journal" },
-  "Complexity": { "quartile": "Q2", "type": "journal" },
-  "Progress in Artificial Intelligence": { "quartile": "Q2", "type": "journal" },
-  "Enfermería Intensiva": { "quartile": "Q2", "type": "journal" },
-  "Enfermería Intensiva (English ed.)": { "quartile": "Q2", "type": "journal" },
-  "International Journal of Sensor Networks": { "quartile": "Q3", "type": "journal" },
-  "Computational Management Science": { "quartile": "Q2", "type": "journal" },
-  "Discrete Applied Mathematics": { "quartile": "Q2", "type": "journal" },
-  "Wireless Communications and Mobile Computing": { "quartile": "Q3", "type": "journal" },
-  "IEEE Latin America Transactions": { "quartile": "Q3", "type": "journal" },
-  "methaodos revista de ciencias sociales": { "quartile": "Q3", "type": "journal" },
-  "methaodos. revista de ciencias sociales": { "quartile": "Q3", "type": "journal" },
-  "International Electronic Journal of Mathematics Education": { "quartile": "Q3", "type": "journal" },
-  "Journal of Engineering and Technology Management": { "quartile": "Q2", "type": "journal" },
-  "Lecture notes in computer science": { "type": "conference" },
-  "Advances in intelligent systems and computing": { "type": "conference" },
-  "Communications in computer and information science": { "type": "conference" },
-  "INTED proceedings": { "type": "conference" },
-  "EDULEARN proceedings": { "type": "conference" },
-  "ICERI proceedings": { "type": "conference" },
-  "arXiv (Cornell University)": { "type": "preprint" },
-  "Zenodo (CERN European Organization for Nuclear Research)": { "type": "preprint" },
-  "SSRN Electronic Journal": { "type": "preprint" },
-  "Research Square": { "type": "preprint" },
-  "Figshare": { "type": "preprint" }
+  "Lecture notes in computer science": {
+    "type": "conference",
+    "quartiles": {}
+  },
+  "Advances in intelligent systems and computing": {
+    "type": "conference",
+    "quartiles": {}
+  },
+  "Communications in computer and information science": {
+    "type": "conference",
+    "quartiles": {}
+  },
+  "INTED proceedings": {
+    "type": "conference",
+    "quartiles": {}
+  },
+  "EDULEARN proceedings": {
+    "type": "conference",
+    "quartiles": {}
+  },
+  "ICERI proceedings": {
+    "type": "conference",
+    "quartiles": {}
+  },
+  "AI Magazine": {
+    "type": "journal",
+    "issns": [
+      "07384602"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q3",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "European Geriatric Medicine": {
+    "type": "journal",
+    "issns": [
+      "18787649"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "JUCS - Journal of Universal Computer Science": {
+    "type": "journal",
+    "issns": [
+      "0948695X"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Congresos UEX actas de congresos": {
+    "type": "journal",
+    "issns": [
+      "31017177"
+    ],
+    "quartiles": {}
+  },
+  "Nursing in Critical Care": {
+    "type": "journal",
+    "issns": [
+      "13621017"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q2",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Boletín de Estadística e Investigación Operativa": {
+    "type": "journal",
+    "issns": [
+      "23871725"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q4",
+      "2018": "Q4",
+      "2019": "Q4",
+      "2020": "Q4",
+      "2021": "Q4",
+      "2022": "Q4",
+      "2023": "Q4",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "IET Biometrics": {
+    "type": "journal",
+    "issns": [
+      "20474938"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Healthcare": {
+    "type": "journal",
+    "issns": [
+      "22279032"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q1",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Computer Science and Information Systems": {
+    "type": "journal",
+    "issns": [
+      "18200214"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q2",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "European Journal of Operational Research": {
+    "type": "journal",
+    "issns": [
+      "03772217"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Annals of Operations Research": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Environmental Research Letters": {
+    "type": "journal",
+    "issns": [
+      "17489326"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Ageing and Longevity": {
+    "type": "journal",
+    "issns": [
+      "26739259"
+    ],
+    "quartiles": {}
+  },
+  "Neurocomputing": {
+    "type": "journal",
+    "issns": [
+      "09252312"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Porto Biomedical Journal": {
+    "type": "journal",
+    "issns": [
+      "24448664"
+    ],
+    "quartiles": {
+      "2018": "Q3",
+      "2019": "Q3"
+    }
+  },
+  "Nurse Education in Practice": {
+    "type": "journal",
+    "issns": [
+      "14715953"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Frontiers in Water": {
+    "type": "journal",
+    "issns": [
+      "26249375"
+    ],
+    "quartiles": {
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "European Journal of Investigation in Health Psychology and Education": {
+    "type": "journal",
+    "issns": [
+      "21748144"
+    ],
+    "quartiles": {
+      "2021": "Q3",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Neural Computing and Applications": {
+    "type": "journal",
+    "issns": [
+      "09410643"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q1",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Current Opinion in Pulmonary Medicine": {
+    "type": "journal",
+    "issns": [
+      "10705287"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "PEDIATRICS": {
+    "type": "journal",
+    "issns": [
+      "00314005"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Knowledge-Based Systems": {
+    "type": "journal",
+    "issns": [
+      "09507051"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Policy Research in Tourism Leisure and Events": {
+    "type": "journal",
+    "issns": [
+      "19407963"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Pattern Analysis and Applications": {
+    "type": "journal",
+    "issns": [
+      "14337541"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Clinical Gerontologist": {
+    "type": "journal",
+    "issns": [
+      "07317115"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Applied Soft Computing": {
+    "type": "journal",
+    "issns": [
+      "15684946"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Progress in Organic Coatings": {
+    "type": "journal",
+    "issns": [
+      "03009440"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Behavioral Sciences": {
+    "type": "journal",
+    "issns": [
+      "2076328X"
+    ],
+    "quartiles": {
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Nature Communications": {
+    "type": "journal",
+    "issns": [
+      "20411723"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Heuristics": {
+    "type": "journal",
+    "issns": [
+      "13811231"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Addiction Research & Theory": {
+    "type": "journal",
+    "issns": [
+      "10586989"
+    ],
+    "quartiles": {}
+  },
+  "Annals of the American Thoracic Society": {
+    "type": "journal",
+    "issns": [
+      "23256621"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "PubMed": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Tecnología y Ciencias del Agua": {
+    "type": "journal",
+    "issns": [
+      "01878336"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q4",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q4",
+      "2021": "Q4",
+      "2022": "Q4",
+      "2023": "Q4",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Clínica y Salud": {
+    "type": "journal",
+    "issns": [
+      "11305274"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q4",
+      "2018": "Q3",
+      "2019": "Q4",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "International Electronic Journal of Mathematics Education": {
+    "type": "journal",
+    "issns": [
+      "13063030"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q4",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Language and Speech": {
+    "type": "journal",
+    "issns": [
+      "00238309"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Scientific Reports": {
+    "type": "journal",
+    "issns": [
+      "20452322"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Critical Care Explorations": {
+    "type": "journal",
+    "issns": [
+      "26398028"
+    ],
+    "quartiles": {
+      "2022": "Q3",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Engineering Applications of Artificial Intelligence": {
+    "type": "journal",
+    "issns": [
+      "09521976"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "IEEE Engineering Management Review": {
+    "type": "journal",
+    "issns": [
+      "03608581"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q3",
+      "2018": "Q4",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Journal of Retailing and Consumer Services": {
+    "type": "journal",
+    "issns": [
+      "09696989"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Top": {
+    "type": "journal",
+    "issns": [
+      "11345764"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Computers & Industrial Engineering": {
+    "type": "journal",
+    "issns": [
+      "03608352"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Knowledge and Information Systems": {
+    "type": "journal",
+    "issns": [
+      "02191377"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q1",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Psychology Research and Behavior Management": {
+    "type": "journal",
+    "issns": [
+      "11791578"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q1",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Tourism and Hospitality Research": {
+    "type": "journal",
+    "issns": [
+      "14673584"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q2",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Universitat Oberta de Catalunya (UOC)": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Papeles del Psicólogo - Psychologist Papers": {
+    "type": "journal",
+    "issns": [
+      "02147823"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Applied Intelligence": {
+    "type": "journal",
+    "issns": [
+      "0924669X"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Entropy": {
+    "type": "journal",
+    "issns": [
+      "10994300"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Personality and Individual Differences": {
+    "type": "journal",
+    "issns": [
+      "01918869"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Pediatric Research": {
+    "type": "journal",
+    "issns": [
+      "00313998"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Scientific Data": {
+    "type": "journal",
+    "issns": [
+      "20524463"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Internet of Things": {
+    "type": "journal",
+    "issns": [
+      "25426605"
+    ],
+    "quartiles": {
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q4",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Production Research": {
+    "type": "journal",
+    "issns": [
+      "00207543"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Nursing and Women s Health": {
+    "type": "journal",
+    "issns": [
+      "25771450"
+    ],
+    "quartiles": {}
+  },
+  "Machines": {
+    "type": "journal",
+    "issns": [
+      "20751702"
+    ],
+    "quartiles": {
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Journal of Tourism Futures": {
+    "type": "journal",
+    "issns": [
+      "20555911"
+    ],
+    "quartiles": {
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Porcine Health Management": {
+    "type": "journal",
+    "issns": [
+      "20555660"
+    ],
+    "quartiles": {
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Acción Psicológica": {
+    "type": "journal",
+    "issns": [
+      "1578908X"
+    ],
+    "quartiles": {}
+  },
+  "Energy Reports": {
+    "type": "journal",
+    "issns": [
+      "23524847"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Revista Española de Geriatría y Gerontología": {
+    "type": "journal",
+    "issns": [
+      "0211139X"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q4",
+      "2021": "Q4",
+      "2022": "Q3",
+      "2023": "Q4",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Frontiers in Environmental Science": {
+    "type": "journal",
+    "issns": [
+      "2296665X"
+    ],
+    "quartiles": {
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Expert Review of Respiratory Medicine": {
+    "type": "journal",
+    "issns": [
+      "17476348"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Antibiotics": {
+    "type": "journal",
+    "issns": [
+      "20796382"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Clinical Psychology & Psychotherapy": {
+    "type": "journal",
+    "issns": [
+      "10633995"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Angiology": {
+    "type": "journal",
+    "issns": [
+      "03929590"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Pathogens": {
+    "type": "journal",
+    "issns": [
+      "20760817"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Revista De Ciencias Sociales": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q4",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Enfermería Intensiva (English ed )": {
+    "type": "journal",
+    "issns": [
+      "25299840"
+    ],
+    "quartiles": {}
+  },
+  "Discrete Applied Mathematics": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "IEEE Access": {
+    "type": "journal",
+    "issns": [
+      "21693536"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Sustainability": {
+    "type": "journal",
+    "issns": [
+      "20711050"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Information Sciences": {
+    "type": "journal",
+    "issns": [
+      "00200255"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "The Science of The Total Environment": {
+    "type": "journal",
+    "issns": [
+      "00489697"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Pattern Recognition": {
+    "type": "journal",
+    "issns": [
+      "00313203"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Enfermería Intensiva": {
+    "type": "journal",
+    "issns": [
+      "11302399"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Applied Sciences": {
+    "type": "journal",
+    "issns": [
+      "20763417"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q3",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q3",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "The R Journal": {
+    "type": "journal",
+    "issns": [
+      "20734859"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Sleep and Biological Rhythms": {
+    "type": "journal",
+    "issns": [
+      "14469235"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Tourism Review": {
+    "type": "journal",
+    "issns": [
+      "02513102"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Applied Stochastic Models in Business and Industry": {
+    "type": "journal",
+    "issns": [
+      "15241904"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Mathematics": {
+    "type": "journal",
+    "issns": [
+      "22277390"
+    ],
+    "quartiles": {
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Cognitive Computation": {
+    "type": "journal",
+    "issns": [
+      "18669956"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Engineering Trends and Technology": {
+    "type": "journal",
+    "issns": [
+      "22315381"
+    ],
+    "quartiles": {
+      "2021": "Q4",
+      "2022": "Q4",
+      "2023": "Q4",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Pattern Recognition Letters": {
+    "type": "journal",
+    "issns": [
+      "01678655"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Sensor Networks": {
+    "type": "journal",
+    "issns": [
+      "17481279"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q2",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Universidad Rey Juan Carlos": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Substance Abuse": {
+    "type": "journal",
+    "issns": [
+      "08897077"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Sustainable Cities and Society": {
+    "type": "journal",
+    "issns": [
+      "22106707"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Environmental Research and Public Health": {
+    "type": "journal",
+    "issns": [
+      "16604601"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Computers and Electronics in Agriculture": {
+    "type": "journal",
+    "issns": [
+      "01681699"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Physiological Measurement": {
+    "type": "journal",
+    "issns": [
+      "09673334"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Journal of Informetrics": {
+    "type": "journal",
+    "issns": [
+      "17511577"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Quality & Quantity": {
+    "type": "journal",
+    "issns": [
+      "00335177"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Mining": {
+    "type": "journal",
+    "issns": [
+      "26736489"
+    ],
+    "quartiles": {
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Porta Linguarum Revista Interuniversitaria de Didáctica de las Lenguas Extranjeras": {
+    "type": "journal",
+    "issns": [
+      "16977467"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Engineering and Technology Management": {
+    "type": "journal",
+    "issns": [
+      "09234748"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Nutrients": {
+    "type": "journal",
+    "issns": [
+      "20726643"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Computers & Security": {
+    "type": "journal",
+    "issns": [
+      "01674048"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Expert Systems with Applications": {
+    "type": "journal",
+    "issns": [
+      "09574174"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Global Environmental Change": {
+    "type": "journal",
+    "issns": [
+      "09593780"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Ecological Indicators": {
+    "type": "journal",
+    "issns": [
+      "1470160X"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Tourism Management": {
+    "type": "journal",
+    "issns": [
+      "02615177"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Electronic Journal of Research in Educational Psychology": {
+    "type": "journal",
+    "issns": [
+      "16962095"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q4",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Arrow@dit (Dublin Institute of Technology)": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Microorganisms": {
+    "type": "journal",
+    "issns": [
+      "20762607"
+    ],
+    "quartiles": {
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Pharmaceutics": {
+    "type": "journal",
+    "issns": [
+      "19994923"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Molecular Sciences": {
+    "type": "journal",
+    "issns": [
+      "14220067"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "ROTUR Revista de Ocio y Turismo": {
+    "type": "journal",
+    "issns": [
+      "18886884"
+    ],
+    "quartiles": {}
+  },
+  "Entertainment Computing": {
+    "type": "journal",
+    "issns": [
+      "18759521"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q3",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q3",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Journal of Services Marketing": {
+    "type": "journal",
+    "issns": [
+      "08876045"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Suis": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "REVISTA ESPANOLA DE CARDIOLOGIA": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "DOAJ (DOAJ: Directory of Open Access Journals)": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "BMC Medical Education": {
+    "type": "journal",
+    "issns": [
+      "14726920"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Brain Topography": {
+    "type": "journal",
+    "issns": [
+      "08960267"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Wiley StatsRef: Statistics Reference Online": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Environment and Planning B Urban Analytics and City Science": {
+    "type": "journal",
+    "issns": [
+      "23998083"
+    ],
+    "quartiles": {
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Progress in Artificial Intelligence": {
+    "type": "journal",
+    "issns": [
+      "21926352"
+    ],
+    "quartiles": {
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q3",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Journal of Pediatric Nursing": {
+    "type": "journal",
+    "issns": [
+      "08825963"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Information Fusion": {
+    "type": "journal",
+    "issns": [
+      "15662535"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Global Optimization": {
+    "type": "journal",
+    "issns": [
+      "09255001"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Dairy Science": {
+    "type": "journal",
+    "issns": [
+      "00220302"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Complexity": {
+    "type": "journal",
+    "issns": [
+      "10762787"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "methaodos revista de ciencias sociales": {
+    "type": "journal",
+    "issns": [
+      "23408413"
+    ],
+    "quartiles": {}
+  },
+  "Software Practice and Experience": {
+    "type": "journal",
+    "issns": [
+      "00380644"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "International Journal of Applied Earth Observation and Geoinformation": {
+    "type": "journal",
+    "issns": [
+      "03032434"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "INFORMS Journal on Applied Analytics": {
+    "type": "journal",
+    "issns": [
+      "00922102"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "REVISTA ESPANOLA DE SALUD PUBLICA": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q4",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Executive excellence: la revista de liderazgo, la gestión y la toma de decisiones": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Ecclesia": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Computers & Operations Research": {
+    "type": "journal",
+    "issns": [
+      "03050548"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Simulation Modelling Practice and Theory": {
+    "type": "journal",
+    "issns": [
+      "1569190X"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Rock Mechanics and Mining Sciences": {
+    "type": "journal",
+    "issns": [
+      "13651609"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Antimicrobial Agents": {
+    "type": "journal",
+    "issns": [
+      "09248579"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Nursing Ethics": {
+    "type": "journal",
+    "issns": [
+      "09697330"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Quality and Service Sciences": {
+    "type": "journal",
+    "issns": [
+      "1756669X"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q1",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Psychosocial Intervention": {
+    "type": "journal",
+    "issns": [
+      "11320559"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Intelligent Information Systems": {
+    "type": "journal",
+    "issns": [
+      "09259902"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q1",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "PLoS ONE": {
+    "type": "journal",
+    "issns": [
+      "19326203"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "AIDS Care": {
+    "type": "journal",
+    "issns": [
+      "09540121"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "LWT": {
+    "type": "journal",
+    "issns": [
+      "00236438"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Paediatric Respiratory Reviews": {
+    "type": "journal",
+    "issns": [
+      "15260542"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Sensors": {
+    "type": "journal",
+    "issns": [
+      "14248220"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Multimedia Tools and Applications": {
+    "type": "journal",
+    "issns": [
+      "13807501"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q2",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Dialnet (Universidad de la Rioja)": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Ecosystem Services": {
+    "type": "journal",
+    "issns": [
+      "22120416"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Wireless Communications and Mobile Computing": {
+    "type": "journal",
+    "issns": [
+      "15308669"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2"
+    }
+  },
+  "IEEE Software": {
+    "type": "journal",
+    "issns": [
+      "07407459"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Expert Opinion on Pharmacotherapy": {
+    "type": "journal",
+    "issns": [
+      "14656566"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Safety Science": {
+    "type": "journal",
+    "issns": [
+      "09257535"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Energies": {
+    "type": "journal",
+    "issns": [
+      "19961073"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Frontiers in Psychology": {
+    "type": "journal",
+    "issns": [
+      "16641078"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Computational Management Science": {
+    "type": "journal",
+    "issns": [
+      "1619697X"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q3",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Scandinavian Journal of Psychology": {
+    "type": "journal",
+    "issns": [
+      "00365564"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Cytometry Part B Clinical Cytometry": {
+    "type": "journal",
+    "issns": [
+      "15524949"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Computational Optimization and Applications": {
+    "type": "journal",
+    "issns": [
+      "09266003"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "World Academy of Science, Engineering and Technology, International Journal of Bioengineering and Life Sciences": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Gestión de compras: la revista de los profesionales de compras, aprovisionamientos y gestión de materiales": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "SCIENCE OF THE TOTAL ENVIRONMENT": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "IMPOSSIBILIA-REVISTA INTERNACIONAL DE ESTUDIOS LITERARIOS": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Anuncios: Semanario de publicidad y marketing": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "BMJ Open": {
+    "type": "journal",
+    "issns": [
+      "20446055"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Visualized Experiments": {
+    "type": "journal",
+    "issns": [
+      "1940087X"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Anales de Psicología": {
+    "type": "journal",
+    "issns": [
+      "02129728"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Therapeutic Advances in Neurological Disorders": {
+    "type": "journal",
+    "issns": [
+      "17562856"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "The Journal of Headache and Pain": {
+    "type": "journal",
+    "issns": [
+      "11292369"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Revista Lusófona de Educação": {
+    "type": "journal",
+    "issns": [
+      "16457250"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q3",
+      "2018": "Q4",
+      "2019": "Q3",
+      "2020": "Q4",
+      "2021": "Q3",
+      "2022": "Q4",
+      "2023": "Q4",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Revista Colombiana de Nefrología": {
+    "type": "journal",
+    "issns": [
+      "23897708"
+    ],
+    "quartiles": {
+      "2022": "Q4",
+      "2023": "Q4",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Killkana Técnica": {
+    "type": "journal",
+    "issns": [
+      "25288024"
+    ],
+    "quartiles": {}
+  },
+  "Women & Health": {
+    "type": "journal",
+    "issns": [
+      "03630242"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q3",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Journal of Optimization Theory and Applications": {
+    "type": "journal",
+    "issns": [
+      "00223239"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q2",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Journal of Work and Organizational Psychology": {
+    "type": "journal",
+    "issns": [
+      "15765962"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Educación y Humanismo": {
+    "type": "journal",
+    "issns": [
+      "01242121"
+    ],
+    "quartiles": {
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Journal of Cleaner Production": {
+    "type": "journal",
+    "issns": [
+      "09596526"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Population Studies": {
+    "type": "journal",
+    "issns": [
+      "24248150"
+    ],
+    "quartiles": {
+      "2023": "Q4",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Langmuir": {
+    "type": "journal",
+    "issns": [
+      "07437463"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Electronic Notes in Discrete Mathematics": {
+    "type": "journal",
+    "issns": [
+      "15710653"
+    ],
+    "quartiles": {
+      "2016": "Q4",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q4",
+      "2021": "Q3",
+      "2022": "Q4"
+    }
+  },
+  "Transportation research procedia": {
+    "type": "journal",
+    "issns": [
+      "23521457"
+    ],
+    "quartiles": {}
+  },
+  "DYNA ENERGIA Y SOSTENIBILIDAD": {
+    "type": "journal",
+    "issns": [
+      "22542833"
+    ],
+    "quartiles": {}
+  },
+  "REIRE Revista d Innovació i Recerca en Educació": {
+    "type": "journal",
+    "issns": [
+      "20132255"
+    ],
+    "quartiles": {}
+  },
+  "DYNA": {
+    "type": "journal",
+    "issns": [
+      "00127361"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q4",
+      "2022": "Q4",
+      "2023": "Q4",
+      "2024": "Q4",
+      "2025": "Q4",
+      "2026": "Q4"
+    }
+  },
+  "Journal of Environmental Informatics": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Reliability Engineering & System Safety": {
+    "type": "journal",
+    "issns": [
+      "09518320"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "International Journal of Human-Computer Studies": {
+    "type": "journal",
+    "issns": [
+      "10715819"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Computers & Geosciences": {
+    "type": "journal",
+    "issns": [
+      "00983004"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q2",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Water": {
+    "type": "journal",
+    "issns": [
+      "20734441"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q1",
+      "2018": "Q4",
+      "2019": "Q4",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "OASIS": {
+    "type": "journal",
+    "issns": [
+      "16577558"
+    ],
+    "quartiles": {}
+  },
+  "Pain Medicine": {
+    "type": "journal",
+    "issns": [
+      "15262375"
+    ],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Nutrición Hospitalaria": {
+    "type": "journal",
+    "issns": [
+      "02121611"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "IEEE Latin America Transactions": {
+    "type": "journal",
+    "issns": [
+      "15480992"
+    ],
+    "quartiles": {
+      "2016": "Q2",
+      "2017": "Q2",
+      "2018": "Q2",
+      "2019": "Q2",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "Anales de la Real Academia Nacional de Farmacia": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "River Research and Applications": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q2",
+      "2021": "Q2",
+      "2022": "Q2",
+      "2023": "Q2",
+      "2024": "Q2",
+      "2025": "Q2",
+      "2026": "Q2"
+    }
+  },
+  "CLINICAL JOURNAL OF PAIN": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "NUTRICION HOSPITALARIA": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Omega (United Kingdom)": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "INVESTIGATIVE OPHTHALMOLOGY & VISUAL SCIENCE": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "Transportation Science": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  },
+  "Computers and Operations Research": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {}
+  },
+  "IEICE Transactions on Information and Systems": {
+    "type": "journal",
+    "issns": [
+      "09168532"
+    ],
+    "quartiles": {
+      "2016": "Q3",
+      "2017": "Q3",
+      "2018": "Q3",
+      "2019": "Q3",
+      "2020": "Q3",
+      "2021": "Q3",
+      "2022": "Q3",
+      "2023": "Q3",
+      "2024": "Q3",
+      "2025": "Q3",
+      "2026": "Q3"
+    }
+  },
+  "Energy and Buildings": {
+    "type": "journal",
+    "issns": [],
+    "quartiles": {
+      "2016": "Q1",
+      "2017": "Q1",
+      "2018": "Q1",
+      "2019": "Q1",
+      "2020": "Q1",
+      "2021": "Q1",
+      "2022": "Q1",
+      "2023": "Q1",
+      "2024": "Q1",
+      "2025": "Q1",
+      "2026": "Q1"
+    }
+  }
 }

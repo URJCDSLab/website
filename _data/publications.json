@@ -97,7 +97,7 @@
     "journal": "AI Magazine",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0738-4602",
     "keywords": [
       "Language model",
@@ -135,7 +135,7 @@
     "journal": "European Geriatric Medicine",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1878-7649",
     "keywords": [
       "Hip fracture",
@@ -273,7 +273,7 @@
     "journal": "JUCS - Journal of Universal Computer Science",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "0948-695X",
     "keywords": [
       "Data quality",
@@ -387,7 +387,7 @@
     "journal": "Nursing in Critical Care",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1362-1017",
     "keywords": [
       "Catheter",
@@ -417,7 +417,7 @@
     "journal": "Boletín de Estadística e Investigación Operativa",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "2387-1725",
     "keywords": [
       "Data visualization",
@@ -522,7 +522,7 @@
     "journal": "IET Biometrics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2047-4938",
     "keywords": [
       "Morphing",
@@ -753,7 +753,7 @@
     "journal": "Environmental Research Letters",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1748-9326",
     "keywords": [
       "Eutrophication",
@@ -823,7 +823,7 @@
     "journal": "Neurocomputing",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0925-2312",
     "keywords": [
       "Estimation",
@@ -965,7 +965,7 @@
     "journal": "Porto Biomedical Journal",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "2444-8664",
     "keywords": [
       "Portuguese",
@@ -998,7 +998,7 @@
     "journal": "Nurse Education in Practice",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1471-5953",
     "keywords": [
       "Soft skills",
@@ -1066,7 +1066,7 @@
     "journal": "Environmental Research Letters",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1748-9326",
     "keywords": [
       "Nutrient",
@@ -1098,7 +1098,7 @@
     "journal": "Frontiers in Water",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2624-9375",
     "keywords": [
       "Hydropower",
@@ -1166,7 +1166,7 @@
     "journal": "European Journal of Investigation in Health Psychology and Education",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2174-8144",
     "keywords": [
       "Job satisfaction",
@@ -1202,7 +1202,7 @@
     "journal": "Neural Computing and Applications",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "0941-0643",
     "keywords": [
       "Utterance",
@@ -1238,7 +1238,7 @@
     "journal": "Current Opinion in Pulmonary Medicine",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1070-5287",
     "keywords": [
       "Multidisciplinary approach",
@@ -1277,7 +1277,7 @@
     "journal": "PEDIATRICS",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0031-4005",
     "keywords": [
       "Medicine",
@@ -1343,7 +1343,7 @@
     "journal": "Journal of Policy Research in Tourism Leisure and Events",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1940-7963",
     "keywords": [
       "Tourism",
@@ -1529,7 +1529,7 @@
     "journal": "Clinical Gerontologist",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "0731-7115",
     "keywords": [
       "Anxiety",
@@ -1567,7 +1567,7 @@
     "journal": "Applied Soft Computing",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1568-4946",
     "keywords": [
       "Reinforcement learning",
@@ -1645,7 +1645,7 @@
     "journal": "Progress in Organic Coatings",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0300-9440",
     "keywords": [
       "Materials science",
@@ -1680,7 +1680,7 @@
     "journal": "Behavioral Sciences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2076-328X",
     "keywords": [
       "Psychology",
@@ -1774,7 +1774,7 @@
     "journal": "Nature Communications",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2041-1723",
     "keywords": [
       "Mediterranean climate",
@@ -1809,7 +1809,7 @@
     "journal": "Journal of Heuristics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1381-1231",
     "keywords": [
       "Process (computing)",
@@ -1878,7 +1878,7 @@
     "journal": "Annals of the American Thoracic Society",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2325-6621",
     "keywords": [
       "Ivacaftor",
@@ -2286,7 +2286,7 @@
     "journal": "Tecnología y Ciencias del Agua",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "0187-8336",
     "keywords": [
       "Physics"
@@ -2466,7 +2466,7 @@
     "journal": "International Electronic Journal of Mathematics Education",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q3",
+    "quartile": "Q4",
     "issn": "1306-3030",
     "keywords": [
       "Mathematics education",
@@ -2606,7 +2606,7 @@
     "journal": "Language and Speech",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0023-8309",
     "keywords": [
       "Psychology",
@@ -2675,7 +2675,7 @@
     "journal": "Critical Care Explorations",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2639-8028",
     "keywords": [
       "Medicine",
@@ -2742,7 +2742,7 @@
     "journal": "IEEE Engineering Management Review",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0360-8581",
     "keywords": [
       "Business",
@@ -2990,7 +2990,7 @@
     "journal": "Journal of Retailing and Consumer Services",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0969-6989",
     "keywords": [
       "Business",
@@ -3210,7 +3210,7 @@
     "journal": "Knowledge and Information Systems",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0219-1377",
     "keywords": [
       "Reputation",
@@ -3281,7 +3281,7 @@
     "journal": "Psychology Research and Behavior Management",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1179-1578",
     "keywords": [
       "Psychology",
@@ -3382,7 +3382,7 @@
     "journal": "Tourism and Hospitality Research",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1467-3584",
     "keywords": [
       "Tourism",
@@ -3687,7 +3687,7 @@
     "journal": "Papeles del Psicólogo - Psychologist Papers",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "0214-7823",
     "keywords": [
       "Borderline personality disorder",
@@ -3771,7 +3771,7 @@
     "journal": "Applied Intelligence",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "0924-669X",
     "keywords": [
       "Computer science",
@@ -3843,7 +3843,7 @@
     "journal": "Personality and Individual Differences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0191-8869",
     "keywords": [
       "Conscientiousness",
@@ -3913,7 +3913,7 @@
     "journal": "Pediatric Research",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0031-3998",
     "keywords": [
       "Medicine",
@@ -3947,7 +3947,7 @@
     "journal": "Scientific Data",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2052-4463",
     "keywords": [
       "European union",
@@ -4263,7 +4263,7 @@
     "journal": "Tecnología y Ciencias del Agua",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "0187-8336",
     "keywords": [
       "Geography",
@@ -4397,7 +4397,7 @@
     "journal": "Machines",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2075-1702",
     "keywords": [
       "Computer science",
@@ -4432,7 +4432,7 @@
     "journal": "Journal of Tourism Futures",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2055-5911",
     "keywords": [
       "Originality",
@@ -4468,7 +4468,7 @@
     "journal": "Porcine Health Management",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2055-5660",
     "keywords": [
       "Isoquinoline",
@@ -4616,7 +4616,7 @@
     "journal": "Energy Reports",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2352-4847",
     "keywords": [
       "Rock mass classification",
@@ -4717,12 +4717,7 @@
     "work_type": "thesis",
     "source_type": "repository",
     "quartile": null,
-    "keywords": [
-      "Machine Learning",
-      "Sampling Methods",
-      "Classification",
-      "Data Complexity"
-    ],
+    "keywords": [],
     "landing_page_url": "https://hdl.handle.net/10115/30399",
     "pdf_url": "https://hdl.handle.net/10115/30399",
     "is_oa": true,
@@ -4744,7 +4739,7 @@
     "journal": "Revista Española de Geriatría y Gerontología",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "0211-139X",
     "keywords": [
       "Immunogenicity",
@@ -4783,7 +4778,7 @@
     "journal": "Frontiers in Environmental Science",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2296-665X",
     "keywords": [
       "Pesticide",
@@ -4849,7 +4844,7 @@
     "journal": "Expert Review of Respiratory Medicine",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1747-6348",
     "keywords": [
       "Medicine",
@@ -4883,7 +4878,7 @@
     "journal": "Antibiotics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2079-6382",
     "keywords": [
       "Tobramycin",
@@ -4919,7 +4914,7 @@
     "journal": "Revista Española de Geriatría y Gerontología",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "0211-139X",
     "keywords": [
       "Reactogenicity",
@@ -4955,7 +4950,7 @@
     "journal": "Clinical Psychology & Psychotherapy",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1063-3995",
     "keywords": [
       "Anorexia nervosa",
@@ -5044,7 +5039,7 @@
     "journal": "International Angiology",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "0392-9590",
     "keywords": [
       "Medicine",
@@ -5184,7 +5179,7 @@
     "journal": "Pathogens",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2076-0817",
     "keywords": [
       "Medicine",
@@ -5247,7 +5242,7 @@
     "journal": "Revista De Ciencias Sociales",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.31876/rcs.v29i2.39986",
@@ -5378,7 +5373,7 @@
     "journal": "IEEE Access",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2169-3536",
     "keywords": [
       "Misinformation",
@@ -5559,7 +5554,7 @@
     "journal": "Sustainability",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2071-1050",
     "keywords": [
       "Moderation",
@@ -5777,7 +5772,7 @@
     "journal": "Applied Sciences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2076-3417",
     "keywords": [
       "Tracking (education)",
@@ -5826,11 +5821,7 @@
     "work_type": "conference",
     "source_type": "journal",
     "quartile": "Q1",
-    "keywords": [
-      "Pharmacovigilance",
-      "COVID-19 Vaccines",
-      "Observational Study"
-    ],
+    "keywords": [],
     "landing_page_url": "https://doi.org/10.1007/s40264-022-01227-2",
     "pdf_url": null,
     "is_oa": false,
@@ -5921,7 +5912,7 @@
     "journal": "The R Journal",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2073-4859",
     "keywords": [
       "Nutrient",
@@ -5956,7 +5947,7 @@
     "journal": "Sleep and Biological Rhythms",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "1446-9235",
     "keywords": [
       "Insomnia",
@@ -6098,7 +6089,7 @@
     "journal": "Tourism Review",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0251-3102",
     "keywords": [
       "Nationality",
@@ -6133,7 +6124,7 @@
     "journal": "Applied Intelligence",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "0924-669X",
     "keywords": [
       "Hostility",
@@ -6344,7 +6335,7 @@
     "journal": "Applied Stochastic Models in Business and Industry",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1524-1904",
     "keywords": [
       "Cover (algebra)",
@@ -6374,7 +6365,7 @@
     "journal": "Mathematics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "2227-7390",
     "keywords": [
       "Local optimum",
@@ -6446,7 +6437,7 @@
     "journal": "International Journal of Engineering Trends and Technology",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "2231-5381",
     "keywords": [
       "Business",
@@ -6477,7 +6468,7 @@
     "journal": "Pattern Recognition Letters",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "0167-8655",
     "keywords": [
       "Anomaly detection",
@@ -6550,7 +6541,7 @@
     "journal": "Applied Stochastic Models in Business and Industry",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1524-1904",
     "keywords": [
       "Aviation",
@@ -6626,7 +6617,7 @@
     "journal": "Applied Intelligence",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "0924-669X",
     "keywords": [
       "Computer science",
@@ -6826,7 +6817,7 @@
     "journal": "Substance Abuse",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0889-7077",
     "keywords": [
       "Impulsivity",
@@ -6971,7 +6962,7 @@
     "journal": "IEEE Access",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2169-3536",
     "keywords": [
       "Agile software development",
@@ -7075,7 +7066,7 @@
     "journal": "Mathematics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "2227-7390",
     "keywords": [
       "Mathematical optimization",
@@ -7150,7 +7141,7 @@
     "journal": "Sustainable Cities and Society",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2210-6707",
     "keywords": [
       "Urban heat island",
@@ -7185,7 +7176,7 @@
     "journal": "Pattern Recognition Letters",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "0167-8655",
     "keywords": [
       "Misinformation",
@@ -7228,7 +7219,7 @@
     "journal": "International Journal of Environmental Research and Public Health",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "1660-4601",
     "keywords": [
       "Landslide",
@@ -7264,7 +7255,7 @@
     "journal": "Sustainability",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2071-1050",
     "keywords": [
       "Nexus (standard)",
@@ -7369,7 +7360,7 @@
     "journal": "Sustainability",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2071-1050",
     "keywords": [
       "C4.5 algorithm",
@@ -7404,7 +7395,7 @@
     "journal": "Physiological Measurement",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0967-3334",
     "keywords": [
       "Approximate entropy",
@@ -7475,7 +7466,7 @@
     "journal": "Quality & Quantity",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0033-5177",
     "keywords": [
       "Personalization",
@@ -7509,7 +7500,7 @@
     "journal": "Applied Sciences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2076-3417",
     "keywords": [
       "Categorical variable",
@@ -7543,7 +7534,7 @@
     "journal": "International Journal of Environmental Research and Public Health",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "1660-4601",
     "keywords": [
       "Pandemic",
@@ -7615,7 +7606,7 @@
     "journal": "Mining",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2673-6489",
     "keywords": [
       "Rockfall",
@@ -7648,7 +7639,7 @@
     "journal": "Porta Linguarum Revista Interuniversitaria de Didáctica de las Lenguas Extranjeras",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1697-7467",
     "keywords": [
       "Psychology",
@@ -7683,7 +7674,7 @@
     "journal": "Journal of Engineering and Technology Management",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "0923-4748",
     "keywords": [
       "Scrum",
@@ -7859,7 +7850,7 @@
     "journal": "International Journal of Environmental Research and Public Health",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "1660-4601",
     "keywords": [
       "Pandemic",
@@ -7937,7 +7928,7 @@
     "journal": "Global Environmental Change",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0959-3780",
     "keywords": [
       "Eutrophication",
@@ -7972,7 +7963,7 @@
     "journal": "Sustainability",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2071-1050",
     "keywords": [
       "Scopus",
@@ -8008,7 +7999,7 @@
     "journal": "Ecological Indicators",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1470-160X",
     "keywords": [
       "Water Framework Directive",
@@ -8048,7 +8039,7 @@
     "journal": "International Journal of Environmental Research and Public Health",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "1660-4601",
     "keywords": [
       "Hip fracture",
@@ -8084,7 +8075,7 @@
     "journal": "Tourism Management",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0261-5177",
     "keywords": [
       "Tourism",
@@ -8118,14 +8109,10 @@
       "Antonio Alonso Ayuso"
     ],
     "journal": "Top",
-    "work_type": "editorial",
+    "work_type": "journal",
     "source_type": "journal",
     "quartile": "Q2",
-    "keywords": [
-      "Operations Research",
-      "Optimization",
-      "Mathematical Programming"
-    ],
+    "keywords": [],
     "landing_page_url": "https://doi.org/10.1007/s11750-021-00595-y",
     "pdf_url": null,
     "is_oa": false,
@@ -8145,7 +8132,7 @@
     "journal": "Electronic Journal of Research in Educational Psychology",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "1696-2095",
     "keywords": [
       "Psychology",
@@ -8254,7 +8241,7 @@
     "journal": "Microorganisms",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2076-2607",
     "keywords": [
       "Cystic fibrosis",
@@ -8321,7 +8308,7 @@
     "journal": "Pharmaceutics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1999-4923",
     "keywords": [
       "Nanocarriers",
@@ -8389,7 +8376,7 @@
     "journal": "International Journal of Molecular Sciences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1422-0067",
     "keywords": [
       "Biofilm",
@@ -8494,7 +8481,7 @@
     "journal": "Applied Intelligence",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "0924-669X",
     "keywords": [
       "Computer science",
@@ -8529,7 +8516,7 @@
     "journal": "Entertainment Computing",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "1875-9521",
     "keywords": [
       "Feeling",
@@ -8564,7 +8551,7 @@
     "journal": "Journal of Services Marketing",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0887-6045",
     "keywords": [
       "Business",
@@ -8626,7 +8613,7 @@
     "journal": "IEEE Access",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "2169-3536",
     "keywords": [
       "Computer science",
@@ -8699,7 +8686,7 @@
     "journal": "REVISTA ESPANOLA DE CARDIOLOGIA",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1016/j.recesp.2019.11.017",
@@ -9025,7 +9012,7 @@
     "journal": "Mathematics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "2227-7390",
     "keywords": [
       "Computer science",
@@ -9061,7 +9048,7 @@
     "journal": "BMC Medical Education",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1472-6920",
     "keywords": [
       "Cross-sectional study",
@@ -9132,7 +9119,7 @@
     "journal": "Brain Topography",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0896-0267",
     "keywords": [
       "Frequentist inference",
@@ -9231,7 +9218,7 @@
     "journal": "Environment and Planning B Urban Analytics and City Science",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2399-8083",
     "keywords": [
       "Estimator",
@@ -9295,7 +9282,7 @@
     "journal": "Progress in Artificial Intelligence",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q3",
     "issn": "2192-6352",
     "keywords": [
       "Computer science",
@@ -9408,7 +9395,7 @@
     "journal": "Journal of Pediatric Nursing",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0882-5963",
     "keywords": [
       "Migraine",
@@ -9654,7 +9641,7 @@
     "journal": "Complexity",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "1076-2787",
     "keywords": [
       "Real estate",
@@ -9754,7 +9741,7 @@
     "journal": "Software Practice and Experience",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0038-0644",
     "keywords": [
       "Big data",
@@ -9956,7 +9943,7 @@
     "journal": "International Journal of Applied Earth Observation and Geoinformation",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0303-2434",
     "keywords": [
       "Land cover",
@@ -10172,7 +10159,7 @@
     "journal": "INFORMS Journal on Applied Analytics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0092-2102",
     "keywords": [
       "SAFER",
@@ -10204,7 +10191,7 @@
     "journal": "REVISTA ESPANOLA DE SALUD PUBLICA",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": null,
     "keywords": [],
     "landing_page_url": null,
@@ -10939,7 +10926,7 @@
     "journal": "International Journal of Rock Mechanics and Mining Sciences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1365-1609",
     "keywords": [
       "Isotropy",
@@ -10973,7 +10960,7 @@
     "journal": "International Journal of Antimicrobial Agents",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0924-8579",
     "keywords": [
       "Autoregressive integrated moving average",
@@ -11008,7 +10995,7 @@
     "journal": "Nursing Ethics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0969-7330",
     "keywords": [
       "Cronbach's alpha",
@@ -11075,7 +11062,7 @@
     "journal": "International Journal of Quality and Service Sciences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1756-669X",
     "keywords": [
       "Tourism",
@@ -11110,7 +11097,7 @@
     "journal": "Psychosocial Intervention",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1132-0559",
     "keywords": [
       "Psychology",
@@ -11217,7 +11204,7 @@
     "journal": "Journal of Intelligent Information Systems",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0925-9902",
     "keywords": [
       "Exploit",
@@ -11532,7 +11519,7 @@
     "journal": "AIDS Care",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0954-0121",
     "keywords": [
       "Mood",
@@ -11639,7 +11626,7 @@
     "journal": "Paediatric Respiratory Reviews",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1526-0542",
     "keywords": [
       "Psychosocial",
@@ -11770,7 +11757,7 @@
     "journal": "Sensors",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1424-8220",
     "keywords": [
       "Transport engineering",
@@ -11804,7 +11791,7 @@
     "journal": "Multimedia Tools and Applications",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "1380-7501",
     "keywords": [
       "Computer science",
@@ -12210,7 +12197,7 @@
     "journal": "Ecosystem Services",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1016/j.ecoser.2018.12.013",
@@ -12238,7 +12225,7 @@
     "journal": "Wireless Communications and Mobile Computing",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q3",
+    "quartile": "Q2",
     "issn": "1530-8669",
     "keywords": [
       "Computer science",
@@ -12276,7 +12263,7 @@
     "journal": "IEEE Software",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0740-7459",
     "keywords": [
       "Agile software development",
@@ -12413,7 +12400,7 @@
     "journal": "Expert Opinion on Pharmacotherapy",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1465-6566",
     "keywords": [
       "Cystic fibrosis",
@@ -12590,7 +12577,7 @@
     "journal": "Safety Science",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0925-7535",
     "keywords": [
       "Aviation",
@@ -12658,7 +12645,7 @@
     "journal": "Energies",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1996-1073",
     "keywords": [
       "Benchmark (surveying)",
@@ -12690,7 +12677,7 @@
     "journal": "Frontiers in Psychology",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1664-1078",
     "keywords": [
       "Psychology",
@@ -12722,7 +12709,7 @@
     "journal": "Computational Management Science",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": "1619-697X",
     "keywords": [
       "Computer science",
@@ -12862,7 +12849,7 @@
     "journal": "Scandinavian Journal of Psychology",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0036-5564",
     "keywords": [
       "Psychology",
@@ -12934,7 +12921,7 @@
     "journal": "Cytometry Part B Clinical Cytometry",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1552-4949",
     "keywords": [
       "Primary effusion lymphoma",
@@ -13109,7 +13096,7 @@
     "journal": "Computational Optimization and Applications",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0926-6003",
     "keywords": [
       "Mathematical optimization",
@@ -13597,7 +13584,7 @@
     "journal": "BMJ Open",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2044-6055",
     "keywords": [
       "Medicine",
@@ -13858,7 +13845,7 @@
     "journal": "Journal of Visualized Experiments",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1940-087X",
     "keywords": [
       "Neuroscience",
@@ -13893,7 +13880,7 @@
     "journal": "Anales de Psicología",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q3",
     "issn": "0212-9728",
     "keywords": [
       "Loneliness",
@@ -13929,7 +13916,7 @@
     "journal": "Therapeutic Advances in Neurological Disorders",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1756-2856",
     "keywords": [
       "Migraine",
@@ -14004,7 +13991,7 @@
     "journal": "Revista Lusófona de Educação",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "1645-7250",
     "keywords": [
       "Humanities",
@@ -14034,7 +14021,7 @@
     "journal": "Revista Colombiana de Nefrología",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "2389-7708",
     "keywords": [
       "Medicine",
@@ -14131,7 +14118,7 @@
     "journal": "Women & Health",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "0363-0242",
     "keywords": [
       "Medicine",
@@ -14170,7 +14157,7 @@
     "journal": "Revista Lusófona de Educação",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "1645-7250",
     "keywords": [
       "Humanities",
@@ -14296,7 +14283,7 @@
     "journal": "Journal of Optimization Theory and Applications",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q1",
+    "quartile": "Q2",
     "issn": "0022-3239",
     "keywords": [
       "Karush–Kuhn–Tucker conditions",
@@ -14331,7 +14318,7 @@
     "journal": "Journal of Work and Organizational Psychology",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "1576-5962",
     "keywords": [
       "Psychology",
@@ -14366,7 +14353,7 @@
     "journal": "Educación y Humanismo",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "0124-2121",
     "keywords": [
       "Humanities",
@@ -14395,7 +14382,7 @@
     "journal": "Journal of Cleaner Production",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0959-6526",
     "keywords": [
       "Nexus (standard)",
@@ -14429,7 +14416,7 @@
     "journal": "International Journal of Population Studies",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q4",
     "issn": "2424-8150",
     "keywords": [
       "Graduation (instrument)",
@@ -14502,7 +14489,7 @@
     "journal": "Langmuir",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0743-7463",
     "keywords": [
       "Nanoparticle",
@@ -14536,7 +14523,7 @@
     "journal": "Electronic Notes in Discrete Mathematics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "1571-0653",
     "keywords": [
       "Heading (navigation)",
@@ -14572,7 +14559,7 @@
     "journal": "Anales de Psicología",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q3",
     "issn": "0212-9728",
     "keywords": [
       "Reliability (semiconductor)",
@@ -14930,7 +14917,7 @@
     "journal": "Clínica y Salud",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q4",
     "issn": "1130-5274",
     "keywords": [
       "Anosmia",
@@ -15055,7 +15042,7 @@
     "journal": "Computer Science and Information Systems",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q3",
     "issn": "1820-0214",
     "keywords": [
       "Computer science",
@@ -15180,7 +15167,7 @@
     "journal": "DYNA",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "0012-7361",
     "keywords": [
       "Political science",
@@ -15206,7 +15193,7 @@
     "journal": "Journal of Environmental Informatics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.3808/jei.201500313",
@@ -15267,7 +15254,7 @@
     "journal": "Reliability Engineering & System Safety",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0951-8320",
     "keywords": [
       "Aviation",
@@ -15302,7 +15289,7 @@
     "journal": "International Journal of Human-Computer Studies",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1071-5819",
     "keywords": [
       "Crowdsourcing",
@@ -15476,7 +15463,7 @@
     "journal": "Ecosystem Services",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "2212-0416",
     "keywords": [
       "Recreation",
@@ -15545,7 +15532,7 @@
     "journal": "Computers & Geosciences",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "0098-3004",
     "keywords": [
       "Computer science",
@@ -15615,7 +15602,7 @@
     "journal": "Water",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2073-4441",
     "keywords": [
       "Nonpoint source pollution",
@@ -15654,7 +15641,7 @@
     "journal": "Water",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q2",
     "issn": "2073-4441",
     "keywords": [
       "Blueprint",
@@ -15894,7 +15881,7 @@
     "journal": "Pain Medicine",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": "1526-2375",
     "keywords": [
       "Carpal tunnel syndrome",
@@ -15929,7 +15916,7 @@
     "journal": "Nutrición Hospitalaria",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "0212-1611",
     "keywords": [
       "Humanities",
@@ -15960,7 +15947,7 @@
     "journal": "IEEE Latin America Transactions",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q3",
+    "quartile": "Q2",
     "issn": "1548-0992",
     "keywords": [
       "Pedestrian detection",
@@ -16174,7 +16161,7 @@
     "journal": "River Research and Applications",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1002/rra.2983",
@@ -16231,7 +16218,7 @@
     "journal": "CLINICAL JOURNAL OF PAIN",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1097/ajp.0000000000000241",
@@ -16351,7 +16338,7 @@
     "journal": "Omega (United Kingdom)",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1016/j.omega.2015.02.013",
@@ -16468,7 +16455,7 @@
     "journal": "Transportation Science",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1287/trsc.2014.0557",
@@ -16626,7 +16613,7 @@
     "journal": "IEICE Transactions on Information and Systems",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q3",
     "issn": "0916-8532",
     "keywords": [
       "Computer science",
@@ -16658,7 +16645,7 @@
     "journal": "Discrete Applied Mathematics",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1016/j.dam.2015.11.006",
@@ -16703,7 +16690,7 @@
     "journal": "Energy and Buildings",
     "source_type": "journal",
     "work_type": "journal",
-    "quartile": null,
+    "quartile": "Q1",
     "issn": null,
     "keywords": [],
     "landing_page_url": "https://doi.org/10.1016/j.enbuild.2015.10.020",

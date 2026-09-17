@@ -377,43 +377,61 @@ p.lead + div.row.justify-content-evenly {
 }
 
 /* Publications Page Styles */
-.pub-stat-card {
-    background: #ffffff;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.pub-stat-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-}
-.pub-stat-number {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-.pub-stat-label {
-    font-size: 0.95rem;
-    color: #333333;
-}
-.publication-item {
-    transition: background-color 0.15s ease;
-    padding-left: 6px;
-    border-left: 3px solid transparent;
-}
-.publication-item:hover {
-    background-color: #fcfcfc;
-    border-left-color: #3697d9;
-}
-.pub-title a:hover {
-    color: #3697d9 !important;
-}
 .pub-filter-toolbar {
     background: #f8f9fa;
     border-radius: 8px;
 }
-#pub-filter-buttons button {
+
+.pub-filter-btn {
+    background-color: #ffffff;
+    color: #212529 !important;
+    border: 1px solid #ced4da;
     border-radius: 20px;
-    font-size: 0.82rem;
-    padding: 4px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
+
+.pub-filter-btn:hover {
+    background-color: #e9ecef;
+    color: #111827 !important;
+    border-color: #adb5bd;
+}
+
+.pub-filter-btn.active {
+    background-color: #3697d9 !important;
+    color: #ffffff !important;
+    border-color: #3697d9 !important;
+    box-shadow: 0 2px 5px rgba(54, 151, 217, 0.35);
+}
+
+.pub-filter-btn.filter-q1.active {
+    background-color: #d97706 !important;
+    color: #ffffff !important;
+    border-color: #d97706 !important;
+    box-shadow: 0 2px 5px rgba(217, 119, 6, 0.35);
+}
+
+.pub-filter-btn.filter-q1.active i {
+    color: #ffffff !important;
+}
+
+.publication-item {
+    transition: background-color 0.15s ease;
+    padding-left: 8px;
+    border-left: 3px solid transparent;
+}
+
+.publication-item:hover {
+    background-color: #fcfcfc;
+    border-left-color: #3697d9;
+}
+
+.pub-title a:hover {
+    color: #3697d9 !important;
+}
+
 
