@@ -1,2 +1,16 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js build output
+/.next/
+/out/
+
 # JetBrains IDEs files
 .idea/**
+
+# Production / Temp
+*.log
+.DS_Store
+*.pem
