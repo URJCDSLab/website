@@ -15,6 +15,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 
@@ -24,7 +25,11 @@ LOOKBACK_DAYS = 180  # Default ~6 months for incremental checks
 
 
 def log(msg):
-    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
+    try:
+        print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
+    except Exception:
+        safe_msg = str(msg).encode("ascii", "replace").decode("ascii")
+        print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] {safe_msg}", flush=True)
 
 
 def http_get_json(url, timeout=25):
@@ -272,20 +277,126 @@ def fetch_orcid_works(orcid, min_year):
     return results
 
 
+def strip_accents(s):
+    if not s:
+        return ""
+    return "".join(c for c in unicodedata.normalize("NFD", str(s)) if unicodedata.category(c) != "Mn").lower()
+
+
 def is_dslab_member(author_name, active_members):
-    """Check if an author string matches an active member."""
+    """Check if an author string matches an active member with accent-insensitive and surname handling."""
     if not author_name:
         return False
-    a_clean = author_name.lower()
+    a_clean = strip_accents(author_name).replace("‐", "-")
+    
     for m in active_members:
-        m_name = m["name"].lower()
-        if m_name in a_clean or a_clean in m_name:
-            return m["name"]
-        m_tokens = [t for t in m_name.split() if len(t) > 2]
-        matches = sum(1 for t in m_tokens if t in a_clean)
-        if matches >= 2:
-            return m["name"]
+        m_name = m["name"]
+        m_clean = strip_accents(m_name)
+        
+        # Exact full name
+        if m_clean in a_clean:
+            return m_name
+            
+        # Strict members that must not match generic first surname alone:
+        if m_name == "Antonio Alonso Ayuso" and "ayuso" not in a_clean:
+            continue
+        if m_name == "Isaac Martín de Diego" and "diego" not in a_clean:
+            continue
+            
+        tokens = [t for t in m_clean.split() if len(t) > 2]
+        
+        # Compound first names: e.g. "angel luis", "juan jose", "francisco javier", "maria jesus", "maria teresa"
+        if len(tokens) >= 3:
+            surnames = tokens[1:]
+            if tokens[0] in ["angel", "juan", "francisco", "maria"] and len(tokens) >= 4:
+                surnames = tokens[2:]
+                
+            # Both surnames / hyphenated
+            if len(surnames) >= 2 and (f"{surnames[0]}-{surnames[1]}" in a_clean or f"{surnames[0]} {surnames[1]}" in a_clean):
+                return m_name
+            if all(s in a_clean for s in surnames):
+                return m_name
+                
+            # First initial + primary family surname (e.g. "A. Udias", "C. Alfaro", "L. Escudero")
+            first_initial = tokens[0][0]
+            primary_surname = surnames[0]
+            if primary_surname in a_clean and (tokens[0] in a_clean or re.search(r"\b" + first_initial + r"[\.\s]", a_clean)):
+                return m_name
+        elif len(tokens) == 2:
+            if all(t in a_clean for t in tokens):
+                return m_name
+            first_initial = tokens[0][0]
+            if tokens[1] in a_clean and (tokens[0] in a_clean or re.search(r"\b" + first_initial + r"[\.\s]", a_clean)):
+                return m_name
+                
     return False
+
+
+def is_valid_work_for_member(work, member_name, member_orcid, member_orcid_dois, member_orcid_titles, active_members):
+    """
+    Validates whether an OpenAlex work actually belongs to the specified DSLab member,
+    preventing OpenAlex author-disambiguation errors (e.g. Antonio Alonso @ LinkedIn,
+    or Isaac Martin @ University of Toronto, or M. Lena @ Indonesia).
+    """
+    doi = normalize_doi(work.get("doi"))
+    norm_t = normalize_title(work.get("title"))
+
+    # 1. Authoritative ground truth: verified in author's personal ORCID record
+    if (doi and doi in member_orcid_dois) or (norm_t and norm_t in member_orcid_titles):
+        return True
+
+    authorships = work.get("authorships", [])
+
+    # 2. Lab co-authorship: if another active DSLab member is a confirmed co-author
+    for a in authorships:
+        a_name = a.get("author", {}).get("display_name") or a.get("raw_author_name") or ""
+        for other_m in active_members:
+            if other_m["name"] != member_name and is_dslab_member(a_name, [other_m]):
+                return True
+
+    # 3. Inspect the specific authorship entry for this member in OpenAlex
+    member_auth = None
+    for a in authorships:
+        auth = a.get("author", {})
+        if auth and auth.get("orcid") == f"https://orcid.org/{member_orcid}":
+            member_auth = a
+            break
+
+    if not member_auth:
+        return False
+
+    raw_name = (member_auth.get("raw_author_name") or "").strip()
+    affils = member_auth.get("raw_affiliation_strings") or []
+    affil_str = " ".join(affils).lower()
+
+    # Disallowed corporate or foreign entities with no Spanish / URJC ties
+    disallowed_institutions = [
+        "linkedin", "sick children", "toronto", "hospital for sick children",
+        "universitas negeri padang", "universidad privada del norte", "imperial college london",
+        "waset", "world academy of science"
+    ]
+    has_local_affil = any(
+        l in affil_str
+        for l in ["rey juan carlos", "urjc", "madrid", "spain", "españa", "telefónica", "csic", "carlos iii", "complutense"]
+    )
+    if any(d in affil_str for d in disallowed_institutions) and not has_local_affil:
+        return False
+
+    source_title = ((work.get("primary_location") or {}).get("source") or {}).get("display_name", "").lower()
+    if any(d in source_title for d in ["waset", "world academy of science"]):
+        return False
+
+    # Surname validation in raw_name
+    raw_clean = strip_accents(raw_name).replace("‐", "-")
+
+    if member_name == "Antonio Alonso Ayuso" and "ayuso" not in raw_clean and not has_local_affil:
+        return False
+    if member_name == "Isaac Martín de Diego" and "diego" not in raw_clean and not has_local_affil:
+        return False
+    if member_name == "María Teresa González de Lena Alonso" and "lena" not in raw_clean and "gonzalez" not in raw_clean and not has_local_affil:
+        return False
+
+    return True
 
 
 def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, start_year=DEFAULT_START_YEAR):
@@ -307,17 +418,18 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
         min_year = start_date.year
         log(f"Running INCREMENTAL sync looking back {lookback_days} days (from {from_date_str})")
 
-    # Index existing publications by DOI and normalized title
+    # Index existing publications by DOI and normalized title (only for incremental runs)
     pubs_by_doi = {}
     pubs_by_title = {}
 
-    for p in existing_pubs:
-        doi = normalize_doi(p.get("doi"))
-        t_norm = normalize_title(p.get("title"))
-        if doi:
-            pubs_by_doi[doi] = p
-        elif t_norm:
-            pubs_by_title[t_norm] = p
+    if not is_full:
+        for p in existing_pubs:
+            doi = normalize_doi(p.get("doi"))
+            t_norm = normalize_title(p.get("title"))
+            if doi:
+                pubs_by_doi[doi] = p
+            elif t_norm:
+                pubs_by_title[t_norm] = p
 
     # Query APIs for active members
     for idx, m in enumerate(active_members):
@@ -329,9 +441,16 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
 
         log(f"[{idx+1}/{len(active_members)}] Fetching for {name} ({orcid})...")
 
-        # 1. OpenAlex
+        # 1. ORCID (Authoritative ground truth)
+        orcid_works = fetch_orcid_works(orcid, min_year)
+        log(f"   -> ORCID returned {len(orcid_works)} works")
+        member_orcid_dois = {ow["doi"] for ow in orcid_works if ow.get("doi")}
+        member_orcid_titles = {normalize_title(ow["title"]) for ow in orcid_works if ow.get("title")}
+
+        # 2. OpenAlex
         oa_works = fetch_openalex_works(orcid, from_date_str)
         log(f"   -> OpenAlex returned {len(oa_works)} works")
+        valid_oa_count = 0
         for w in oa_works:
             doi = normalize_doi(w.get("doi"))
             title = w.get("title")
@@ -342,6 +461,12 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             if year and year < start_year:
                 continue
 
+            # Validate author ownership
+            if not is_valid_work_for_member(w, name, orcid, member_orcid_dois, member_orcid_titles, active_members):
+                log(f"   [FILTERED] Discarded misattributed work for {name}: '{title[:55]}...' (DOI: {doi})")
+                continue
+
+            valid_oa_count += 1
             authors = [
                 a.get("author", {}).get("display_name")
                 for a in w.get("authorships", [])
@@ -357,18 +482,16 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             quartile, ranked_type = find_ranking_for_journal(journal, issn, year, journal_rankings)
             work_type = determine_work_type(w.get("type"), journal, source_type, ranked_type)
 
-            # Keywords: DO NOT make up keywords. Only include if explicitly provided by source.
-            # Filter to real topic keywords if available from source, or keep empty
-            raw_kws = w.get("keywords", [])
-            keywords = []
-            if raw_kws and isinstance(raw_kws, list):
-                for k in raw_kws:
-                    kw_name = k.get("display_name") if isinstance(k, dict) else str(k)
-                    kw_score = k.get("score", 1.0) if isinstance(k, dict) else 1.0
-                    # Avoid noisy low-confidence tags
-                    if kw_name and kw_score >= 0.5:
-                        keywords.append(kw_name)
-            keywords = keywords[:6]
+            # Extract clean, academic research topics from OpenAlex (CWTS Leiden topics)
+            topics = []
+            primary_topic = w.get("primary_topic")
+            if primary_topic and isinstance(primary_topic, dict) and primary_topic.get("display_name"):
+                topics.append(primary_topic["display_name"])
+            for t in w.get("topics", []):
+                t_name = t.get("display_name") if isinstance(t, dict) else None
+                if t_name and t_name not in topics:
+                    topics.append(t_name)
+            keywords = topics[:4]
 
             landing_url = w.get("doi") or (
                 w.get("primary_location", {}).get("landing_page_url") if w.get("primary_location") else None
@@ -428,9 +551,9 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
                 else:
                     pubs_by_title[norm_t] = item
 
-        # 2. ORCID
-        orcid_works = fetch_orcid_works(orcid, min_year)
-        log(f"   -> ORCID returned {len(orcid_works)} works")
+        log(f"   -> Retained {valid_oa_count} validated OpenAlex works")
+
+        # Process ORCID works to catch any publications missing in OpenAlex
         for ow in orcid_works:
             y = ow["year"]
             if y is not None and y < start_year:
