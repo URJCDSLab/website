@@ -1,0 +1,184 @@
+[
+  {
+    "id": "pace",
+    "title": "PACE",
+    "period": "2024 - 2026",
+    "image": "/assets/images/research_projects/pace.jpg",
+    "description": "Performance Analytics and Competitions Evaluation (PACE) is a sports data analysis project that uses advanced technology and Machine Learning to help athletes improve their performance. It provides tools for optimizing training and competition strategies, making informed decisions, and tracking progress. By transforming large amounts of data into useful information, PACE supports athletes in achieving competitive success."
+  },
+  {
+    "id": "ia3",
+    "title": "IA3 chair",
+    "period": "2024 - 2026",
+    "image": "/assets/images/research_projects/ia3.png",
+    "link": "http://ia3migdem.uah.es/",
+    "description": "The Chair of Artificial Intelligence in Aeronautics and Aerospace is a joint initiative led by Universidad de Alcalá and Indra, with the goal of driving innovation, research, and talent development in the application of AI to aviation and space technologies."
+  },
+  {
+    "id": "ailive4env",
+    "title": "AILIVE4ENV",
+    "period": "2024 - 2026",
+    "image": "/assets/images/research_projects/ailive4env.jpg",
+    "description": "AILIVE4ENV is a data-driven project focused on enhancing productivity and reducing the environmental impact of livestock farming through artificial intelligence, satellite imagery, and IoT data. By applying predictive and prescriptive models, it aims to deliver actionable recommendations for the sustainable management of natural resources, supporting the agri-livestock sector in its contribution to climate change mitigation."
+  },
+  {
+    "id": "attrv",
+    "title": "ATTRV",
+    "period": "2024 - 2025",
+    "image": "/assets/images/research_projects/attrv.jpg",
+    "description": "Application of Artificial Intelligence in the study of predictive factors of evolution in hereditary transthyretin Amyloidosis."
+  },
+  {
+    "id": "dicyme",
+    "title": "DICYME",
+    "period": "2022 - 2025",
+    "image": "/assets/images/research_projects/dicyme.jpg",
+    "link": "https://dicyme.denexus.io/en/dicyme-project",
+    "fundingLogo": "/assets/images/research_projects/MICIU+NextG+PRTR+AEI.svg",
+    "description": "Design and build a solution for modeling cyber risk in industrial infrastructures. The aim is to develop a system that, based on evidence obtained from different data sources, can make dynamic measurements or estimates of the probability and impact of the different cyber incidents that could occur. Once these measures or estimates allow modeling the cyber risk, the visualization of the results obtained will be complete, updated, and understandable, so that it will be possible to support decision-making."
+  },
+  {
+    "id": "evastur",
+    "title": "EVASTUR",
+    "period": "2022 - 2025",
+    "image": "/assets/images/research_projects/evastur.jpg",
+    "description": "Develop a comprehensive platform to analyze, visualize and evaluate sustainable tourism indicators. This system will allow to explore relevant data on sustainable tourism, using advanced visualization and analysis tools. It will include an interactive component that will facilitate informed decision making by generating predictions and recommendations based on machine learning models."
+  },
+  {
+    "id": "vrcardio",
+    "title": "VRCARDIO",
+    "period": "2022 - 2024",
+    "image": "/assets/images/research_projects/cardio.jpg",
+    "description": "Collaboration with the company Spika Tech. S.L. for holographic and non-invasive visualisation with the aim of measuring all the electrical signals produced by the heart to prevent and diagnose heart health."
+  },
+  {
+    "id": "decide-madrid",
+    "title": "DECIDE MADRID",
+    "period": "2022 - 2023",
+    "image": "/assets/images/research_projects/madrid.jpg",
+    "description": "Collaboration with the company Deimos Space S.L. and the Madrid City Council in the improvement of the classification models of the Madrid Decide database."
+  },
+  {
+    "id": "xmidas",
+    "title": "XMIDAS",
+    "period": "2021 - 2027",
+    "image": "/assets/images/research_projects/xmidas.jpg",
+    "description": "The XMIDAS project integrates mathematical optimization and machine learning to develop explainable, adaptive data science solutions for real-world industrial applications. It addresses challenges like concept drift and model uncertainty using agile methodologies, with a strong focus on interdisciplinary collaboration and technology transfer across sectors such as health, transport, and energy."
+  },
+  {
+    "id": "siagro",
+    "title": "SIAGRO",
+    "period": "2021 - 2022",
+    "image": "/assets/images/research_projects/tat.jpg",
+    "description": "Collaboration in the development of the SIAGRO tool with the TEST & TRIALS company. SIAGRO is a statistical software with a user-friendly interface to analyse data, carry out statistical process control, exploratory data analysis, pattern discovery, predictive modelling, with the ultimate goal of aiding decision making and instant quality control."
+  },
+  {
+    "id": "rnfc",
+    "title": "RNFC",
+    "period": "2021 - 2022",
+    "image": "/assets/images/research_projects/rnfc.jpeg",
+    "description": "The aim of this study is to design and validate a prediction model of ambulation capacity one month after suffering a hip fracture. It is a multicentre, analytical and observational study. The method consists of using data from patients included in the National Hip Fracture Registry (RNFC) during the period between 2017 and 2020 and designing a predictive model of clinically significant deterioration of gait (loss of autonomy or total loss of the ability to ambulate) one month after the fracture. The predictive model will then be validated in the group of patients included in the RNFC."
+  },
+  {
+    "id": "abaco",
+    "title": "ABACO",
+    "period": "2020",
+    "image": "/assets/images/research_projects/mattress.png",
+    "description": "The main goal of ABACO (Automatic Bed Assistance based on Continuous Optimization) project — developed in collaboration with Pixelabs S.L — is to develop, by using techniques and methods of Data Science, an intelligent algorithm that is able to learn dynamically by using several sleep session reports from smart-mattress and find optimal-pressures patters depending on the characteristics of the user. Thus, it is possible to know which parameters need to be changed to improve the experience, the comfort, and the quality of the sleep."
+  },
+  {
+    "id": "gelob",
+    "title": "GELOB",
+    "period": "2020 - 2022",
+    "image": "/assets/images/research_projects/wolfs.jpg",
+    "description": "IoT to preserve the intensive livestock farming. This project is coordinated by the Unión de Pequeños Agricultores (UPA). The aim is to prevent wolf attacks using the analysis of live data taken from livestock holdings. These data are collected by digital-cowbells — developed by Digitanimal — that allow to track the position and monitoring the animals."
+  },
+  {
+    "id": "covid-19",
+    "title": "COVID-19",
+    "period": "2020",
+    "image": "/assets/images/research_projects/covid19.jpg",
+    "link": "/research/projects/covid19/reports/covid19-report.html",
+    "description": "Development of the Health Sufficiency Indicator (HSI) during the COVID-19 pandemic. Visualization tool for better understanding of the stress of the Spanish Health System."
+  },
+  {
+    "id": "draco",
+    "title": "DRACO",
+    "period": "2019 - 2022",
+    "image": "/assets/images/research_projects/draco.jpg",
+    "description": "DRACO (Dynamic Recover and Automatic Communities Organizer) is a project that will provide a software tool capable of dynamically modeling social behavior and automatically detect the communities in which individuals are organized according to their behavior. For this purpose, techniques for the recovery and organization of information, Data Science and Machine Learning will be used."
+  },
+  {
+    "id": "emobrand",
+    "title": "EMOBRAND",
+    "period": "2019 - 2022",
+    "image": "/assets/images/research_projects/emobrand.jpg",
+    "description": "EMOBRAND (System for the Visualization of Brand Emotion from Multiple Views) is a tool able to evaluate and provide a visualization about the image of a brand on the network, as well as the relation of the image with the brand identity. Techniques for the recovery and organization of information, Data Science, Machine Learning, Artificial Intelligence, Text Processing and Computer Vision will be used."
+  },
+  {
+    "id": "citizenlab",
+    "title": "CitizenLab",
+    "period": "2019 - 2021",
+    "image": "/assets/images/research_projects/citizenlab.jpg",
+    "link": "https://www.grantthornton.es/contentassets/13e5fa99f3ed4fd4903463f86ec89b44/citizenlab-20250226-2.pdf",
+    "secondaryLink": "http://www.citizenlabhub.es/",
+    "description": "CitizenLab is an experimental data science project that uses big data and artificial intelligence to analyze citizen behavior and improve public services in the Madrid region. It generates predictive models and decision-making tools that help optimize mobility, healthcare, infrastructure, and tourism, aiming to enhance citizens’ quality of life and foster economic development through data-driven innovation."
+  },
+  {
+    "id": "sabermed",
+    "title": "SABERMED",
+    "period": "2018 - 2021",
+    "image": "/assets/images/research_projects/sabermed.jpg",
+    "link": "/research/projects/sabermed/",
+    "description": "SABERMED (Swarm Agent-Based Environment for Reputation in MEDicine) is a tool capable of assessing the reputation of digital content on the web, which will detect fraudulent content through the application of techniques of Data Science, Big Data architectures and Artificial Intelligence (Deep Learning and Intelligent Agents)."
+  },
+  {
+    "id": "kross",
+    "title": "KROSS: Knowledge Recovering and Organization Semantic System",
+    "period": "2018 - 2021",
+    "image": "/assets/images/research_projects/kross.jpg",
+    "description": "KROSS is a project funded by MedLab Media Group for the management and knowledge recovering of scientific documents. Its main objectives are obtaining relevance of documents, monitoring dynamic evolution of relevances, detecting trends, calculating summaries, and automated text generation."
+  },
+  {
+    "id": "digitanimal",
+    "title": "DigitAnimal",
+    "period": "2018 - 2021",
+    "image": "/assets/images/research_projects/digitanimal.jpg",
+    "description": "Modeling the behavior of cattle using Data Science techniques and IoT and Big Data tools, developing Machine Learning algorithms to automate the detection of abnormal behavior in cattle, creating new metrics for model validation, and scaling new services through Big Data technologies."
+  },
+  {
+    "id": "ml-and-s",
+    "title": "Machine Learning & Security",
+    "period": "2018 - 2020",
+    "image": "/assets/images/research_projects/ML&S.jpg",
+    "description": "A project funded by the Community of Madrid (CAM), focused on the intersection of Machine Learning, anomaly detection, and cyber security."
+  },
+  {
+    "id": "emoweb",
+    "title": "Emoweb",
+    "period": "2018 - 2019",
+    "image": "/assets/images/research_projects/emoweb.jpg",
+    "description": "A prototype of a new tool for dynamic sentiment analysis of textual content from websites. This prototype includes a visual and dynamic framework to analyze texts, based on a well-established lexicon. An unsupervised learning algorithm can append new words and calculate or update their sentiment polarization and strength over time."
+  },
+  {
+    "id": "ppi",
+    "title": "PPI: Protección de la Propiedad Intelectual",
+    "period": "2016 - 2018",
+    "image": "/assets/images/research_projects/ppi.jpg",
+    "description": "Development of a tool capable of tracking the presence of digital media assets imitating the behavior of users searching for fraudulent content on the web."
+  },
+  {
+    "id": "uniko",
+    "title": "Unified Knowledge: UNIKO",
+    "period": "2016 - 2018",
+    "image": "/assets/images/research_projects/uniko.jpg",
+    "description": "A social research support platform that increases the efficiency of research, providing researchers with a tool that makes it as easy as possible to search and process input data, covering all possible sources: from other research to direct feedback from people in society in general or the research community."
+  },
+  {
+    "id": "invisum",
+    "title": "INVISUM: INtelligent VIdeoSUrveillance systeM",
+    "period": "2014 - 2017",
+    "image": "/assets/images/research_projects/invisum.jpg",
+    "description": "INVISUM is a project funded by the Spanish Ministry of Economy and Competitivity focused on the development of an advanced and complete security system, incorporating new compression techniques, pattern detection, decision support, and scalable distributed architectures."
+  }
+]

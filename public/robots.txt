@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Disallow indexing of team members, research projects, publications, and partners
+Disallow: /about/team/
+Disallow: /research/projects/
+Disallow: /research/publications/
+Disallow: /research/partners/
+
+# Asset directories
+Disallow: /assets/images/blog/
+Disallow: /assets/images/conecta/
+Disallow: /assets/images/consulting_clients/
+Disallow: /assets/images/consulting_projects/
+Disallow: /assets/images/group/
+Disallow: /assets/images/practicum/
+Disallow: /assets/images/research_partners/
+Disallow: /assets/images/research_projects/
+Disallow: /assets/images/team/
+Disallow: /assets/images/training/
+
+Sitemap: https://www.datasciencelab.es/sitemap.xml

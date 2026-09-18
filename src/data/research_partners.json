@@ -1,0 +1,108 @@
+[
+  {
+    "name": "Academia Joven de España",
+    "logo": "/assets/images/conecta/logo_aje.png",
+    "url": "https://academiajoven.es/",
+    "description": "Academia Joven de España aims to promote and support outstanding early-career researchers in Spain, while inspiring scientific vocations among younger generations across all fields of knowledge."
+  },
+  {
+    "name": "AuditAI (UAH)",
+    "logo": "/assets/images/research_partners/auditai.webp",
+    "url": "http://auditai.uah.es/",
+    "description": "The AuditAI research group at the University of Alcalá specializes in the development and analysis of complex software systems, high-quality software engineering practices, audits of AI developments, and AI applications in programming environments."
+  },
+  {
+    "name": "Centro de Investigación en Ciencias del Deporte (URJC)",
+    "logo": "/assets/images/research_partners/CIDE.svg",
+    "url": "https://cide.urjc.es/",
+    "description": "The CIDE Research Center at Rey Juan Carlos University is a multidisciplinary center dedicated to advancing high-quality research and training in Sport Sciences, contributing actively to fields such as physical activity, health, and athletic performance."
+  },
+  {
+    "name": "Centro de Investigación en Ciencias de Información Geoespacial",
+    "logo": "/assets/images/research_partners/centrogeo.svg",
+    "url": "https://www.centrogeo.org.mx/",
+    "description": "CentroGeo is a research center in Mexico dedicated to advancing geospatial information science, generating and applying cutting-edge knowledge and technologies to address territorial and environmental challenges."
+  },
+  {
+    "name": "DeNexus",
+    "logo": "/assets/images/research_partners/denexus.svg",
+    "url": "https://denexus.io/",
+    "description": "DeNexus provides a full-stack cyber risk quantification and management platform specifically designed for industrial sectors such as energy, manufacturing, data centers, transportation, and critical infrastructures."
+  },
+  {
+    "name": "Department of Industrial Engineering (UChile)",
+    "logo": "/assets/images/research_partners/uchile.svg",
+    "url": "https://www.dii.uchile.cl/",
+    "description": "The Department of Industrial Engineering at the University of Chile is a leading academic center in Latin America renowned for research and education in operations research, data science, and management engineering."
+  },
+  {
+    "name": "Ericsson",
+    "logo": "/assets/images/consulting_clients/ericsson.svg",
+    "url": "https://www.ericsson.com/en",
+    "description": "Ericsson is a global leader in telecommunications and networking technology, providing infrastructure, services, and software solutions for mobile and fixed broadband networks and 5G innovation."
+  },
+  {
+    "name": "Grupo de Ingeniería de Medios (UEx)",
+    "logo": "/assets/images/research_partners/gim.png",
+    "description": "The Media Engineering Group (GIM) at the University of Extremadura focuses on developing efficient and effective methods for extracting semantic content and knowledge representation from digital information."
+  },
+  {
+    "name": "Grupo de investigación en Aplicaciones Sociales e Interdisciplinares basadas en Agentes (UCM)",
+    "logo": "/assets/images/research_partners/grasia.svg",
+    "url": "https://grasia.fdi.ucm.es/",
+    "description": "GRASIA is a research group focused on designing and engineering sociotechnical systems to empower communities, combining software engineering, artificial intelligence, data mining, and multi-agent simulation."
+  },
+  {
+    "name": "Grupo de Optimización (US)",
+    "logo": "/assets/images/research_partners/US.svg",
+    "url": "https://investigacion.us.es/sisius/grupo/FQM329",
+    "description": "The Optimization Research Group at the University of Seville works in data science, operations research, mathematical modeling applied to industry, and mathematical optimization with applications to machine learning."
+  },
+  {
+    "name": "Indra",
+    "logo": "/assets/images/research_partners/indra.svg",
+    "url": "https://www.indracompany.com/",
+    "description": "Indra is a global technology and consulting leader known for its commitment to innovation and advanced solutions across aerospace, defense, mobility, and digital services worldwide."
+  },
+  {
+    "name": "Instituto de Investigación Biomédica de Salamanca",
+    "logo": "/assets/images/research_partners/ibsal.svg",
+    "url": "https://ibsal.es/",
+    "description": "The Institute for Biomedical Research of Salamanca (IBSAL) integrates clinical, translational, epidemiological, and health services research from the University Hospital and University of Salamanca."
+  },
+  {
+    "name": "Interdisciplinary Mathematics Institute (UCM)",
+    "logo": "/assets/images/research_partners/imi.svg",
+    "url": "https://www.ucm.es/imi",
+    "description": "IMI at Complutense University of Madrid promotes research, collaboration, and innovation across mathematical disciplines, connecting mathematicians with scientists to solve complex real-world problems."
+  },
+  {
+    "name": "MedLab Media Group (now dezzai)",
+    "logo": "/assets/images/consulting_clients/medlab.svg",
+    "url": "https://dezzai.com/en/",
+    "description": "Dezzai (formerly MedLab Media Group) is a technology company applying artificial intelligence, natural language processing, and data analytics to drive digital transformation in the healthcare ecosystem."
+  },
+  {
+    "name": "School of Science & Technology (IE)",
+    "logo": "/assets/images/research_partners/ie_sst.svg",
+    "url": "https://www.ie.edu/school-science-technology/",
+    "description": "The School of Science & Technology at IE University offers modern STEM education and research focused on artificial intelligence, applied data analytics, and real-world technology challenges."
+  },
+  {
+    "name": "SensoWave",
+    "logo": "/assets/images/consulting_clients/sensowave.svg",
+    "url": "https://sensowave.es/en/",
+    "description": "SensoWave creates innovative products and services in wireless IoT technologies, sensor telemetry, and big data across livestock, environmental monitoring, and industrial applications."
+  },
+  {
+    "name": "Sistemas Complejos y Física Fundamental (URJC)",
+    "logo": "/assets/images/research_partners/URJC.svg",
+    "url": "http://www.complexity.es",
+    "description": "The SCFF Research Group at Rey Juan Carlos University focuses on the study, modeling, and prediction of complex systems, network science, fluid dynamics, and Bayesian inference."
+  },
+  {
+    "name": "Tecnologías para el Análisis y Diagnóstico Territorial (URJC)",
+    "logo": "/assets/images/research_partners/URJC.svg",
+    "description": "TADAT Research Group at Rey Juan Carlos University focuses on spatial AI, territorial analysis, environmental diagnosis, and ecosystem monitoring in protected areas and biosphere reserves."
+  }
+]

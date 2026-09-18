@@ -1,0 +1,137 @@
+[
+  {
+    "id": "complexity-measures",
+    "title": "Complexity measures",
+    "description": "We develop tools and metrics to analyze and characterize data regarding feature overlap, class separability, and data geometry to improve machine learning models based on dataset properties.",
+    "leads": [
+      { "name": "Víctor Aceña", "id": "victor-acena" },
+      { "name": "Carmen Lancho", "id": "carmen-lancho" }
+    ]
+  },
+  {
+    "id": "data-visualization",
+    "title": "Data visualization",
+    "description": "We design tools to graphically represent complex multidimensional data, focusing on enhancing decision-making through effective and interactive visualizations.",
+    "leads": [
+      { "name": "Isaac Martín", "id": "isaac-martin" },
+      { "name": "Emilio López", "id": "emilio-lopez" }
+    ]
+  },
+  {
+    "id": "explainable-ml",
+    "title": "Explainable machine learning",
+    "description": "We focus on explainable and interpretable ML, particularly counterfactuals and semifactuals, enhancing transparency in sensitive fields like healthcare and finance.",
+    "leads": [
+      { "name": "Javier Martínez", "id": "javier-martinez" },
+      { "name": "Rubén Rodríguez", "id": "ruben-rodriguez" }
+    ]
+  },
+  {
+    "id": "foundations-ml",
+    "title": "Foundations of machine learning",
+    "description": "We explore the theoretical foundations of machine learning, specializing in Support Vector Machines, kernel methods, statistical learning theory, and ensemble methods.",
+    "leads": [
+      { "name": "Isaac Martín", "id": "isaac-martin" },
+      { "name": "Javier Martínez", "id": "javier-martinez" }
+    ]
+  },
+  {
+    "id": "generative-ai",
+    "title": "Generative AI",
+    "description": "We research and develop AI systems capable of generating realistic data, including text, images, and synthetic datasets, enabling personalization, simulation, and creative applications.",
+    "leads": [
+      { "name": "Alberto Fernández", "id": "alberto-fernandez" },
+      { "name": "Rubén Rodríguez", "id": "ruben-rodriguez" }
+    ]
+  },
+  {
+    "id": "indicator-development",
+    "title": "Indicator development",
+    "description": "We design robust indicators for sectors like sustainable tourism and healthcare, supporting precise evaluations and informed public decisions.",
+    "leads": [
+      { "name": "Emilio López", "id": "emilio-lopez" },
+      { "name": "Carmen Lancho", "id": "carmen-lancho" }
+    ]
+  },
+  {
+    "id": "intelligent-agents",
+    "title": "Intelligent agents",
+    "description": "We create autonomous and multi-agent AI systems for dynamic tasks, integrating perception, reasoning, and action for advanced automation.",
+    "leads": [
+      { "name": "Alberto Fernández", "id": "alberto-fernandez" },
+      { "name": "Rubén Rodríguez", "id": "ruben-rodriguez" }
+    ]
+  },
+  {
+    "id": "iot",
+    "title": "Internet of things",
+    "description": "We develop edge ML algorithms for IoT systems, optimizing data transmission to improve energy efficiency and operational reliability in smart sensors.",
+    "leads": [
+      { "name": "Alberto Fernández", "id": "alberto-fernandez" },
+      { "name": "Felipe Ortega", "id": "felipe-ortega" }
+    ]
+  },
+  {
+    "id": "knowledge-systems",
+    "title": "Knowledge-based systems",
+    "description": "We create systems integrating domain expert knowledge, semantic graphs, and rule engines to address complex reasoning problems efficiently.",
+    "leads": [
+      { "name": "Alberto Fernández", "id": "alberto-fernandez" },
+      { "name": "Rubén Rodríguez", "id": "ruben-rodriguez" }
+    ]
+  },
+  {
+    "id": "metaheuristics",
+    "title": "Metaheuristics",
+    "description": "We research advanced heuristic and metaheuristic search algorithms to solve NP-hard combinatorial optimization problems in logistics and network design.",
+    "leads": [
+      { "name": "Antonio Alonso", "id": "antonio-alonso" },
+      { "name": "Víctor Aceña", "id": "victor-acena" }
+    ]
+  },
+  {
+    "id": "open-data",
+    "title": "Open data",
+    "description": "We develop architectures and systems for managing open data repositories, ensuring accessibility, interoperability, and reusability for public and scientific value.",
+    "leads": [
+      { "name": "Emilio López", "id": "emilio-lopez" },
+      { "name": "Carmen Lancho", "id": "carmen-lancho" }
+    ]
+  },
+  {
+    "id": "optimization",
+    "title": "Optimization",
+    "description": "We develop mathematical optimization methods to maximize system efficiency in resource management, scheduling, and operational performance under uncertainty.",
+    "leads": [
+      { "name": "Antonio Alonso", "id": "antonio-alonso" },
+      { "name": "Carmen Lancho", "id": "carmen-lancho" }
+    ]
+  },
+  {
+    "id": "performance-metrics",
+    "title": "Performance metrics",
+    "description": "We create advanced mathematical metrics to evaluate the efficiency, calibration, fairness, and generalization of complex machine learning models.",
+    "leads": [
+      { "name": "Isaac Martín", "id": "isaac-martin" },
+      { "name": "Javier Martínez", "id": "javier-martinez" }
+    ]
+  },
+  {
+    "id": "sports-analytics",
+    "title": "Sports analytics",
+    "description": "We apply machine learning models to enhance athletic performance and competition strategies, across sports like football, swimming, and speed skating.",
+    "leads": [
+      { "name": "Isaac Martín", "id": "isaac-martin" },
+      { "name": "Víctor Aceña", "id": "victor-acena" }
+    ]
+  },
+  {
+    "id": "recommender-systems",
+    "title": "Recommender systems",
+    "description": "We design personalized recommendation algorithms for tourism, content platforms, and clinical protocols, enhancing user decision-making.",
+    "leads": [
+      { "name": "Isaac Martín", "id": "isaac-martin" },
+      { "name": "Alberto Fernández", "id": "alberto-fernandez" }
+    ]
+  }
+]

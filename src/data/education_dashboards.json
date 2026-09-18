@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Cybersecurity Risk Analysis and Simulation",
+    "authors": "Emilio L. Cano & Javier Sánchez",
+    "date": "Nov. 2024",
+    "url": "https://github.com/URJCDSlab/cras",
+    "slidesUrl": "https://www.lcano.com/p/user2024/#/title-slide",
+    "description": "An evolution of the Open FAIR™ Risk Analysis Tool, redesigned as an interactive Shiny application to simplify and enhance Cyber Risk Simulation for cybersecurity students and professionals."
+  },
+  {
+    "title": "Data Explorer Assistant",
+    "authors": "Carmen Lancho & Isaac Martín",
+    "date": "Dec. 2023",
+    "url": "https://dslab-urjc.shinyapps.io/DEA_ML/",
+    "sourceUrl": "https://hdl.handle.net/10115/27461",
+    "description": "Interactive app developed so that readers of the book 'Aprendizaje Automático' can put their knowledge into practice with data cleaning, exploratory data analysis, and predictive model exploration."
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Modelos Estadísticos para la Predicción",
+    "authors": "Víctor Aceña & Isaac Martín",
+    "date": "Sep. 2025",
+    "url": "https://urjcdslab.github.io/ModelosEstadisticosPrediccion/",
+    "description": "Provides a rigorous and practical introduction to statistical modeling techniques, especially regression models, aimed at helping students understand, apply, and critically evaluate predictive methods using real data and the R programming language.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Modelos de Regresión",
+    "authors": "Víctor Aceña, Carmen Lancho & Isaac Martín",
+    "date": "Jan. 2025",
+    "url": "https://urjcdslab.github.io/Regresion",
+    "description": "An overview of regression models, including linear, variable selection, regularization, non-linear transformations, feature engineering, and generalized regression techniques, aimed at data science students.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Introducción al software estadístico R",
+    "authors": "Emilio L. Cano",
+    "date": "Jun. 2024",
+    "url": "https://www.lcano.com/b/iser/_book/",
+    "description": "This book provides practical guidance on using software for statistical data analysis, aimed at helping companies and institutions leverage their data to maintain competitiveness in the digital age.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Inferencia Estadística",
+    "authors": "Carmen Lancho, Víctor Aceña & Isaac Martín",
+    "date": "May 2024",
+    "url": "https://urjcdslab.github.io/InferenciaEstadistica",
+    "sourceUrl": "https://github.com/URJCDSLab/InferenciaEstadistica",
+    "pdfUrl": "https://hdl.handle.net/10115/41304",
+    "description": "An exploration of statistical inference, covering key concepts and practical applications essential for data science and engineering students, published open-access in BURJC.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Fundamentos de ciencia de datos con R",
+    "authors": "With contributions by Emilio L. Cano",
+    "date": "Jan. 2024",
+    "url": "https://cdr-book.github.io/",
+    "description": "This book guides readers through the complexities of data science, from understanding big data and ethical data governance to mastering statistical techniques and using R for practical applications.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Aprendizaje Automático",
+    "authors": "Carmen Lancho & Isaac Martín",
+    "date": "Dec. 2023",
+    "url": "https://urjcdslab.github.io/AprendizajeAutomaticoI",
+    "sourceUrl": "https://github.com/URJCDSLab/AprendizajeAutomaticoI",
+    "pdfUrl": "https://hdl.handle.net/10115/27431",
+    "description": "An introduction to the fundamentals of Machine Learning, focusing on equipping students with skills to extract valuable insights from data and make informed decisions.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Estadística Aplicada a las Ciencias y la Ingeniería",
+    "authors": "Emilio L. Cano",
+    "date": "Apr. 2023",
+    "url": "https://emilopezcano.github.io/estadistica-ciencias-ingenieria/",
+    "description": "This book covers the typical curriculum of Statistics and Probability courses for Science and Engineering degrees at Spanish universities, providing a comprehensive and accessible resource.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Matemáticas Discreta y Álgebra",
+    "authors": "With contributions by Marina Cuesta",
+    "date": "Sep. 2022",
+    "url": "https://hdl.handle.net/10115/20345",
+    "description": "A foundational synthesis of Discrete Mathematics and Linear Algebra as the bedrock for Computer Science and Cybersecurity, deposited at BURJC.",
+    "language": "ES",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Ciencia de datos para la ciberseguridad",
+    "authors": "Alberto Fernández & Isaac Martín",
+    "date": "Oct. 2020",
+    "url": "https://www.ra-ma.es/libro/ciencia-de-datos-para-la-ciberseguridad_115724/",
+    "description": "This book presents Data Science as a tool for understanding, preventing, detecting, and addressing cybersecurity threats, aimed at professionals, students, engineers, and mathematicians.",
+    "language": "ES",
+    "isOpenAccess": false
+  },
+  {
+    "title": "Six Sigma with R",
+    "authors": "Emilio L. Cano, Javier M. Moguerza & Andrés Redchuk",
+    "date": "Aug. 2012",
+    "url": "https://www.sixsigmawithr.com/",
+    "description": "A comprehensive Springer guide that integrates the Six Sigma methodology with the R programming language to improve processes and solve problems using statistical techniques.",
+    "language": "EN",
+    "isOpenAccess": false
+  }
+]

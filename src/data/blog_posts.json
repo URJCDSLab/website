@@ -1,0 +1,573 @@
+[
+  {
+    "id": "new-publication-nursing-in-critical-care",
+    "title": "New publication in Nursing in Critical Care",
+    "date": "15 Apr 2026",
+    "description": "DSLAB collaborated with the Burn and Resuscitation Units at Hospital Universitario de La Paz to standardize discard volume in arterial catheter blood sampling, significantly reducing iatrogenic anemia in critically ill ICU patients.",
+    "content": [
+      "The Data Science Lab is pleased to share our latest collaborative study conducted with the Burn Unit and the Resuscitation Unit at Hospital Universitario de La Paz. The paper addresses the crucial clinical need to standardize discard volumes during arterial catheter blood extractions to mitigate iatrogenic anemia, a severe condition frequently affecting critically ill patients.",
+      "Our colleague Víctor Aceña led the statistical and computational design of the investigation, implemented entirely using R. Sample reliability was validated through the Clinical Acceptance Interval (CAI) and Reference Change Value (RCV), moving beyond simple statistical significance to guarantee genuine clinical utility in bedside medical decision-making.",
+      "Key finding: A discard volume of 2 mL—twice the dead space of the radial catheter—is sufficient to obtain fully reliable analytical readings, including arterial blood gas analysis and electrolytes. This standardized protocol enables reducing discard volume by up to 40% compared to conventional ICU practice without additional costs and with complete analytical precision."
+    ],
+    "image": "/assets/images/blog/nursing_in_critical_care.jpg",
+    "links": [
+      {
+        "label": "Read Full Open Access Article (DOI)",
+        "url": "https://doi.org/10.1111/nicc.70493"
+      },
+      {
+        "label": "Meet Víctor Aceña",
+        "url": "/about/team/#victor-acena"
+      }
+    ],
+    "tags": [
+      "Scientific Outreach",
+      "Critical Care",
+      "Publications"
+    ]
+  },
+  {
+    "id": "marina-cuesta-phd-thesis-seio-bulletin",
+    "title": "Marina Cuesta's doctoral thesis featured in the SEIO Bulletin",
+    "date": "15 Jan 2026",
+    "description": "Marina Cuesta's doctoral research on machine-learning-powered data visualizations has been highlighted in the official bulletin of the Spanish Society of Statistics and Operations Research (SEIO).",
+    "content": [
+      "The Spanish Society of Statistics and Operations Research (SEIO) has featured the doctoral thesis of our colleague Marina Cuesta in its official bulletin (BEIO).",
+      "The work, titled 'Machine Learning-Powered Data Visualizations for Guiding Data Science', explores novel visualization paradigms that combine predictive machine learning models with exploratory visual interfaces, empowering data practitioners to understand complex high-dimensional datasets and guide modeling decisions.",
+      "This recognition underscores DSLAB's continuous dedication to advancing interpretable AI, graphical statistical methods, and practical visual analytics."
+    ],
+    "links": [
+      {
+        "label": "Read Article in BEIO",
+        "url": "https://www.seio.es/beio/machine-learning-powered-data-visualizations-for-guiding-data-science/"
+      },
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7439707537127456768/"
+      }
+    ],
+    "tags": [
+      "Machine Learning",
+      "SEIO",
+      "Data Visualization"
+    ]
+  },
+  {
+    "id": "dslab-drives-generative-ai-at-ideal-2025",
+    "title": "DSLAB champions generative AI research at the IDEAL 2025 international conference",
+    "date": "11 Nov 2025",
+    "description": "DSLAB organizes the special session 'Recent Advances in Generative Artificial Intelligence' at the 26th International Conference on Intelligent Data Engineering and Automated Learning (IDEAL 2025).",
+    "content": [
+      "The Data Science Lab (DSLAB) is actively co-organizing the special session 'Recent Advances in Generative Artificial Intelligence' within the framework of the 26th International Conference on Intelligent Data Engineering and Automated Learning (IDEAL 2025), to be held in Jaén, Spain.",
+      "This session provides a premier academic forum to showcase cutting-edge breakthroughs in generative models, diffusion algorithms, large language models (LLMs), synthetic data generation, and their transformative applications across science and industry.",
+      "Researchers and practitioners from across the globe are invited to submit their innovative works and join us in advancing responsible, robust generative intelligence."
+    ],
+    "image": "/assets/images/blog/jaen.jpg",
+    "conferenceLogo": "https://ideal2025.ujaen.es/wp-content/uploads/2025/10/cropped-logo-transparente.png",
+    "links": [
+      {
+        "label": "Special Session Information",
+        "url": "https://ideal2025.ujaen.es/recent-advances-in-generative-artificial-intelligence/"
+      },
+      {
+        "label": "DSLab Research Lines",
+        "url": "/research"
+      }
+    ],
+    "tags": [
+      "Artificial Intelligence",
+      "Generative AI",
+      "Conferences",
+      "IDEAL 2025"
+    ]
+  },
+  {
+    "id": "bachelor-thesis-proposals-2025-2026",
+    "title": "Bachelor's and master's thesis proposals (2025–2026)",
+    "date": "7 Oct 2025",
+    "description": "DSLAB presents its curated catalog of Bachelor's (TFG) and Master's (TFM) thesis projects for the 2025–2026 academic year, working with real-world datasets across healthcare, sports analytics, and AI.",
+    "content": [
+      "At DSLAB, we are pleased to present our official thesis proposals for the 2025–2026 academic year, tailored for students in Computer Science, Mathematics, Data Science and Engineering, and Artificial Intelligence.",
+      "Our projects provide students with the unique opportunity to work with real, challenging datasets alongside experienced research mentors.",
+      "Key topics include: deep generative models in clinical settings, explainable AI, sports performance analytics, automated educational feedback platforms, and cyber risk simulation."
+    ],
+    "links": [
+      {
+        "label": "Download Proposals Document (PDF)",
+        "url": "/blog/files/Propuestas_TFG_2025_2026.pdf"
+      }
+    ],
+    "tags": [
+      "Bachelor's Thesis",
+      "Master's Thesis",
+      "Education"
+    ]
+  },
+  {
+    "id": "dslab-circular-economy-asia-pacific-adb",
+    "title": "DSLAB contributes to circular economy in Asia-Pacific with the Asian Development Bank",
+    "date": "18 Jun 2025",
+    "description": "DSLAB researcher Emilio López presented data-driven models for marine plastic pollution at the Asian Development Bank's Circular Economy Forum in Manila.",
+    "content": [
+      "DSLAB researcher Emilio López participated in the prestigious Circular Economy Forum organized by the Asian Development Bank (ADB) in Manila, Philippines.",
+      "The international forum gathered policymakers, technological leaders, and scientific researchers to address the urgent crisis of marine plastic pollution across the Asia-Pacific region, exploring sustainable circular business models and evidence-based interventions.",
+      "In collaboration with MRC Consultants and Seureca (Veolia), DSLAB contributed predictive analytics and data architectures designed to monitor material flows, assess environmental risks, and optimize regional recycling infrastructure."
+    ],
+    "image": "https://seads.adb.org/sites/default/files/styles/1280x720/public/event/2025-05/circular_economy_forum_adb.jpg",
+    "additionalImages": [
+      "/assets/images/blog/ceforum1.jpg",
+      "/assets/images/blog/ceforum2.jpg"
+    ],
+    "links": [
+      {
+        "label": "ADB CE Forum Website",
+        "url": "https://adb.eventsair.com/ce-forum/"
+      },
+      {
+        "label": "Asian Development Bank (ADB)",
+        "url": "https://www.adb.org/"
+      }
+    ],
+    "tags": [
+      "Circular Economy",
+      "Sustainability",
+      "Scientific Outreach",
+      "International"
+    ]
+  },
+  {
+    "id": "wide-participation-xli-seio-conference",
+    "title": "Extensive participation of DSLAB at the XLI SEIO national conference",
+    "date": "13 Jun 2025",
+    "description": "DSLAB faculty and doctoral researchers presented multiple papers and specialized sessions at the XLI National Conference of Statistics and Operations Research in Lleida.",
+    "content": [
+      "A large delegation from the Data Science Lab participated in the XLI National Conference of the Spanish Society of Statistics and Operations Research (SEIO), hosted at the University of Lleida.",
+      "Our researchers delivered presentations across diverse applied domains, including sustainable tourism metrics, high-performance sports analytics, explainable machine learning models, and optimization under uncertainty.",
+      "The conference was a fantastic setting to exchange findings with leading national and international statisticians and reinforce research alliances."
+    ],
+    "image": "https://seio2025.com/files/attachments/campus-de-cappont.jpg",
+    "conferenceLogo": "https://seio2025.com/files/attachments/logoseio-white-nobackground.png",
+    "links": [
+      {
+        "label": "SEIO Conference Website",
+        "url": "https://seio2025.com/"
+      },
+      {
+        "label": "SEIO Society",
+        "url": "https://www.seio.es/"
+      }
+    ],
+    "tags": [
+      "Conferences",
+      "SEIO",
+      "Statistics",
+      "Machine Learning"
+    ]
+  },
+  {
+    "id": "dicyme-project-jnic-2025",
+    "title": "The DICYME project featured prominently at JNIC 2025",
+    "date": "4 Jun 2025",
+    "description": "At the National Cybersecurity Research Days (JNIC 2025) in Zaragoza, DSLAB presented dynamic industrial cyber risk modeling developed with DeNexus.",
+    "content": [
+      "The DICYME research project was prominently represented at the 2025 National Cybersecurity Research Days (JNIC), held in Zaragoza, by our colleague Javier Sánchez in collaboration with DeNexus.",
+      "In the technology transfer track, Javier presented the article 'Dynamic Industrial Cyber Risk Modelling based on Evidence (DICYME)', demonstrating how complex technical vulnerabilities in industrial control systems can be quantified into actionable financial metrics using advanced data science and LLMs.",
+      "Furthermore, Javier presented the poster 'Basal Attractiveness Concept for Cybercriminals', introducing a novel conceptual framework for estimating why certain organizations are targeted preferentially by threat actors."
+    ],
+    "image": "https://2025.jnic.es/wp-content/uploads/images/spain-scaled.jpg",
+    "conferenceLogo": "https://2025.jnic.es/wp-content/uploads/images/2025/2025_LOGO_JNIC_NEGATIVO.png",
+    "links": [
+      {
+        "label": "Download Presentation Slides (PDF)",
+        "url": "/blog/files/slides_jnic25.pdf"
+      },
+      {
+        "label": "JNIC 2025 Website",
+        "url": "https://2025.jnic.es/"
+      },
+      {
+        "label": "DeNexus",
+        "url": "https://www.denexus.io/"
+      }
+    ],
+    "tags": [
+      "Cybersecurity",
+      "Transfer",
+      "Conferences",
+      "DICYME"
+    ]
+  },
+  {
+    "id": "analyzing-data-in-cybersecurity",
+    "title": "Analyzing data in cybersecurity: CDTIC webinar",
+    "date": "3 Jun 2025",
+    "description": "Alberto Fernández presented the webinar 'Cybersecurity for a Connected Future' organized by CDTIC Extremadura under the TriRuralTech project.",
+    "content": [
+      "Our colleague Alberto Fernández delivered an insightful webinar titled 'Cybersecurity for a Connected Future', hosted by the Extremadura ICT Demonstrator Centre (CDTIC) within the European TriRuralTech initiative.",
+      "Alberto provided a clear, accessible overview of how modern data analytics and machine learning are indispensable for threat detection, anomaly scoring, and automated incident response.",
+      "He highlighted real-world methodologies employed at DSLAB to convert raw network logs and behavioral telemetry into actionable cyber defense intelligence."
+    ],
+    "image": "https://i.ytimg.com/vi/xX1Xlz9mQRw/maxresdefault.jpg",
+    "links": [
+      {
+        "label": "Watch Webinar on YouTube",
+        "url": "https://www.youtube.com/live/v4DijEdD74c?feature=shared&t=7443"
+      },
+      {
+        "label": "Download Slides (PDF)",
+        "url": "/blog/files/slides_data_ciber.pdf"
+      },
+      {
+        "label": "CDTIC Extremadura",
+        "url": "https://cdticextremadura.es/"
+      }
+    ],
+    "tags": [
+      "Cybersecurity",
+      "Webinar",
+      "Scientific Outreach"
+    ]
+  },
+  {
+    "id": "distribution-of-conecta-board-game",
+    "title": "Nationwide distribution of ¡CONECTA! board game begins",
+    "date": "5 Mar 2025",
+    "description": "¡CONECTA!, the innovative educational board game co-created by DSLAB, Teleco Renta, COIT, and the Young Academy of Spain, begins its rollout to schools and universities.",
+    "content": [
+      "The board game ¡CONECTA!, designed by DSLAB in partnership with the Young Academy of Spain, the Official College of Telecommunication Engineers (COIT), and Teleco Renta, has commenced nationwide distribution across Spain.",
+      "The game introduces students to the exciting challenges of telecommunications engineering and data science, blending teamwork, resource allocation, and AI problem-solving in a fast-paced board experience.",
+      "Copies are being sent to secondary schools, high schools, and engineering faculties to promote scientific vocations in technology and computing."
+    ],
+    "image": "/assets/images/blog/conecta_distribucion.jpg",
+    "links": [
+      {
+        "label": "Explore ¡CONECTA! Webpage",
+        "url": "/education/conecta/"
+      },
+      {
+        "label": "Young Academy of Spain",
+        "url": "https://academiajoven.es/"
+      },
+      {
+        "label": "COIT",
+        "url": "https://www.coit.es/"
+      }
+    ],
+    "tags": [
+      "Education",
+      "Game",
+      "Outreach",
+      "¡CONECTA!"
+    ]
+  },
+  {
+    "id": "new-master-in-sports-analytics-musa",
+    "title": "DSLAB drives the new official master's in sports analytics (MUSA)",
+    "date": "17 Jan 2025",
+    "description": "Fundación Madri+d issues favorable accreditation for URJC's pioneering Master's Degree in Sports Analytics, coordinated by DSLAB professors.",
+    "content": [
+      "DSLAB is thrilled to announce that the Madri+d Knowledge Foundation has officially accredited the new Master's Degree in Sports Analytics (MUSA) at Universidad Rey Juan Carlos.",
+      "Coordinated by DSLAB professors, this postgraduate program meets the rapidly surging industry demand for professionals capable of combining data science, GPS tracking, biomechanics, computer vision, and machine learning in elite sports.",
+      "Students will receive comprehensive training covering statistical modeling of physical load, tactical performance evaluation, opponent scouting, and interactive dashboard engineering."
+    ],
+    "image": "/blog/files/background_musa.webp",
+    "conferenceLogo": "/blog/files/logo_musa_white.png",
+    "links": [
+      {
+        "label": "MUSA Official Blog",
+        "url": "https://blogs.etsii.urjc.es/musa/"
+      },
+      {
+        "label": "URJC Program Details",
+        "url": "https://www.urjc.es/estudios/master/9586-master-universitario-en-analisis-de-datos-deportivos"
+      }
+    ],
+    "tags": [
+      "Sports Analytics",
+      "Master's Degree",
+      "Education"
+    ]
+  },
+  {
+    "id": "vi-urjc-scientific-outreach-awards-dsgame",
+    "title": "VI URJC scientific outreach awards: recognition for DSGAME",
+    "date": "20 Nov 2024",
+    "description": "The educational board game DSGAME receives an honorable award for scientific dissemination at the VI URJC Outreach Awards ceremony.",
+    "content": [
+      "The educational board game DSGAME, created by DSLAB researchers Isaac Martín and Carmen Lancho, was awarded special recognition at the VI Scientific Outreach Awards, held within the 'Ciencia eres tú' ceremony organized by the Vice-Rectorate for Research and Innovation at URJC.",
+      "The award celebrates the game's exceptional contribution to democratizing foundational concepts of data science, algorithms, and mathematics for pre-university students in an engaging, gamified format."
+    ],
+    "image": "https://www.urjc.es/media/k2/items/cache/f98bc8146faf2cc2b5e9f4b3df223e2c_XL.jpg",
+    "links": [
+      {
+        "label": "Read URJC Official News",
+        "url": "https://www.urjc.es/todas-las-noticias-de-actualidad-cientifica/9447-la-divulgacion-cientifica-protagonista-de-ciencia-eres-tu"
+      }
+    ],
+    "tags": [
+      "Awards",
+      "Scientific Outreach",
+      "Science Week"
+    ]
+  },
+  {
+    "id": "r-at-dslab-madrid-r-user-group",
+    "title": "The use of R at DSLAB: 92nd Madrid R Users Group meeting",
+    "date": "30 Oct 2024",
+    "description": "Carmen Lancho and Emilio López showcased how DSLAB utilizes R and Shiny across cutting-edge research projects and educational tools.",
+    "content": [
+      "At the 92nd meeting of the Madrid R Users Group (Comunidad R Hispano), DSLAB researchers Carmen Lancho and Emilio López shared how the R programming language powers diverse research, package development, and teaching initiatives at the lab.",
+      "During the presentation, they reviewed applications such as the Data Explorer Assistant (DEA), the CRAS cyber risk simulation tool, reproducible reporting in Quarto, and custom R packages developed by lab members."
+    ],
+    "image": "https://secure.meetupstatic.com/photos/event/9/b/9/4/600_524259828.webp",
+    "links": [
+      {
+        "label": "Presentation Slides & Code",
+        "url": "https://urjcdslab.github.io/rmadrid92/"
+      },
+      {
+        "label": "URJC Event Details",
+        "url": "https://eventos.urjc.es/124214/detail/laboratorio-de-ciencia-de-datos-92o-reunion-grupo-de-r-de-madrid.html"
+      }
+    ],
+    "tags": [
+      "R",
+      "Shiny",
+      "Meetup",
+      "Open Source"
+    ]
+  },
+  {
+    "id": "cras-presentation-user-2024-salzburg",
+    "title": "CRAS: cybersecurity risk analysis and simulation at useR! 2024",
+    "date": "11 Jul 2024",
+    "description": "Emilio López presented CRAS, an interactive Shiny application implementing the Open FAIR™ standard for cyber loss simulation, at the useR! 2024 conference in Salzburg.",
+    "content": [
+      "Our colleague Emilio López presented the Shiny application CRAS: Cybersecurity Risk Analysis and Simulation at the global useR! 2024 conference in Salzburg, Austria.",
+      "CRAS enables cybersecurity professionals and risk officers to model and simulate economic loss scenarios using the Factor Analysis of Information Risk (FAIR™) framework, supporting custom probability distributions and automated Quarto executive reporting."
+    ],
+    "image": "https://events.linuxfoundation.org/wp-content/uploads/2023/09/UseR-24-Event-LaunchAssets-v1_hero-2400x1200-B-1920x960.png",
+    "conferenceLogo": "https://events.linuxfoundation.org/wp-content/uploads/2023/09/UseR-24-logo-white.svg",
+    "links": [
+      {
+        "label": "Download Presentation Slides",
+        "url": "https://www.lcano.com/p/user2024/"
+      },
+      {
+        "label": "useR! 2024 Schedule",
+        "url": "https://userconf2024.sched.com/event/1c8y6"
+      }
+    ],
+    "tags": [
+      "R",
+      "Shiny",
+      "Cybersecurity",
+      "useR! 2024"
+    ]
+  },
+  {
+    "id": "rootedcon-and-t3chfest-2024",
+    "title": "DSLAB at RootedCON and T3chFest 2024",
+    "date": "18 Mar 2024",
+    "description": "The DICYME research team attended RootedCON and T3chFest in Madrid to track the latest advancements in ethical hacking, software engineering, and AI.",
+    "content": [
+      "Researchers from the DICYME project attended RootedCON 2024 (March 7–9) and T3chFest 2024 (March 14–15) in Madrid as part of their continuous training and technology dissemination activities.",
+      "At RootedCON, Spain's premier cybersecurity summit, the team engaged with international specialists on ethical hacking, operational technology (OT) vulnerabilities, and modern digital forensics.",
+      "At T3chFest, hosting over 1,500 tech innovators at Universidad Carlos III, the researchers explored emerging AI architectures and scalable cloud services, fostering connections with industry engineering teams."
+    ],
+    "image": "/assets/images/blog/rootedcon_logo.png",
+    "conferenceLogo": "/assets/images/blog/t3chfest_logo.svg",
+    "links": [
+      {
+        "label": "RootedCON Madrid 2024",
+        "url": "https://www.rootedcon.com/archive/rooted2024/"
+      },
+      {
+        "label": "T3chFest 2024",
+        "url": "https://t3chfest.es/2024/"
+      }
+    ],
+    "tags": [
+      "Conferences",
+      "Cybersecurity",
+      "RootedCON",
+      "T3chFest"
+    ]
+  },
+  {
+    "id": "bachelor-master-thesis-proposals-2023-2024",
+    "title": "Bachelor's and master's thesis proposals (2023–2024)",
+    "date": "02 Oct 2023",
+    "description": "DSLAB offered thesis projects covering intelligent virtual tutors, travel recommendation systems, interlaboratory quality Shiny apps, and clinical predictive modeling.",
+    "content": [
+      "The Data Science Lab published its official research catalog of Bachelor's and Master's thesis proposals for the 2023–2024 academic year.",
+      "Featured topics included: development of intelligent conversational tutors; design and implementation of personalized travel recommendation engines; cross-platform gamified assessment pipelines; and Shiny dashboards for interlaboratory trial automation."
+    ],
+    "links": [
+      {
+        "label": "Download Proposals Document (PDF)",
+        "url": "/blog/files/Propuestas_TFG_TFM_2023_2024.pdf"
+      }
+    ],
+    "tags": [
+      "Bachelor's Thesis",
+      "Master's Thesis",
+      "Education"
+    ]
+  },
+  {
+    "id": "dslab-ti-dsexams-educational-innovation",
+    "title": "DSLAB-TI: DSEXAMS project for mass generation of randomized questionnaires",
+    "date": "06 Mar 2023",
+    "description": "The DSLAB-TI teaching innovation group launches DSEXAMS, an open educational project for automated multi-purpose quiz generation.",
+    "content": [
+      "The teaching innovation group of the Data Science Laboratory (DSLAB-TI) launched the educational innovation project 'DSEXAMS: Massive and Automated Generation of Multi-Purpose Randomized Questionnaires'.",
+      "The project aims to construct an open, standardized question repository and automated generation scripts, enabling professors to deliver randomized exams and formative quizzes seamlessly across digital learning environments."
+    ],
+    "links": [
+      {
+        "label": "Explore DSLAB-TI Innovation Group",
+        "url": "/education/dslab-ti/"
+      }
+    ],
+    "tags": [
+      "Teaching Innovation",
+      "Education",
+      "DSEXAMS"
+    ]
+  },
+  {
+    "id": "xxi-science-innovation-week-human-intelligence-ai",
+    "title": "XXI Science and Innovation Week: human intelligence to the rescue of AI",
+    "date": "03 Nov 2021",
+    "description": "DSLAB presented the scientific workshop 'Human Intelligence to the Rescue of AI' during the 21st Madrid Science and Innovation Week.",
+    "content": [
+      "DSLAB researchers presented their interactive workshop 'Human Intelligence to the Rescue of Artificial Intelligence' at the 21st Science and Innovation Week of the Community of Madrid.",
+      "The session explored the essential role of human supervision, domain intuition, and ethical guidelines in supervising automated machine learning pipelines."
+    ],
+    "image": "/assets/images/blog/xxi_semana_ciencia_innovacion.png",
+    "links": [
+      {
+        "label": "Download Workshop Slides (PDF)",
+        "url": "https://dslab-website.s3.eu-central-1.amazonaws.com/Semana_Ciencia_2021___IH_al_rescate_IA.pdf"
+      }
+    ],
+    "tags": [
+      "Scientific Outreach",
+      "Science Week",
+      "Artificial Intelligence"
+    ]
+  },
+  {
+    "id": "dsgame-board-game-young-academy-spain",
+    "title": "DSLAB and the Young Academy of Spain promote data science via DSGAME",
+    "date": "25 Aug 2021",
+    "description": "DSLAB and the Academia Joven de España presented the DSGAME board game to top high-school scholars across Spain.",
+    "content": [
+      "DSLAB, in collaboration with the Young Academy of Spain (Academia Joven de España), introduced DSGAME: The Board Game of Data Science to the highest-achieving high school graduates across Spain.",
+      "The game was developed to communicate complex data science concepts—from data preparation and feature engineering to model training—through interactive and enjoyable gameplay."
+    ],
+    "image": "/assets/images/blog/dsgame1.jpg",
+    "additionalImages": [
+      "/assets/images/blog/dsgame2.jpg",
+      "/assets/images/blog/dsgame3.jpg"
+    ],
+    "links": [
+      {
+        "label": "Learn More about DSGAME",
+        "url": "/education/"
+      }
+    ],
+    "tags": [
+      "Scientific Outreach",
+      "Teaching Innovation",
+      "DSGAME"
+    ]
+  },
+  {
+    "id": "xx-science-innovation-week-healthcare-covid19",
+    "title": "XX Science and Innovation Week: healthcare sufficiency and COVID-19",
+    "date": "10 Nov 2020",
+    "description": "DSLAB presented epidemiological modeling and predictive capacity analysis for healthcare infrastructure during the initial waves of COVID-19.",
+    "content": [
+      "At the 20th Science and Innovation Week, DSLAB researchers shared their study 'Healthcare Sufficiency and COVID-19', providing data-driven perspectives on hospital resource allocation, intensive care capacity, and epidemic curve modeling during the COVID-19 pandemic."
+    ],
+    "image": "/assets/images/blog/xx_semana_ciencia_innovacion.png",
+    "links": [
+      {
+        "label": "Download Presentation (PDF)",
+        "url": "https://dslab-website.s3.eu-central-1.amazonaws.com/Suficiencia_Sanitaria_y_COVID_19.pdf"
+      }
+    ],
+    "tags": [
+      "Scientific Outreach",
+      "Science Week",
+      "Healthcare",
+      "COVID-19"
+    ]
+  },
+  {
+    "id": "bachelor-master-thesis-proposals-2019-2020",
+    "title": "Bachelor's and master's thesis proposals (2019–2020)",
+    "date": "24 Mar 2020",
+    "description": "Thesis proposals on SABERMED clinical evaluation, class overlap metrics, genetic clustering, and symbolic data analysis.",
+    "content": [
+      "DSLAB presented its research thesis offerings for the 2019–2020 academic year.",
+      "Key projects focused on: evaluating multi-class classification models in clinical diagnostic datasets (SABERMED); genetic clustering algorithms; metrics for measuring overlap between classes; and symbolic data analysis for large-scale categorical aggregates."
+    ],
+    "links": [
+      {
+        "label": "Download Proposals PDF",
+        "url": "https://dslab-website.s3.eu-central-1.amazonaws.com/DSLAB_Propuestas_TFG_TFM_2019_2020.pdf"
+      }
+    ],
+    "tags": [
+      "Bachelor's Thesis",
+      "Master's Thesis",
+      "Education"
+    ]
+  },
+  {
+    "id": "bachelor-master-thesis-proposals-2018-2019",
+    "title": "Bachelor's and master's thesis proposals (2018–2019)",
+    "date": "04 Dec 2018",
+    "description": "Thesis opportunities on healthcare web scraping, brand image machine learning, and computer vision.",
+    "content": [
+      "The Data Science Lab offered research-oriented thesis topics for the 2018–2019 academic cycle.",
+      "Proposals included web scraping and information retrieval pipelines for public health datasets, brand reputation analytics using deep learning and convolutional neural networks, and automated sentiment classification."
+    ],
+    "links": [
+      {
+        "label": "Download Proposals PDF",
+        "url": "https://dslab-website.s3.eu-central-1.amazonaws.com/DSLAB_Propuestas_TFG_TFM_2019_2020.pdf"
+      }
+    ],
+    "tags": [
+      "Bachelor's Thesis",
+      "Master's Thesis",
+      "Education"
+    ]
+  },
+  {
+    "id": "bachelor-master-thesis-proposals-2016-2017",
+    "title": "Bachelor's and master's thesis proposals (2016–2017)",
+    "date": "24 Feb 2017",
+    "description": "Early foundation thesis projects on Big Data video surveillance, web sentiment analysis, and machine learning for IT security.",
+    "content": [
+      "During its founding academic year (2016–2017), DSLAB published its inaugural thesis opportunities for engineering students.",
+      "Themes encompassed Big Data architectures for intelligent video surveillance, web-scale sentiment classification, deep learning for video tagging, and automated machine learning for network intrusion detection."
+    ],
+    "links": [
+      {
+        "label": "Download Proposals PDF",
+        "url": "https://dslab-website.s3.eu-central-1.amazonaws.com/DSLAB_Propuestas_TFG_TFM_2019_2020.pdf"
+      }
+    ],
+    "tags": [
+      "Bachelor's Thesis",
+      "Master's Thesis",
+      "Education",
+      "Foundations"
+    ]
+  }
+]

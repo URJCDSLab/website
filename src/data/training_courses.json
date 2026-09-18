@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Data collection",
+    "image": "/assets/images/training/ObtencionDeDatos.jpg",
+    "description": "Introduction to the main tools and procedures for obtaining structured and unstructured data using Python and R, covering web scraping, API retrieval, social media feeds, and formats such as CSV, JSON, and XML."
+  },
+  {
+    "title": "Management and data processing",
+    "image": "/assets/images/training/OyTdD.png",
+    "description": "Tools for the creation and maintenance of data repositories concentrating heterogeneous information for analytics pipelines, focusing on Elasticsearch, Kibana, and Solr."
+  },
+  {
+    "title": "Introduction to Apache Spark",
+    "image": "/assets/images/training/spark.jpg",
+    "description": "Comprehensive presentation of the Apache Spark ecosystem for distributed data processing, structured DataFrames, Spark SQL, Spark Streaming, and scalable MLlib."
+  },
+  {
+    "title": "Scientific programming in Python",
+    "image": "/assets/images/training/ProgramacionCientificaEnPython.jpg",
+    "description": "Scientific programming tools in Python using Anaconda and Jupyter notebooks, covering NumPy, SciPy, Pandas, Seaborn, and interactive Bokeh plotting."
+  },
+  {
+    "title": "Reproducible data analysis with R",
+    "image": "/assets/images/training/repR.jpg",
+    "description": "Introduction to the R environment and RStudio for reproducible workflows, tidy data manipulation, automated reporting with Quarto/RMarkdown, and ggplot2 graphics."
+  },
+  {
+    "title": "Graphical interfaces for R",
+    "image": "/assets/images/training/R.jpg",
+    "description": "Presentation of RCommander and Rattle graphical interfaces that empower practitioners with minimal programming experience to run statistical models and data mining."
+  },
+  {
+    "title": "Cloud computing for data science",
+    "image": "/assets/images/training/ComputationCloudParaCienciaDeDatos.jpg",
+    "description": "Theoretical and practical training on deploying scalable data pipelines on Amazon AWS using Docker containers and cloud computing resources."
+  },
+  {
+    "title": "Machine learning",
+    "image": "/assets/images/training/data_mining.jpg",
+    "description": "Classical and modern supervised/unsupervised algorithms for pattern extraction, predictive modeling, feature engineering, and cross-validation."
+  },
+  {
+    "title": "Clustering with R",
+    "image": "/assets/images/training/clustering_R.jpg",
+    "description": "In-depth study of clustering methodologies, hierarchical vs non-hierarchical algorithms, density-based methods, and practical domain use cases."
+  },
+  {
+    "title": "Text mining and natural language processing",
+    "image": "/assets/images/training/MineriaDeTexto_Y_ProcesadoDeLenguajeNatural.png",
+    "description": "NLP libraries in Python and R for sentiment analysis, topic modeling, named entity recognition, and unstructured text analytics from web sources."
+  },
+  {
+    "title": "Advanced data visualization",
+    "image": "/assets/images/training/Visualizacion.png",
+    "description": "Advanced tools for visual communication and storytelling, from interactive dashboards with Shiny and Plotly to multi-dimensional charting."
+  },
+  {
+    "title": "Data privacy",
+    "image": "/assets/images/training/PrivacidadDeDatos.jpg",
+    "description": "Protocols, differential privacy, anonymization, and GDPR legal regulations to guarantee rigorous security and privacy standards in analytics systems."
+  },
+  {
+    "title": "Meta-analysis",
+    "image": "/assets/images/training/metaanalisis.jpg",
+    "description": "Practical review of statistical methodologies for combining quantitative findings across scientific studies, utilizing specialized R meta-analysis libraries."
+  }
+]
