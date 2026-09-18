@@ -1,10 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { researchLines } from "@/data/research";
-import { FlaskConical, ArrowRight, Sparkles } from "lucide-react";
+import researchLines from "@/data/research_lines.json";
 
 export const metadata: Metadata = {
-  title: "Research Lines",
+  title: "Research lines | Data Science Lab",
   description: "Explore the core research lines of the Data Science Lab at URJC.",
 };
 
@@ -14,12 +13,8 @@ export default function ResearchLinesPage() {
       
       {/* Header */}
       <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0086BA]/10 text-[#0086BA] dark:bg-[#0086BA]/20 mb-3">
-          <FlaskConical className="w-3.5 h-3.5" />
-          Scientific Inquiries
-        </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
-          Research Lines
+          Research lines
         </h1>
         <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
           Our research lines focus on developing innovative mathematical and computational solutions to address complex challenges across multiple domains. Reach out directly to line leaders for scientific collaboration.
@@ -35,9 +30,9 @@ export default function ResearchLinesPage() {
             className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#0086BA]/60 dark:hover:border-[#0086BA]/60 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">
                 {line.title}
-              </h3>
+              </h2>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 {line.description}
               </p>
@@ -62,9 +57,9 @@ export default function ResearchLinesPage() {
       {/* Footer Banner */}
       <div className="p-8 rounded-2xl bg-gradient-to-r from-[#0086BA] to-[#006d96] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
-          <h3 className="text-xl font-bold">
+          <h2 className="text-xl font-bold">
             Interested in launching a joint research initiative?
-          </h3>
+          </h2>
           <p className="text-sm text-white/90 mt-1">
             We collaborate with academic teams and institutions across Europe and Latin America.
           </p>

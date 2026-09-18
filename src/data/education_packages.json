@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Virtual Intelligent Tutor (ViLT)",
+    "url": "https://github.com/URJCDSLab/ViLT",
+    "description": "ViLT is a comprehensive framework that integrates an intelligent chatbot to support virtual tutoring for students across various degree programs at ETSII, URJC. It leverages large language models, LangChain, and RAG techniques to optimize natural language queries."
+  },
+  {
+    "title": "AdvancedBasketballStats",
+    "url": "https://cran.r-project.org/package=AdvancedBasketballStats",
+    "description": "This R package provides a range of functions and metrics commonly used in basketball analytics to evaluate player performance, team statistics, lineup efficiency, and play-by-play data based on Dean Oliver's concepts."
+  },
+  {
+    "title": "SixSigma",
+    "url": "https://github.com/emilopezcano/SixSigma",
+    "description": "Functions and utilities to perform Statistical Analyses in the Six Sigma way, including DMAIC phases, process capability, control charts, and measurement system analysis."
+  },
+  {
+    "title": "CSViz method",
+    "url": "https://github.com/URJCDSLab/CSViz",
+    "paperUrl": "https://doi.org/10.1007/s10489-023-05149-4",
+    "description": "Implementation of CSViz: Class Separability Visualization for High-Dimensional Datasets."
+  },
+  {
+    "title": "CPRViz method",
+    "url": "https://github.com/URJCDSLab/CPRViz",
+    "description": "Implementation of CPRViz: Consistent Probability Regions Visualization for model understanding."
+  },
+  {
+    "title": "KRAKEN-SND",
+    "url": "https://github.com/URJCDSLab/KRAKEN-SND",
+    "paperUrl": "https://doi.org/10.1016/j.engappai.2021.104230",
+    "description": "Implementation of KRAKEN-SND: Knowledge Recovering Architecture based on Keywords Extraction from Narratives for Suspicious News Detection."
+  },
+  {
+    "title": "MOE",
+    "url": "https://github.com/URJCDSLab/moe",
+    "paperUrl": "https://doi.org/10.1016/j.knosys.2022.109669",
+    "description": "Implementation and validation of MOE, Minimally Overfitted Learners: A general framework for ensemble learning."
+  },
+  {
+    "title": "Hostility measure",
+    "url": "https://github.com/URJCDSLab/Hostility_measure",
+    "paperUrl": "https://doi.org/10.1007/s10489-022-03793-w",
+    "description": "Generator Python code for artificial datasets and results of the Hostility measure for multi-level study of data complexity."
+  },
+  {
+    "title": "Experts perception-based system for misinformation detection",
+    "url": "https://github.com/URJCDSLab/expert-perception-based-system-data",
+    "paperUrl": "https://doi.org/10.1016/j.patrec.2021.11.008",
+    "description": "Data and scripts used in the paper 'Experts perception-based system to detect misinformation in health websites'."
+  },
+  {
+    "title": "Explanation sets",
+    "url": "https://github.com/URJCDSLab/explanation_sets_experiments",
+    "paperUrl": "https://doi.org/10.1016/j.ins.2022.10.084",
+    "description": "Implementation and evaluation of 'Explanation sets: A general framework for machine learning explainability'."
+  }
+]

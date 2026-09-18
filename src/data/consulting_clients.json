@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Autana BP",
+    "logo": "/assets/images/consulting_clients/autana.svg",
+    "url": "https://autanabp.com/",
+    "description": "Autana Business Partners is a consulting firm that supports organizations in driving growth, operational efficiency, financial planning, and strategic transformation."
+  },
+  {
+    "name": "Deimos",
+    "logo": "/assets/images/consulting_clients/deimos.svg",
+    "url": "https://deimos-space.com/",
+    "description": "Deimos is a technology company specializing in space systems, satellite engineering, and mission-critical software for defense, aeronautics, and maritime sectors, now part of Indra."
+  },
+  {
+    "name": "Dephimática",
+    "logo": "/assets/images/consulting_clients/dephimatica.svg",
+    "url": "https://www.dephimatica.es/",
+    "description": "Dephimática specializes in statistical consulting, information management, data collection, and software engineering for efficient enterprise data exploitation."
+  },
+  {
+    "name": "Digitanimal",
+    "logo": "/assets/images/consulting_clients/digitanimal.svg",
+    "url": "https://digitanimal.com/",
+    "description": "Digitanimal is an agritech company developing integrated IoT collars and AI algorithms to track and optimize the health, location, and welfare of extensive livestock."
+  },
+  {
+    "name": "Endesa",
+    "logo": "/assets/images/consulting_clients/endesa.svg",
+    "url": "https://www.endesa.com/",
+    "description": "Endesa is a leading Spanish electric utility providing power and gas services to 10 million customers, driving innovation in renewable generation and smart grid management."
+  },
+  {
+    "name": "Ericsson",
+    "logo": "/assets/images/consulting_clients/ericsson.svg",
+    "url": "https://www.ericsson.com/en",
+    "description": "Ericsson is a global telecommunications leader delivering 5G networking infrastructure, digital services, IoT connectivity, and cloud software for operators worldwide."
+  },
+  {
+    "name": "GFK (merged with NIQ)",
+    "logo": "/assets/images/consulting_clients/gfk.svg",
+    "url": "https://nielseniq.com/global/en/",
+    "description": "GfK is a premier market intelligence and consumer analytics provider, now combined with NielsenIQ (NIQ) to provide actionable global retail and audience insights."
+  },
+  {
+    "name": "IMASDE",
+    "logo": "/assets/images/consulting_clients/imasde.svg",
+    "url": "https://e-imasde.eu/",
+    "description": "IMASDE Agroalimentaria is a private research center focused on animal nutrition, primary agricultural production, and sustainability across the food value chain."
+  },
+  {
+    "name": "Liberty Seguros (acquired by Generali)",
+    "logo": "/assets/images/consulting_clients/liberty-seguros.svg",
+    "url": "https://www.generali.es/",
+    "description": "Liberty Seguros is an insurance provider specializing in predictive risk models and customer analytics, now integrated into the Generali Group."
+  },
+  {
+    "name": "MedLab Media Group (now dezzai)",
+    "logo": "/assets/images/consulting_clients/medlab.svg",
+    "url": "https://dezzai.com/en/",
+    "description": "Dezzai (formerly MedLab Media Group) develops AI and semantic search solutions for healthcare professionals, medical publishing, and clinical research."
+  },
+  {
+    "name": "Pixelabs",
+    "logo": "/assets/images/consulting_clients/pixelabs.svg",
+    "url": "https://pixelabs-ai.com/",
+    "description": "Pixelabs develops artificial intelligence solutions with deep expertise in computer vision, deep learning, biometric sensors, and automated quality inspection."
+  },
+  {
+    "name": "Repsol",
+    "logo": "/assets/images/consulting_clients/repsol.svg",
+    "url": "https://www.repsol.com",
+    "description": "Repsol is a global multi-energy company operating across oil, gas, renewable electricity, and advanced sustainable fuels with over 24,000 employees."
+  },
+  {
+    "name": "Satlink",
+    "logo": "/assets/images/consulting_clients/satlink.svg",
+    "url": "https://satlink.es/",
+    "description": "Satlink is a maritime technology company delivering satellite communications, electronic monitoring systems, and oceanographic AI for sustainable fisheries management."
+  },
+  {
+    "name": "SensoWave",
+    "logo": "/assets/images/consulting_clients/sensowave.svg",
+    "url": "https://sensowave.es/en/",
+    "description": "SensoWave creates innovative IoT hardware, sensor telemetry, and big data architectures for smart agriculture, eHealth, and industrial automation."
+  },
+  {
+    "name": "Seureca Veolia",
+    "logo": "/assets/images/consulting_clients/veolia.svg",
+    "url": "https://www.seureca.veolia.com/en",
+    "description": "Seureca is the engineering and consulting arm of Veolia, designing sustainable infrastructure and environmental data analytics in water, waste, and clean energy."
+  },
+  {
+    "name": "Shapypro",
+    "logo": "/assets/images/consulting_clients/shapypro.svg",
+    "url": "https://shapypro.com/",
+    "description": "Shapypro designs and manages proficiency testing and interlaboratory comparison programs to assure analytical quality control across clinical and chemical laboratories."
+  },
+  {
+    "name": "Spika Tech",
+    "logo": "/assets/images/consulting_clients/spika.svg",
+    "url": "https://www.spikatech.com/en",
+    "description": "Spika Tech is an engineering company creating innovative holographic visualization, health diagnostics, and advanced software products."
+  },
+  {
+    "name": "Telefónica",
+    "logo": "/assets/images/consulting_clients/telefonica.svg",
+    "url": "https://www.telefonica.com/en/",
+    "description": "Telefónica is one of the world's leading telecommunications and digital infrastructure corporations, serving over 380 million customers across Europe and Latin America."
+  },
+  {
+    "name": "Tier1 Technology",
+    "logo": "/assets/images/consulting_clients/tier1.svg",
+    "url": "https://www.tier1.es/",
+    "description": "Tier1 Technology is a listed software and IT services company with 30+ years of experience delivering omnichannel retail platforms (Comerzzia) and enterprise AI solutions."
+  }
+]

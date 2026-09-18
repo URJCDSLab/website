@@ -1,71 +1,70 @@
 import { Metadata } from "next";
-import { GraduationCap, Database, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import trainingCoursesData from "@/data/training_courses.json";
+import { TrainingCourse } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Training",
+  title: "Professional training | Data Science Lab",
   description: "Specialized data science and engineering training programs for professionals.",
 };
 
-const courses = [
-  {
-    title: "Data Collection & Wrangling",
-    image: "/assets/images/training/ObtencionDeDatos.jpg",
-    description: "Introduction to tools and procedures for obtaining structured and unstructured data using Python and R, covering web scraping, APIs, databases, and formats like JSON, XML, and parquet.",
-  },
-  {
-    title: "Data Processing & Repositories",
-    image: "/assets/images/training/OyTdD.png",
-    description: "Creation and maintenance of unified data repositories with Elasticsearch, Kibana, Solr, and data lake pipelines for enterprise data science exploitation.",
-  },
-  {
-    title: "Big Data & Distributed Computing",
-    image: "/assets/images/training/spark.jpg",
-    description: "Scalable data processing using Apache Spark, PySpark, and distributed computing frameworks for high-velocity and large-volume datasets.",
-  },
-  {
-    title: "Predictive Analytics & Machine Learning",
-    image: "/assets/images/training/ObtencionDeDatos.jpg",
-    description: "End-to-end predictive modeling, regression, classification, cross-validation, and MLOps best practices for deploying robust models in production.",
-  },
-];
+const courses = trainingCoursesData as TrainingCourse[];
 
 export default function TrainingPage() {
   return (
     <div className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       {/* Header */}
-      <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0086BA]/10 text-[#0086BA] dark:bg-[#0086BA]/20 mb-3">
-          <GraduationCap className="w-3.5 h-3.5" />
-          Professional Development
-        </div>
+      <div className="max-w-4xl space-y-4">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
-          Professional Training
+          Professional training
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-          At DSLAB, we offer specialized training for professionals and corporate teams across key areas of data science, from foundational data wrangling to distributed architectures and MLOps.
+        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+          At DSLAB, we design and deliver advanced, hands-on training for professionals, research groups, and corporate engineering teams. The catalog below showcases <strong>courses we have already successfully conducted</strong> across key data science disciplines.
         </p>
+
+        {/* Custom course tailored callout */}
+        <div className="p-6 rounded-2xl bg-gradient-to-r from-[#0086BA]/10 via-slate-50 to-emerald-500/10 dark:from-[#0086BA]/20 dark:via-slate-900 dark:to-emerald-500/20 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-6">
+          <div className="space-y-1">
+            <h2 className="text-base font-bold text-slate-900 dark:text-slate-100">
+              Need custom training for your team?
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              We design and deliver bespoke training programs tailored specifically to your organization&apos;s technical requirements, domain challenges, and scheduling needs.
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#0086BA] text-white hover:bg-[#0086BA]/90 transition-colors shrink-0 inline-flex items-center gap-1.5 shadow-sm"
+          >
+            Request custom training <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
 
       {/* Courses Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {courses.map((course) => (
           <div
-            key={course.title}
-            className="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between"
+            key={course.id || course.title}
+            className="group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between"
           >
-            <div className="h-44 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+            {/* Course Image */}
+            <div className="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
               <img
                 src={course.image}
                 alt={course.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <div className="p-6 flex-grow flex flex-col justify-between">
+
+            {/* Content */}
+            <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-[#0086BA] transition-colors mb-2 leading-snug">
                   {course.title}
-                </h3>
+                </h2>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   {course.description}
                 </p>

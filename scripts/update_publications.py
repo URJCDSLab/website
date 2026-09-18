@@ -5,7 +5,7 @@ Data Science Lab (DSLab) - URJC
 Automated publication scraper and enrichment pipeline.
 Fetches publications from OpenAlex and ORCID for all active lab members,
 deduplicates across co-authors, enriches with year-specific SCImago (SJR) quartiles,
-preserves only genuine source keywords, merges manual entries, and saves to _data/publications.json.
+preserves only genuine source keywords, merges manual entries, and saves to src/data/publications/publications.json.
 """
 
 import argparse
@@ -71,39 +71,44 @@ def clean_issn(issn_str):
     return re.findall(r"[0-9]{4}[0-9X]{4}", issn_str.replace("-", "").upper())
 
 
-def extract_active_members(team_html_path="about/team/index.html"):
-    """Extract all active faculty, researchers, and affiliated members from the team page."""
-    if not os.path.exists(team_html_path):
-        log(f"Warning: {team_html_path} not found.")
+def extract_active_members(team_json_path="src/data/team.json"):
+    """Extract all active faculty, researchers, and affiliated members from team JSON."""
+    if not os.path.exists(team_json_path):
+        log(f"Warning: {team_json_path} not found.")
         return []
 
-    with open(team_html_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # Former members section marks the end of active members
-    former_pos = content.find("Former members")
-    if former_pos != -1:
-        active_content = content[:former_pos]
-    else:
-        active_content = content
-
-    member_blocks = re.findall(
-        r'<div class="team-member[^>]*>(.*?)<!-- team-member: end -->',
-        active_content,
-        re.DOTALL
-    )
+    with open(team_json_path, "r", encoding="utf-8") as f:
+        try:
+            team_data = json.load(f)
+        except Exception as e:
+            log(f"Error loading {team_json_path}: {e}")
+            return []
 
     members = []
-    for block in member_blocks:
-        name_match = re.search(r'<h4 class="margin-clear">([^<]+)</h4>', block)
-        if not name_match:
-            continue
-        name = name_match.group(1).strip()
+    # team.json can be a dictionary categorized by role or a flat list
+    raw_list = []
+    if isinstance(team_data, dict):
+        for category in ["faculty", "researchers", "affiliated"]:
+            raw_list.extend(team_data.get(category, []))
+    elif isinstance(team_data, list):
+        raw_list = team_data
 
-        orcid_match = re.search(r"orcid\.org/([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X])", block)
+    for member in raw_list:
+        if not isinstance(member, dict):
+            continue
+        if member.get("category", "").lower() == "former":
+            continue
+
+        name = member.get("name", "").strip()
+        if not name:
+            continue
+
+        orcid_url = member.get("orcid", "")
+        orcid_match = re.search(r"orcid\.org/([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X])", orcid_url) if orcid_url else None
         orcid = orcid_match.group(1) if orcid_match else None
 
-        scholar_match = re.search(r"scholar\.google\.[^/]+/citations\?user=([a-zA-Z0-9_-]+)", block)
+        scholar_url = member.get("scholar", "")
+        scholar_match = re.search(r"scholar\.google\.[^/]+/citations\?user=([a-zA-Z0-9_-]+)", scholar_url) if scholar_url else None
         scholar = scholar_match.group(1) if scholar_match else None
 
         members.append({
@@ -115,7 +120,7 @@ def extract_active_members(team_html_path="about/team/index.html"):
     return members
 
 
-def load_journal_rankings(path="_data/journal_rankings.json"):
+def load_journal_rankings(path="src/data/publications/journal_rankings.json"):
     if os.path.exists(path):
         try:
             with open(path, "r", encoding="utf-8") as f:
@@ -125,7 +130,7 @@ def load_journal_rankings(path="_data/journal_rankings.json"):
     return {}
 
 
-def load_manual_publications(path="_data/publications_manual.json"):
+def load_manual_publications(path="src/data/publications/publications_manual.json"):
     if os.path.exists(path):
         try:
             with open(path, "r", encoding="utf-8") as f:
@@ -135,7 +140,7 @@ def load_manual_publications(path="_data/publications_manual.json"):
     return []
 
 
-def load_existing_publications(path="_data/publications.json"):
+def load_existing_publications(path="src/data/publications/publications.json"):
     if os.path.exists(path):
         try:
             with open(path, "r", encoding="utf-8") as f:
@@ -672,8 +677,8 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
         reverse=True
     )
 
-    # Save to _data/publications.json
-    out_dir = "_data"
+    # Save to src/data/publications/publications.json
+    out_dir = "src/data/publications"
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "publications.json")
 

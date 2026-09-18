@@ -1,7 +1,13 @@
 User-agent: *
 Allow: /
 
-Disallow: /assets/images/banners/
+# Disallow indexing of team members, research projects, publications, and partners
+Disallow: /about/team/
+Disallow: /research/projects/
+Disallow: /research/publications/
+Disallow: /research/partners/
+
+# Asset directories
 Disallow: /assets/images/blog/
 Disallow: /assets/images/conecta/
 Disallow: /assets/images/consulting_clients/

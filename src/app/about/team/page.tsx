@@ -1,16 +1,86 @@
 import { Metadata } from "next";
-import { TeamMemberCard } from "@/components/TeamMemberCard";
-import { 
-  facultyMembers, 
-  researchers, 
-  affiliatedMembers, 
-  visitingResearchers, 
-  formerMembers 
-} from "@/data/team";
-import { Users, Sparkles } from "lucide-react";
+import { TeamMemberCard } from "@/components/about/TeamMemberCard";
+import teamData from "@/data/team.json";
+import { TeamMember } from "@/types";
+
+interface OtherMember {
+  name: string;
+  surname: string;
+}
+
+function sortBySpanishSurname(a: { lastName?: string }, b: { lastName?: string }): number {
+  return (a.lastName ?? "").localeCompare(b.lastName ?? "", "es", { sensitivity: "base" });
+}
+
+function sortOtherBySurname(a: OtherMember, b: OtherMember): number {
+  return a.surname.localeCompare(b.surname, "es", { sensitivity: "base" });
+}
+
+// Seniority rank hierarchies:
+// 1. Faculty: General Coordinator first -> Full Professor -> Associate Professor -> Assistant Professor -> Junior Assistant Professor -> Postdoc
+const facultyRankOrder: Record<string, number> = {
+  "Full Professor": 1,
+  "Associate Professor": 2,
+  "Assistant Professor": 3,
+  "Junior Assistant Professor": 4,
+  "Postdoctoral Researcher": 5,
+};
+
+// 2. Researchers: Postdoc -> PhD Student -> Researcher
+const researcherRankOrder: Record<string, number> = {
+  "Postdoctoral Researcher": 1,
+  "PhD. Student": 2,
+  "PhD Student": 2,
+  "Researcher": 3,
+};
+
+// 3. Affiliated Faculty: Postdoc -> Researcher
+const affiliatedRankOrder: Record<string, number> = {
+  "Postdoctoral Researcher": 1,
+  "Researcher": 2,
+};
+
+function sortFaculty(a: TeamMember, b: TeamMember): number {
+  // General Coordinator is strictly first
+  const isCoordA = a.title === "General Coordinator" || a.id === "isaac-martin";
+  const isCoordB = b.title === "General Coordinator" || b.id === "isaac-martin";
+  if (isCoordA && !isCoordB) return -1;
+  if (!isCoordA && isCoordB) return 1;
+
+  const rankA = facultyRankOrder[a.role] ?? 99;
+  const rankB = facultyRankOrder[b.role] ?? 99;
+  if (rankA !== rankB) return rankA - rankB;
+  return sortBySpanishSurname(a, b);
+}
+
+function sortResearchers(a: TeamMember, b: TeamMember): number {
+  const rankA = researcherRankOrder[a.role] ?? 99;
+  const rankB = researcherRankOrder[b.role] ?? 99;
+  if (rankA !== rankB) return rankA - rankB;
+  return sortBySpanishSurname(a, b);
+}
+
+function sortAffiliated(a: TeamMember, b: TeamMember): number {
+  const rankA = affiliatedRankOrder[a.role] ?? 99;
+  const rankB = affiliatedRankOrder[b.role] ?? 99;
+  if (rankA !== rankB) return rankA - rankB;
+  return sortBySpanishSurname(a, b);
+}
+
+const facultyMembers: TeamMember[] = ([...(teamData.faculty as TeamMember[])]).sort(sortFaculty);
+const researchers: TeamMember[] = ([...(teamData.researchers as TeamMember[])]).sort(sortResearchers);
+const affiliatedMembers: TeamMember[] = ([...(teamData.affiliated as TeamMember[])]).sort(sortAffiliated);
+
+const visitingResearchers: string[] = ([...(teamData.visiting as OtherMember[])])
+  .sort(sortOtherBySurname)
+  .map((m) => m.name);
+
+const formerMembers: string[] = ([...(teamData.former as OtherMember[])])
+  .sort(sortOtherBySurname)
+  .map((m) => m.name);
 
 export const metadata: Metadata = {
-  title: "Team",
+  title: "Team | Data Science Lab",
   description: "Meet the professors, researchers, and doctoral students at Data Science Lab (URJC).",
 };
 
@@ -20,12 +90,8 @@ export default function TeamPage() {
       
       {/* Header */}
       <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0086BA]/10 text-[#0086BA] dark:bg-[#0086BA]/20 mb-3">
-          <Users className="w-3.5 h-3.5" />
-          Our People
-        </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
-          Faculty &amp; Researchers
+          Faculty &amp; researchers
         </h1>
         <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400">
           The Data Science Lab brings together multidisciplinary faculty, postdoctoral researchers, and doctoral students across computer science, statistics, telecommunications, and health sciences.
@@ -34,7 +100,7 @@ export default function TeamPage() {
 
       {/* Section 1: Faculty */}
       <section className="space-y-8">
-        <div className="border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
             Faculty ({facultyMembers.length})
           </h2>
@@ -52,9 +118,9 @@ export default function TeamPage() {
 
       {/* Section 2: Researchers & PhD Students */}
       <section className="space-y-8">
-        <div className="border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-            Researchers &amp; PhD Students ({researchers.length})
+            PhD students &amp; Researchers ({researchers.length})
           </h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
             Early-career researchers and doctoral candidates driving experimental development.
@@ -70,12 +136,12 @@ export default function TeamPage() {
 
       {/* Section 3: Affiliated Faculty */}
       <section className="space-y-8">
-        <div className="border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-            Affiliated Faculty &amp; Collaborators ({affiliatedMembers.length})
+            Affiliated faculty &amp; collaborators ({affiliatedMembers.length})
           </h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Researchers from partner universities collaborating closely with DSLab.
+            Researchers from partner universities collaborating closely with DSLAB.
           </p>
         </div>
 
@@ -91,9 +157,9 @@ export default function TeamPage() {
         
         {/* Visiting */}
         <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
-          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-            Visiting Researchers
-          </h3>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            Visiting researchers
+          </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">
             International academics and scholars who have joined us for research stays:
           </p>
@@ -109,9 +175,9 @@ export default function TeamPage() {
 
         {/* Former members */}
         <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
-          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-            Former Members
-          </h3>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            Former members
+          </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">
             Alumni and researchers who contributed to the lab:
           </p>

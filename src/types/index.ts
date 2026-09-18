@@ -1,6 +1,8 @@
 export interface TeamMember {
   id: string;
   name: string;
+  firstName?: string;
+  lastName?: string;
   role: string;
   category: "faculty" | "researchers" | "affiliated" | "visiting" | "former";
   title?: string;
@@ -33,34 +35,136 @@ export interface Publication {
   dslab_authors?: string[];
 }
 
-export interface ResearchLine {
+export interface ResearchLineItem {
   id: string;
   title: string;
-  shortDesc: string;
-  icon: string;
   description: string;
-  topics: string[];
+  leads: { name: string; id: string }[];
 }
 
-export interface Project {
+export interface ResearchProjectItem {
   id: string;
   title: string;
-  type: "research" | "consulting";
-  fundingAgency?: string;
-  duration?: string;
-  summary: string;
+  period: string;
+  image: string;
+  description: string;
   link?: string;
-  tags: string[];
+  secondaryLink?: string;
+  fundingLogo?: string;
+}
+
+export interface PartnerItem {
+  name: string;
+  logo: string;
+  url?: string;
+  description: string;
+}
+
+export interface ConsultingProjectItem {
+  id: string;
+  title: string;
+  client: string;
+  period: string;
+  image: string;
+  description: string;
+}
+
+export interface ClientItem {
+  name: string;
+  logo: string;
+  url?: string;
+  description: string;
+}
+
+export interface BookItem {
+  title: string;
+  authors: string;
+  date: string;
+  url: string;
+  sourceUrl?: string;
+  pdfUrl?: string;
+  description: string;
+  language?: string;
+  isOpenAccess?: boolean;
+}
+
+export interface PackageItem {
+  title: string;
+  url: string;
+  paperUrl?: string;
+  description: string;
+}
+
+export interface DashboardItem {
+  title: string;
+  authors: string;
+  date: string;
+  url: string;
+  slidesUrl?: string;
+  sourceUrl?: string;
+  description: string;
+}
+
+export interface SlideItem {
+  title: string;
+  authors: string;
+  date: string;
+  url: string;
+  description: string;
+}
+
+export interface ExerciseItem {
+  title: string;
+  authors: string;
+  date: string;
+  url: string;
+  burjcUrl?: string;
+  description: string;
+}
+
+export interface TrainingCourseItem {
+  title: string;
+  image: string;
+  description: string;
+}
+
+export interface GroupPhotoItem {
+  id: number;
+  src: string;
+  alt: string;
+}
+
+export interface BlogPostLink {
+  label: string;
+  url: string;
 }
 
 export interface BlogPost {
   id: string;
   title: string;
   date: string;
-  author: string;
-  authorLink?: string;
-  summary: string;
-  content: string;
+  description?: string;
+  content: string[];
+  image?: string;
   imageUrl?: string;
-  tags: string[];
+  summary?: string;
+  author?: string;
+  authorLink?: string;
+  conferenceLogo?: string;
+  additionalImages?: string[];
+  links?: BlogPostLink[];
+  tags?: string[];
 }
+
+// Convenient aliases for page components
+export type ResearchProject = ResearchProjectItem;
+export type ResearchPartner = PartnerItem;
+export type ConsultingProject = ConsultingProjectItem;
+export type ConsultingClient = ClientItem;
+export type Book = BookItem & { burjcUrl?: string };
+export type RPackage = PackageItem & { cranUrl?: string; githubUrl?: string; authors?: string };
+export type ShinyApp = DashboardItem;
+export type LectureSlide = SlideItem;
+export type ExerciseSet = ExerciseItem;
+export type TrainingCourse = TrainingCourseItem & { id?: string };
+export type GroupPhoto = GroupPhotoItem;

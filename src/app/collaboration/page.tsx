@@ -1,106 +1,138 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Handshake, FileCheck, Award, ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Collaborate With Us",
-  description: "Partnership and collaboration models with the Data Science Lab at URJC.",
+  title: "Collaborate with us | Data Science Lab",
+  description: "Discover the different ways your company or institution can collaborate with DSLAB and the university environment.",
 };
 
 export default function CollaborationPage() {
   return (
-    <div className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
       {/* Header */}
-      <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0086BA]/10 text-[#0086BA] dark:bg-[#0086BA]/20 mb-3">
-          <Handshake className="w-3.5 h-3.5" />
-          University-Industry Transfer
-        </div>
+      <div className="max-w-4xl space-y-6">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
-          Collaborate With Us
+          Collaborate with us
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-          Discover the legal frameworks and flexible partnership mechanisms available to work with DSLAB and the public university ecosystem under Organic Law 2/2023 (LOSU, Art. 60).
+        <p className="text-lg sm:text-xl font-medium text-slate-700 dark:text-slate-300 leading-relaxed">
+          Discover the different ways your company or institution can collaborate with DSLAB and the university environment.
         </p>
+        <div className="space-y-4 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p>
+            Collaboration with research groups at Spanish public universities is governed by the current legal framework (Organic Law 2/2023 of the University System, article 60). Multiple instruments exist to formalize partnerships, offering both flexible and competitive options adapted to the needs of external organizations.
+          </p>
+          <p>
+            These collaboration mechanisms are classified into two main categories, depending on whether they are established through direct agreements or require a public call process. Each of them has its own formalization process, financial structure, responsible figures, and specific objectives, allowing universities to adapt partnerships to the particular context and needs of each external entity.
+          </p>
+        </div>
       </div>
 
-      {/* Collaboration Mechanisms */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Collaboration Categories Cards */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
-        {/* Direct Management */}
-        <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
-          <div className="space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#0086BA]/10 text-[#0086BA] flex items-center justify-center">
-              <FileCheck className="w-6 h-6" />
+        {/* Card 1: Direct Management */}
+        <div className="rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+          <div>
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
+              <img
+                src="/assets/images/collaboration/direct.jpg"
+                alt="Direct management collaboration"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-              Direct Management
-            </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Agile direct agreements adapted to enterprise goals:
-            </p>
-            <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0086BA] mt-2 shrink-0" />
-                <span><strong>Bilateral Projects (Art. 60):</strong> Tailored R&amp;D contracts and technological consulting for specific enterprise challenges.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0086BA] mt-2 shrink-0" />
-                <span><strong>Institutional Research Chairs:</strong> Long-term strategic alliances funding dedicated doctoral candidates and joint labs.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0086BA] mt-2 shrink-0" />
-                <span><strong>Observatories:</strong> Continuous monitoring and benchmarking of sector-specific data.</span>
-              </li>
-            </ul>
+            <div className="p-6 sm:p-8 space-y-4">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                Direct management
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                These mechanisms allow establishing direct agreements with varying levels of commitment, duration, and impact:
+              </p>
+              <ul className="space-y-3 pt-2 text-sm text-slate-600 dark:text-slate-400">
+                <li className="flex items-start gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#0086BA] mt-2 shrink-0" />
+                  <span>
+                    <strong className="text-slate-900 dark:text-slate-200">Bilateral projects (Art. 60):</strong> Tailored contracts for specific research, consultancy, or innovation services.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#0086BA] mt-2 shrink-0" />
+                  <span>
+                    <strong className="text-slate-900 dark:text-slate-200">Research chairs:</strong> Long-term collaborations around a shared strategic research area.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#0086BA] mt-2 shrink-0" />
+                  <span>
+                    <strong className="text-slate-900 dark:text-slate-200">Observatories:</strong> Joint initiatives for monitoring, analysis, and reporting in specialized fields.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#0086BA] mt-2 shrink-0" />
+                  <span>
+                    <strong className="text-slate-900 dark:text-slate-200">Research institutes or centers:</strong> Structured and permanent collaborations through dedicated research units.
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Competitive Public Calls */}
-        <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
-          <div className="space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#E30613]/10 text-[#E30613] flex items-center justify-center">
-              <Award className="w-6 h-6" />
+        {/* Card 2: Public Call */}
+        <div className="rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+          <div>
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
+              <img
+                src="/assets/images/collaboration/public_call.jpg"
+                alt="Public call collaboration"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-              Competitive Public Grants
-            </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Co-funding opportunities for ambitious collaborative projects:
-            </p>
-            <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E30613] mt-2 shrink-0" />
-                <span><strong>Horizon Europe:</strong> International consortia tackling continent-scale healthcare, energy, and digital transformation challenges.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E30613] mt-2 shrink-0" />
-                <span><strong>CDTI &amp; AEI National Calls:</strong> Public-private partnerships and industrial doctorates supported by the Spanish Science Ministry.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E30613] mt-2 shrink-0" />
-                <span><strong>Regional Innovation Hubs:</strong> Targeted funding from the Community of Madrid for technological demonstration.</span>
-              </li>
-            </ul>
+            <div className="p-6 sm:p-8 space-y-4">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                Public call
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                These mechanisms involve competitive processes and co-funding, promoting knowledge transfer and innovation:
+              </p>
+              <ul className="space-y-3 pt-2 text-sm text-slate-600 dark:text-slate-400">
+                <li className="flex items-start gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#E30613] mt-2 shrink-0" />
+                  <span>
+                    <strong className="text-slate-900 dark:text-slate-200">Industrial doctorates:</strong> Collaborative PhD programs that integrate academic research with business challenges.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#E30613] mt-2 shrink-0" />
+                  <span>
+                    <strong className="text-slate-900 dark:text-slate-200">Public-private collaboration projects:</strong> Joint R&amp;D initiatives co-funded by public programs and private companies.
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
       </div>
 
-      {/* CTA Box */}
-      <div className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-center max-w-2xl mx-auto space-y-4">
-        <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-          Let’s discuss your next data project
-        </h3>
-        <p className="text-sm text-slate-600 dark:text-slate-400">
-          Our team can help structure the collaboration under the most suitable mechanism for your institution.
-        </p>
+      {/* Call to Action Bar */}
+      <div className="rounded-2xl bg-gradient-to-r from-[#0086BA] to-[#006d96] p-8 sm:p-12 text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="max-w-xl text-center sm:text-left">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            Ready to start a collaboration that makes an impact?
+          </h2>
+          <p className="mt-2 text-sm sm:text-base text-white/90">
+            Contact our team to discuss opportunities tailored to your organization’s goals.
+          </p>
+        </div>
         <Link
           href="/contact/"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#0086BA] hover:bg-[#006d96] transition-colors shadow-md"
+          className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0086BA] bg-white hover:bg-slate-50 shadow-md transition-transform transform hover:-translate-y-0.5 shrink-0"
         >
-          Contact Our Team <ArrowRight className="w-4 h-4" />
+          <Mail className="w-4 h-4 text-[#0086BA]" />
+          <span>Contact DSLAB</span>
+          <ArrowRight className="w-4 h-4 ml-1" />
         </Link>
       </div>
 

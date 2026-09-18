@@ -1,11 +1,14 @@
 import { Metadata } from "next";
-import { researchProjects } from "@/data/research";
-import { Briefcase, ExternalLink, Calendar } from "lucide-react";
+import researchProjectsData from "@/data/research_projects.json";
+import { ResearchProject } from "@/types";
+import { ExternalLink, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Research Projects",
-  description: "Competitive research projects, public funding, and technology transfer at DSLab.",
+  title: "Research projects | Data Science Lab",
+  description: "Competitive research projects, public funding, and technology transfer at DSLAB.",
 };
+
+const projects = researchProjectsData as ResearchProject[];
 
 export default function ResearchProjectsPage() {
   return (
@@ -13,12 +16,8 @@ export default function ResearchProjectsPage() {
       
       {/* Header */}
       <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0086BA]/10 text-[#0086BA] dark:bg-[#0086BA]/20 mb-3">
-          <Briefcase className="w-3.5 h-3.5" />
-          Grants &amp; Partnerships
-        </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
-          Research Projects
+          Research projects
         </h1>
         <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
           DSLAB leads and participates in research-driven projects that span healthcare, industrial cyber risk, sustainable tourism, aerospace, and agriculture, funded through competitive European, national, and regional calls.
@@ -27,7 +26,7 @@ export default function ResearchProjectsPage() {
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {researchProjects.map((project) => (
+        {projects.map((project) => (
           <div
             key={project.id}
             id={project.id}
@@ -49,27 +48,37 @@ export default function ResearchProjectsPage() {
             {/* Content */}
             <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-[#0086BA] transition-colors">
+                <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-[#0086BA] transition-colors">
                   {project.title}
-                </h3>
+                </h2>
                 <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   {project.description}
                 </p>
               </div>
 
-              {project.link && (
-                <div className="pt-2">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit project website for ${project.title}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0086BA] hover:underline"
-                  >
-                    Visit project website <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-              )}
+              <div className="space-y-3 pt-2">
+                {project.fundingLogo && (
+                  <img
+                    src={project.fundingLogo}
+                    alt="Funding institution"
+                    className="w-100 h-auto object-contain mx-auto"
+                  />
+                )}
+
+                {project.link && (
+                  <div>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit project website for ${project.title}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0086BA] hover:underline"
+                    >
+                      Visit project website <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}

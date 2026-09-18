@@ -1,0 +1,138 @@
+[
+  {
+    "id": "agrocos",
+    "title": "AGROCOS",
+    "client": "Digitanimal",
+    "period": "2026 - 2027",
+    "image": "/assets/images/consulting_projects/agrocos.jpg",
+    "description": "This project focuses on the development and technological transfer of a predictive livestock farming system for the estimation of soil organic carbon levels. The research aims to evolve an existing estimation model into a robust, interpretable, and operational tool by integrating soil analysis, livestock-related variables, and GPS-based animal monitoring data."
+  },
+  {
+    "id": "tunai",
+    "title": "TunAI",
+    "client": "Satlink",
+    "period": "2026 - 2027",
+    "image": "/assets/images/consulting_projects/tunai.jpg",
+    "description": "The TunAI project consists in the development of a system designed to predict the presence of tuna by analyzing historical catch data alongside oceanographic conditions. The analytical tool simplifies complex datasets into practical operational products for maritime activities with an emphasis on explainable AI."
+  },
+  {
+    "id": "genai-retail",
+    "title": "Research on GenAI applied to promotional campaigns in retail",
+    "client": "Tier1 & Optimization Research Group (US)",
+    "period": "2025 - 2026",
+    "image": "/assets/images/consulting_projects/comerzzia.jpg",
+    "description": "Explores the application of Generative AI within retail to automate and personalize promotional campaigns through LLMs, RAG architectures, and intelligent multi-agent systems, balancing performance with data privacy and ethical mitigation of algorithmic bias."
+  },
+  {
+    "id": "prefactura",
+    "title": "Pre-invoice estimation for gas and electricity contracts",
+    "client": "Endesa",
+    "period": "2025",
+    "image": "/assets/images/consulting_projects/prefactura.png",
+    "description": "Porting MATLAB algorithms to scalable Python pipelines to estimate preliminary invoices for gas and electricity contracts, creating a flexible, maintainable solution for energy cost forecasting."
+  },
+  {
+    "id": "plastic-pollution",
+    "title": "Plastic pollution from source to sea",
+    "client": "Seureca Veolia",
+    "period": "2025",
+    "image": "/assets/images/consulting_projects/mrc_plastic.jpg",
+    "description": "Development and deployment of an Open Data Platform to support data-driven decision making around plastic management, integrating voluntary data contributions and KPIs to prepare for Global Plastic Treaty obligations."
+  },
+  {
+    "id": "weaving-connections",
+    "title": "Weaving Connections",
+    "client": "Seureca Veolia",
+    "period": "2024 - 2025",
+    "image": "/assets/images/consulting_projects/mrc_brazil.png",
+    "description": "Consolidating and mapping data to create indicators to assist in designing, evaluating, and improving public policies against energy poverty in isolated and vulnerable communities in Brazil."
+  },
+  {
+    "id": "guatemala-grid",
+    "title": "Geospatial mapping of least cost mini grid potential in Guatemala",
+    "client": "Seureca Veolia",
+    "period": "2020",
+    "image": "/assets/images/consulting_projects/mrc.jpg",
+    "description": "Data science advisory activities for World Bank energy projects, conducting geospatial electrification and cost minimization analysis for rural communities in Guatemala."
+  },
+  {
+    "id": "eul3r",
+    "title": "EUL3R",
+    "client": "Autana Business Partners & Gisela",
+    "period": "2020",
+    "image": "/assets/images/consulting_projects/euler.png",
+    "description": "Design and development of mathematical optimization models and time-series forecasting applied to retail stock management processes."
+  },
+  {
+    "id": "endesa-trends",
+    "title": "Tendencias Actuales en Ciencia de Datos",
+    "client": "Endesa",
+    "period": "2020",
+    "image": "/assets/images/consulting_projects/endesa.jpg",
+    "description": "Specialized executive seminar series reviewing the latest state-of-the-art developments in data science and enterprise AI architectures."
+  },
+  {
+    "id": "repsol-risk",
+    "title": "Gestión del Riesgo y Optimización Matemática",
+    "client": "Repsol",
+    "period": "2017 - 2020",
+    "image": "/assets/images/consulting_projects/repsol.jpg",
+    "description": "Applied data science, stochastic optimization, and quantitative risk management for integrated global energy operations."
+  },
+  {
+    "id": "medlab-health",
+    "title": "Ciencia de datos para la digitalización de los sistemas de Salud",
+    "client": "MedLab Media Group",
+    "period": "2017 - 2019",
+    "image": "/assets/images/consulting_projects/mmg.jpg",
+    "description": "Developing specialized natural language processing, semantic search, and clinical data mining algorithms for international medical platforms."
+  },
+  {
+    "id": "digitanimal-iot",
+    "title": "Digitanimal Data Science",
+    "client": "Management Construction and Trade Innovative Solutions",
+    "period": "2017 - 2018",
+    "image": "/assets/images/consulting_projects/digitanimal.jpg",
+    "description": "Machine learning algorithms on continuous GPS collar telemetry to detect abnormal cattle behavior and scale livestock management services."
+  },
+  {
+    "id": "gfk-analytics",
+    "title": "Ingeniería y análisis avanzado de datos",
+    "client": "GfK Emer Ad Hoc Research",
+    "period": "2017 - 2018",
+    "image": "/assets/images/consulting_projects/gfk.jpg",
+    "description": "Advanced data engineering and consumer predictive modeling for global market intelligence and audience measurement."
+  },
+  {
+    "id": "ericsson-ml",
+    "title": "Machine Learning and Data Science",
+    "client": "Ericsson",
+    "period": "2017 - 2018",
+    "image": "/assets/images/consulting_projects/ml&ds_ericsson.jpg",
+    "description": "Predictive maintenance and anomaly detection on distributed network infrastructure for telecommunication operators."
+  },
+  {
+    "id": "liberty-seguros",
+    "title": "Machine Learning and Data Science",
+    "client": "Liberty Seguros",
+    "period": "2017 - 2018",
+    "image": "/assets/images/consulting_projects/ML&DS.jpg",
+    "description": "Actuarial machine learning models for risk scoring and customer churn prediction in automotive and home insurance."
+  },
+  {
+    "id": "ericsson-chair",
+    "title": "Cátedra Ericsson sobre Ciencia de Datos aplicada a 5G",
+    "client": "Ericsson",
+    "period": "2016 - 2019",
+    "image": "/assets/images/consulting_projects/ericsson5g.jpg",
+    "description": "Joint academic-industrial research chair focused on applying data science algorithms and predictive models to next-generation 5G mobile networks."
+  },
+  {
+    "id": "talentum",
+    "title": "Talentum Startups",
+    "client": "Telefónica",
+    "period": "2016 - 2018",
+    "image": "/assets/images/consulting_projects/talentum.jpg",
+    "description": "Mentorship and technological acceleration program guiding young university talent in building innovative data-driven startups."
+  }
+]

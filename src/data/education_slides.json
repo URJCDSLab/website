@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Inferencia Estadística",
+    "authors": "Carmen Lancho, Víctor Aceña & Isaac Martín",
+    "date": "Nov. 2024",
+    "url": "https://hdl.handle.net/10115/41375",
+    "description": "Complete lecture slides accompanying the book 'Inferencia Estadística'."
+  },
+  {
+    "title": "Aprendizaje Automático",
+    "authors": "Carmen Lancho & Isaac Martín",
+    "date": "Dec. 2023",
+    "url": "https://hdl.handle.net/10115/27430",
+    "description": "Complete lecture slides accompanying the book 'Aprendizaje Automático'."
+  },
+  {
+    "title": "Introduction to Git (Seminar)",
+    "authors": "With contributions by Elena García-Morato & Felipe Ortega",
+    "date": "Jul. 2023",
+    "url": "https://github.com/URJCDSLab/Seminar-Intro-Git",
+    "description": "Materials and practical walk-throughs for the teaching innovation seminar 'Introduction to Git' in the DSLAB-TI series."
+  },
+  {
+    "title": "Unsupervised Analysis (Short course)",
+    "authors": "Isaac Martín",
+    "date": "Jan. 2023",
+    "url": "https://github.com/URJCDSLab/Short_Courses/tree/main/Clustering",
+    "description": "Materials and code notebooks for the 'Unsupervised Analysis' short course covering hierarchical and non-hierarchical clustering."
+  },
+  {
+    "title": "Exploratory Data Analysis (Short course)",
+    "authors": "Isaac Martín",
+    "date": "Nov. 2022",
+    "url": "https://github.com/URJCDSLab/Short_Courses/tree/main/EDA",
+    "description": "Materials and code notebooks for the 'Exploratory Data Analysis' short course."
+  }
+]

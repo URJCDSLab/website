@@ -3,7 +3,7 @@ name: Deploy Modern Next.js Website to GitHub Pages
 on:
   push:
     branches:
-      - v2-react
+      - gh-pages
   workflow_dispatch:
 
 permissions:

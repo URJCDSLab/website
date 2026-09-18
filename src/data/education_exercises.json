@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Inferencia Estadística (Labs)",
+    "authors": "Carmen Lancho, Víctor Aceña & Isaac Martín",
+    "date": "Nov. 2024",
+    "url": "https://github.com/URJCDSLab/LaboratoriosRInferenciaEstadistica",
+    "burjcUrl": "https://hdl.handle.net/10115/41411",
+    "description": "Laboratories for the book 'Inferencia Estadística', including both problem statements and complete solutions in HTML and PDF, accompanied by datasets and R code."
+  },
+  {
+    "title": "Inferencia Estadística (Exercises)",
+    "authors": "Carmen Lancho, Víctor Aceña & Isaac Martín",
+    "date": "Nov. 2024",
+    "url": "https://github.com/URJCDSLab/Ejercicios_InferenciaEstadistica",
+    "burjcUrl": "https://hdl.handle.net/10115/41413",
+    "description": "R scripts with exercises for the book 'Inferencia Estadística', including both theoretical/applied problems and their full solutions, archived on BURJC."
+  },
+  {
+    "title": "Aprendizaje Automático (Exercises)",
+    "authors": "Carmen Lancho & Isaac Martín",
+    "date": "Dec. 2023",
+    "url": "https://github.com/URJCDSLab/EjerciciosAprendizajeAutomatico",
+    "burjcUrl": "https://hdl.handle.net/10115/27432",
+    "description": "R scripts with machine learning exercises for the book 'Aprendizaje Automático', including problems, training tasks, and solutions."
+  }
+]

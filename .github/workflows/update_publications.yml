@@ -44,7 +44,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/publications.json _data/journal_rankings.json _data/publications_manual.json
+          git add src/data/publications/publications.json src/data/publications/journal_rankings.json src/data/publications/publications_manual.json
           if git diff --staged --quiet; then
             echo "No changes detected in publications data."
           else
