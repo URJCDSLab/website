@@ -174,7 +174,7 @@
       "In the technology transfer track, Javier presented the article 'Dynamic Industrial Cyber Risk Modelling based on Evidence (DICYME)', demonstrating how complex technical vulnerabilities in industrial control systems can be quantified into actionable financial metrics using advanced data science and LLMs.",
       "Furthermore, Javier presented the poster 'Basal Attractiveness Concept for Cybercriminals', introducing a novel conceptual framework for estimating why certain organizations are targeted preferentially by threat actors."
     ],
-    "image": "https://2025.jnic.es/wp-content/uploads/images/spain-scaled.jpg",
+    "image": "/assets/images/blog/zaragoza.jpg",
     "conferenceLogo": "https://2025.jnic.es/wp-content/uploads/images/2025/2025_LOGO_JNIC_NEGATIVO.png",
     "links": [
       {
@@ -375,8 +375,11 @@
       "At RootedCON, Spain's premier cybersecurity summit, the team engaged with international specialists on ethical hacking, operational technology (OT) vulnerabilities, and modern digital forensics.",
       "At T3chFest, hosting over 1,500 tech innovators at Universidad Carlos III, the researchers explored emerging AI architectures and scalable cloud services, fostering connections with industry engineering teams."
     ],
-    "image": "/assets/images/blog/rootedcon_logo.png",
-    "conferenceLogo": "/assets/images/blog/t3chfest_logo.svg",
+    "image": "/assets/images/blog/madrid.jpg",
+    "conferenceLogos": [
+      "https://i0.wp.com/rootedcon.com/wp-content/uploads/2025/02/RootedCON.png",
+      "https://t3chfest.es/2026/_nuxt/img/t3f_logo_white.dd77692.svg"
+    ],
     "links": [
       {
         "label": "RootedCON Madrid 2024",

@@ -150,7 +150,8 @@ export interface BlogPost {
   summary?: string;
   author?: string;
   authorLink?: string;
-  conferenceLogo?: string;
+  conferenceLogo?: string | string[];
+  conferenceLogos?: string[];
   additionalImages?: string[];
   links?: BlogPostLink[];
   tags?: string[];

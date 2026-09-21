@@ -11,9 +11,79 @@ interface BlogTimelineProps {
 // Estimate visual height for balanced two-column distribution
 function estimatePostHeight(post: BlogPost): number {
   const baseCard = 180;
-  const imgHeight = post.image || post.conferenceLogo ? 220 : 0;
+  const hasMedia = Boolean(
+    post.image ||
+      post.conferenceLogo ||
+      (post.conferenceLogos && post.conferenceLogos.length > 0)
+  );
+  const imgHeight = hasMedia ? 220 : 0;
   const descHeight = Math.ceil((post.description || post.summary || "").length / 50) * 20;
   return baseCard + imgHeight + descHeight;
+}
+
+function getConferenceLogos(post: BlogPost): string[] {
+  if (post.conferenceLogos && post.conferenceLogos.length > 0) {
+    return post.conferenceLogos;
+  }
+  if (Array.isArray(post.conferenceLogo)) {
+    return post.conferenceLogo;
+  }
+  if (post.conferenceLogo) {
+    return [post.conferenceLogo];
+  }
+  return [];
+}
+
+function ConferenceBanner({
+  post,
+  inModal = false,
+}: {
+  post: BlogPost;
+  inModal?: boolean;
+}) {
+  const logos = getConferenceLogos(post);
+  if (!post.image && logos.length === 0) return null;
+
+  const containerClass = inModal
+    ? "relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 max-h-80 flex items-center justify-center"
+    : "relative rounded-xl overflow-hidden max-h-60 bg-slate-100 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 group-hover/btn:opacity-95 transition-opacity";
+
+  const imgClass = inModal
+    ? "w-full h-full max-h-80 object-cover"
+    : "w-full h-full max-h-60 object-cover group-hover/btn:scale-102 transition-transform duration-300";
+
+  return (
+    <div className={containerClass}>
+      {post.image && (
+        <img
+          src={post.image}
+          alt={post.title}
+          className={imgClass}
+        />
+      )}
+      {logos.length === 1 && (
+        <div className={`absolute inset-0 flex items-center justify-center bg-black/25 ${inModal ? "p-4 pointer-events-none" : "p-3"}`}>
+          <img
+            src={logos[0]}
+            alt="Conference logo"
+            className={`${inModal ? "max-h-24 max-w-[80%]" : "max-h-20 max-w-[75%]"} object-contain drop-shadow-lg`}
+          />
+        </div>
+      )}
+      {logos.length > 1 && (
+        <div className={`absolute inset-0 flex items-center justify-center gap-6 sm:gap-10 bg-black/35 ${inModal ? "p-4 pointer-events-none" : "p-3"}`}>
+          {logos.map((logo, idx) => (
+            <img
+              key={logo}
+              src={logo}
+              alt={`Conference logo ${idx + 1}`}
+              className={`${inModal ? "max-h-20 max-w-[42%]" : "max-h-16 max-w-[42%]"} object-contain drop-shadow-lg`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 function distributePosts(posts: BlogPost[]) {
@@ -153,26 +223,7 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
             </h2>
 
             {/* Conference Banner / Logo Header */}
-            {(selectedPost.image || selectedPost.conferenceLogo) && (
-              <div className="relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 max-h-80 flex items-center justify-center">
-                {selectedPost.image && (
-                  <img
-                    src={selectedPost.image}
-                    alt={selectedPost.title}
-                    className="w-full h-full max-h-80 object-cover"
-                  />
-                )}
-                {selectedPost.conferenceLogo && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/25 p-4 pointer-events-none">
-                    <img
-                      src={selectedPost.conferenceLogo}
-                      alt="Conference logo"
-                      className="max-h-24 max-w-[80%] object-contain drop-shadow-lg"
-                    />
-                  </div>
-                )}
-              </div>
-            )}
+            <ConferenceBanner post={selectedPost} inModal />
 
             {/* Body Paragraphs */}
             <div className="space-y-4 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -263,26 +314,7 @@ function PostCard({ post, onOpen }: { post: BlogPost; onOpen: () => void }) {
         className="w-full text-left space-y-3 cursor-pointer group/btn focus:outline-none"
       >
         {/* Conference / Event Banner or Logo */}
-        {(post.image || post.conferenceLogo) && (
-          <div className="relative rounded-xl overflow-hidden max-h-60 bg-slate-100 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 group-hover/btn:opacity-95 transition-opacity">
-            {post.image && (
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-full max-h-60 object-cover group-hover/btn:scale-102 transition-transform duration-300"
-              />
-            )}
-            {post.conferenceLogo && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/25 p-3">
-                <img
-                  src={post.conferenceLogo}
-                  alt="Conference logo"
-                  className="max-h-20 max-w-[75%] object-contain drop-shadow-md"
-                />
-              </div>
-            )}
-          </div>
-        )}
+        <ConferenceBanner post={post} />
 
         {/* Title */}
         <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover/btn:text-[#0086BA] transition-colors leading-snug">
