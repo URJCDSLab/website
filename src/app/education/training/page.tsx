@@ -3,11 +3,14 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import trainingCoursesData from "@/data/training_courses.json";
 import { TrainingCourse } from "@/types";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Professional training | Data Science Lab",
-  description: "Specialized data science and engineering training programs for professionals.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Professional Training",
+  description:
+    "Tailored data science, machine learning, and optimization courses and executive training programs conducted by DSLAB URJC.",
+  path: "/education/training/",
+});
 
 const courses = trainingCoursesData as TrainingCourse[];
 

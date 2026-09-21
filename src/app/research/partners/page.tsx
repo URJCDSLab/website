@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import researchPartnersData from "@/data/research_partners.json";
 import { ResearchPartner } from "@/types";
 import { PartnerClientCard } from "@/components/ui/PartnerClientCard";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Research partners | Data Science Lab",
-  description: "Academic and institutional research partners collaborating with DSLAB.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Research Partners",
+  description:
+    "Academic groups, hospital research foundations, and technological institutions collaborating on AI and data science research with DSLAB.",
+  path: "/research/partners/",
+});
 
 const partners = researchPartnersData as ResearchPartner[];
 

@@ -11,11 +11,14 @@ import {
   Code2,
   PlayCircle
 } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "DSLAB-TI | Data Science Lab",
-  description: "Data Science Lab for Teaching Innovation (DSLAB-TI) at Universidad Rey Juan Carlos.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "DSLAB-TI Teaching Innovation",
+  description:
+    "Data Science Lab for Teaching Innovation (DSLAB-TI) at URJC: advancing active pedagogical methodologies, gamification, and digital learning tools.",
+  path: "/education/dslab-ti/",
+});
 
 const strategicObjectives = [
   "Promote continuous improvement of teaching and learning processes.",

@@ -1,11 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, ShieldCheck, Cpu, Database, Network } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "SABERMED | Data Science Lab",
-  description: "Swarm Agent-Based Environment for Reputation in MEDicine assessing credibility of online medical information and detecting fraudulent health content.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "SABERMED Project",
+  description:
+    "Swarm Agent-Based Environment for Reputation in MEDicine: assessing online medical credibility and identifying fraudulent health content.",
+  path: "/research/projects/sabermed/",
+});
 
 const objectives = [
   {

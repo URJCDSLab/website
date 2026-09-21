@@ -1,8 +1,17 @@
 import fs from "node:fs";
 import path from "node:path";
+import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
 import { BentoGrid } from "@/components/home/BentoGrid";
 import { GroupCarousel } from "@/components/home/GroupCarousel";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Data Science Lab | Rey Juan Carlos University (URJC)",
+  description:
+    "Data Science Laboratory at Rey Juan Carlos University (URJC). Leading research, education, and knowledge transfer in machine learning, mathematical optimization, and big data.",
+  path: "/",
+});
 
 function getGroupPhotos(): string[] {
   const dir = path.join(process.cwd(), "public/assets/images/group");

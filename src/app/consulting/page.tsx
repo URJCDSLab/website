@@ -3,11 +3,14 @@ import Link from "next/link";
 import consultingProjectsData from "@/data/consulting_projects.json";
 import { ConsultingProject } from "@/types";
 import { Calendar, Building2, ArrowRight } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Consulting projects | Data Science Lab",
-  description: "Applied data science and artificial intelligence consulting projects by DSLAB for industry.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Consulting Projects",
+  description:
+    "Applied data science, artificial intelligence algorithms, predictive pipelines, and automated decision-support platforms delivered by DSLAB URJC.",
+  path: "/consulting/",
+});
 
 const projects = consultingProjectsData as ConsultingProject[];
 

@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import researchProjectsData from "@/data/research_projects.json";
 import { ResearchProject } from "@/types";
 import { ExternalLink, Calendar } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Research projects | Data Science Lab",
-  description: "Competitive research projects, public funding, and technology transfer at DSLAB.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Research Projects",
+  description:
+    "Competitive European, national, and regional research projects in healthcare, cybersecurity, tourism, and AI led by Data Science Lab (URJC).",
+  path: "/research/projects/",
+});
 
 const projects = researchProjectsData as ResearchProject[];
 

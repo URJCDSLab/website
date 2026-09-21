@@ -1,9 +1,12 @@
 import { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "¡CONECTA! | Data Science Lab",
-  description: "¡CONECTA! - The educational board game for telecommunications engineering and data science.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "¡CONECTA! Serious Game",
+  description:
+    "¡CONECTA! - The educational board game designed by DSLAB URJC teaching telecommunications engineering, data science, and AI problem-solving.",
+  path: "/education/conecta/",
+});
 
 const stages = [
   {

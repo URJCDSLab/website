@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { TeamMemberCard } from "@/components/about/TeamMemberCard";
 import teamData from "@/data/team.json";
 import { TeamMember } from "@/types";
+import { createPageMetadata } from "@/lib/metadata";
 
 interface OtherMember {
   firstName: string;
@@ -79,10 +80,12 @@ const formerMembers: string[] = ([...(teamData.former as OtherMember[])])
   .sort(sortOtherBySurname)
   .map((m) => `${m.firstName} ${m.lastName}`);
 
-export const metadata: Metadata = {
-  title: "Team | Data Science Lab",
-  description: "Meet the professors, researchers, and doctoral students at Data Science Lab (URJC).",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Faculty & Researchers",
+  description:
+    "Meet the professors, postdoctoral researchers, PhD candidates, and scholars powering the Data Science Lab at Universidad Rey Juan Carlos (URJC).",
+  path: "/about/team/",
+});
 
 export default function TeamPage() {
   return (

@@ -9,11 +9,14 @@ import {
   ArrowRight 
 } from "lucide-react";
 import { PartnerClientCard } from "@/components/ui/PartnerClientCard";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Practicum & internships | Data Science Lab",
-  description: "University internships and student research practicum at the Data Science Lab.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Practicum & Internships",
+  description:
+    "Curricular internships, bachelor's (TFG) and master's (TFM) theses supervised by DSLAB URJC with leading corporate and research partners.",
+  path: "/education/practicum/",
+});
 
 const learningAreas = [
   {

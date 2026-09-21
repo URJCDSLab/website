@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import blogPostsData from "@/data/blog_posts.json";
 import { BlogPost } from "@/types";
 import { BlogTimeline } from "@/components/blog/BlogTimeline";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Blog & news | Data Science Lab",
-  description: "News, research milestones, conferences, and open-source updates from the Data Science Lab (URJC).",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "News & Highlights",
+  description:
+    "Explore the latest research breakthroughs, conferences, open-source releases, awards, and milestones from Data Science Lab URJC.",
+  path: "/blog/",
+});
 
 const blogPosts = blogPostsData as BlogPost[];
 

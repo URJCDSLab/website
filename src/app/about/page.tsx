@@ -3,11 +3,14 @@ import Link from "next/link";
 import { ArrowRight, Database, LineChart } from "lucide-react";
 import { DataScienceVennDiagram } from "@/components/about/DataScienceVennDiagram";
 import { DataScienceLifecycle } from "@/components/about/DataScienceLifecycle";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "About | Data Science Lab",
-  description: "Advancing foundations and applications of data science at Universidad Rey Juan Carlos.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "About the Lab",
+  description:
+    "Learn about DSLAB's mission, interdisciplinary methodology, and foundations combining hacking skills, math knowledge, and domain expertise at URJC.",
+  path: "/about/",
+});
 
 export default function AboutPage() {
   return (

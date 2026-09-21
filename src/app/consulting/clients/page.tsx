@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import consultingClientsData from "@/data/consulting_clients.json";
 import { ConsultingClient } from "@/types";
 import { PartnerClientCard } from "@/components/ui/PartnerClientCard";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Consulting clients | Data Science Lab",
-  description: "Companies and organizations that trust DSLAB for data science consulting.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Consulting Clients",
+  description:
+    "Companies, utilities, agrotech innovators, and public institutions partnering with DSLAB URJC for high-impact data science solutions.",
+  path: "/consulting/clients/",
+});
 
 const clients = consultingClientsData as ConsultingClient[];
 

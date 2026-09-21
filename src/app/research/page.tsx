@@ -1,11 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import researchLines from "@/data/research_lines.json";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Research lines | Data Science Lab",
-  description: "Explore the core research lines of the Data Science Lab at URJC.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Research Lines",
+  description:
+    "Explore the 15 core research lines at DSLAB URJC: statistical modeling, machine learning, optimization, clinical data analytics, and real-world AI applications.",
+  path: "/research/",
+});
 
 export default function ResearchLinesPage() {
   return (

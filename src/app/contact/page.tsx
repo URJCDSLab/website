@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import { Mail, MapPin } from "lucide-react";
 import { ContactMap } from "@/components/contact/ContactMap";
 import { XIcon, LinkedInIcon, GithubIcon, BlueskyIcon } from "@/components/ui/icons";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact | Data Science Lab",
-  description: "Get in touch with the Data Science Lab at Rey Juan Carlos University.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact",
+  description:
+    "Get in touch with the Data Science Lab at Universidad Rey Juan Carlos campus in Móstoles/Madrid for research, partnership, or academic inquiries.",
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (

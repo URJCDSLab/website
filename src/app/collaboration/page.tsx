@@ -1,11 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Collaborate with us | Data Science Lab",
-  description: "Discover the different ways your company or institution can collaborate with DSLAB and the university environment.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Collaborate With Us",
+  description:
+    "Institutional frameworks (LOSU Article 60), joint research chairs, sponsorship agreements, and collaborative R&D options with DSLAB URJC.",
+  path: "/collaboration/",
+});
 
 export default function CollaborationPage() {
   return (

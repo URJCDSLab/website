@@ -6,11 +6,14 @@ import { PackagesSection } from "@/components/education/PackagesSection";
 import { DashboardsSection } from "@/components/education/DashboardsSection";
 import { SlidesSection } from "@/components/education/SlidesSection";
 import { ExercisesSection } from "@/components/education/ExercisesSection";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Learning resources | Data Science Lab",
-  description: "Curated open-access books, R packages, interactive apps, and educational tools created by DSLAB.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Learning Resources",
+  description:
+    "Open-access books, CRAN R packages, interactive web dashboards, slides, and hands-on exercises created by Data Science Lab URJC.",
+  path: "/education/",
+});
 
 export default function EducationPage() {
   return (
