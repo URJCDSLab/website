@@ -35,13 +35,27 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
   const [frontError, setFrontError] = React.useState(false);
   const [backError, setBackError] = React.useState(false);
 
-  /** Derive initials from the member's name for the fallback avatar */
-  const initials = member.name
+  /** Compute full name from firstName and lastName (or fallback to member.name if provided) */
+  const fullName = member.name ?? `${member.firstName} ${member.lastName}`;
+
+  /** Derive initials from the member's full name for the fallback avatar */
+  const initials = fullName
     .split(" ")
     .filter(Boolean)
     .slice(0, 2)
     .map((w) => w[0].toUpperCase())
     .join("");
+
+  /** Resolve photo paths under /assets/images/team/ if not already an absolute path */
+  const photoSrc = member.photo.startsWith("/")
+    ? member.photo
+    : `/assets/images/team/${member.photo}`;
+
+  const hoverPhotoSrc = member.hoverPhoto
+    ? member.hoverPhoto.startsWith("/")
+      ? member.hoverPhoto
+      : `/assets/images/team/${member.hoverPhoto}`
+    : undefined;
 
   React.useEffect(() => {
     function handleHashChange() {
@@ -94,8 +108,8 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
               <InitialsAvatar initials={initials} />
             ) : (
               <img
-                src={member.photo}
-                alt={member.name}
+                src={photoSrc}
+                alt={fullName}
                 className="w-full h-full object-cover"
                 onError={() => setFrontError(true)}
               />
@@ -103,14 +117,14 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
           </div>
 
           {/* Back face (child photo Easter egg) */}
-          {member.hoverPhoto && (
+          {hoverPhotoSrc && (
             <div className="absolute inset-0 w-full h-full rounded-full overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)]">
               {backError ? (
                 <InitialsAvatar initials={initials} />
               ) : (
                 <img
-                  src={member.hoverPhoto}
-                  alt={`${member.name} (childhood)`}
+                  src={hoverPhotoSrc}
+                  alt={`${fullName} (childhood)`}
                   className="w-full h-full object-cover"
                   onError={() => setBackError(true)}
                 />
@@ -122,7 +136,7 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
 
       {/* Name and Titles */}
       <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-[#0086BA] transition-colors">
-        {member.name}
+        {fullName}
       </h3>
 
       {member.title && (
@@ -152,7 +166,7 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
         {member.email && (
           <a
             href={`mailto:${member.email}`}
-            aria-label={`Email ${member.name}`}
+            aria-label={`Email ${fullName}`}
             className="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-white hover:bg-[#0086BA] transition-colors duration-200 shadow-sm"
             title={member.email}
           >
@@ -165,7 +179,7 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
             href={member.scholar}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Google Scholar of ${member.name}`}
+            aria-label={`Google Scholar of ${fullName}`}
             className="w-8 h-8 rounded-full flex items-center justify-center bg-[#4285F4]/10 dark:bg-[#4285F4]/20 text-[#4285F4] hover:bg-[#4285F4] hover:text-white transition-colors duration-200 shadow-sm"
             title="Google Scholar"
           >
@@ -178,7 +192,7 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
             href={member.orcid}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`ORCID of ${member.name}`}
+            aria-label={`ORCID of ${fullName}`}
             className="w-8 h-8 rounded-full flex items-center justify-center bg-[#A6CE39]/15 dark:bg-[#A6CE39]/25 text-[#A6CE39] hover:bg-[#A6CE39] hover:text-white transition-colors duration-200 shadow-sm"
             title={`ORCID: ${member.orcid}`}
           >

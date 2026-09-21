@@ -2,251 +2,211 @@
   "faculty": [
     {
       "id": "isaac-martin",
-      "name": "Isaac Martín de Diego",
       "firstName": "Isaac",
       "lastName": "Martín de Diego",
       "role": "Full Professor",
       "title": "General Coordinator",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/isaacmartin.jpg",
-      "hoverPhoto": "/assets/images/team/isaacmartin_peque.jpg",
+      "photo": "isaacmartin.jpg",
+      "hoverPhoto": "isaacmartin_peque.jpg",
       "email": "isaac.martin@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=_d-eROgAAAAJ",
       "orcid": "https://orcid.org/0000-0001-5197-2932"
     },
     {
       "id": "antonio-alonso",
-      "name": "Antonio Alonso Ayuso",
       "firstName": "Antonio",
       "lastName": "Alonso Ayuso",
       "role": "Full Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/antonioalonso.jpg",
+      "photo": "antonioalonso.jpg",
       "email": "antonio.alonso@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=h13bm8EAAAAJ",
       "orcid": "https://orcid.org/0000-0002-6130-3596"
     },
     {
       "id": "javier-martinez",
-      "name": "Javier Martínez Moguerza",
       "firstName": "Javier",
       "lastName": "Martínez Moguerza",
       "role": "Full Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/javiermartinez.jpg",
+      "photo": "javiermartinez.jpg",
       "email": "javier.moguerza@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=IWqUGBIAAAAJ",
       "orcid": "https://orcid.org/0000-0003-1415-1961"
     },
     {
       "id": "laureano-escudero",
-      "name": "Laureano Escudero Bueno",
       "firstName": "Laureano",
       "lastName": "Escudero Bueno",
       "role": "Full Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/laureanoescudero.jpg",
+      "photo": "laureanoescudero.jpg",
       "scholar": "https://scholar.google.com/citations?user=KhDVANkAAAAJ",
       "orcid": "https://orcid.org/0000-0002-1196-7124"
     },
     {
       "id": "juanjo-fernandez",
-      "name": "Juan José Fernández Muñoz",
       "firstName": "Juan José",
       "lastName": "Fernández Muñoz",
       "role": "Full Professor",
-      "category": "faculty",
       "department": "Faculty of Health Sciences",
-      "photo": "/assets/images/team/juanjofernandez.jpg",
+      "photo": "juanjofernandez.jpg",
       "orcid": "https://orcid.org/0000-0001-5519-7515"
     },
     {
       "id": "angel-udias",
-      "name": "Ángel Luis Udías Moinelo",
       "firstName": "Ángel Luis",
       "lastName": "Udías Moinelo",
       "role": "Full Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/angelluisudias.jpg",
+      "photo": "angelluisudias.jpg",
       "scholar": "https://scholar.google.com/citations?user=Er_xVjUAAAAJ",
       "orcid": "https://orcid.org/0000-0003-1219-0465"
     },
     {
       "id": "emilio-lopez",
-      "name": "Emilio López Cano",
       "firstName": "Emilio",
       "lastName": "López Cano",
       "role": "Associate Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/emiliolopez.jpg",
-      "hoverPhoto": "/assets/images/team/emiliolopez_peque.png",
+      "photo": "emiliolopez.jpg",
+      "hoverPhoto": "emiliolopez_peque.png",
       "email": "emilio.lopez@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=4lLDMhYAAAAJ",
       "orcid": "https://orcid.org/0000-0002-6101-9755"
     },
     {
       "id": "javier-garzas",
-      "name": "Javier Garzás Parra",
       "firstName": "Javier",
       "lastName": "Garzás Parra",
       "role": "Associate Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/garzas.jpeg",
+      "photo": "garzas.jpg",
       "orcid": "https://orcid.org/0000-0003-2885-5425"
     },
     {
       "id": "cesar-alfaro",
-      "name": "César Alfaro Gimeno",
       "firstName": "César",
       "lastName": "Alfaro Gimeno",
       "role": "Associate Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/cesaralfaro.jpg",
+      "photo": "cesaralfaro.jpg",
       "scholar": "https://scholar.google.com/citations?user=u87QWOcAAAAJ",
       "orcid": "https://orcid.org/0000-0002-9146-4067"
     },
     {
       "id": "felipe-ortega",
-      "name": "Felipe Ortega Soto",
       "firstName": "Felipe",
       "lastName": "Ortega Soto",
       "role": "Associate Professor",
-      "category": "faculty",
       "department": "Dept. Signal & Comm. Theory & Telematic Systems",
-      "photo": "/assets/images/team/felipeortega.jpg",
+      "photo": "felipeortega.jpg",
       "email": "felipe.ortega@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=rL1I_WYAAAAJ",
       "orcid": "https://orcid.org/0000-0003-0231-2051"
     },
     {
       "id": "alberto-fernandez",
-      "name": "Alberto Fernández Isabel",
       "firstName": "Alberto",
       "lastName": "Fernández Isabel",
       "role": "Associate Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/albertofernandez.jpg",
-      "hoverPhoto": "/assets/images/team/albertofernandez_peque.jpg",
+      "photo": "albertofernandez.jpg",
+      "hoverPhoto": "albertofernandez_peque.jpg",
       "email": "alberto.fernandez.isabel@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=zBTamFQAAAAJ",
       "orcid": "https://orcid.org/0000-0002-0848-1190"
     },
     {
       "id": "javier-gomez",
-      "name": "Javier Gómez Miguel",
       "firstName": "Javier",
       "lastName": "Gómez Miguel",
       "role": "Associate Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/javiergomez.jpg",
+      "photo": "javiergomez.jpg",
       "scholar": "https://scholar.google.com/citations?user=eS0T9oUAAAAJ",
       "orcid": "https://orcid.org/0000-0001-6434-7263"
     },
     {
       "id": "maria-jesus-algar",
-      "name": "María Jesús Algar Díaz",
       "firstName": "María Jesús",
       "lastName": "Algar Díaz",
       "role": "Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/mariajesusalgar.jpg",
+      "photo": "mariajesusalgar.jpg",
       "orcid": "https://orcid.org/0000-0002-7539-8522"
     },
     {
       "id": "carlos-grima",
-      "name": "Carlos Grima Izquierdo",
       "firstName": "Carlos",
       "lastName": "Grima Izquierdo",
       "role": "Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/carlosgrima.jpg",
+      "photo": "carlosgrima.jpg",
       "orcid": "https://orcid.org/0000-0001-6819-4735"
     },
     {
       "id": "teresa-gonzalez",
-      "name": "María Teresa González de Lena Alonso",
       "firstName": "María Teresa",
       "lastName": "González de Lena Alonso",
       "role": "Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/mariateresagonzalez.jpg",
+      "photo": "mariateresagonzalez.jpg",
       "orcid": "https://orcid.org/0000-0002-9725-0588"
     },
     {
       "id": "victor-acena",
-      "name": "Víctor Aceña Gil",
       "firstName": "Víctor",
       "lastName": "Aceña Gil",
       "role": "Junior Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/victoracena.jpg",
-      "hoverPhoto": "/assets/images/team/victoracena_peque.jpg",
+      "photo": "victoracena.jpg",
+      "hoverPhoto": "victoracena_peque.jpg",
       "email": "victor.acena@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=VYBMPIlG9cIC",
       "orcid": "https://orcid.org/0000-0003-1838-2150"
     },
     {
       "id": "gema-gutierrez",
-      "name": "Gema Gutiérrez Peña",
       "firstName": "Gema",
       "lastName": "Gutiérrez Peña",
       "role": "Junior Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/gemagutierrez.jpg",
+      "photo": "gemagutierrez.jpg",
       "scholar": "https://scholar.google.com/citations?user=99ijrzMAAAAJ",
       "orcid": "https://orcid.org/0000-0002-1178-8257"
     },
     {
       "id": "carmen-lancho",
-      "name": "Carmen Lancho Martín",
       "firstName": "Carmen",
       "lastName": "Lancho Martín",
       "role": "Junior Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/carmenlancho.jpg",
-      "hoverPhoto": "/assets/images/team/carmenlancho_peque.jpg",
+      "photo": "carmenlancho.jpg",
+      "hoverPhoto": "carmenlancho_peque.jpg",
       "email": "carmen.lancho@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=NwncmhAAAAAJ",
       "orcid": "https://orcid.org/0000-0002-4674-1598"
     },
     {
       "id": "natalia-madrueno",
-      "name": "Natalia Madrueño Sierro",
       "firstName": "Natalia",
       "lastName": "Madrueño Sierro",
       "role": "Junior Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/nataliamadrueno.jpg",
+      "photo": "nataliamadrueno.jpg",
       "scholar": "https://scholar.google.com/citations?user=QBUi9CgAAAAJ",
       "orcid": "https://orcid.org/0009-0008-9823-9701"
     },
     {
       "id": "ruben-rodriguez",
-      "name": "Rubén Rodríguez Fernández",
       "firstName": "Rubén",
       "lastName": "Rodríguez Fernández",
       "role": "Junior Assistant Professor",
-      "category": "faculty",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/rubenrodriguez.jpeg",
-      "hoverPhoto": "/assets/images/team/rubenrodriguez_peque.jpg",
+      "photo": "rubenrodriguez.jpg",
+      "hoverPhoto": "rubenrodriguez_peque.jpg",
       "email": "ruben.rodriguez@urjc.es",
       "scholar": "https://scholar.google.com/citations?user=7ffLA30AAAAJ",
       "orcid": "https://orcid.org/0000-0002-4140-1551"
@@ -255,175 +215,161 @@
   "researchers": [
     {
       "id": "javier-cabezas",
-      "name": "Javier Cabezas Gívica",
       "firstName": "Javier",
       "lastName": "Cabezas Gívica",
       "role": "PhD. Student",
-      "category": "researchers",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/javiercabezas.jpeg",
+      "photo": "javiercabezas.jpg",
       "orcid": "https://orcid.org/0000-0003-3335-8036"
     },
     {
       "id": "jorge-colomer",
-      "name": "Jorge Colomer Sánchez",
       "firstName": "Jorge",
       "lastName": "Colomer Sánchez",
       "role": "PhD. Student",
-      "category": "researchers",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/jorgecolomer.jpg"
+      "photo": "jorgecolomer.jpg"
     },
     {
       "id": "javier-sanchez",
-      "name": "Javier Sánchez García-Ochoa",
       "firstName": "Javier",
       "lastName": "Sánchez García-Ochoa",
       "role": "PhD. Student",
-      "category": "researchers",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/javiersanchez.jpg",
+      "photo": "javiersanchez.jpg",
       "scholar": "https://scholar.google.com/citations?user=H7Dt7TcAAAAJ",
       "orcid": "https://orcid.org/0009-0003-3137-6174"
     },
     {
       "id": "enrique-roa",
-      "name": "Enrique Roa Rastrilla",
       "firstName": "Enrique",
       "lastName": "Roa Rastrilla",
       "role": "Researcher",
-      "category": "researchers",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/enriqueroa.jpg"
+      "photo": "enriqueroa.jpg"
     },
     {
       "id": "sergio-garcia",
-      "name": "Sergio García Martín",
       "firstName": "Sergio",
       "lastName": "García Martín",
-      "role": "Researcher",
-      "category": "researchers",
+      "role": "PhD. Student",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "/assets/images/team/sergiogarcia.jpg",
+      "photo": "sergiogarcia.jpg",
       "orcid": "https://orcid.org/0009-0009-7514-2488"
     }
   ],
   "affiliated": [
     {
       "id": "marina-cuesta",
-      "name": "Marina Cuesta Santa Teresa",
       "firstName": "Marina",
       "lastName": "Cuesta Santa Teresa",
       "role": "Postdoctoral Researcher",
-      "category": "affiliated",
       "department": "Carlos III University of Madrid",
-      "photo": "/assets/images/team/marinacuesta.jpg",
-      "hoverPhoto": "/assets/images/team/marinacuesta_peque.jpg",
+      "photo": "marinacuesta.jpg",
+      "hoverPhoto": "marinacuesta_peque.jpg",
       "scholar": "https://scholar.google.com/citations?user=n-aAGKkAAAAJ",
       "orcid": "https://orcid.org/0000-0002-1880-9225"
     },
     {
       "id": "javier-cantero",
-      "name": "Francisco Javier Cantero Zorita",
       "firstName": "Francisco Javier",
       "lastName": "Cantero Zorita",
       "role": "Researcher",
-      "category": "affiliated",
       "department": "University of Alcalá",
-      "photo": "/assets/images/team/javiercantero.jpg",
+      "photo": "javiercantero.jpg",
       "orcid": "https://orcid.org/0009-0003-3630-5324"
     }
   ],
   "visiting": [
     {
-      "name": "Carlos Alberto Moncade Vásquez",
-      "surname": "Moncade Vásquez"
+      "firstName": "Carlos Alberto",
+      "lastName": "Moncade Vásquez"
     },
     {
-      "name": "Gerardo Reyes Salgado",
-      "surname": "Reyes Salgado"
+      "firstName": "Gerardo",
+      "lastName": "Reyes Salgado"
     },
     {
-      "name": "Alberto Scocco",
-      "surname": "Scocco"
+      "firstName": "Alberto",
+      "lastName": "Scocco"
     },
     {
-      "name": "Aldana Stefania Tibaldo",
-      "surname": "Tibaldo"
+      "firstName": "Aldana Stefania",
+      "lastName": "Tibaldo"
     }
   ],
   "former": [
     {
-      "name": "Adrián Alonso Barriuso",
-      "surname": "Alonso Barriuso"
+      "firstName": "Adrián",
+      "lastName": "Alonso Barriuso"
     },
     {
-      "name": "Paula Carballo Pérez",
-      "surname": "Carballo Pérez"
+      "firstName": "Paula",
+      "lastName": "Carballo Pérez"
     },
     {
-      "name": "Andrea Condado Gómez",
-      "surname": "Condado Gómez"
+      "firstName": "Andrea",
+      "lastName": "Condado Gómez"
     },
     {
-      "name": "Clara Contreras Nevares",
-      "surname": "Contreras Nevares"
+      "firstName": "Clara",
+      "lastName": "Contreras Nevares"
     },
     {
-      "name": "Walter René Cuenca Guachamín",
-      "surname": "Cuenca Guachamín"
+      "firstName": "Walter René",
+      "lastName": "Cuenca Guachamín"
     },
     {
-      "name": "Alejandro Delgado Peribáñez",
-      "surname": "Delgado Peribáñez"
+      "firstName": "Alejandro",
+      "lastName": "Delgado Peribáñez"
     },
     {
-      "name": "Antonio Fernández Cáceres",
-      "surname": "Fernández Cáceres"
+      "firstName": "Antonio",
+      "lastName": "Fernández Cáceres"
     },
     {
-      "name": "Anibal R. Figueras Vidal",
-      "surname": "Figueras Vidal"
+      "firstName": "Anibal R.",
+      "lastName": "Figueras Vidal"
     },
     {
-      "name": "Mikel Galafate de la Llave",
-      "surname": "Galafate de la Llave"
+      "firstName": "Mikel",
+      "lastName": "Galafate de la Llave"
     },
     {
-      "name": "Alejandro García de Marina Martín",
-      "surname": "García de Marina Martín"
+      "firstName": "Alejandro",
+      "lastName": "García de Marina Martín"
     },
     {
-      "name": "César González Fernández",
-      "surname": "González Fernández"
+      "firstName": "César",
+      "lastName": "González Fernández"
     },
     {
-      "name": "Jorge Navarro García",
-      "surname": "Navarro García"
+      "firstName": "Jorge",
+      "lastName": "Navarro García"
     },
     {
-      "name": "Álvaro Novillo Correas",
-      "surname": "Novillo Correas"
+      "firstName": "Álvaro",
+      "lastName": "Novillo Correas"
     },
     {
-      "name": "Juan Carlos Prieto Hernández",
-      "surname": "Prieto Hernández"
+      "firstName": "Juan Carlos",
+      "lastName": "Prieto Hernández"
     },
     {
-      "name": "Ana Isabel Rodríguez Redondo",
-      "surname": "Rodríguez Redondo"
+      "firstName": "Ana Isabel",
+      "lastName": "Rodríguez Redondo"
     },
     {
-      "name": "Jaime Rueda Carpintero",
-      "surname": "Rueda Carpintero"
+      "firstName": "Jaime",
+      "lastName": "Rueda Carpintero"
     },
     {
-      "name": "Iñaki San Román Lana",
-      "surname": "San Román Lana"
+      "firstName": "Iñaki",
+      "lastName": "San Román Lana"
     },
     {
-      "name": "Javier Saugar López",
-      "surname": "Saugar López"
+      "firstName": "Javier",
+      "lastName": "Saugar López"
     }
   ]
 }

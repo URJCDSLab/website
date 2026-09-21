@@ -1,10 +1,10 @@
 export interface TeamMember {
   id: string;
-  name: string;
-  firstName?: string;
-  lastName?: string;
+  firstName: string;
+  lastName: string;
+  name?: string;
   role: string;
-  category: "faculty" | "researchers" | "affiliated" | "visiting" | "former";
+  category?: "faculty" | "researchers" | "affiliated" | "visiting" | "former";
   title?: string;
   department: string;
   institution?: string;

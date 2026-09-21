@@ -4,8 +4,8 @@ import teamData from "@/data/team.json";
 import { TeamMember } from "@/types";
 
 interface OtherMember {
-  name: string;
-  surname: string;
+  firstName: string;
+  lastName: string;
 }
 
 function sortBySpanishSurname(a: { lastName?: string }, b: { lastName?: string }): number {
@@ -13,7 +13,7 @@ function sortBySpanishSurname(a: { lastName?: string }, b: { lastName?: string }
 }
 
 function sortOtherBySurname(a: OtherMember, b: OtherMember): number {
-  return a.surname.localeCompare(b.surname, "es", { sensitivity: "base" });
+  return a.lastName.localeCompare(b.lastName, "es", { sensitivity: "base" });
 }
 
 // Seniority rank hierarchies:
@@ -73,11 +73,11 @@ const affiliatedMembers: TeamMember[] = ([...(teamData.affiliated as TeamMember[
 
 const visitingResearchers: string[] = ([...(teamData.visiting as OtherMember[])])
   .sort(sortOtherBySurname)
-  .map((m) => m.name);
+  .map((m) => `${m.firstName} ${m.lastName}`);
 
 const formerMembers: string[] = ([...(teamData.former as OtherMember[])])
   .sort(sortOtherBySurname)
-  .map((m) => m.name);
+  .map((m) => `${m.firstName} ${m.lastName}`);
 
 export const metadata: Metadata = {
   title: "Team | Data Science Lab",
