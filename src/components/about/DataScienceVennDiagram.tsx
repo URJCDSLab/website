@@ -4,6 +4,32 @@ import * as React from "react";
 
 type HoverArea = 'hacking' | 'math' | 'expertise' | 'ml' | 'danger' | 'traditional' | 'ds' | null;
 
+const VENN_COLORS = {
+  // 3 Dominios Principales
+  hacking: '#E30613', // Rojo URJC (Modelling)
+  math: '#16A34A', // Verde (Evaluation)
+  expertise: '#EAB308', // Amarillo (Data preparation)
+  expertiseText: '#CA8A04', // Amarillo calibrado para contraste de texto
+
+  // Núcleo Central
+  dataScience: '#0086BA', // Azul corporativo DSLab
+  dataScienceActive: '#FFFFFF',
+
+  // Textos e Iluminación de Intersecciones
+  ml: {
+    default: '#784D4E',
+    active: '#B1CFCC',
+  },
+  danger: {
+    default: '#C2410C',
+    active: '#FED7AA',
+  },
+  traditional: {
+    default: '#759C26',
+    active: '#F7FF5F',
+  },
+} as const;
+
 const INTERSECTION_LABELS = [
   {
     area: 'ml' as const,
@@ -13,8 +39,8 @@ const INTERSECTION_LABELS = [
     y2: 160,
     line1: 'Machine',
     line2: 'learning',
-    activeColor: '#b1cfcc',
-    defaultColor: '#784d4e',
+    activeColor: VENN_COLORS.ml.active,
+    defaultColor: VENN_COLORS.ml.default,
   },
   {
     area: 'danger' as const,
@@ -24,8 +50,8 @@ const INTERSECTION_LABELS = [
     y2: 315,
     line1: 'Danger',
     line2: 'zone!',
-    activeColor: '#fed7aa',
-    defaultColor: '#c2410c',
+    activeColor: VENN_COLORS.danger.active,
+    defaultColor: VENN_COLORS.danger.default,
   },
   {
     area: 'traditional' as const,
@@ -35,8 +61,8 @@ const INTERSECTION_LABELS = [
     y2: 315,
     line1: 'Traditional',
     line2: 'research',
-    activeColor: '#F7FF5F',
-    defaultColor: '#759C26',
+    activeColor: VENN_COLORS.traditional.active,
+    defaultColor: VENN_COLORS.traditional.default,
   },
 ] as const;
 
@@ -71,15 +97,15 @@ function VennBaseLayers({ isHovered }: { isHovered: boolean }) {
   return (
     <>
       <g style={{ opacity: isHovered ? 0.15 : 1, transition: 'opacity 0.4s ease-out' }}>
-        <use href="#venn-c1" fill="#E30613" fillOpacity="0.25" />
-        <use href="#venn-c2" fill="#16A34A" fillOpacity="0.25" />
-        <use href="#venn-c3" fill="#EAB308" fillOpacity="0.25" />
+        <use href="#venn-c1" fill={VENN_COLORS.hacking} fillOpacity="0.25" />
+        <use href="#venn-c2" fill={VENN_COLORS.math} fillOpacity="0.25" />
+        <use href="#venn-c3" fill={VENN_COLORS.expertise} fillOpacity="0.25" />
       </g>
 
       <g style={{ opacity: isHovered ? 0.4 : 1, transition: 'opacity 0.4s ease-out' }} fill="none" strokeWidth="2.5">
-        <use href="#venn-c1" stroke="#E30613" />
-        <use href="#venn-c2" stroke="#16A34A" />
-        <use href="#venn-c3" stroke="#EAB308" />
+        <use href="#venn-c1" stroke={VENN_COLORS.hacking} />
+        <use href="#venn-c2" stroke={VENN_COLORS.math} />
+        <use href="#venn-c3" stroke={VENN_COLORS.expertise} />
       </g>
     </>
   );
@@ -91,42 +117,42 @@ function VennHighlights({ hovered }: { hovered: HoverArea }) {
       {/* Dominios puros */}
       <g mask="url(#venn-not-c2)">
         <g mask="url(#venn-not-c3)">
-          <use href="#venn-c1" fill="#e30613" style={{ opacity: hovered === 'hacking' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
+          <use href="#venn-c1" fill={VENN_COLORS.hacking} style={{ opacity: hovered === 'hacking' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
         </g>
       </g>
 
       <g mask="url(#venn-not-c1)">
         <g mask="url(#venn-not-c3)">
-          <use href="#venn-c2" fill="#16a34a" style={{ opacity: hovered === 'math' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
+          <use href="#venn-c2" fill={VENN_COLORS.math} style={{ opacity: hovered === 'math' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
         </g>
       </g>
 
       <g mask="url(#venn-not-c1)">
         <g mask="url(#venn-not-c2)">
-          <use href="#venn-c3" fill="#eab308" style={{ opacity: hovered === 'expertise' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
+          <use href="#venn-c3" fill={VENN_COLORS.expertise} style={{ opacity: hovered === 'expertise' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
         </g>
       </g>
 
       {/* Intersecciones dobles (Mezcla visual con superposición de los padres) */}
       <g clipPath="url(#venn-only-c2)" mask="url(#venn-not-c3)" style={{ opacity: hovered === 'ml' ? 1 : 0, transition: 'opacity 0.3s' }}>
-        <use href="#venn-c1" fill="#e30613" fillOpacity="0.55" />
-        <use href="#venn-c1" fill="#16a34a" fillOpacity="0.55" />
+        <use href="#venn-c1" fill={VENN_COLORS.hacking} fillOpacity="0.55" />
+        <use href="#venn-c1" fill={VENN_COLORS.math} fillOpacity="0.55" />
       </g>
 
       <g clipPath="url(#venn-only-c3)" mask="url(#venn-not-c2)" style={{ opacity: hovered === 'danger' ? 1 : 0, transition: 'opacity 0.3s' }}>
-        <use href="#venn-c1" fill="#e30613" fillOpacity="0.55" />
-        <use href="#venn-c1" fill="#eab308" fillOpacity="0.55" />
+        <use href="#venn-c1" fill={VENN_COLORS.hacking} fillOpacity="0.55" />
+        <use href="#venn-c1" fill={VENN_COLORS.expertise} fillOpacity="0.55" />
       </g>
 
       <g clipPath="url(#venn-only-c3)" mask="url(#venn-not-c1)" style={{ opacity: hovered === 'traditional' ? 1 : 0, transition: 'opacity 0.3s' }}>
-        <use href="#venn-c2" fill="#16a34a" fillOpacity="0.55" />
-        <use href="#venn-c2" fill="#eab308" fillOpacity="0.55" />
+        <use href="#venn-c2" fill={VENN_COLORS.math} fillOpacity="0.55" />
+        <use href="#venn-c2" fill={VENN_COLORS.expertise} fillOpacity="0.55" />
       </g>
 
       {/* Intersección central */}
       <g clipPath="url(#venn-only-c2)" style={{ opacity: hovered === 'ds' ? 1 : 0, transition: 'opacity 0.3s' }}>
         <g clipPath="url(#venn-only-c3)">
-          <use href="#venn-c1" fill="#0086BA" fillOpacity="0.85" />
+          <use href="#venn-c1" fill={VENN_COLORS.dataScience} fillOpacity="0.85" />
         </g>
       </g>
     </g>
@@ -210,18 +236,18 @@ function VennLabels({ hovered }: { hovered: HoverArea }) {
       {/* Textos exteriores (Colores fijos) */}
       <g className="font-bold text-[23px]">
         <VennAnimatedLabel origin="140px 181px" isActive={hovered === 'hacking'}>
-          <text transform="rotate(-45, 120, 160)" x="140" y="170" textAnchor="middle" fill="#e30613">Hacking</text>
-          <text transform="rotate(-45, 120, 160)" x="140" y="192" textAnchor="middle" fill="#e30613">skills</text>
+          <text transform="rotate(-45, 120, 160)" x="140" y="170" textAnchor="middle" fill={VENN_COLORS.hacking}>Hacking</text>
+          <text transform="rotate(-45, 120, 160)" x="140" y="192" textAnchor="middle" fill={VENN_COLORS.hacking}>skills</text>
         </VennAnimatedLabel>
 
         <VennAnimatedLabel origin="400px 191px" isActive={hovered === 'math'}>
-          <text transform="rotate(45, 420, 160)" x="400" y="180" textAnchor="middle" fill="#16a34a">Math &amp; statistics</text>
-          <text transform="rotate(45, 420, 160)" x="400" y="202" textAnchor="middle" fill="#16a34a">knowledge</text>
+          <text transform="rotate(45, 420, 160)" x="400" y="180" textAnchor="middle" fill={VENN_COLORS.math}>Math &amp; statistics</text>
+          <text transform="rotate(45, 420, 160)" x="400" y="202" textAnchor="middle" fill={VENN_COLORS.math}>knowledge</text>
         </VennAnimatedLabel>
 
         <VennAnimatedLabel origin="280px 401px" isActive={hovered === 'expertise'}>
-          <text x="280" y="390" textAnchor="middle" fill="#ca8a04">Substantive</text>
-          <text x="280" y="412" textAnchor="middle" fill="#ca8a04">expertise</text>
+          <text x="280" y="390" textAnchor="middle" fill={VENN_COLORS.expertiseText}>Substantive</text>
+          <text x="280" y="412" textAnchor="middle" fill={VENN_COLORS.expertiseText}>expertise</text>
         </VennAnimatedLabel>
       </g>
 
@@ -252,8 +278,8 @@ function VennLabels({ hovered }: { hovered: HoverArea }) {
         y2={262}
         line1="Data"
         line2="science"
-        activeColor="#ffffff"
-        defaultColor="#0086BA"
+        activeColor={VENN_COLORS.dataScienceActive}
+        defaultColor={VENN_COLORS.dataScience}
         className="font-extrabold text-[24px] tracking-wide"
       />
     </g>
