@@ -1,8 +1,79 @@
 "use client";
 
 import * as React from "react";
+import { DiagramPopover } from "./DiagramPopover";
+
+const STAGE_DESCRIPTIONS: Record<number | 'data', { title: string; desc: string; color: string }> = {
+  1: {
+    title: "Business understanding",
+    desc: "Framing project objectives, success criteria, and key analytical requirements.",
+    color: "#0086BA",
+  },
+  2: {
+    title: "Data preparation",
+    desc: "Ingesting, cleaning, normalizing, and feature-engineering datasets for modeling.",
+    color: "#EAB308",
+  },
+  3: {
+    title: "Modelling",
+    desc: "Selecting, training, optimizing, and calibrating predictive and statistical models.",
+    color: "#E30613",
+  },
+  4: {
+    title: "Evaluation",
+    desc: "Validating model performance against business metrics and statistical baselines.",
+    color: "#16A34A",
+  },
+  5: {
+    title: "Visualization",
+    desc: "Translating quantitative discoveries into actionable dashboards and visual insights.",
+    color: "#9333EA",
+  },
+  6: {
+    title: "Deployment",
+    desc: "Integrating validated models into production environments for automated decisions.",
+    color: "#EA580C",
+  },
+  data: {
+    title: "Data",
+    desc: "The central core asset and ground truth connecting every phase of the lifecycle.",
+    color: "#0086BA",
+  },
+};
+
+const STAGE_ANCHORS: Record<number | 'data', { x: number; y: number; placement: 'top' | 'bottom' | 'left' | 'right' }> = {
+  1: { x: 50, y: 15, placement: 'bottom' },
+  2: { x: 80, y: 33, placement: 'left' },
+  3: { x: 80, y: 67, placement: 'left' },
+  4: { x: 50, y: 85, placement: 'top' },
+  5: { x: 20, y: 67, placement: 'right' },
+  6: { x: 20, y: 33, placement: 'right' },
+  data: { x: 50, y: 50, placement: 'top' },
+};
+
+function LifecyclePopover({
+  hoveredStage,
+}: {
+  hoveredStage: number | 'data' | null;
+}) {
+  if (!hoveredStage) return null;
+  const current = STAGE_DESCRIPTIONS[hoveredStage];
+  const anchor = STAGE_ANCHORS[hoveredStage];
+
+  return (
+    <DiagramPopover
+      title={current.title}
+      desc={current.desc}
+      color={current.color}
+      posX={anchor.x}
+      posY={anchor.y}
+      placement={anchor.placement}
+    />
+  );
+}
 
 export function DataScienceLifecycle() {
+  const [hoveredStage, setHoveredStage] = React.useState<number | 'data' | null>(null);
   const center = { x: 270, y: 270 };
 
   const circleRadius = 158;
@@ -85,7 +156,7 @@ export function DataScienceLifecycle() {
 
   return (
       <div className="w-full flex flex-col items-center justify-center h-full">
-        <div className="w-full aspect-square max-w-[520px] flex items-center justify-center">
+        <div className="relative w-full aspect-square max-w-[520px] flex items-center justify-center">
           <svg
               viewBox="40 40 460 460"
               className="w-full h-full select-none"
@@ -110,7 +181,13 @@ export function DataScienceLifecycle() {
             </defs>
 
             {/* Central Hexagon: Data */}
-            <g filter="url(#hex-shadow)">
+            <g
+              filter="url(#hex-shadow)"
+              onMouseEnter={() => setHoveredStage('data')}
+              onMouseLeave={() => setHoveredStage(null)}
+              className="cursor-default transition-transform duration-200 hover:scale-105"
+              style={{ transformOrigin: `${center.x}px ${center.y}px` }}
+            >
               {/* Subtle outer dashed orbit ring */}
               <polygon
                 points={getHexagonPoints(center.x, center.y, hexRadius + 14)}
@@ -162,6 +239,8 @@ export function DataScienceLifecycle() {
                   <g
                       key={stage.id}
                       filter="url(#hex-shadow)"
+                      onMouseEnter={() => setHoveredStage(stage.id)}
+                      onMouseLeave={() => setHoveredStage(null)}
                       className="transition-transform duration-200 hover:scale-105 cursor-default"
                       style={{ transformOrigin: `${cx}px ${cy}px` }}
                   >
@@ -189,6 +268,7 @@ export function DataScienceLifecycle() {
               );
             })}
           </svg>
+          <LifecyclePopover hoveredStage={hoveredStage} />
         </div>
 
         <p className="mt-2 text-sm text-center text-slate-500 dark:text-slate-400">

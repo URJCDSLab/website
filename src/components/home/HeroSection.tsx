@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, Users } from "lucide-react";
+import { FlaskConical, BookOpen, Users } from "lucide-react";
 import { HeroCanvas } from "./HeroCanvas";
 
 export function HeroSection() {
@@ -27,14 +27,6 @@ export function HeroSection() {
           {/* Action CTAs with integrated stats */}
           <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Link
-              href="/research/"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white bg-[#0086BA] hover:bg-[#006d96] shadow-lg shadow-[#0086BA]/25 transition-transform hover:-translate-y-0.5 text-sm sm:text-base"
-            >
-              <span>15 research lines</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
               href="/research/publications/"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-slate-800 dark:text-slate-200 bg-white/90 dark:bg-slate-800/90 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm backdrop-blur-sm transition-transform hover:-translate-y-0.5 text-sm sm:text-base"
             >
@@ -48,6 +40,14 @@ export function HeroSection() {
             >
               <Users className="w-4 h-4 text-emerald-500" />
               <span>25+ faculty &amp; researchers</span>
+            </Link>
+
+            <Link
+              href="/research/"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-slate-800 dark:text-slate-200 bg-white/90 dark:bg-slate-800/90 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm backdrop-blur-sm transition-transform hover:-translate-y-0.5 text-sm sm:text-base"
+            >
+              <FlaskConical className="w-4 h-4 text-[#E30613]" />
+              <span>15 research lines</span>
             </Link>
           </div>
         </div>

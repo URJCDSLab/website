@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { DiagramPopover } from "./DiagramPopover";
 
 type HoverArea = 'hacking' | 'math' | 'expertise' | 'ml' | 'danger' | 'traditional' | 'ds' | null;
 
@@ -29,6 +30,54 @@ const VENN_COLORS = {
     active: '#F7FF5F',
   },
 } as const;
+
+const VENN_DESCRIPTIONS: Record<NonNullable<HoverArea>, { title: string; desc: string; color: string }> = {
+  hacking: {
+    title: 'Hacking skills',
+    desc: 'Programming, algorithmic thinking, and building computational data pipelines.',
+    color: VENN_COLORS.hacking,
+  },
+  math: {
+    title: 'Math & statistics',
+    desc: 'Statistical modeling, probabilistic reasoning, and formal quantitative theory.',
+    color: VENN_COLORS.math,
+  },
+  expertise: {
+    title: 'Substantive expertise',
+    desc: 'Domain-specific knowledge, industry context, and real-world problem framing.',
+    color: VENN_COLORS.expertiseText,
+  },
+  ml: {
+    title: 'Machine learning',
+    desc: 'Algorithms that extract patterns from data without contextual domain grounding.',
+    color: VENN_COLORS.ml.default,
+  },
+  danger: {
+    title: 'Danger zone!',
+    desc: 'Coding models without statistical rigor — high risk of misleading conclusions.',
+    color: VENN_COLORS.danger.default,
+  },
+  traditional: {
+    title: 'Traditional research',
+    desc: 'Classical hypothesis testing and academic inquiry without modern computational scale.',
+    color: VENN_COLORS.traditional.default,
+  },
+  ds: {
+    title: 'Data science',
+    desc: 'The complete synergy: computer science, mathematical rigor, and domain expertise.',
+    color: VENN_COLORS.dataScience,
+  },
+};
+
+const VENN_ANCHORS: Record<NonNullable<HoverArea>, { x: number; y: number; placement: 'top' | 'bottom' | 'left' | 'right' }> = {
+  hacking: { x: 30, y: 30, placement: 'right' },
+  math: { x: 70, y: 30, placement: 'left' },
+  expertise: { x: 50, y: 75, placement: 'top' },
+  ml: { x: 50, y: 22, placement: 'bottom' },
+  danger: { x: 30, y: 62, placement: 'right' },
+  traditional: { x: 70, y: 62, placement: 'left' },
+  ds: { x: 50, y: 50, placement: 'top' },
+};
 
 const INTERSECTION_LABELS = [
   {
@@ -316,30 +365,52 @@ function VennHitboxes({
   );
 }
 
+function VennPopover({
+  hovered,
+}: {
+  hovered: HoverArea;
+}) {
+  if (!hovered) return null;
+  const current = VENN_DESCRIPTIONS[hovered];
+  const anchor = VENN_ANCHORS[hovered];
+
+  return (
+    <DiagramPopover
+      title={current.title}
+      desc={current.desc}
+      color={current.color}
+      posX={anchor.x}
+      posY={anchor.y}
+      placement={anchor.placement}
+    />
+  );
+}
+
 export function DataScienceVennDiagram() {
   const [hovered, setHovered] = React.useState<HoverArea>(null);
 
   return (
-      <div className="w-full flex flex-col items-center justify-center h-full">
-        <div className="w-full aspect-square max-w-[520px] flex items-center justify-center">
-          <svg
-              viewBox="40 40 460 440"
-              className="w-full h-full select-none"
-              role="img"
-              aria-label="Venn diagram showing the multidisciplinary foundations of Data Science"
-          >
-            <VennDefs />
-            <VennBaseLayers isHovered={hovered !== null} />
-            <VennHighlights hovered={hovered} />
-            <VennLabels hovered={hovered} />
-            <VennHitboxes setHovered={setHovered} />
-          </svg>
-        </div>
+    <div className="w-full flex flex-col items-center justify-center h-full">
+      <div className="relative w-full aspect-square max-w-[520px] flex items-center justify-center">
+        <svg
+          viewBox="40 40 460 440"
+          className="w-full h-full select-none"
+          role="img"
+          aria-label="Venn diagram showing the multidisciplinary foundations of Data Science"
+        >
+          <VennDefs />
+          <VennBaseLayers isHovered={hovered !== null} />
+          <VennHighlights hovered={hovered} />
+          <VennLabels hovered={hovered} />
+          <VennHitboxes setHovered={setHovered} />
+        </svg>
 
-        {/* Pie / Título de la figura restaurado */}
-        <p className="mt-2 text-sm text-center text-slate-500 dark:text-slate-400">
-          Interdisciplinary nature of data science skills
-        </p>
+        <VennPopover hovered={hovered} />
       </div>
+
+      <p className="mt-2 text-sm text-center text-slate-500 dark:text-slate-400">
+        Interdisciplinary nature of data science skills
+      </p>
+    </div>
   );
 }
