@@ -23,8 +23,8 @@ export default function LeafletMap({
 
   const isDark = resolvedTheme === "dark";
   const tileUrl = isDark
-    ? "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png?api_key=cb1_3pp6_1_069788c37b5eb0e33c446fe2"
-    : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?api_key=cb1_3pp6_1_069788c37b5eb0e33c446fe2";
+    ? "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png?key=cb1_3pp6_1_069788c37b5eb0e33c446fe2"
+    : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3pp6_1_069788c37b5eb0e33c446fe2";
   const tileUrlRef = React.useRef(tileUrl);
 
   // Handle dynamic theme switching without recreating markers or resetting map state
