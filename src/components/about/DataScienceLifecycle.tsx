@@ -17,12 +17,54 @@ export function DataScienceLifecycle() {
   };
 
   const stages = [
-    { id: 1, text: ["Business", "understanding"], color: "#0086BA", angle: -90, textColor: "fill-white" },
-    { id: 2, text: ["Data", "preparation"], color: "#EAB308", angle: -30, textColor: "fill-slate-900" },
-    { id: 3, text: ["Modelling"], color: "#E30613", angle: 30, textColor: "fill-white" },
-    { id: 4, text: ["Evaluation"], color: "#16A34A", angle: 90, textColor: "fill-white" },
-    { id: 5, text: ["Visualization"], color: "#9333EA", angle: 150, textColor: "fill-white" },
-    { id: 6, text: ["Deployment"], color: "#EA580C", angle: 210, textColor: "fill-white" },
+    {
+      id: 1,
+      text: ["Business", "understanding"],
+      colorClass: "fill-[#0086BA] dark:fill-[#0284C7]",
+      strokeClass: "stroke-white/20 dark:stroke-white/30",
+      angle: -90,
+      textColor: "fill-white",
+    },
+    {
+      id: 2,
+      text: ["Data", "preparation"],
+      colorClass: "fill-[#EAB308] dark:fill-[#FACC15]",
+      strokeClass: "stroke-black/10 dark:stroke-white/25",
+      angle: -30,
+      textColor: "fill-slate-950",
+    },
+    {
+      id: 3,
+      text: ["Modelling"],
+      colorClass: "fill-[#E30613] dark:fill-[#EF4444]",
+      strokeClass: "stroke-white/20 dark:stroke-white/30",
+      angle: 30,
+      textColor: "fill-white",
+    },
+    {
+      id: 4,
+      text: ["Evaluation"],
+      colorClass: "fill-[#16A34A] dark:fill-[#22C55E]",
+      strokeClass: "stroke-white/20 dark:stroke-white/30",
+      angle: 90,
+      textColor: "fill-white",
+    },
+    {
+      id: 5,
+      text: ["Visualization"],
+      colorClass: "fill-[#9333EA] dark:fill-[#A855F7]",
+      strokeClass: "stroke-white/20 dark:stroke-white/30",
+      angle: 150,
+      textColor: "fill-white",
+    },
+    {
+      id: 6,
+      text: ["Deployment"],
+      colorClass: "fill-[#EA580C] dark:fill-[#F97316]",
+      strokeClass: "stroke-white/20 dark:stroke-white/30",
+      angle: 210,
+      textColor: "fill-white",
+    },
   ];
 
   // Helper to draw perfectly circular arrows between stages
@@ -51,18 +93,43 @@ export function DataScienceLifecycle() {
               aria-label="Typical Data Science project lifecycle flow"
           >
             <defs>
-              <marker id="lifecycle-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 1 L 9 5 L 0 9 z" fill="#0086BA" />
+              <marker
+                id="lifecycle-arrow"
+                viewBox="0 0 10 10"
+                refX="6"
+                refY="5"
+                markerWidth="6"
+                markerHeight="6"
+                orient="auto-start-reverse"
+              >
+                <path d="M 0 1 L 9 5 L 0 9 z" className="fill-[#0086BA] dark:fill-[#38BDF8] transition-colors duration-300" />
               </marker>
-              <filter id="hex-shadow" x="-10%" y="-10%" width="120%" height="120%">
-                <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.12" />
+              <filter id="hex-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#000000" floodOpacity="0.2" />
               </filter>
             </defs>
 
             {/* Central Hexagon: Data */}
             <g filter="url(#hex-shadow)">
-              <polygon points={getHexagonPoints(center.x, center.y, hexRadius + 8)} className="fill-slate-900 dark:fill-slate-950" />
-              <text x={center.x} y={center.y + 7} textAnchor="middle" className="fill-white font-extrabold text-[22px] pointer-events-none tracking-wide">
+              {/* Subtle outer dashed orbit ring */}
+              <polygon
+                points={getHexagonPoints(center.x, center.y, hexRadius + 14)}
+                className="fill-none stroke-slate-300 dark:stroke-[#38BDF8]/40"
+                strokeWidth="1.5"
+                strokeDasharray="4 4"
+              />
+              {/* Core Data hexagon */}
+              <polygon
+                points={getHexagonPoints(center.x, center.y, hexRadius + 6)}
+                className="fill-slate-900 dark:fill-slate-800 stroke-slate-700/60 dark:stroke-slate-600/80 transition-colors duration-300"
+                strokeWidth="2"
+              />
+              <text
+                x={center.x}
+                y={center.y + 7}
+                textAnchor="middle"
+                className="fill-white dark:fill-slate-100 font-extrabold text-[22px] pointer-events-none tracking-wide"
+              >
                 Data
               </text>
             </g>
@@ -77,11 +144,10 @@ export function DataScienceLifecycle() {
                       key={`arrow-${stage.id}`}
                       d={renderArrow(stage.angle, endAngle)}
                       fill="none"
-                      stroke="#0086BA"
                       strokeWidth="3.5"
                       strokeLinecap="round"
                       markerEnd="url(#lifecycle-arrow)"
-                      className="opacity-90"
+                      className="stroke-[#0086BA] dark:stroke-[#38BDF8] opacity-80 dark:opacity-90 transition-colors duration-300"
                   />
               );
             })}
@@ -96,21 +162,25 @@ export function DataScienceLifecycle() {
                   <g
                       key={stage.id}
                       filter="url(#hex-shadow)"
-                      className="transition-transform duration-200 hover:scale-105"
+                      className="transition-transform duration-200 hover:scale-105 cursor-default"
                       style={{ transformOrigin: `${cx}px ${cy}px` }}
                   >
-                    <polygon points={getHexagonPoints(cx, cy, hexRadius)} fill={stage.color} />
+                    <polygon
+                      points={getHexagonPoints(cx, cy, hexRadius)}
+                      strokeWidth="1.5"
+                      className={`${stage.colorClass} ${stage.strokeClass} transition-colors duration-300`}
+                    />
 
                     {stage.text.length === 1 ? (
-                        <text x={cx} y={cy + 4.5} textAnchor="middle" className={`${stage.textColor} font-bold text-[14px] pointer-events-none`}>
+                        <text x={cx} y={cy + 4.5} textAnchor="middle" className={`${stage.textColor} font-bold text-[15px] pointer-events-none`}>
                           {stage.text[0]}
                         </text>
                     ) : (
                         <>
-                          <text x={cx} y={cy - 4} textAnchor="middle" className={`${stage.textColor} font-bold text-[13px] pointer-events-none`}>
+                          <text x={cx} y={cy - 4} textAnchor="middle" className={`${stage.textColor} font-bold text-[14px] pointer-events-none`}>
                             {stage.text[0]}
                           </text>
-                          <text x={cx} y={cy + 13} textAnchor="middle" className={`${stage.textColor} font-bold text-[13px] pointer-events-none`}>
+                          <text x={cx} y={cy + 13} textAnchor="middle" className={`${stage.textColor} font-bold text-[14px] pointer-events-none`}>
                             {stage.text[1]}
                           </text>
                         </>
