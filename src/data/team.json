@@ -256,6 +256,14 @@
       "department": "Dept. Computer Science and Statistics",
       "photo": "sergiogarcia.jpg",
       "orcid": "https://orcid.org/0009-0009-7514-2488"
+    },
+    {
+      "id": "roberto-canduela",
+      "firstName": "Roberto",
+      "lastName": "Canduela Luengo",
+      "role": "PhD. Student",
+      "department": "Dept. Computer Science and Statistics",
+      "photo": "robertocanduela.jpg"
     }
   ],
   "affiliated": [
