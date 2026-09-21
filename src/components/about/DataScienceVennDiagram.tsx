@@ -24,8 +24,8 @@ const INTERSECTION_LABELS = [
     y2: 315,
     line1: 'Danger',
     line2: 'zone!',
-    activeColor: '#f3cae3',
-    defaultColor: '#b02080',
+    activeColor: '#fed7aa',
+    defaultColor: '#c2410c',
   },
   {
     area: 'traditional' as const,
@@ -35,8 +35,8 @@ const INTERSECTION_LABELS = [
     y2: 315,
     line1: 'Traditional',
     line2: 'research',
-    activeColor: '#c5d5f5',
-    defaultColor: '#4567bb',
+    activeColor: '#F7FF5F',
+    defaultColor: '#759C26',
   },
 ] as const;
 
@@ -72,14 +72,14 @@ function VennBaseLayers({ isHovered }: { isHovered: boolean }) {
     <>
       <g style={{ opacity: isHovered ? 0.15 : 1, transition: 'opacity 0.4s ease-out' }}>
         <use href="#venn-c1" fill="#E30613" fillOpacity="0.25" />
-        <use href="#venn-c2" fill="#0D9488" fillOpacity="0.25" />
-        <use href="#venn-c3" fill="#7C3AED" fillOpacity="0.25" />
+        <use href="#venn-c2" fill="#16A34A" fillOpacity="0.25" />
+        <use href="#venn-c3" fill="#EAB308" fillOpacity="0.25" />
       </g>
 
       <g style={{ opacity: isHovered ? 0.4 : 1, transition: 'opacity 0.4s ease-out' }} fill="none" strokeWidth="2.5">
         <use href="#venn-c1" stroke="#E30613" />
-        <use href="#venn-c2" stroke="#0D9488" />
-        <use href="#venn-c3" stroke="#7C3AED" />
+        <use href="#venn-c2" stroke="#16A34A" />
+        <use href="#venn-c3" stroke="#EAB308" />
       </g>
     </>
   );
@@ -97,30 +97,30 @@ function VennHighlights({ hovered }: { hovered: HoverArea }) {
 
       <g mask="url(#venn-not-c1)">
         <g mask="url(#venn-not-c3)">
-          <use href="#venn-c2" fill="#0d9488" style={{ opacity: hovered === 'math' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
+          <use href="#venn-c2" fill="#16a34a" style={{ opacity: hovered === 'math' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
         </g>
       </g>
 
       <g mask="url(#venn-not-c1)">
         <g mask="url(#venn-not-c2)">
-          <use href="#venn-c3" fill="#7c3aed" style={{ opacity: hovered === 'expertise' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
+          <use href="#venn-c3" fill="#eab308" style={{ opacity: hovered === 'expertise' ? 0.55 : 0, transition: 'opacity 0.3s' }} />
         </g>
       </g>
 
       {/* Intersecciones dobles (Mezcla visual con superposición de los padres) */}
       <g clipPath="url(#venn-only-c2)" mask="url(#venn-not-c3)" style={{ opacity: hovered === 'ml' ? 1 : 0, transition: 'opacity 0.3s' }}>
         <use href="#venn-c1" fill="#e30613" fillOpacity="0.55" />
-        <use href="#venn-c1" fill="#0d9488" fillOpacity="0.55" />
+        <use href="#venn-c1" fill="#16a34a" fillOpacity="0.55" />
       </g>
 
       <g clipPath="url(#venn-only-c3)" mask="url(#venn-not-c2)" style={{ opacity: hovered === 'danger' ? 1 : 0, transition: 'opacity 0.3s' }}>
         <use href="#venn-c1" fill="#e30613" fillOpacity="0.55" />
-        <use href="#venn-c1" fill="#7c3aed" fillOpacity="0.55" />
+        <use href="#venn-c1" fill="#eab308" fillOpacity="0.55" />
       </g>
 
       <g clipPath="url(#venn-only-c3)" mask="url(#venn-not-c1)" style={{ opacity: hovered === 'traditional' ? 1 : 0, transition: 'opacity 0.3s' }}>
-        <use href="#venn-c2" fill="#0d9488" fillOpacity="0.55" />
-        <use href="#venn-c2" fill="#7c3aed" fillOpacity="0.55" />
+        <use href="#venn-c2" fill="#16a34a" fillOpacity="0.55" />
+        <use href="#venn-c2" fill="#eab308" fillOpacity="0.55" />
       </g>
 
       {/* Intersección central */}
@@ -215,13 +215,13 @@ function VennLabels({ hovered }: { hovered: HoverArea }) {
         </VennAnimatedLabel>
 
         <VennAnimatedLabel origin="400px 191px" isActive={hovered === 'math'}>
-          <text transform="rotate(45, 420, 160)" x="400" y="180" textAnchor="middle" fill="#0d9488">Math &amp; statistics</text>
-          <text transform="rotate(45, 420, 160)" x="400" y="202" textAnchor="middle" fill="#0d9488">knowledge</text>
+          <text transform="rotate(45, 420, 160)" x="400" y="180" textAnchor="middle" fill="#16a34a">Math &amp; statistics</text>
+          <text transform="rotate(45, 420, 160)" x="400" y="202" textAnchor="middle" fill="#16a34a">knowledge</text>
         </VennAnimatedLabel>
 
         <VennAnimatedLabel origin="280px 401px" isActive={hovered === 'expertise'}>
-          <text x="280" y="390" textAnchor="middle" fill="#7c3aed">Substantive</text>
-          <text x="280" y="412" textAnchor="middle" fill="#7c3aed">expertise</text>
+          <text x="280" y="390" textAnchor="middle" fill="#ca8a04">Substantive</text>
+          <text x="280" y="412" textAnchor="middle" fill="#ca8a04">expertise</text>
         </VennAnimatedLabel>
       </g>
 
