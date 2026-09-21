@@ -28,10 +28,10 @@ export function DataScienceLifecycle() {
     {
       id: 2,
       text: ["Data", "preparation"],
-      colorClass: "fill-[#EAB308] dark:fill-[#FACC15]",
+      colorClass: "fill-[#EAB308] dark:fill-[#CCA80B]",
       strokeClass: "stroke-black/10 dark:stroke-white/25",
       angle: -30,
-      textColor: "fill-slate-950",
+      textColor: "fill-white",
     },
     {
       id: 3,
