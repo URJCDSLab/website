@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import trainingCoursesData from "@/data/training_courses.json";
 import { TrainingCourse } from "@/types";
 import { createPageMetadata } from "@/lib/metadata";
+import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Professional Training",
@@ -28,22 +29,14 @@ export default function TrainingPage() {
         </p>
 
         {/* Custom course tailored callout */}
-        <div className="p-6 rounded-2xl bg-gradient-to-r from-[#0086BA]/10 via-slate-50 to-emerald-500/10 dark:from-[#0086BA]/20 dark:via-slate-900 dark:to-emerald-500/20 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-6">
-          <div className="space-y-1">
-            <h2 className="text-base font-bold text-slate-900 dark:text-slate-100">
-              Need custom training for your team?
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-              We design and deliver bespoke training programs tailored specifically to your organization&apos;s technical requirements, domain challenges, and scheduling needs.
-            </p>
-          </div>
-          <Link
-            href="/contact"
-            className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#0086BA] text-white hover:bg-[#0086BA]/90 transition-colors shrink-0 inline-flex items-center gap-1.5 shadow-sm"
-          >
-            Request custom training <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        <CtaBanner
+          title="Need custom training for your team?"
+          description="We design and deliver bespoke training programs tailored specifically to your organization's technical requirements, domain challenges, and scheduling needs."
+          buttonText="Request custom training"
+          buttonHref="/contact/"
+          variant="subtle"
+          className="mt-6"
+        />
       </div>
 
       {/* Courses Grid */}

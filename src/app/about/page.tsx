@@ -4,6 +4,7 @@ import { ArrowRight, Database, LineChart } from "lucide-react";
 import { DataScienceVennDiagram } from "@/components/about/DataScienceVennDiagram";
 import { DataScienceLifecycle } from "@/components/about/DataScienceLifecycle";
 import { createPageMetadata } from "@/lib/metadata";
+import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata: Metadata = createPageMetadata({
   title: "About the Lab",
@@ -174,22 +175,13 @@ export default function AboutPage() {
         </section>
 
         {/* Navigation link to Team */}
-        <div className="p-8 rounded-2xl bg-slate-100 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-              Meet our researchers &amp; faculty
-            </h2>
-            <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-              Explore the academic profiles, publications, and scientific roles of everyone in the lab.
-            </p>
-          </div>
-          <Link
-              href="/about/team/"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#0086BA] hover:bg-[#006d96] shrink-0 transition-colors shadow-md"
-          >
-            View team <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        <CtaBanner
+          title="Meet our researchers & faculty"
+          description="Explore the academic profiles, publications, and scientific roles of everyone in the lab."
+          buttonText="View team"
+          buttonHref="/about/team/"
+          variant="subtle"
+        />
 
       </div>
   );

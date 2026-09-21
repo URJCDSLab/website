@@ -7,6 +7,7 @@ import { DashboardsSection } from "@/components/education/DashboardsSection";
 import { SlidesSection } from "@/components/education/SlidesSection";
 import { ExercisesSection } from "@/components/education/ExercisesSection";
 import { createPageMetadata } from "@/lib/metadata";
+import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Learning Resources",
@@ -36,27 +37,18 @@ export default function EducationPage() {
       <SlidesSection />
       <ExercisesSection />
 
-      {/* Professional Training Banner */}
-      <div className="p-8 rounded-2xl bg-slate-100 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div>
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0086BA] mb-2">
-            <GraduationCap className="w-4 h-4" />
-            Executive &amp; specialized programs
-          </div>
-          <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-            Professional training courses
-          </h2>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Master degrees, executive certifications, and university courses in data science and big data.
-          </p>
-        </div>
-        <Link
-          href="/education/training/"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#0086BA] hover:bg-[#006d96] shrink-0 transition-colors shadow-md"
-        >
-          View training courses <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+      {/* CTA to Training */}
+      <CtaBanner
+        badge={{
+          icon: GraduationCap,
+          text: "Executive & specialized programs",
+        }}
+        title="Professional training courses"
+        description="Master degrees, executive certifications, and university courses in data science and big data."
+        buttonText="View training courses"
+        buttonHref="/education/training/"
+        variant="subtle"
+      />
 
     </div>
   );

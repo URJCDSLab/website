@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import researchLines from "@/data/research_lines.json";
 import { createPageMetadata } from "@/lib/metadata";
+import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Research Lines",
@@ -58,22 +59,13 @@ export default function ResearchLinesPage() {
       </div>
 
       {/* Footer Banner */}
-      <div className="p-8 rounded-2xl bg-gradient-to-r from-[#0086BA] to-[#006d96] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div>
-          <h2 className="text-xl font-bold">
-            Interested in launching a joint research initiative?
-          </h2>
-          <p className="text-sm text-white/90 mt-1">
-            We collaborate with academic teams and institutions across Europe and Latin America.
-          </p>
-        </div>
-        <Link
-          href="/collaboration/"
-          className="px-6 py-3 rounded-xl font-semibold text-[#0086BA] bg-white hover:bg-slate-50 transition-colors shadow-md shrink-0"
-        >
-          Let&apos;s explore together
-        </Link>
-      </div>
+      <CtaBanner
+        title="Interested in launching a joint research initiative?"
+        description="We collaborate with academic teams and institutions across Europe and Latin America."
+        buttonText="Let's explore together"
+        buttonHref="/collaboration/"
+        variant="brand"
+      />
 
     </div>
   );

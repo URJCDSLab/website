@@ -4,6 +4,7 @@ import consultingProjectsData from "@/data/consulting_projects.json";
 import { ConsultingProject } from "@/types";
 import { Calendar, Building2, ArrowRight } from "lucide-react";
 import { createPageMetadata } from "@/lib/metadata";
+import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Consulting Projects",
@@ -72,22 +73,13 @@ export default function ConsultingPage() {
       </div>
 
       {/* Clients Link Banner */}
-      <div className="p-8 rounded-2xl bg-slate-100 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div>
-          <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-            Our consulting clients &amp; partners
-          </h2>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Discover the organizations we have worked with across multiple sectors.
-          </p>
-        </div>
-        <Link
-          href="/consulting/clients/"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#0086BA] hover:bg-[#006d96] shrink-0 transition-colors shadow-md"
-        >
-          View clients <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+      <CtaBanner
+        title="Our consulting clients & partners"
+        description="Discover the organizations we have worked with across multiple sectors."
+        buttonText="View clients"
+        buttonHref="/consulting/clients/"
+        variant="subtle"
+      />
 
     </div>
   );

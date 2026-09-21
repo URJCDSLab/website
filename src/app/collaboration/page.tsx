@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { createPageMetadata } from "@/lib/metadata";
+import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Collaborate With Us",
@@ -120,24 +121,13 @@ export default function CollaborationPage() {
       </div>
 
       {/* Call to Action Bar */}
-      <div className="rounded-2xl bg-gradient-to-r from-[#0086BA] to-[#006d96] p-8 sm:p-12 text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div className="max-w-xl text-center sm:text-left">
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Ready to start a collaboration that makes an impact?
-          </h2>
-          <p className="mt-2 text-sm sm:text-base text-white/90">
-            Contact our team to discuss opportunities tailored to your organization’s goals.
-          </p>
-        </div>
-        <Link
-          href="/contact/"
-          className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0086BA] bg-white hover:bg-slate-50 shadow-md transition-transform transform hover:-translate-y-0.5 shrink-0"
-        >
-          <Mail className="w-4 h-4 text-[#0086BA]" />
-          <span>Contact DSLAB</span>
-          <ArrowRight className="w-4 h-4 ml-1" />
-        </Link>
-      </div>
+      <CtaBanner
+        title="Ready to start a collaboration that makes an impact?"
+        description="Contact our team to discuss opportunities tailored to your organization’s goals."
+        buttonText="Contact DSLAB"
+        buttonHref="/contact/"
+        variant="brand"
+      />
 
     </div>
   );

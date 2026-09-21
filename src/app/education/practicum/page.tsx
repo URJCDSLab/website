@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { PartnerClientCard } from "@/components/ui/PartnerClientCard";
 import { createPageMetadata } from "@/lib/metadata";
+import { CtaBanner } from "@/components/ui/CtaBanner";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Practicum & Internships",
@@ -115,23 +116,13 @@ export default function PracticumPage() {
       </section>
 
       {/* Call to Action Banner */}
-      <section className="rounded-3xl bg-gradient-to-r from-[#0086BA] to-[#006d96] p-8 sm:p-12 text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-8">
-        <div className="max-w-2xl space-y-2 text-center sm:text-left">
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Interested in doing your practicum with us?
-          </h2>
-          <p className="text-sm sm:text-base text-white/90 leading-relaxed">
-            Reach out through our contact form to inquire about current internship openings and academic credit agreements.
-          </p>
-        </div>
-        <Link
-          href="/contact/"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0086BA] bg-white hover:bg-slate-50 shadow-md transition-[transform,background-color] duration-200 transform hover:-translate-y-0.5 shrink-0 text-sm"
-        >
-          <span>Contact DSLAB</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </section>
+      <CtaBanner
+        title="Interested in doing your practicum with us?"
+        description="Reach out through our contact form to inquire about current internship openings and academic credit agreements."
+        buttonText="Contact DSLAB"
+        buttonHref="/contact/"
+        variant="brand"
+      />
 
     </div>
   );

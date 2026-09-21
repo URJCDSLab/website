@@ -160,7 +160,7 @@ function HeaderSection() {
 
 function CtaBanner() {
   return (
-      <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#0086BA]/10 via-slate-50 to-rose-500/10 dark:from-[#0086BA]/20 dark:via-slate-900 dark:to-rose-500/20 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="p-6 sm:p-8 rounded-2xl bg-slate-100 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
           <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
             Featured teaching initiatives
@@ -174,15 +174,17 @@ function CtaBanner() {
               href="https://github.com/URJCDSLab/ViLT"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-xl text-sm font-semibold bg-[#0086BA] text-white hover:bg-[#0086BA]/90 transition-colors inline-flex items-center gap-1.5"
+              className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-semibold bg-[#0086BA] text-white hover:bg-[#006d96] shadow-md transition-[transform,background-color] duration-200 transform hover:-translate-y-0.5 shrink-0"
           >
-            Meet ViLT <ExternalLink className="w-4 h-4" />
+            <span>Meet ViLT</span>
+            <ExternalLink className="w-4 h-4 ml-0.5" />
           </a>
           <Link
               href="/education/conecta/"
-              className="px-4 py-2 rounded-xl text-sm font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors inline-flex items-center gap-1.5"
+              className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm transition-[transform,background-color] duration-200 transform hover:-translate-y-0.5 shrink-0"
           >
-            ¡CONECTA! <Gamepad2 className="w-4 h-4 text-[#E30613]" />
+            <span>¡CONECTA!</span>
+            <Gamepad2 className="w-4 h-4 text-[#E30613]" />
           </Link>
         </div>
       </div>
