@@ -120,7 +120,7 @@ export default function AboutPage() {
                     <li className="flex items-start gap-2.5">
                       <span className="w-2 h-2 rounded-full bg-[#0086BA] mt-2 shrink-0" />
                       <span>
-                      <strong className="text-slate-900 dark:text-slate-200">Computer science &amp; information systems:</strong> Managing the core data lifecycle, including automated data acquisition, secure storage, cleaning, preparation, and high-performance computation and parallelization.
+                      <strong className="text-slate-900 dark:text-slate-200">Computer science &amp; information systems:</strong> Managing the core data lifecycle, including automated data acquisition, secure storage, enrichment, preparation, and high-performance computation and parallelization.
                     </span>
                     </li>
                     <li className="flex items-start gap-2.5">

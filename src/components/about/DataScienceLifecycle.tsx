@@ -11,7 +11,7 @@ const STAGE_DESCRIPTIONS: Record<number | 'data', { title: string; desc: string;
   },
   2: {
     title: "Data preparation",
-    desc: "Ingesting, cleaning, normalizing, and feature-engineering datasets for modeling.",
+    desc: "Ingesting, enrichment, normalizing, and feature-engineering datasets for modeling.",
     color: "#EAB308",
   },
   3: {
