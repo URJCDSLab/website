@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Calendar, ExternalLink, X, FileText, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Calendar, ExternalLink, X, FileText, ArrowRight, User } from "lucide-react";
 import { BlogPost } from "@/types";
 
 interface BlogTimelineProps {
@@ -109,11 +110,47 @@ function distributePosts(posts: BlogPost[]) {
 export function BlogTimeline({ posts }: BlogTimelineProps) {
   const [selectedPost, setSelectedPost] = React.useState<BlogPost | null>(null);
 
+  // Sync selectedPost with URL hash (e.g. #mst-ensemble opens the modal)
+  React.useEffect(() => {
+    function handleHashChange() {
+      if (typeof window === "undefined") return;
+      const hash = window.location.hash.replace(/^#/, "");
+      if (!hash) {
+        setSelectedPost(null);
+        return;
+      }
+      const matched = posts.find((p) => p.id === hash);
+      if (matched) {
+        setSelectedPost(matched);
+      }
+    }
+
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [posts]);
+
+  // Open modal and update URL hash
+  const handleOpenPost = React.useCallback((post: BlogPost) => {
+    setSelectedPost(post);
+    if (typeof window !== "undefined" && window.location.hash !== `#${post.id}`) {
+      window.history.pushState(null, "", `#${post.id}`);
+    }
+  }, []);
+
+  // Close modal and remove URL hash
+  const handleClosePost = React.useCallback(() => {
+    setSelectedPost(null);
+    if (typeof window !== "undefined" && window.location.hash) {
+      window.history.pushState(null, "", window.location.pathname + window.location.search);
+    }
+  }, []);
+
   // Close modal on Escape key and lock body scroll
   React.useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
-        setSelectedPost(null);
+        handleClosePost();
       }
     }
 
@@ -128,7 +165,7 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [selectedPost]);
+  }, [selectedPost, handleClosePost]);
 
   const { left, right } = React.useMemo(() => distributePosts(posts), [posts]);
 
@@ -143,7 +180,7 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
 
             {/* Timeline node */}
             <span className="absolute -left-[31px] top-[27px] w-3.5 h-3.5 rounded-full border-2 border-white dark:border-slate-900 bg-[#0086BA] shadow-sm z-10 group-hover:scale-125 transition-transform" />
-            <PostCard post={post} onOpen={() => setSelectedPost(post)} />
+            <PostCard post={post} onOpen={() => handleOpenPost(post)} />
           </div>
         ))}
       </div>
@@ -163,7 +200,7 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
 
                 {/* Connector point on center spine */}
                 <span className="absolute -right-[39px] top-[27px] w-3.5 h-3.5 rounded-full border-2 border-white dark:border-slate-900 bg-[#0086BA] shadow-sm z-10 group-hover:scale-125 transition-transform" />
-                <PostCard post={post} onOpen={() => setSelectedPost(post)} />
+                <PostCard post={post} onOpen={() => handleOpenPost(post)} />
               </div>
             ))}
           </div>
@@ -177,7 +214,7 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
 
                 {/* Connector point on center spine (offset by 16px to prevent collisions) */}
                 <span className="absolute -left-[39px] top-[43px] w-3.5 h-3.5 rounded-full border-2 border-white dark:border-slate-900 bg-[#0086BA] shadow-sm z-10 group-hover:scale-125 transition-transform" />
-                <PostCard post={post} onOpen={() => setSelectedPost(post)} />
+                <PostCard post={post} onOpen={() => handleOpenPost(post)} />
               </div>
             ))}
           </div>
@@ -195,7 +232,7 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
           <button
             type="button"
             aria-label="Close dialog overlay"
-            onClick={() => setSelectedPost(null)}
+            onClick={handleClosePost}
             className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm transition-opacity cursor-default w-full h-full border-0 p-0"
           />
 
@@ -209,7 +246,7 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
               </div>
               <button
                 type="button"
-                onClick={() => setSelectedPost(null)}
+                onClick={handleClosePost}
                 aria-label="Close dialog"
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
@@ -252,22 +289,48 @@ export function BlogTimeline({ posts }: BlogTimelineProps) {
                   Related resources &amp; links
                 </h4>
                 <div className="flex flex-wrap gap-2.5">
-                  {selectedPost.links.map((link) => (
-                    <a
-                      key={link.url}
-                      href={link.url}
-                      target={link.url.startsWith("http") ? "_blank" : undefined}
-                      rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#0086BA] hover:bg-[#006d96] transition-colors shadow-sm"
-                    >
-                      {link.url.endsWith(".pdf") ? (
-                        <FileText className="w-4 h-4" />
-                      ) : (
-                        <ExternalLink className="w-4 h-4" />
-                      )}
-                      <span>{link.label}</span>
-                    </a>
-                  ))}
+                  {selectedPost.links.map((link) => {
+                    const isExternal = link.url.startsWith("http://") || link.url.startsWith("https://");
+                    const isPdf = link.url.endsWith(".pdf");
+                    const isPerson = link.url.includes("/team");
+
+                    const buttonClasses =
+                      "inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#0086BA] hover:bg-[#006d96] transition-colors shadow-sm";
+
+                    const renderIcon = () => {
+                      if (isPdf) return <FileText className="w-4 h-4" />;
+                      if (isExternal) return <ExternalLink className="w-4 h-4" />;
+                      if (isPerson) return <User className="w-4 h-4" />;
+                      return <ArrowRight className="w-4 h-4" />;
+                    };
+
+                    if (isExternal) {
+                      return (
+                        <a
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={buttonClasses}
+                        >
+                          {renderIcon()}
+                          <span>{link.label}</span>
+                        </a>
+                      );
+                    }
+
+                    return (
+                      <Link
+                        key={link.url}
+                        href={link.url}
+                        onClick={handleClosePost}
+                        className={buttonClasses}
+                      >
+                        {renderIcon()}
+                        <span>{link.label}</span>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
