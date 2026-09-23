@@ -5,14 +5,14 @@
     "date": "23 Sep 2026",
     "description": "DSLAB researchers introduce the MST Ensemble Framework, a geometric classification method that decouples graph analysis from inductive prediction using Minimum Spanning Trees and WRAB sampling.",
     "content": [
-      "El MST Ensemble Framework es un método de clasificación geométrica estructurado en dos fases diferenciadas que desacoplan el análisis de grafos de la predicción final.",
-      "En la primera fase, el algoritmo utiliza la estrategia de muestreo Weighted RAndom Bootstrap (WRAB) para generar múltiples submuestras con proporciones de clase alteradas, construyendo un Árbol de Expansión Mínima (MST) para cada una de ellas. A partir de la homogeneidad de etiquetas en los vecindarios del grafo, se identifican las regiones puras y de frontera para calcular un affinity score continuo que mide el grado de pertenencia de cada instancia a su clase.",
-      "En la segunda fase, este descriptor topológico se utiliza como objetivo blando para entrenar un predictor inductivo global (como un clasificador supervisado estándar), permitiendo inferencias rápidas y generalizables sin necesidad de recalcular los grafos durante la fase de test."
+      "The MST Ensemble Framework is a geometric classification method structured in two distinct phases that decouple graph analysis from final prediction.",
+      "In the first phase, the algorithm employs the Weighted RAndom Bootstrap (WRAB) sampling strategy to generate multiple subsamples with altered class proportions, constructing a Minimum Spanning Tree (MST) for each of them. Based on label homogeneity within the graph neighborhoods, pure and boundary regions are identified to compute a continuous affinity score measuring each instance's degree of class membership.",
+      "In the second phase, this topological descriptor serves as a soft target to train a global inductive predictor (such as a standard supervised classifier), enabling fast and generalizable inference without requiring graph recalculations during testing."
     ],
     "links": [
       {
-        "label": "Read Full Open Access Article (DOI)",
-        "url": "https://doi.org/10.1016/j.knosys.2026.117057"
+        "label": "Paper in ScienceDirect (Knowledge-Based Systems)",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0950705126017831"
       },
       {
         "label": "Meet Víctor Aceña",
