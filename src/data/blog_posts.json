@@ -1,5 +1,30 @@
 [
   {
+    "id": "tfg-2026-rnfc",
+    "title": "Bachelor's Thesis Proposal (2026–2027): Automation & Quality Control Platform for RNFC",
+    "date": "5 Oct 2026",
+    "description": "Proposal for a Bachelor's Thesis (TFG) to design and develop a web-based data automation and quality control platform for the Spanish National Hip Fracture Registry (RNFC).",
+    "content": [
+      "The Spanish National Hip Fracture Registry (RNFC - Registro Nacional de Fracturas de Cadera) compiles clinical data from numerous hospitals across Spain and regularly produces quarterly, semi-annual, and annual reports. This process involves managing high volumes of data, validating quality, identifying inconsistencies, running analytical pipelines, and generating final reports.",
+      "The objective of this Bachelor's Thesis (TFG) for the 2026–2027 academic year is to design and develop a software platform that automates this workflow, minimizing manual intervention while enhancing data quality and reliability.",
+      "A primary challenge will be building an automated data validation engine capable of detecting discrepancies and errors—such as incompatible timestamps, missing mandatory variables, out-of-range clinical metrics, or contradictory variable combinations.",
+      "Additionally, the project will establish direct integration with the Registry's database for automated on-demand reporting. On top of this infrastructure, a web interface will be created to select reporting windows, generate reports, inspect flagged discrepancies, and monitor data quality indicators.",
+      "As a potential extension, the platform may integrate a role-based access control (RBAC) system allowing each participating hospital exclusive access to its own records, enabling authorized staff to review flagged errors and apply traceable, audited corrections."
+    ],
+    "links": [
+      {
+        "label": "Contact Carmen Lancho",
+        "url": "/about/team/#carmen-lancho"
+      }
+    ],
+    "tags": [
+      "Bachelor's Thesis",
+      "Healthcare",
+      "Data Quality",
+      "Web Platform"
+    ]
+  },
+  {
     "id": "mst-ensemble",
     "title": "Minimum Spanning Trees ensemble framework: A geometric classifier",
     "date": "23 Sep 2026",
