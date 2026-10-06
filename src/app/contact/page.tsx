@@ -33,7 +33,7 @@ export default function ContactPage() {
               href="mailto:gr_inv.dslab@urjc.es"
               className="relative overflow-hidden p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#0086BA] shadow-sm hover:shadow-md transition-[border-color,box-shadow] duration-300 flex flex-col justify-center min-h-[96px] group text-right"
           >
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 text-[#0086BA] opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
+            <div className="absolute top-1/2 -translate-y-1/2 left-4 text-[#0086BA] opacity-[0.10] dark:opacity-[0.16] group-hover:opacity-100 dark:group-hover:opacity-100 pointer-events-none select-none transition-[transform,opacity] duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
               <Mail className="w-16 h-16" strokeWidth={1.5} />
             </div>
             <div className="relative z-10 w-full">
@@ -53,7 +53,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="relative overflow-hidden p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-900 dark:hover:border-slate-100 shadow-sm hover:shadow-md transition-[border-color,box-shadow] duration-300 flex flex-col justify-center min-h-[96px] group text-right"
           >
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 text-slate-900 dark:text-slate-100 opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
+            <div className="absolute top-1/2 -translate-y-1/2 left-4 text-slate-900 dark:text-slate-100 opacity-[0.10] dark:opacity-[0.16] group-hover:opacity-100 dark:group-hover:opacity-100 pointer-events-none select-none transition-[transform,opacity] duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
               <XIcon className="w-16 h-16" />
             </div>
             <div className="relative z-10 w-full">
@@ -73,7 +73,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="relative overflow-hidden p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#0A66C2] shadow-sm hover:shadow-md transition-[border-color,box-shadow] duration-300 flex flex-col justify-center min-h-[96px] group text-right"
           >
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 text-[#0A66C2] opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
+            <div className="absolute top-1/2 -translate-y-1/2 left-4 text-[#0A66C2] opacity-[0.10] dark:opacity-[0.16] group-hover:opacity-100 dark:group-hover:opacity-100 pointer-events-none select-none transition-[transform,opacity] duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
               <LinkedInIcon className="w-16 h-16" />
             </div>
             <div className="relative z-10 w-full">
@@ -93,7 +93,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="relative overflow-hidden p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-900 dark:hover:border-slate-100 shadow-sm hover:shadow-md transition-[border-color,box-shadow] duration-300 flex flex-col justify-center min-h-[96px] group text-right"
           >
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 text-slate-900 dark:text-slate-100 opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
+            <div className="absolute top-1/2 -translate-y-1/2 left-4 text-slate-900 dark:text-slate-100 opacity-[0.10] dark:opacity-[0.16] group-hover:opacity-100 dark:group-hover:opacity-100 pointer-events-none select-none transition-[transform,opacity] duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
               <GithubIcon className="w-16 h-16" />
             </div>
             <div className="relative z-10 w-full">
@@ -113,7 +113,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="relative overflow-hidden p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#0285FF] shadow-sm hover:shadow-md transition-[border-color,box-shadow] duration-300 flex flex-col justify-center min-h-[96px] group text-right"
           >
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 text-[#0285FF] opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
+            <div className="absolute top-1/2 -translate-y-1/2 left-4 text-[#0285FF] opacity-[0.10] dark:opacity-[0.16] group-hover:opacity-100 dark:group-hover:opacity-100 pointer-events-none select-none transition-[transform,opacity] duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
               <BlueskyIcon className="w-16 h-16" />
             </div>
             <div className="relative z-10 w-full">
