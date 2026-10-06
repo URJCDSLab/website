@@ -67,7 +67,7 @@ function ConferenceBanner({
           <img
             src={logos[0]}
             alt="Conference logo"
-            className={`${inModal ? "max-h-24 max-w-[80%]" : "max-h-20 max-w-[75%]"} object-contain drop-shadow-lg`}
+            className={`${inModal ? "max-h-40 max-w-[80%]" : "max-h-32 max-w-[75%]"} object-contain drop-shadow-lg`}
           />
         </div>
       )}

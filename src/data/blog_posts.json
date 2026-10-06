@@ -11,6 +11,7 @@
       "Additionally, the project will establish direct integration with the Registry's database for automated on-demand reporting. On top of this infrastructure, a web interface will be created to select reporting windows, generate reports, inspect flagged discrepancies, and monitor data quality indicators.",
       "As a potential extension, the platform may integrate a role-based access control (RBAC) system allowing each participating hospital exclusive access to its own records, enabling authorized staff to review flagged errors and apply traceable, audited corrections."
     ],
+    "image": "https://rnfc.es/wp-content/uploads/2019/05/cropped-Logo-RNFC.png",
     "links": [
       {
         "label": "Contact Carmen Lancho",
@@ -115,7 +116,7 @@
       "Researchers and practitioners from across the globe are invited to submit their innovative works and join us in advancing responsible, robust generative intelligence."
     ],
     "image": "/assets/images/blog/jaen.jpg",
-    "conferenceLogo": "https://ideal2025.ujaen.es/wp-content/uploads/2025/10/cropped-logo-transparente.png",
+    "conferenceLogo": "/blog/files/logo_ideal2025_white.png",
     "links": [
       {
         "label": "Special Session Information",
