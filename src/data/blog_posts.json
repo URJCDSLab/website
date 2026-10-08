@@ -54,7 +54,7 @@
     ]
   },
   {
-    "id": "mst-ensemble",
+    "id": "2026-mst-ensemble",
     "title": "Minimum Spanning Trees ensemble framework: A geometric classifier",
     "date": "23 Sep 2026",
     "description": "DSLAB researchers introduce the MST Ensemble Framework, a geometric classification method that decouples graph analysis from inductive prediction using Minimum Spanning Trees and WRAB sampling.",
@@ -81,7 +81,7 @@
     ]
   },
   {
-    "id": "new-publication-nursing-in-critical-care",
+    "id": "2026-nursing-critical-care",
     "title": "New publication in Nursing in Critical Care",
     "date": "15 Apr 2026",
     "description": "DSLAB collaborated with the Burn and Resuscitation Units at Hospital Universitario de La Paz to standardize discard volume in arterial catheter blood sampling, significantly reducing iatrogenic anemia in critically ill ICU patients.",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "id": "marina-cuesta-phd-thesis-seio-bulletin",
+    "id": "2026-phd-marina-seio",
     "title": "Marina Cuesta's doctoral thesis featured in the SEIO Bulletin",
     "date": "15 Jan 2026",
     "description": "Marina Cuesta's doctoral research on machine-learning-powered data visualizations has been highlighted in the official bulletin of the Spanish Society of Statistics and Operations Research (SEIO).",
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "id": "dslab-drives-generative-ai-at-ideal-2025",
+    "id": "2025-ideal-genai",
     "title": "DSLAB champions generative AI research at the IDEAL 2025 international conference",
     "date": "11 Nov 2025",
     "description": "DSLAB organizes the special session 'Recent Advances in Generative Artificial Intelligence' at the 26th International Conference on Intelligent Data Engineering and Automated Learning (IDEAL 2025).",
@@ -163,7 +163,7 @@
     ]
   },
   {
-    "id": "bachelor-thesis-proposals-2025-2026",
+    "id": "2025-thesis-proposals",
     "title": "Bachelor's and master's thesis proposals (2025–2026)",
     "date": "7 Oct 2025",
     "description": "DSLAB presents its curated catalog of Bachelor's (TFG) and Master's (TFM) thesis projects for the 2025–2026 academic year, working with real-world datasets across healthcare, sports analytics, and AI.",
@@ -185,7 +185,7 @@
     ]
   },
   {
-    "id": "dslab-circular-economy-asia-pacific-adb",
+    "id": "2025-adb-circular-economy",
     "title": "DSLAB contributes to circular economy in Asia-Pacific with the Asian Development Bank",
     "date": "18 Jun 2025",
     "description": "DSLAB researcher Emilio López presented data-driven models for marine plastic pollution at the Asian Development Bank's Circular Economy Forum in Manila.",
@@ -217,7 +217,7 @@
     ]
   },
   {
-    "id": "wide-participation-xli-seio-conference",
+    "id": "2025-seio-conference",
     "title": "Extensive participation of DSLAB at the XLI SEIO national conference",
     "date": "13 Jun 2025",
     "description": "DSLAB faculty and doctoral researchers presented multiple papers and specialized sessions at the XLI National Conference of Statistics and Operations Research in Lleida.",
@@ -246,7 +246,7 @@
     ]
   },
   {
-    "id": "dicyme-project-jnic-2025",
+    "id": "2025-dicyme-jnic",
     "title": "The DICYME project featured prominently at JNIC 2025",
     "date": "4 Jun 2025",
     "description": "At the National Cybersecurity Research Days (JNIC 2025) in Zaragoza, DSLAB presented dynamic industrial cyber risk modeling developed with DeNexus.",
@@ -279,7 +279,7 @@
     ]
   },
   {
-    "id": "analyzing-data-in-cybersecurity",
+    "id": "2025-cybersecurity-webinar",
     "title": "Analyzing data in cybersecurity: CDTIC webinar",
     "date": "3 Jun 2025",
     "description": "Alberto Fernández presented the webinar 'Cybersecurity for a Connected Future' organized by CDTIC Extremadura under the TriRuralTech project.",
@@ -310,7 +310,7 @@
     ]
   },
   {
-    "id": "distribution-of-conecta-board-game",
+    "id": "2025-conecta-distribution",
     "title": "Nationwide distribution of ¡CONECTA! board game begins",
     "date": "5 Mar 2025",
     "description": "¡CONECTA!, the innovative educational board game co-created by DSLAB, Teleco Renta, COIT, and the Young Academy of Spain, begins its rollout to schools and universities.",
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "id": "new-master-in-sports-analytics-musa",
+    "id": "2025-musa-master",
     "title": "DSLAB drives the new official master's in sports analytics (MUSA)",
     "date": "17 Jan 2025",
     "description": "Fundación Madri+d issues favorable accreditation for URJC's pioneering Master's Degree in Sports Analytics, coordinated by DSLAB professors.",
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "id": "vi-urjc-scientific-outreach-awards-dsgame",
+    "id": "2024-dsgame-outreach-award",
     "title": "VI URJC scientific outreach awards: recognition for DSGAME",
     "date": "20 Nov 2024",
     "description": "The educational board game DSGAME receives an honorable award for scientific dissemination at the VI URJC Outreach Awards ceremony.",
@@ -392,7 +392,7 @@
     ]
   },
   {
-    "id": "r-at-dslab-madrid-r-user-group",
+    "id": "2024-madrid-r-meetup",
     "title": "The use of R at DSLAB: 92nd Madrid R Users Group meeting",
     "date": "30 Oct 2024",
     "description": "Carmen Lancho and Emilio López showcased how DSLAB utilizes R and Shiny across cutting-edge research projects and educational tools.",
@@ -419,7 +419,7 @@
     ]
   },
   {
-    "id": "cras-presentation-user-2024-salzburg",
+    "id": "2024-cras-user-conf",
     "title": "CRAS: cybersecurity risk analysis and simulation at useR! 2024",
     "date": "11 Jul 2024",
     "description": "Emilio López presented CRAS, an interactive Shiny application implementing the Open FAIR™ standard for cyber loss simulation, at the useR! 2024 conference in Salzburg.",
@@ -447,7 +447,7 @@
     ]
   },
   {
-    "id": "rootedcon-and-t3chfest-2024",
+    "id": "2024-rootedcon-t3chfest",
     "title": "DSLAB at RootedCON and T3chFest 2024",
     "date": "18 Mar 2024",
     "description": "The DICYME research team attended RootedCON and T3chFest in Madrid to track the latest advancements in ethical hacking, software engineering, and AI.",
@@ -479,7 +479,7 @@
     ]
   },
   {
-    "id": "bachelor-master-thesis-proposals-2023-2024",
+    "id": "2023-thesis-proposals",
     "title": "Bachelor's and master's thesis proposals (2023–2024)",
     "date": "02 Oct 2023",
     "description": "DSLAB offered thesis projects covering intelligent virtual tutors, travel recommendation systems, interlaboratory quality Shiny apps, and clinical predictive modeling.",
@@ -500,7 +500,7 @@
     ]
   },
   {
-    "id": "dslab-ti-dsexams-educational-innovation",
+    "id": "2023-dsexams-project",
     "title": "DSLAB-TI: DSEXAMS project for mass generation of randomized questionnaires",
     "date": "06 Mar 2023",
     "description": "The DSLAB-TI teaching innovation group launches DSEXAMS, an open educational project for automated multi-purpose quiz generation.",
@@ -521,7 +521,7 @@
     ]
   },
   {
-    "id": "xxi-science-innovation-week-human-intelligence-ai",
+    "id": "2021-science-week",
     "title": "XXI Science and Innovation Week: human intelligence to the rescue of AI",
     "date": "03 Nov 2021",
     "description": "DSLAB presented the scientific workshop 'Human Intelligence to the Rescue of AI' during the 21st Madrid Science and Innovation Week.",
@@ -543,7 +543,7 @@
     ]
   },
   {
-    "id": "dsgame-board-game-young-academy-spain",
+    "id": "2021-dsgame-young-academy",
     "title": "DSLAB and the Young Academy of Spain promote data science via DSGAME",
     "date": "25 Aug 2021",
     "description": "DSLAB and the Academia Joven de España presented the DSGAME board game to top high-school scholars across Spain.",
@@ -569,7 +569,7 @@
     ]
   },
   {
-    "id": "xx-science-innovation-week-healthcare-covid19",
+    "id": "2020-science-week-covid19",
     "title": "XX Science and Innovation Week: healthcare sufficiency and COVID-19",
     "date": "10 Nov 2020",
     "description": "DSLAB presented epidemiological modeling and predictive capacity analysis for healthcare infrastructure during the initial waves of COVID-19.",
@@ -591,7 +591,7 @@
     ]
   },
   {
-    "id": "bachelor-master-thesis-proposals-2019-2020",
+    "id": "2020-thesis-proposals",
     "title": "Bachelor's and master's thesis proposals (2019–2020)",
     "date": "24 Mar 2020",
     "description": "Thesis proposals on SABERMED clinical evaluation, class overlap metrics, genetic clustering, and symbolic data analysis.",
@@ -612,7 +612,7 @@
     ]
   },
   {
-    "id": "bachelor-master-thesis-proposals-2018-2019",
+    "id": "2018-thesis-proposals",
     "title": "Bachelor's and master's thesis proposals (2018–2019)",
     "date": "04 Dec 2018",
     "description": "Thesis opportunities on healthcare web scraping, brand image machine learning, and computer vision.",
@@ -633,7 +633,7 @@
     ]
   },
   {
-    "id": "bachelor-master-thesis-proposals-2016-2017",
+    "id": "2017-thesis-proposals",
     "title": "Bachelor's and master's thesis proposals (2016–2017)",
     "date": "24 Feb 2017",
     "description": "Early foundation thesis projects on Big Data video surveillance, web sentiment analysis, and machine learning for IT security.",
