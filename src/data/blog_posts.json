@@ -1,5 +1,33 @@
 [
   {
+    "id": "2026-fpi-degem",
+    "title": "Predoctoral Fellowship (FPI) in Generative AI and Large Language Models – DEGEM Project",
+    "date": "8 Oct 2026",
+    "description": "DSLAB at Universidad Rey Juan Carlos invites applications for a full-time 36-month predoctoral contract (FPI) to pursue a PhD in Generative Artificial Intelligence within the DEGEM project (Detecting & Governing Drift in Generative Models).",
+    "content": [
+      "The Data Science Laboratory (DSLAB) at Universidad Rey Juan Carlos (URJC) is seeking a candidate to pursue a doctoral thesis in Generative Artificial Intelligence within the research project DEGEM (Detecting & Governing Drift in Generative Models).",
+      "The research will address how to detect, explain, and correct behavioral shifts in deployed LLM-based systems, working with technologies such as Large Language Models (LLMs), Intelligent Agents, Retrieval-Augmented Generation (RAG), PEFT/LoRA, Explainable AI, Drift Detection, and LLMOps/MLOps.",
+      "The selected candidate will participate in the research and development of novel methods, experimentation with generative models, scientific publications, open-source software development, and validation in real-world scenarios. The position offers a full-time predoctoral contract at URJC – DSLAB with an expected duration of 36 months within the DEGEM project.",
+      "We are looking for graduates holding a Master's degree in Computer Science, Data Science, Artificial Intelligence, Mathematics, Statistics, Telecommunications, or related areas, interested in developing a high-level doctoral thesis in GenAI and LLMs. Experience with Python, Machine Learning, NLP, PyTorch, Hugging Face, RAG, LLM agents, LangChain/LangGraph, and MLOps will be valued, although prior mastery of all these technologies is not required."
+    ],
+    "links": [
+      {
+        "label": "Contact Alberto Fernández",
+        "url": "/about/team/#alberto-fernandez"
+      },
+      {
+        "label": "Contact Isaac Martín",
+        "url": "/about/team/#isaac-martin"
+      }
+    ],
+    "tags": [
+      "PhD Position",
+      "Generative AI",
+      "LLMs",
+      "DEGEM"
+    ]
+  },
+  {
     "id": "tfg-2026-rnfc",
     "title": "Bachelor's Thesis Proposal (2026–2027): Automation & Quality Control Platform for RNFC",
     "date": "5 Oct 2026",
