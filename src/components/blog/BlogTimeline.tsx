@@ -45,13 +45,15 @@ function ConferenceBanner({
   const logos = getConferenceLogos(post);
   if (!post.image && logos.length === 0) return null;
 
+  const isSvg = Boolean(post.image?.endsWith(".svg"));
+
   const containerClass = inModal
-    ? "relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 max-h-80 flex items-center justify-center"
-    : "relative rounded-xl overflow-hidden max-h-60 bg-slate-100 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 group-hover/btn:opacity-95 transition-opacity";
+    ? `relative rounded-xl overflow-hidden ${isSvg ? "bg-white p-6" : "bg-slate-100 dark:bg-slate-800"} border border-slate-200 dark:border-slate-800 max-h-80 flex items-center justify-center`
+    : `relative rounded-xl overflow-hidden max-h-60 ${isSvg ? "bg-white p-6 flex items-center justify-center" : "bg-slate-100 dark:bg-slate-800"} border border-slate-100 dark:border-slate-800 group-hover/btn:opacity-95 transition-opacity`;
 
   const imgClass = inModal
-    ? "w-full h-full max-h-80 object-cover"
-    : "w-full h-full max-h-60 object-cover group-hover/btn:scale-102 transition-transform duration-300";
+    ? (isSvg ? "max-h-32 max-w-[80%] object-contain" : "w-full h-full max-h-80 object-cover")
+    : (isSvg ? "max-h-24 max-w-[80%] object-contain group-hover/btn:scale-105 transition-transform duration-300" : "w-full h-full max-h-60 object-cover group-hover/btn:scale-102 transition-transform duration-300");
 
   return (
     <div className={containerClass}>
