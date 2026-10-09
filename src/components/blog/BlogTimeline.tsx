@@ -35,6 +35,61 @@ function getConferenceLogos(post: BlogPost): string[] {
   return [];
 }
 
+function getBannerClasses(inModal: boolean, isSvg: boolean) {
+  if (inModal) {
+    return {
+      container: `relative rounded-xl overflow-hidden ${isSvg ? "bg-white p-6" : "bg-slate-100 dark:bg-slate-800"} border border-slate-200 dark:border-slate-800 max-h-80 flex items-center justify-center`,
+      image: isSvg ? "max-h-32 max-w-[80%] object-contain" : "w-full h-full max-h-80 object-cover",
+    };
+  }
+
+  return {
+    container: `relative rounded-xl overflow-hidden max-h-60 ${isSvg ? "bg-white p-6 flex items-center justify-center" : "bg-slate-100 dark:bg-slate-800"} border border-slate-100 dark:border-slate-800 group-hover/btn:opacity-95 transition-opacity`,
+    image: isSvg
+      ? "max-h-24 max-w-[80%] object-contain group-hover/btn:scale-105 transition-transform duration-300"
+      : "w-full h-full max-h-60 object-cover group-hover/btn:scale-102 transition-transform duration-300",
+  };
+}
+
+function ConferenceLogosOverlay({
+  logos,
+  inModal,
+}: {
+  logos: string[];
+  inModal: boolean;
+}) {
+  if (logos.length === 0) return null;
+
+  const padClass = inModal ? "p-4 pointer-events-none" : "p-3";
+
+  if (logos.length === 1) {
+    const sizeClass = inModal ? "max-h-40 max-w-[80%]" : "max-h-32 max-w-[75%]";
+    return (
+      <div className={`absolute inset-0 flex items-center justify-center bg-black/25 ${padClass}`}>
+        <img
+          src={logos[0]}
+          alt="Conference logo"
+          className={`${sizeClass} object-contain drop-shadow-lg`}
+        />
+      </div>
+    );
+  }
+
+  const sizeClass = inModal ? "max-h-20 max-w-[42%]" : "max-h-16 max-w-[42%]";
+  return (
+    <div className={`absolute inset-0 flex items-center justify-center gap-6 sm:gap-10 bg-black/35 ${padClass}`}>
+      {logos.map((logo, idx) => (
+        <img
+          key={logo}
+          src={logo}
+          alt={`Conference logo ${idx + 1}`}
+          className={`${sizeClass} object-contain drop-shadow-lg`}
+        />
+      ))}
+    </div>
+  );
+}
+
 function ConferenceBanner({
   post,
   inModal = false,
@@ -46,45 +101,18 @@ function ConferenceBanner({
   if (!post.image && logos.length === 0) return null;
 
   const isSvg = Boolean(post.image?.endsWith(".svg"));
-
-  const containerClass = inModal
-    ? `relative rounded-xl overflow-hidden ${isSvg ? "bg-white p-6" : "bg-slate-100 dark:bg-slate-800"} border border-slate-200 dark:border-slate-800 max-h-80 flex items-center justify-center`
-    : `relative rounded-xl overflow-hidden max-h-60 ${isSvg ? "bg-white p-6 flex items-center justify-center" : "bg-slate-100 dark:bg-slate-800"} border border-slate-100 dark:border-slate-800 group-hover/btn:opacity-95 transition-opacity`;
-
-  const imgClass = inModal
-    ? (isSvg ? "max-h-32 max-w-[80%] object-contain" : "w-full h-full max-h-80 object-cover")
-    : (isSvg ? "max-h-24 max-w-[80%] object-contain group-hover/btn:scale-105 transition-transform duration-300" : "w-full h-full max-h-60 object-cover group-hover/btn:scale-102 transition-transform duration-300");
+  const { container, image } = getBannerClasses(inModal, isSvg);
 
   return (
-    <div className={containerClass}>
+    <div className={container}>
       {post.image && (
         <img
           src={post.image}
           alt={post.title}
-          className={imgClass}
+          className={image}
         />
       )}
-      {logos.length === 1 && (
-        <div className={`absolute inset-0 flex items-center justify-center bg-black/25 ${inModal ? "p-4 pointer-events-none" : "p-3"}`}>
-          <img
-            src={logos[0]}
-            alt="Conference logo"
-            className={`${inModal ? "max-h-40 max-w-[80%]" : "max-h-32 max-w-[75%]"} object-contain drop-shadow-lg`}
-          />
-        </div>
-      )}
-      {logos.length > 1 && (
-        <div className={`absolute inset-0 flex items-center justify-center gap-6 sm:gap-10 bg-black/35 ${inModal ? "p-4 pointer-events-none" : "p-3"}`}>
-          {logos.map((logo, idx) => (
-            <img
-              key={logo}
-              src={logo}
-              alt={`Conference logo ${idx + 1}`}
-              className={`${inModal ? "max-h-20 max-w-[42%]" : "max-h-16 max-w-[42%]"} object-contain drop-shadow-lg`}
-            />
-          ))}
-        </div>
-      )}
+      <ConferenceLogosOverlay logos={logos} inModal={inModal} />
     </div>
   );
 }
