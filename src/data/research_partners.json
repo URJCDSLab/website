@@ -84,6 +84,12 @@
     "description": "Dezzai (formerly MedLab Media Group) is a technology company applying artificial intelligence, natural language processing, and data analytics to drive digital transformation in the healthcare ecosystem."
   },
   {
+    "name": "Registro Nacional de Fracturas de Cadera (RNFC)",
+    "logo": "/assets/images/research_partners/rnfc.png",
+    "url": "https://rnfc.es/",
+    "description": "The Spanish National Hip Fracture Registry (RNFC) is a multicenter clinical initiative compiling and analyzing continuous healthcare data from hospitals across Spain to benchmark clinical practice and improve care and recovery outcomes for hip fracture patients."
+  },
+  {
     "name": "School of Science & Technology (IE)",
     "logo": "/assets/images/research_partners/ie_sst.svg",
     "url": "https://www.ie.edu/school-science-technology/",
