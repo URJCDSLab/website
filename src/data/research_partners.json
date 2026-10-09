@@ -15,7 +15,7 @@
     "name": "Centro de Investigación en Ciencias del Deporte (URJC)",
     "logo": "/assets/images/research_partners/CIDE.svg",
     "url": "https://cide.urjc.es/",
-    "description": "The CIDE Research Center at Rey Juan Carlos University is a multidisciplinary center dedicated to advancing high-quality research and training in Sport Sciences, contributing actively to fields such as physical activity, health, and athletic performance."
+    "description": "The Centre for Sports Science Research (CIDE) at Rey Juan Carlos University is a multidisciplinary center dedicated to advancing high-quality research and training in Sport Sciences, contributing actively to fields such as physical activity, health, and athletic performance."
   },
   {
     "name": "Centro de Investigación en Ciencias de Información Geoespacial",
@@ -72,10 +72,10 @@
     "description": "The Institute for Biomedical Research of Salamanca (IBSAL) integrates clinical, translational, epidemiological, and health services research from the University Hospital and University of Salamanca."
   },
   {
-    "name": "Interdisciplinary Mathematics Institute (UCM)",
+    "name": "Instituto de Matemática Interdisciplinar (UCM)",
     "logo": "/assets/images/research_partners/imi.svg",
     "url": "https://www.ucm.es/imi",
-    "description": "IMI at Complutense University of Madrid promotes research, collaboration, and innovation across mathematical disciplines, connecting mathematicians with scientists to solve complex real-world problems."
+    "description": "Interdisciplinary Mathematics Institute (IMI) at Complutense University of Madrid promotes research, collaboration, and innovation across mathematical disciplines, connecting mathematicians with scientists to solve complex real-world problems."
   },
   {
     "name": "MedLab Media Group (now dezzai)",
@@ -84,7 +84,7 @@
     "description": "Dezzai (formerly MedLab Media Group) is a technology company applying artificial intelligence, natural language processing, and data analytics to drive digital transformation in the healthcare ecosystem."
   },
   {
-    "name": "Registro Nacional de Fracturas de Cadera (RNFC)",
+    "name": "Registro Nacional de Fracturas de Cadera",
     "logo": "/assets/images/research_partners/rnfc.png",
     "url": "https://rnfc.es/",
     "description": "The Spanish National Hip Fracture Registry (RNFC) is a multicenter clinical initiative compiling and analyzing continuous healthcare data from hospitals across Spain to benchmark clinical practice and improve care and recovery outcomes for hip fracture patients."
@@ -105,11 +105,12 @@
     "name": "Sistemas Complejos y Física Fundamental (URJC)",
     "logo": "/assets/images/research_partners/URJC.svg",
     "url": "http://www.complexity.es",
-    "description": "The SCFF Research Group at Rey Juan Carlos University focuses on the study, modeling, and prediction of complex systems, network science, fluid dynamics, and Bayesian inference."
+    "description": "The Sistemas Complejos y Física Fundamental (SCFF) Research Group at Rey Juan Carlos University focuses on the study, modeling, and prediction of complex systems, network science, fluid dynamics, and Bayesian inference."
   },
   {
     "name": "Tecnologías para el Análisis y Diagnóstico Territorial (URJC)",
     "logo": "/assets/images/research_partners/URJC.svg",
-    "description": "TADAT Research Group at Rey Juan Carlos University focuses on spatial AI, territorial analysis, environmental diagnosis, and ecosystem monitoring in protected areas and biosphere reserves."
+    "url": "https://servicios.urjc.es/pdi/grupos-investigacion/tadat",
+    "description": "The Technologies for Territorial Analysis and Diagnosis (TADAT) Research Group at Rey Juan Carlos University focuses on spatial AI, territorial analysis, environmental diagnosis, and ecosystem monitoring in protected areas and biosphere reserves."
   }
 ]
