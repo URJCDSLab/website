@@ -280,7 +280,8 @@
       "lastName": "López Gómez",
       "role": "PhD. Student",
       "department": "Dept. Computer Science and Statistics",
-      "photo": "lucialopez_peque.jpg"
+      "photo": "lucialopez.jpg",
+      "hoverPhoto": "lucialopez_peque.jpg"
     }
   ],
   "affiliated": [
