@@ -265,6 +265,22 @@
       "role": "PhD. Student",
       "department": "Dept. Computer Science and Statistics",
       "photo": "robertocanduela.jpg"
+    },
+    {
+      "id": "nicolas-leconte",
+      "firstName": "Nicolas",
+      "lastName": "Leconte Demarsy",
+      "role": "PhD. Student",
+      "department": "Dept. Computer Science and Statistics",
+      "photo": "nicolasleconte.jpg"
+    },
+    {
+      "id": "roberto-canduela",
+      "firstName": "Lucía",
+      "lastName": "López Gómez",
+      "role": "PhD. Student",
+      "department": "Dept. Computer Science and Statistics",
+      "photo": "lucialopez_peque.jpg"
     }
   ],
   "affiliated": [
