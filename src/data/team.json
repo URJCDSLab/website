@@ -282,6 +282,14 @@
       "department": "Dept. Computer Science and Statistics",
       "photo": "lucialopez.jpg",
       "hoverPhoto": "lucialopez_peque.jpg"
+    },
+    {
+      "id": "alba-martinez",
+      "firstName": "Alba",
+      "lastName": "Martínez de la Hermosa",
+      "role": "PhD. Student",
+      "department": "Dept. Computer Science and Statistics",
+      "photo": "albamartinez.jpg"
     }
   ],
   "affiliated": [
