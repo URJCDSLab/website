@@ -44,7 +44,7 @@ export function GroupCarousel({ photos }: GroupCarouselProps) {
       aria-label="Data Science Lab group photos"
     >
       {/* Slides */}
-      <div className="relative aspect-[16/9] sm:aspect-[21/9] md:aspect-[16/8] w-full overflow-hidden">
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
         {photos.map((src, index) => {
           const isActive = index === currentIndex;
           return (
