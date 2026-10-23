@@ -159,10 +159,8 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
         </p>
       )}
 
-      <div className="w-12 h-px bg-slate-200 dark:bg-slate-800 my-4" />
-
       {/* Social / Academic badges */}
-      <div className="mt-auto flex items-center justify-center gap-3">
+      <div className="mt-auto pt-4 flex items-center justify-center gap-3">
         {member.email && (
           <a
             href={`mailto:${member.email}`}
