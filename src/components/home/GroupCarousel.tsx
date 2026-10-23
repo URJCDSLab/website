@@ -27,10 +27,10 @@ export function GroupCarousel({ photos }: GroupCarouselProps) {
   useEffect(() => {
     if (isPaused || total <= 1) return;
     const timer = setInterval(() => {
-      nextSlide();
+      setCurrentIndex((prev) => (prev + 1) % total);
     }, 6000);
     return () => clearInterval(timer);
-  }, [isPaused, nextSlide, total]);
+  }, [isPaused, total]);
 
   if (total === 0) return null;
 
