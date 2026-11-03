@@ -49,6 +49,6 @@ jobs:
             echo "No changes detected in publications data."
           else
             echo "Committing updated publications data..."
-            git commit -m "chore(publications): auto-update publications database [skip ci]"
+            git commit -m "chore(publications): auto-update publications database"
             git push origin gh-pages
           fi
