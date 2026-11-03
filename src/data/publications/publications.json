@@ -1,5 +1,33 @@
 [
   {
+    "title": "Minimum Spanning Trees ensemble framework: A geometric classifier",
+    "doi": "10.1016/j.knosys.2026.117057",
+    "year": 2026,
+    "publication_date": "2026-09-22",
+    "authors": [
+      "Víctor Aceña",
+      "F. Javier Martín-Campo",
+      "Paula Terán-Viadero"
+    ],
+    "journal": "Knowledge-Based Systems",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": "Q1",
+    "issn": "0950-7051",
+    "keywords": [
+      "Topological and Geometric Data Analysis",
+      "Advanced Clustering Algorithms Research",
+      "Data Mining and Machine Learning Applications"
+    ],
+    "landing_page_url": "https://doi.org/10.1016/j.knosys.2026.117057",
+    "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0950705126017831/pdf",
+    "is_oa": true,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Víctor Aceña Gil"
+    ]
+  },
+  {
     "title": "Dataset used in article \"A genetic algorithm approach for the two-dimensional variable-sized cutting stock problems\"",
     "doi": "10.5281/zenodo.20121226",
     "year": 2026,
@@ -16,7 +44,11 @@
     "work_type": "preprint",
     "quartile": null,
     "issn": null,
-    "keywords": [],
+    "keywords": [
+      "Optimization and Packing Problems",
+      "Scheduling and Optimization Algorithms",
+      "Vehicle Routing Optimization Methods"
+    ],
     "landing_page_url": "https://doi.org/10.5281/zenodo.20121226",
     "pdf_url": "https://doi.org/10.5281/zenodo.20121226",
     "is_oa": true,
@@ -52,6 +84,35 @@
     ]
   },
   {
+    "title": "Content Validity of the Spanish Version of the Parental Stressor Scale: Neonatal Intensive Care Unit",
+    "doi": "10.1097/anc.0000000000001407",
+    "year": 2026,
+    "publication_date": "2026-08-26",
+    "authors": [
+      "Natalia Cuadrado‐Obregón",
+      "Raquel Navarro Miguel",
+      "Juan José Fernández Muñoz",
+      "María‐Gema Cid‐Expósito"
+    ],
+    "journal": "Advances in Neonatal Care",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": null,
+    "issn": "1536-0903",
+    "keywords": [
+      "Infant Development and Preterm Care",
+      "Health Education and Validation",
+      "Family and Patient Care in Intensive Care Units"
+    ],
+    "landing_page_url": "https://doi.org/10.1097/anc.0000000000001407",
+    "pdf_url": "https://doi.org/10.1097/anc.0000000000001407",
+    "is_oa": true,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Juan José Fernández Muñoz"
+    ]
+  },
+  {
     "title": "External validation of the Hip Fracture Prognosis Tool to predict the probability of gait recovery after hip fracture",
     "doi": "10.1007/s41999-026-01561-4",
     "year": 2026,
@@ -84,6 +145,94 @@
       "Isaac Martín de Diego",
       "Carmen Lancho Martín",
       "Marina Cuesta Santa Teresa"
+    ]
+  },
+  {
+    "title": "Revealing bronchofibroscopy: accidental retention of a tracheostomy cleaning brush",
+    "doi": "10.1016/j.medine.2026.502522",
+    "year": 2026,
+    "publication_date": "2026-07-29",
+    "authors": [
+      "Lucía Alcoba Núñez",
+      "Diego José Ferrer Pargada",
+      "Sergio Garcia Martin"
+    ],
+    "journal": "Medicina Intensiva (English Edition)",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": null,
+    "issn": "2173-5727",
+    "keywords": [
+      "Tracheal and airway disorders",
+      "Foreign Body Medical Cases",
+      "Airway Management and Intubation Techniques"
+    ],
+    "landing_page_url": "https://doi.org/10.1016/j.medine.2026.502522",
+    "pdf_url": null,
+    "is_oa": false,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Sergio García Martín"
+    ]
+  },
+  {
+    "title": "Neuropsychological profiles in long-term schizophrenia: A cluster analysis",
+    "doi": "10.1080/23279095.2026.2695322",
+    "year": 2026,
+    "publication_date": "2026-07-28",
+    "authors": [
+      "Maria del Carmen Caballero-Guzmán",
+      "L Hernandez",
+      "Raquel Tierno Patiño",
+      "Juan José Fernández Muñoz"
+    ],
+    "journal": "Applied Neuropsychology Adult",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": null,
+    "issn": "2327-9095",
+    "keywords": [
+      "Schizophrenia research and treatment",
+      "Dementia and Cognitive Impairment Research",
+      "Mental Health and Psychiatry"
+    ],
+    "landing_page_url": "https://doi.org/10.1080/23279095.2026.2695322",
+    "pdf_url": null,
+    "is_oa": false,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Juan José Fernández Muñoz"
+    ]
+  },
+  {
+    "title": "The Psychometric properties of the Meaning in Life Questionnaire for Spanish nursing students",
+    "doi": "10.17605/osf.io/j6u75",
+    "year": 2026,
+    "publication_date": "2026-07-15",
+    "authors": [
+      "María Teresa Iglesias López",
+      "Elia Fernández-Martínez",
+      "Juan Diego Ramos‐Pichardo",
+      "Juan José Fernández-Muñóz",
+      "Olivia Ibáñez‐Masero",
+      "Ángela María Ortega‐Galán"
+    ],
+    "journal": "Open Science Framework",
+    "source_type": "repository",
+    "work_type": "other",
+    "quartile": null,
+    "issn": null,
+    "keywords": [
+      "Psychological Well-being and Life Satisfaction",
+      "Psychometric Methodologies and Testing",
+      "Religion, Spirituality, and Psychology"
+    ],
+    "landing_page_url": "https://doi.org/10.17605/osf.io/j6u75",
+    "pdf_url": "https://doi.org/10.17605/osf.io/j6u75",
+    "is_oa": true,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Juan José Fernández Muñoz"
     ]
   },
   {
@@ -205,6 +354,34 @@
     "dslab_authors": [
       "Javier Garzás Parra",
       "Gema Gutiérrez Peña"
+    ]
+  },
+  {
+    "title": "Broncofibroscopia reveladora: retención accidental de un cepillo de traqueostomía",
+    "doi": "10.1016/j.medin.2026.502522",
+    "year": 2026,
+    "publication_date": "2026-06-06",
+    "authors": [
+      "Lucía Alcoba Núñez",
+      "Diego José Ferrer Pargada",
+      "Sergio Garcia Martin"
+    ],
+    "journal": "Medicina Intensiva",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": null,
+    "issn": "0210-5691",
+    "keywords": [
+      "Tracheal and airway disorders",
+      "Foreign Body Medical Cases",
+      "Airway Management and Intubation Techniques"
+    ],
+    "landing_page_url": "https://doi.org/10.1016/j.medin.2026.502522",
+    "pdf_url": null,
+    "is_oa": false,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Sergio García Martín"
     ]
   },
   {
@@ -566,9 +743,13 @@
     "work_type": "journal",
     "quartile": "Q1",
     "issn": null,
-    "keywords": [],
+    "keywords": [
+      "Risk and Portfolio Optimization",
+      "Advanced Optimization Algorithms Research",
+      "Advanced Control Systems Optimization"
+    ],
     "landing_page_url": "https://doi.org/10.1016/j.ejor.2026.05.047",
-    "pdf_url": null,
+    "pdf_url": "https://doi.org/10.1016/j.ejor.2026.05.047",
     "is_oa": false,
     "cited_by_count": 0,
     "dslab_authors": [
@@ -588,13 +769,43 @@
     "work_type": "journal",
     "quartile": "Q1",
     "issn": null,
-    "keywords": [],
+    "keywords": [
+      "Advanced Manufacturing and Logistics Optimization",
+      "Facility Location and Emergency Management",
+      "Vehicle Routing Optimization Methods"
+    ],
     "landing_page_url": "https://doi.org/10.1007/s10479-026-07288-6",
-    "pdf_url": null,
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10479-026-07288-6.pdf",
     "is_oa": false,
     "cited_by_count": 0,
     "dslab_authors": [
       "Laureano Escudero Bueno"
+    ]
+  },
+  {
+    "title": "A Memory-Efficient Distributed Algorithm for Approximate Nearest Neighbour Search With Arbitrary Distances",
+    "doi": "10.1109/ojcs.2026.3739651",
+    "year": 2026,
+    "publication_date": "2026-01-01",
+    "authors": [
+      "Javier Martínez Moguerza"
+    ],
+    "journal": "IEEE Open Journal of the Computer Society",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": null,
+    "issn": null,
+    "keywords": [],
+    "landing_page_url": "https://doi.org/10.1109/ojcs.2026.3739651",
+    "pdf_url": null,
+    "is_oa": false,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Javier Martínez Moguerza",
+      "César Alfaro Gimeno",
+      "Felipe Ortega Soto",
+      "Javier Gómez Miguel",
+      "María Jesús Algar Díaz"
     ]
   },
   {
