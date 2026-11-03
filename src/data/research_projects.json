@@ -1,5 +1,12 @@
 [
   {
+    "id": "lic-data-ai",
+    "title": "LIC: Data & AI",
+    "period": "2025 - 2028",
+    "image": "/assets/images/research_projects/lic.png",
+    "description": "Within Madrid's City Intelligence Lab (LIC), the Permanent Data & AI Working Group designs scalable architectures and innovative methods for processing heterogeneous data across Smart Urban Spaces. Led by DSLAB researchers, the team develops solutions for the Madrid Digital Twin (Twin of Twins), focusing on system interoperability, data quality and missing-data analysis, and federated AI and similarity search algorithms prioritized for energy efficiency and sustainability."
+  },
+  {
     "id": "pace",
     "title": "PACE",
     "period": "2024 - 2026",
