@@ -311,6 +311,15 @@ def fetch_orcid_works(orcid, min_year):
     return results
 
 
+# Specific members whose compound surnames must match their distinguishing token
+# to prevent global author disambiguation conflation in OpenAlex (e.g. Antonio Alonso @ LinkedIn, Isaac Martin @ Toronto)
+COMPOUND_SURNAME_GUARDS = {
+    "Antonio Alonso Ayuso": "ayuso",
+    "Isaac Martín de Diego": "diego",
+    "María Teresa González de Lena Alonso": "lena",
+}
+
+
 def is_dslab_member(author_name, active_members):
     """Check if an author string matches an active member with accent-insensitive and surname handling."""
     if not author_name:
@@ -325,10 +334,9 @@ def is_dslab_member(author_name, active_members):
         if m_clean in a_clean:
             return m_name
             
-        # Strict members that must not match generic first surname alone:
-        if m_name == "Antonio Alonso Ayuso" and "ayuso" not in a_clean:
-            continue
-        if m_name == "Isaac Martín de Diego" and "diego" not in a_clean:
+        # Compound surname disambiguation guard
+        guard_token = COMPOUND_SURNAME_GUARDS.get(m_name)
+        if guard_token and guard_token not in a_clean:
             continue
             
         tokens = [t for t in m_clean.split() if len(t) > 2]
@@ -417,11 +425,8 @@ def is_valid_work_for_member(work, member_name, member_orcid, member_orcid_dois,
     # Surname validation in raw_name
     raw_clean = strip_accents(raw_name).replace("‐", "-")
 
-    if member_name == "Antonio Alonso Ayuso" and "ayuso" not in raw_clean and not has_local_affil:
-        return False
-    if member_name == "Isaac Martín de Diego" and "diego" not in raw_clean and not has_local_affil:
-        return False
-    if member_name == "María Teresa González de Lena Alonso" and "lena" not in raw_clean and "gonzalez" not in raw_clean and not has_local_affil:
+    guard_token = COMPOUND_SURNAME_GUARDS.get(member_name)
+    if guard_token and guard_token not in raw_clean and not has_local_affil:
         return False
 
     return True

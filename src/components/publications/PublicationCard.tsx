@@ -15,9 +15,7 @@ interface DslabMemberSummary {
   firstNameToken: string;
   firstInitial: string;
   surnamePattern: RegExp;
-  isAyuso: boolean;
-  isDiego: boolean;
-  isLena: boolean;
+  distinguishingPattern?: RegExp;
 }
 
 function cleanName(s: string): string {
@@ -30,6 +28,16 @@ function cleanName(s: string): string {
     .replace(/\s+/g, " ")
     .trim();
 }
+
+/**
+ * Members whose compound surnames must include their distinguishing second token
+ * to avoid false-positive collisions with very common Spanish surnames (Alonso, Martín, González).
+ */
+const compoundSurnameRequirements: Record<string, RegExp> = {
+  "antonio-alonso": /ayuso/,
+  "isaac-martin": /diego/,
+  "teresa-gonzalez": /lena/,
+};
 
 const dslabMembers: DslabMemberSummary[] = [
   ...teamData.faculty,
@@ -47,9 +55,7 @@ const dslabMembers: DslabMemberSummary[] = [
     firstNameToken: cleanName(m.firstName).split(/\s+/)[0],
     firstInitial: cleanName(m.firstName)[0],
     surnamePattern,
-    isAyuso: cleanLast.includes("ayuso"),
-    isDiego: cleanLast.includes("diego"),
-    isLena: cleanLast.includes("lena"),
+    distinguishingPattern: compoundSurnameRequirements[m.id],
   };
 });
 
@@ -65,10 +71,10 @@ function matchDslabMember(authorStr: string, dslabAuthors?: string[]): DslabMemb
   for (const m of candidates) {
     if (aClean === m.cleanFullName) return m;
 
-    // Disambiguation guards for common Spanish compound surnames
-    if (m.isAyuso && !/ayuso/.test(aClean)) continue;
-    if (m.isDiego && !/diego/.test(aClean)) continue;
-    if (m.isLena && !/lena/.test(aClean)) continue;
+    // Disambiguation guard for compound surnames
+    if (m.distinguishingPattern && !m.distinguishingPattern.test(aClean)) {
+      continue;
+    }
 
     if (m.surnamePattern.test(aClean)) {
       if (
