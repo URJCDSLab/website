@@ -11,20 +11,14 @@ interface PublicationCardProps {
 interface DslabMemberSummary {
   id: string;
   fullName: string;
-  firstName: string;
-  lastName: string;
+  cleanFullName: string;
+  firstNameToken: string;
+  firstInitial: string;
+  surnamePattern: RegExp;
+  isAyuso: boolean;
+  isDiego: boolean;
+  isLena: boolean;
 }
-
-const dslabMembers: DslabMemberSummary[] = [
-  ...teamData.faculty,
-  ...teamData.researchers,
-  ...teamData.affiliated,
-].map((m) => ({
-  id: m.id,
-  fullName: `${m.firstName} ${m.lastName}`.replace(/[\u2010\u2011\u2012\u2013\u2014]/g, "-"),
-  firstName: m.firstName,
-  lastName: m.lastName.replace(/[\u2010\u2011\u2012\u2013\u2014]/g, "-"),
-}));
 
 function cleanName(s: string): string {
   return (s || "")
@@ -37,35 +31,49 @@ function cleanName(s: string): string {
     .trim();
 }
 
+const dslabMembers: DslabMemberSummary[] = [
+  ...teamData.faculty,
+  ...teamData.researchers,
+  ...teamData.affiliated,
+].map((m) => {
+  const cleanLast = cleanName(m.lastName);
+  const surnames = cleanLast.split(/\s+/).filter((t) => t.length > 2);
+  const surnamePattern = new RegExp(`(${surnames.join("|")})`);
+
+  return {
+    id: m.id,
+    fullName: `${m.firstName} ${m.lastName}`.replace(/[\u2010\u2011\u2012\u2013\u2014]/g, "-"),
+    cleanFullName: cleanName(`${m.firstName} ${m.lastName}`),
+    firstNameToken: cleanName(m.firstName).split(/\s+/)[0],
+    firstInitial: cleanName(m.firstName)[0],
+    surnamePattern,
+    isAyuso: cleanLast.includes("ayuso"),
+    isDiego: cleanLast.includes("diego"),
+    isLena: cleanLast.includes("lena"),
+  };
+});
+
 function matchDslabMember(authorStr: string, dslabAuthors?: string[]): DslabMemberSummary | null {
   const aClean = cleanName(authorStr);
   if (!aClean) return null;
 
-  const candidates =
-    dslabAuthors && dslabAuthors.length > 0
-      ? dslabMembers.filter((m) =>
-          dslabAuthors.some((da) => cleanName(da) === cleanName(m.fullName))
-        )
-      : dslabMembers;
+  const dslabSet = dslabAuthors ? new Set(dslabAuthors.map(cleanName)) : null;
+  const candidates = dslabSet
+    ? dslabMembers.filter((m) => dslabSet.has(m.cleanFullName))
+    : dslabMembers;
 
   for (const m of candidates) {
-    const mClean = cleanName(m.fullName);
-    if (aClean === mClean) return m;
-
-    const surnames = cleanName(m.lastName).split(/\s+/).filter((t) => t.length > 2);
-    const firstInitial = cleanName(m.firstName)[0];
-    const firstName = cleanName(m.firstName).split(/\s+/)[0];
+    if (aClean === m.cleanFullName) return m;
 
     // Disambiguation guards for common Spanish compound surnames
-    if (m.fullName.includes("Ayuso") && !aClean.includes("ayuso")) continue;
-    if (m.fullName.includes("Diego") && !aClean.includes("diego")) continue;
-    if (m.fullName.includes("Lena") && !aClean.includes("lena")) continue;
+    if (m.isAyuso && !/ayuso/.test(aClean)) continue;
+    if (m.isDiego && !/diego/.test(aClean)) continue;
+    if (m.isLena && !/lena/.test(aClean)) continue;
 
-    const hasAnySurname = surnames.some((s) => aClean.includes(s));
-    if (hasAnySurname) {
+    if (m.surnamePattern.test(aClean)) {
       if (
-        aClean.includes(firstName) ||
-        new RegExp(`\\b${firstInitial}(\\s|$)`).test(aClean)
+        new RegExp(m.firstNameToken).test(aClean) ||
+        new RegExp(`\\b${m.firstInitial}(\\s|$)`).test(aClean)
       ) {
         return m;
       }
@@ -129,7 +137,7 @@ export function PublicationCard({ publication: pub }: PublicationCardProps) {
         {pub.authors.map((author, idx) => {
           const member = matchDslabMember(author, pub.dslab_authors);
           return (
-            <React.Fragment key={idx}>
+            <React.Fragment key={author}>
               {idx > 0 && ", "}
               {member ? (
                 <Link
