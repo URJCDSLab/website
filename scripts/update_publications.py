@@ -19,6 +19,9 @@ import unicodedata
 import urllib.parse
 import urllib.request
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 USER_AGENT = "URJC-DSLab-Publications-Bot/1.0 (mailto:gr_inv.dslab@urjc.es)"
 DEFAULT_START_YEAR = 2016
 LOOKBACK_DAYS = 180  # Default ~6 months for incremental checks
@@ -71,6 +74,32 @@ def clean_issn(issn_str):
     return re.findall(r"[0-9]{4}[0-9X]{4}", issn_str.replace("-", "").upper())
 
 
+def strip_accents(s):
+    if not s:
+        return ""
+    cleaned = "".join(c for c in unicodedata.normalize("NFD", str(s)) if unicodedata.category(c) != "Mn").lower()
+    for hyphen in ["\u2010", "\u2011", "\u2012", "\u2013", "\u2014"]:
+        cleaned = cleaned.replace(hyphen, "-")
+    return cleaned
+
+
+def normalize_author_name(author_name):
+    if not author_name:
+        return ""
+    return re.sub(r"[\u2010\u2011\u2012\u2013\u2014]", "-", str(author_name)).strip()
+
+
+def merge_dslab_authors(existing_list, new_authors):
+    """Safely append new DSLab authors without duplicates under accent and hyphen variations."""
+    seen_norms = {strip_accents(normalize_author_name(a)): a for a in existing_list}
+    for na in new_authors:
+        clean_na = normalize_author_name(na)
+        norm_na = strip_accents(clean_na)
+        if norm_na not in seen_norms:
+            existing_list.append(clean_na)
+            seen_norms[norm_na] = clean_na
+
+
 def extract_active_members(team_json_path="src/data/team.json"):
     """Extract all active faculty, researchers, and affiliated members from team JSON."""
     if not os.path.exists(team_json_path):
@@ -99,7 +128,7 @@ def extract_active_members(team_json_path="src/data/team.json"):
         if member.get("category", "").lower() == "former":
             continue
 
-        name = member.get("name", "").strip()
+        name = normalize_author_name(f"{member.get('firstName', '')} {member.get('lastName', '')}")
         if not name:
             continue
 
@@ -280,12 +309,6 @@ def fetch_orcid_works(orcid, min_year):
                 "journal": journal
             })
     return results
-
-
-def strip_accents(s):
-    if not s:
-        return ""
-    return "".join(c for c in unicodedata.normalize("NFD", str(s)) if unicodedata.category(c) != "Mn").lower()
 
 
 def is_dslab_member(author_name, active_members):
@@ -509,8 +532,8 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             dslab_authors = [name]
             for a in authors:
                 matched_member = is_dslab_member(a, active_members)
-                if matched_member and matched_member not in dslab_authors:
-                    dslab_authors.append(matched_member)
+                if matched_member:
+                    merge_dslab_authors(dslab_authors, [matched_member])
 
             item = {
                 "title": title,
@@ -535,9 +558,7 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             if doi:
                 if doi in pubs_by_doi:
                     existing = pubs_by_doi[doi]
-                    for da in dslab_authors:
-                        if da not in existing.setdefault("dslab_authors", []):
-                            existing["dslab_authors"].append(da)
+                    merge_dslab_authors(existing.setdefault("dslab_authors", []), dslab_authors)
                     if quartile and not existing.get("quartile"):
                         existing["quartile"] = quartile
                     if keywords and not existing.get("keywords"):
@@ -550,9 +571,7 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
             elif norm_t:
                 if norm_t in pubs_by_title:
                     existing = pubs_by_title[norm_t]
-                    for da in dslab_authors:
-                        if da not in existing.setdefault("dslab_authors", []):
-                            existing["dslab_authors"].append(da)
+                    merge_dslab_authors(existing.setdefault("dslab_authors", []), dslab_authors)
                 else:
                     pubs_by_title[norm_t] = item
 
@@ -571,12 +590,10 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
 
             # Check if already present
             if doi and doi in pubs_by_doi:
-                if name not in pubs_by_doi[doi].setdefault("dslab_authors", []):
-                    pubs_by_doi[doi]["dslab_authors"].append(name)
+                merge_dslab_authors(pubs_by_doi[doi].setdefault("dslab_authors", []), [name])
                 continue
             if norm_t and norm_t in pubs_by_title:
-                if name not in pubs_by_title[norm_t].setdefault("dslab_authors", []):
-                    pubs_by_title[norm_t]["dslab_authors"].append(name)
+                merge_dslab_authors(pubs_by_title[norm_t].setdefault("dslab_authors", []), [name])
                 continue
 
             # New DOI or title found in ORCID
@@ -664,6 +681,12 @@ def build_publications_pipeline(is_full=False, lookback_days=LOOKBACK_DAYS, star
         # Ensure keywords are a clean list or omitted
         if not w.get("keywords") or not isinstance(w["keywords"], list):
             w["keywords"] = []
+
+        # Deduplicate dslab_authors preserving canonical normalized names
+        if w.get("dslab_authors"):
+            deduped_dslab = []
+            merge_dslab_authors(deduped_dslab, w["dslab_authors"])
+            w["dslab_authors"] = deduped_dslab
 
         clean_works.append(w)
 
