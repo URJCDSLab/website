@@ -1,5 +1,41 @@
 [
   {
+    "id": "2026-pdasc-ann-search",
+    "title": "A Memory-Efficient Distributed Algorithm for Approximate Nearest Neighbour Search With Arbitrary Distances",
+    "date": "6 Nov 2026",
+    "description": "DSLAB researcher Elena García-Morato and co-authors publish PDASC in IEEE OJCS, a distributed algorithm for Approximate Nearest Neighbour search designed for arbitrary and non-metric distances with high memory efficiency.",
+    "content": [
+      "The Data Science Lab is proud to announce a new research publication in the IEEE Open Journal of the Computer Society. Developed by our colleague Elena García-Morato Piñán as part of her doctoral thesis—co-authored with María Jesús Algar, César Alfaro Gimeno, Felipe Ortega, Javier Gómez Miguel, and Javier Martínez Moguerza—the paper introduces PDASC (Parametrizable Distributed Algorithm for Similarity Search with Clustering).",
+      "PDASC is an Approximate Nearest Neighbour (ANN) search algorithm conceived to unite flexibility across diverse distance functions, native distributed execution, and high memory efficiency. By leveraging an adapted application of clustering techniques, PDASC builds a hierarchical index that distributes both dataset storage and query processing across multiple compute nodes. A standout capability is its support for arbitrary distance functions—including non-metric dissimilarities—because its internal optimization mechanisms do not rely on specific geometric properties.",
+      "Extensive experimental evaluations across multiple benchmarks and distance metrics demonstrate that PDASC achieves competitive accuracy and latency compared to state-of-the-art baselines, while maintaining a smaller or comparable index footprint per node for similar recall levels. This work advances flexible, distributed similarity search solutions particularly suited for heterogeneous datasets and resource-constrained environments."
+    ],
+    "links": [
+      {
+        "label": "Read Open Access Paper (IEEE OJCS)",
+        "url": "https://doi.org/10.1109/OJCS.2026.3739651"
+      },
+      {
+        "label": "Meet Elena García-Morato",
+        "url": "/about/team/#elena-garcia-morato"
+      },
+      {
+        "label": "Post on X (Twitter)",
+        "url": "https://x.com/DSLAB_URJC/status/2118637481767981564"
+      },
+      {
+        "label": "Elena's LinkedIn Profile",
+        "url": "https://www.linkedin.com/in/elena-garcia-morato/"
+      }
+    ],
+    "tags": [
+      "Approximate Nearest Neighbor",
+      "Distributed Computing",
+      "Machine Learning",
+      "Doctoral Thesis",
+      "Publications"
+    ]
+  },
+  {
     "id": "2026-tfg-agrocos",
     "title": "Bachelor's Thesis Proposal (2026–2027): Interactive Dashboard for Extensive Livestock AI Models in AGROCOS",
     "date": "9 Oct 2026",

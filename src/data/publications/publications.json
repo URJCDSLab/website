@@ -788,6 +788,11 @@
     "year": 2026,
     "publication_date": "2026-01-01",
     "authors": [
+      "Elena García-Morato Piñán",
+      "María Jesús Algar",
+      "César Alfaro",
+      "Felipe Ortega",
+      "Javier Gómez",
       "Javier Martínez Moguerza"
     ],
     "journal": "IEEE Open Journal of the Computer Society",
@@ -795,12 +800,18 @@
     "work_type": "journal",
     "quartile": null,
     "issn": null,
-    "keywords": [],
+    "keywords": [
+      "Approximate Nearest Neighbor",
+      "Distributed Computing",
+      "Clustering",
+      "Arbitrary Distances"
+    ],
     "landing_page_url": "https://doi.org/10.1109/ojcs.2026.3739651",
     "pdf_url": null,
-    "is_oa": false,
+    "is_oa": true,
     "cited_by_count": 0,
     "dslab_authors": [
+      "Elena García-Morato Piñán",
       "Javier Martínez Moguerza",
       "César Alfaro Gimeno",
       "Felipe Ortega Soto",

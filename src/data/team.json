@@ -290,6 +290,16 @@
       "role": "PhD. Student",
       "department": "Dept. Computer Science and Statistics",
       "photo": "albamartinez.jpg"
+    },
+    {
+      "id": "elena-garcia-morato",
+      "firstName": "Elena",
+      "lastName": "García-Morato Piñán",
+      "role": "PhD. Student",
+      "department": "Dept. Signal & Comm. Theory & Telematic Systems",
+      "photo": "elenagarciamorato.jpg",
+      "email": "elena.garciamorato@urjc.es",
+      "orcid": "https://orcid.org/0000-0003-2360-0394"
     }
   ],
   "affiliated": [
