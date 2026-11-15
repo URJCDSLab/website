@@ -1,5 +1,98 @@
 [
   {
+    "title": "El arte matemático de cortar sin desperdiciar: del rollo de acero a la caja de cartón",
+    "doi": "10.66806/fundacion_muyinteresante.624824",
+    "year": 2026,
+    "publication_date": "2026-11-09",
+    "authors": [
+      "F. Javier Martín-Campo",
+      "Antonio Alonso‐Ayuso",
+      "Micael Gallego",
+      "María Sierra-Paradinas",
+      "Óscar Soto-Sánchez",
+      "Paula Terán-Viadero"
+    ],
+    "journal": "Fundación Muy Interesante",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": null,
+    "issn": "1130-4081",
+    "keywords": [
+      "Optimization and Packing Problems",
+      "Computational Geometry and Mesh Generation",
+      "Vehicle Routing Optimization Methods"
+    ],
+    "landing_page_url": "https://doi.org/10.66806/fundacion_muyinteresante.624824",
+    "pdf_url": null,
+    "is_oa": false,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Antonio Alonso Ayuso"
+    ]
+  },
+  {
+    "title": "PHUKUY: Residual AI Calibration and Reproducibility Materials",
+    "doi": "10.5281/zenodo.24046685",
+    "year": 2026,
+    "publication_date": "2026-11-08",
+    "authors": [
+      "Heyul Chavez",
+      "Gianpierre Zapata",
+      "Daniel Palacios Alonso",
+      "Javier Garzás",
+      "Carlos Raymundo"
+    ],
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "source_type": "repository",
+    "work_type": "preprint",
+    "quartile": null,
+    "issn": null,
+    "keywords": [
+      "Chronic Obstructive Pulmonary Disease (COPD) Research",
+      "Sensor Technology and Measurement Systems",
+      "Quality and Safety in Healthcare"
+    ],
+    "landing_page_url": "https://doi.org/10.5281/zenodo.24046685",
+    "pdf_url": "https://doi.org/10.5281/zenodo.24046685",
+    "is_oa": true,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Javier Garzás Parra"
+    ]
+  },
+  {
+    "title": "Interacción entre la edad gestacional y el tipo de procedimiento doloroso en la evaluación del dolor neonatal: estudio multicéntrico",
+    "doi": "10.1016/j.anpedi.2026.504421",
+    "year": 2026,
+    "publication_date": "2026-11-01",
+    "authors": [
+      "Irene Núñez López",
+      "María Gema Cid Expósito",
+      "Raquel Abalo",
+      "Juan José Fernández Muñoz",
+      "Natalia Cuadrado Obregón",
+      "Clara Alonso Díaz",
+      "Laura Collados Gómez"
+    ],
+    "journal": "Anales de Pediatría",
+    "source_type": "journal",
+    "work_type": "journal",
+    "quartile": null,
+    "issn": "1695-4033",
+    "keywords": [
+      "Pediatric Pain Management Techniques",
+      "Anesthesia and Pain Management",
+      "Infant Development and Preterm Care"
+    ],
+    "landing_page_url": "https://doi.org/10.1016/j.anpedi.2026.504421",
+    "pdf_url": "https://doi.org/10.1016/j.anpedi.2026.504421",
+    "is_oa": true,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Juan José Fernández Muñoz"
+    ]
+  },
+  {
     "title": "Minimum Spanning Trees ensemble framework: A geometric classifier",
     "doi": "10.1016/j.knosys.2026.117057",
     "year": 2026,
@@ -138,7 +231,7 @@
       "Bone fractures and treatments"
     ],
     "landing_page_url": "https://doi.org/10.1007/s41999-026-01561-4",
-    "pdf_url": null,
+    "pdf_url": "https://doi.org/10.2139/ssrn.6170031",
     "is_oa": false,
     "cited_by_count": 0,
     "dslab_authors": [
@@ -728,6 +821,28 @@
     "dslab_authors": [
       "Alberto Fernández Isabel",
       "Javier Sánchez García-Ochoa"
+    ]
+  },
+  {
+    "title": "Combining Dissimilarity Spaces to Improve ANN Search",
+    "doi": "10.1007/978-3-032-06069-3_29",
+    "year": 2026,
+    "publication_date": "2026-01-01",
+    "authors": [
+      "Elena García-Morato Piñán"
+    ],
+    "journal": null,
+    "source_type": "book-chapter",
+    "work_type": "chapter",
+    "quartile": null,
+    "issn": null,
+    "keywords": [],
+    "landing_page_url": "https://doi.org/10.1007/978-3-032-06069-3_29",
+    "pdf_url": null,
+    "is_oa": false,
+    "cited_by_count": 0,
+    "dslab_authors": [
+      "Elena García-Morato Piñán"
     ]
   },
   {
