@@ -34,15 +34,15 @@ export function DiagramPopover({
 
   return (
     <div
-      className={`pointer-events-none absolute z-30 transition-opacity duration-150 ease-out animate-in fade-in zoom-in-95 ${transformClass}`}
+      className={`pointer-events-none absolute z-30 transition-opacity duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] ${transformClass}`}
       style={{ left: `${posX}%`, top: `${posY}%` }}
     >
-      <div className="bg-white/95 dark:bg-slate-900/95 text-slate-900 dark:text-white backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 shadow-xl rounded-xl p-3 w-[260px] text-xs">
+      <div className="bg-white/95 dark:bg-[#111827]/95 text-slate-900 dark:text-white backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 shadow-xl rounded-xl p-3 w-[260px] text-xs">
         <div className="flex items-center gap-1.5 font-bold mb-1">
           <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }} />
           <span className="text-slate-900 dark:text-white font-bold">{title}</span>
         </div>
-        <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-[11px] sm:text-xs">
+        <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
           {desc}
         </p>
       </div>

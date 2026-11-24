@@ -17,7 +17,7 @@ export default function ResearchLinesPage() {
       
       {/* Header */}
       <div className="max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
           Research lines
         </h1>
         <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -31,7 +31,7 @@ export default function ResearchLinesPage() {
           <div
             key={line.id}
             id={line.id}
-            className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#0086BA]/60 dark:hover:border-[#0086BA]/60 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between"
+            className="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 hover:border-[#0086BA]/60 dark:hover:border-[#38bdf8]/60 shadow-sm hover:shadow-lg transition-[border-color,box-shadow] duration-300 flex flex-col justify-between"
           >
             <div>
               <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">
@@ -43,12 +43,12 @@ export default function ResearchLinesPage() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center gap-2">
-              <span className="text-xs text-slate-400 font-medium">Leads:</span>
+              <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Leads:</span>
               {line.leads.map((lead) => (
                 <Link
                   key={lead.id}
-                  href={`/about/team#${lead.id}`}
-                  className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-[#0086BA] hover:bg-slate-200 transition-colors"
+                  href={`/about/team/#${lead.id}`}
+                  className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-[#0086BA] dark:hover:text-[#38bdf8] hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                 >
                   {lead.name}
                 </Link>

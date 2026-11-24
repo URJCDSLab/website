@@ -146,7 +146,7 @@ export default function ConectaPage() {
       <section className="pt-8 border-t border-slate-200 dark:border-slate-800">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center justify-center">
           <div className="flex flex-col items-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Project
             </span>
             <div className="h-16 flex items-center justify-center w-48">
@@ -159,7 +159,7 @@ export default function ConectaPage() {
           </div>
 
           <div className="flex flex-col items-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Collaborator
             </span>
             <div className="h-16 flex items-center justify-center w-48">
@@ -172,7 +172,7 @@ export default function ConectaPage() {
           </div>
 
           <div className="flex flex-col items-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Sponsor
             </span>
             <div className="h-16 flex items-center justify-center w-48">

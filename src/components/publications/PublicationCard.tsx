@@ -147,8 +147,8 @@ export function PublicationCard({ publication: pub }: PublicationCardProps) {
               {idx > 0 && ", "}
               {member ? (
                 <Link
-                  href={`/about/team#${member.id}`}
-                  className="font-medium text-slate-900 dark:text-slate-100 underline decoration-[#0086BA]/50 decoration-1 underline-offset-2 hover:decoration-[#0086BA] hover:text-[#0086BA] transition-colors"
+                  href={`/about/team/#${member.id}`}
+                  className="font-medium text-slate-900 dark:text-slate-100 underline decoration-[#0086BA]/50 decoration-1 underline-offset-2 hover:decoration-[#0086BA] hover:text-[#0086BA] dark:hover:text-[#38bdf8] transition-colors"
                   title={`DSLab member: ${member.fullName}`}
                 >
                   {author}
@@ -162,9 +162,9 @@ export function PublicationCard({ publication: pub }: PublicationCardProps) {
       </p>
 
       {/* Journal & Year */}
-      <p className="mt-1 text-xs text-slate-500 dark:text-slate-500 italic">
+      <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
         {pub.journal && <span>{pub.journal}, </span>}
-        <span>{pub.year}</span>
+        <span className="tabular-nums">{pub.year}</span>
       </p>
 
       {/* CWTS Leiden Academic Topics / Keywords */}
@@ -173,7 +173,7 @@ export function PublicationCard({ publication: pub }: PublicationCardProps) {
           {pub.keywords.slice(0, 4).map((kw) => (
             <span
               key={kw}
-              className="px-2 py-0.5 rounded-full text-[11px] font-medium bg-slate-50 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border border-slate-200/80 dark:border-slate-700/80"
+              className="px-2 py-0.5 rounded-full text-xs font-medium bg-slate-50 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border border-slate-200/80 dark:border-slate-700/80"
             >
               #{kw}
             </span>

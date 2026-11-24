@@ -68,16 +68,16 @@ function sortAffiliated(a: TeamMember, b: TeamMember): number {
   return sortBySpanishSurname(a, b);
 }
 
-const facultyMembers: TeamMember[] = ([...(teamData.faculty as TeamMember[])]).sort(sortFaculty);
-const researchers: TeamMember[] = ([...(teamData.researchers as TeamMember[])]).sort(sortResearchers);
-const affiliatedMembers: TeamMember[] = ([...(teamData.affiliated as TeamMember[])]).sort(sortAffiliated);
+const facultyMembers: TeamMember[] = (teamData.faculty as TeamMember[]).toSorted(sortFaculty);
+const researchers: TeamMember[] = (teamData.researchers as TeamMember[]).toSorted(sortResearchers);
+const affiliatedMembers: TeamMember[] = (teamData.affiliated as TeamMember[]).toSorted(sortAffiliated);
 
-const visitingResearchers: string[] = ([...(teamData.visiting as OtherMember[])])
-  .sort(sortOtherBySurname)
+const visitingResearchers: string[] = (teamData.visiting as OtherMember[])
+  .toSorted(sortOtherBySurname)
   .map((m) => `${m.firstName} ${m.lastName}`);
 
-const formerMembers: string[] = ([...(teamData.former as OtherMember[])])
-  .sort(sortOtherBySurname)
+const formerMembers: string[] = (teamData.former as OtherMember[])
+  .toSorted(sortOtherBySurname)
   .map((m) => `${m.firstName} ${m.lastName}`);
 
 export const metadata: Metadata = createPageMetadata({

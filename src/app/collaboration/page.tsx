@@ -17,7 +17,7 @@ export default function CollaborationPage() {
       
       {/* Header */}
       <div className="max-w-4xl space-y-6">
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
           Collaborate with us
         </h1>
         <p className="text-lg sm:text-xl font-medium text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -43,7 +43,7 @@ export default function CollaborationPage() {
               <img
                 src="/assets/images/collaboration/direct.jpg"
                 alt="Direct management collaboration"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover motion-safe:group-hover:scale-105 motion-safe:transition-transform motion-safe:duration-500"
               />
             </div>
             <div className="p-6 sm:p-8 space-y-4">
@@ -90,7 +90,7 @@ export default function CollaborationPage() {
               <img
                 src="/assets/images/collaboration/public_call.jpg"
                 alt="Public call collaboration"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover motion-safe:group-hover:scale-105 motion-safe:transition-transform motion-safe:duration-500"
               />
             </div>
             <div className="p-6 sm:p-8 space-y-4">

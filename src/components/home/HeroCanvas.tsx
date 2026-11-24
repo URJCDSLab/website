@@ -9,13 +9,33 @@ interface Particle {
   vx: number;
   vy: number;
   radius: number;
-  color: string;
-  isRedNode?: boolean;
+  isRedNode: boolean;
 }
 
-export function HeroCanvas() {
+interface HeroCanvasProps {
+  paused?: boolean;
+}
+
+export function HeroCanvas({ paused = false }: HeroCanvasProps) {
   const canvasRef = React.useRef<HTMLCanvasElement | null>(null);
   const { resolvedTheme } = useTheme();
+
+  // Persistent refs so toggling Play/Pause or switching theme NEVER resets particle positions
+  const particlesRef = React.useRef<Particle[]>([]);
+  const pausedRef = React.useRef(paused);
+  const isDarkRef = React.useRef(resolvedTheme === "dark");
+  const reducedMotionRef = React.useRef(false);
+  const syncLoopRef = React.useRef<(() => void) | null>(null);
+
+  React.useEffect(() => {
+    pausedRef.current = paused;
+    syncLoopRef.current?.();
+  }, [paused]);
+
+  React.useEffect(() => {
+    isDarkRef.current = resolvedTheme === "dark";
+    syncLoopRef.current?.();
+  }, [resolvedTheme]);
 
   React.useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,34 +44,48 @@ export function HeroCanvas() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationFrameId: number;
-    let width = (canvas.width = canvas.parentElement?.clientWidth || window.innerWidth);
-    let height = (canvas.height = canvas.parentElement?.clientHeight || 600);
+    const parent = canvas.parentElement;
+    if (!parent) return;
 
-    const isDark = resolvedTheme === "dark";
-    const primaryColor = "#0086BA";
-    const accentColor = "#E30613";
-    const lineColor = isDark ? "rgba(0, 134, 186, " : "rgba(0, 134, 186, ";
+    let animationFrameId = 0;
+    let width = parent.clientWidth || window.innerWidth;
+    let height = parent.clientHeight || 560;
+    let isVisible = true;
+    const maxDistance = 128;
 
-    const particleCount = Math.floor(Math.min(width * 0.08, 90));
-    const particles: Particle[] = [];
+    const setupSize = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = parent.clientWidth || window.innerWidth;
+      height = parent.clientHeight || 560;
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
 
-    for (let i = 0; i < particleCount; i++) {
-      const isRed = i % 9 === 0; // ~11% accent red nodes representing key cluster centers
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.7,
-        vy: (Math.random() - 0.5) * 0.7,
-        radius: isRed ? 3.5 : Math.random() * 2 + 1.5,
-        color: isRed ? accentColor : primaryColor,
-        isRedNode: isRed,
-      });
+    setupSize();
+
+    // Initialize particles once and preserve them across pause/resume & theme changes
+    if (particlesRef.current.length === 0) {
+      const particleCount = Math.floor(Math.min(width * 0.065, 76));
+      const initial: Particle[] = [];
+      for (let i = 0; i < particleCount; i++) {
+        const isRed = i % 9 === 0;
+        initial.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.55,
+          vy: (Math.random() - 0.5) * 0.55,
+          radius: isRed ? 3.2 : Math.random() * 1.8 + 1.4,
+          isRedNode: isRed,
+        });
+      }
+      particlesRef.current = initial;
     }
 
-    const mouse = { x: -1000, y: -1000, radius: 140 };
+    const mouse = { x: -1000, y: -1000, radius: 135 };
 
     const handleMouseMove = (e: MouseEvent) => {
+      if (pausedRef.current || reducedMotionRef.current) return;
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
@@ -62,105 +96,156 @@ export function HeroCanvas() {
       mouse.y = -1000;
     };
 
-    const handleResize = () => {
-      if (!canvas.parentElement) return;
-      width = canvas.width = canvas.parentElement.clientWidth;
-      height = canvas.height = canvas.parentElement.clientHeight;
-    };
+    const drawFrame = (advance: boolean) => {
+      const particles = particlesRef.current;
+      const isDark = isDarkRef.current;
+      const primaryColor = isDark ? "#38bdf8" : "#0086BA";
+      const accentColor = "#E30613";
+      const primaryLineRgb = isDark ? "56, 189, 248" : "0, 134, 186";
 
-    // Attach event listeners to the window so interaction tracks across overlapping DOM elements
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseleave", handleMouseLeave);
-
-    const maxDistance = 120;
-
-    const render = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Draw and update particles
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
-        // Move
-        p.x += p.vx;
-        p.y += p.vy;
+        if (advance) {
+          p.x += p.vx;
+          p.y += p.vy;
 
-        // Bounce from walls
-        if (p.x < 0 || p.x > width) p.vx *= -1;
-        if (p.y < 0 || p.y > height) p.vy *= -1;
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
 
-        // Mouse interaction
-        const dxMouse = mouse.x - p.x;
-        const dyMouse = mouse.y - p.y;
-        const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-        if (distMouse < mouse.radius) {
-          const force = (mouse.radius - distMouse) / mouse.radius;
-          p.x -= (dxMouse / distMouse) * force * 3;
-          p.y -= (dyMouse / distMouse) * force * 3;
+          const dxMouse = mouse.x - p.x;
+          const dyMouse = mouse.y - p.y;
+          const distMouse = Math.hypot(dxMouse, dyMouse);
+          if (distMouse > 0 && distMouse < mouse.radius) {
+            const force = (mouse.radius - distMouse) / mouse.radius;
+            p.x -= (dxMouse / distMouse) * force * 2.4;
+            p.y -= (dyMouse / distMouse) * force * 2.4;
+          }
         }
 
-        // Draw particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.shadowColor = p.color;
-        ctx.shadowBlur = isDark ? 8 : 4;
+        ctx.fillStyle = p.isRedNode ? accentColor : primaryColor;
         ctx.fill();
-        ctx.shadowBlur = 0;
 
-        // Connect with nearby particles
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
-          const dx = p.x - p2.x;
-          const dy = p.y - p2.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+          const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
 
           if (dist < maxDistance) {
-            const alpha = (1 - dist / maxDistance) * (isDark ? 0.35 : 0.2);
+            const alpha = (1 - dist / maxDistance) * (isDark ? 0.3 : 0.18);
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = p.isRedNode || p2.isRedNode
-                ? `rgba(227, 6, 19, ${alpha * 0.8})`
-                : `${lineColor}${alpha})`;
+            ctx.strokeStyle =
+              p.isRedNode || p2.isRedNode
+                ? `rgba(227, 6, 19, ${alpha * 0.75})`
+                : `rgba(${primaryLineRgb}, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
         }
 
-        // Connect with mouse
-        if (distMouse < mouse.radius) {
-          const alpha = (1 - distMouse / mouse.radius) * 0.45;
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(0, 134, 186, ${alpha})`;
-          ctx.lineWidth = 1.2;
-          ctx.stroke();
+        if (advance) {
+          const distMouse = Math.hypot(mouse.x - p.x, mouse.y - p.y);
+          if (distMouse < mouse.radius) {
+            const alpha = (1 - distMouse / mouse.radius) * (isDark ? 0.42 : 0.32);
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = `rgba(${primaryLineRgb}, ${alpha})`;
+            ctx.lineWidth = 1.1;
+            ctx.stroke();
+          }
         }
       }
-
-      animationFrameId = requestAnimationFrame(render);
     };
 
-    render();
+    const canRun = () =>
+      !pausedRef.current && !reducedMotionRef.current && isVisible && !document.hidden;
+
+    const tick = () => {
+      if (!canRun()) {
+        animationFrameId = 0;
+        return;
+      }
+      drawFrame(true);
+      animationFrameId = requestAnimationFrame(tick);
+    };
+
+    const syncLoop = () => {
+      if (canRun()) {
+        if (!animationFrameId) {
+          animationFrameId = requestAnimationFrame(tick);
+        }
+      } else {
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = 0;
+        }
+        // Redraw frozen particles in place (e.g. on pause or theme switch) without advancing
+        drawFrame(false);
+      }
+    };
+
+    syncLoopRef.current = syncLoop;
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleMotionChange = () => {
+      reducedMotionRef.current = mediaQuery.matches;
+      syncLoop();
+    };
+    handleMotionChange();
+    mediaQuery.addEventListener("change", handleMotionChange);
+
+    const resizeObserver = new ResizeObserver(() => {
+      setupSize();
+      for (const p of particlesRef.current) {
+        p.x = Math.min(Math.max(p.x, 0), width);
+        p.y = Math.min(Math.max(p.y, 0), height);
+      }
+      if (!canRun()) {
+        drawFrame(false);
+      }
+    });
+    resizeObserver.observe(parent);
+
+    const intersectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        syncLoop();
+      },
+      { threshold: 0.05 }
+    );
+    intersectionObserver.observe(parent);
+
+    const handleVisibilityChange = () => syncLoop();
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    syncLoop();
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
-      window.removeEventListener("resize", handleResize);
+      syncLoopRef.current = null;
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      mediaQuery.removeEventListener("change", handleMotionChange);
+      resizeObserver.disconnect();
+      intersectionObserver.disconnect();
       window.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [resolvedTheme]);
+  }, []);
 
   return (
-      <canvas
-          ref={canvasRef}
-          // Change pointer-events-auto to pointer-events-none so it doesn't block underlying text selection
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          style={{ opacity: 0.85 }}
-          aria-hidden="true"
-      />
+    <canvas
+      ref={canvasRef}
+      className="hero-scroll-canvas absolute inset-0 w-full h-full pointer-events-none opacity-75 dark:opacity-80"
+      aria-hidden="true"
+    />
   );
 }

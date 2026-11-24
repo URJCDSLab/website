@@ -20,10 +20,10 @@ export default function AboutPage() {
         {/* Page Header & Objectives */}
         <div className="max-w-4xl space-y-6">
           <div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
               The Data Science Lab (DSLAB)
             </h1>
-            <p className="mt-2 text-xl text-[#0086BA] font-semibold">
+            <p className="mt-2 text-xl text-[#0086BA] dark:text-[#38bdf8] font-semibold">
               Advancing foundations and applications of data science
             </p>
           </div>
@@ -98,9 +98,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
             {/* Pillar 1: Data Engineering */}
-            <div className="relative overflow-hidden p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-6 group">
-              <div className="absolute top-1/2 -translate-y-1/2 -left-16 text-[#0086BA] opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
-                <Database className="w-64 h-64" strokeWidth={1} />
+            <div className="relative overflow-hidden p-8 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-6 group">
+              <div className="absolute top-1/2 -translate-y-1/2 -left-16 text-[#0086BA] opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-110">
+                <Database className="w-64 h-64" strokeWidth={1} aria-hidden="true" />
               </div>
 
               <div className="relative z-10 space-y-6">
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 </p>
 
                 <div className="pt-2 space-y-3">
-                  <div className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-200">
+                  <div className="text-xs font-semibold text-slate-900 dark:text-slate-200">
                     Focus areas
                   </div>
                   <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
@@ -135,9 +135,9 @@ export default function AboutPage() {
             </div>
 
             {/* Pillar 2: Data Analytics */}
-            <div className="relative overflow-hidden p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-6 group">
-              <div className="absolute top-1/2 -translate-y-1/2 -left-16 text-[#E30613] opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1/2">
-                <LineChart className="w-64 h-64" strokeWidth={1} />
+            <div className="relative overflow-hidden p-8 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-6 group">
+              <div className="absolute top-1/2 -translate-y-1/2 -left-16 text-[#E30613] opacity-[0.10] dark:opacity-[0.16] pointer-events-none select-none motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-110">
+                <LineChart className="w-64 h-64" strokeWidth={1} aria-hidden="true" />
               </div>
 
               <div className="relative z-10 space-y-6">
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 </p>
 
                 <div className="pt-2 space-y-3">
-                  <div className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-200">
+                  <div className="text-xs font-semibold text-slate-900 dark:text-slate-200">
                     Specialization areas
                   </div>
                   <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">

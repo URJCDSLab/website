@@ -2,8 +2,13 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme inline {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
   :root {
+    color-scheme: light dark;
     --background: #f8fafc;
     --foreground: #0f172a;
     --card: #ffffff;
@@ -18,18 +23,28 @@
     --accent-red: #E30613;
     --accent-red-hover: #c40510;
     --muted: #64748b;
-    --muted-foreground: #64748b;
+    --muted-foreground: #475569;
     --ring: #0086BA;
     --radius: 0.75rem;
+    --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+    --scrollbar-thumb: #94a3b8;
+    --scrollbar-thumb-hover: #64748b;
+    --scrollbar-track: transparent;
+    accent-color: var(--primary);
+  }
+
+  .light {
+    color-scheme: light;
   }
 
   .dark {
+    color-scheme: dark;
     --background: #090d16;
     --foreground: #f8fafc;
     --card: #111827;
     --card-foreground: #f8fafc;
-    --border: #1f2937;
-    --input: #1f2937;
+    --border: #1e293b;
+    --input: #1e293b;
     --primary: #0086BA;
     --primary-hover: #1aa0d6;
     --primary-foreground: #ffffff;
@@ -39,48 +54,247 @@
     --accent-red-hover: #ff2d3b;
     --muted: #94a3b8;
     --muted-foreground: #94a3b8;
-    --ring: #0086BA;
+    --ring: #38bdf8;
+    --scrollbar-thumb: #334155;
+    --scrollbar-thumb-hover: #475569;
+    --scrollbar-track: transparent;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
   }
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-geist), ui-sans-serif, system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s var(--ease-out-expo), color 0.2s var(--ease-out-expo);
 }
 
-/* Custom scrollbar */
+/* Integrated arrowless scrollbar (WebKit/Blink) + thin native scrollbar (Firefox) */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--scrollbar-track);
 }
 ::-webkit-scrollbar-thumb {
-  background: #94a3b8;
-  border-radius: 4px;
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
 }
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+@supports (-moz-appearance: none) {
+  :root {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+}
+
+/* Native modal dialog top-layer scroll containment and entry/exit motion */
+dialog.dslab-modal:modal {
+  overscroll-behavior: contain;
+}
+
+dialog.dslab-modal::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgb(2 6 23 / 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  dialog.dslab-modal {
+    opacity: 0;
+    translate: 0 12px;
+    transition:
+      opacity 220ms var(--ease-out-expo),
+      translate 220ms var(--ease-out-expo),
+      display 220ms,
+      overlay 220ms;
+    transition-behavior: allow-discrete;
+  }
+
+  dialog.dslab-modal[open] {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  dialog.dslab-modal::backdrop {
+    opacity: 0;
+    transition:
+      opacity 220ms var(--ease-out-expo),
+      display 220ms,
+      overlay 220ms;
+    transition-behavior: allow-discrete;
+  }
+
+  dialog.dslab-modal[open]::backdrop {
+    opacity: 1;
+  }
+
+  @starting-style {
+    dialog.dslab-modal[open] {
+      opacity: 0;
+      translate: 0 12px;
+    }
+
+    dialog.dslab-modal[open]::backdrop {
+      opacity: 0;
+    }
+  }
+}
+
+/* CSS Scroll-Driven Animations (Baseline Newly Available, pure compositor progressive enhancement) */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
+    @keyframes dslab-scroll-progress {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    .nav-scroll-progress {
+      transform-origin: left center;
+      animation: dslab-scroll-progress auto linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0% 100%;
+    }
+  }
+
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    /* Integrated Hero scroll exit depth & parallax */
+    .hero-scroll-stage {
+      view-timeline: --hero-tl block;
+    }
+
+    @keyframes dslab-hero-content-exit {
+      from {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+      }
+      to {
+        opacity: 0.15;
+        translate: 0 -42px;
+        scale: 0.96;
+      }
+    }
+
+    .hero-scroll-content {
+      animation: dslab-hero-content-exit auto linear both;
+      animation-timeline: --hero-tl;
+      animation-range: exit 0% exit 85%;
+    }
+
+    @keyframes dslab-hero-canvas-parallax {
+      from {
+        translate: 0 0;
+        scale: 1;
+      }
+      to {
+        translate: 0 56px;
+        scale: 1.05;
+      }
+    }
+
+    .hero-scroll-canvas {
+      animation: dslab-hero-canvas-parallax auto linear both;
+      animation-timeline: --hero-tl;
+      animation-range: exit 0% exit 100%;
+    }
+
+    /* Section & card entry depth choreography */
+    @keyframes dslab-scroll-reveal {
+      from {
+        opacity: 0.25;
+        translate: 0 28px;
+        scale: 0.97;
+      }
+      to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+      }
+    }
+
+    .scroll-reveal {
+      animation: dslab-scroll-reveal auto var(--ease-out-expo) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 24%;
+    }
+
+    .scroll-reveal-delayed-1 {
+      animation: dslab-scroll-reveal auto var(--ease-out-expo) both;
+      animation-timeline: view();
+      animation-range: entry 4% entry 30%;
+    }
+
+    .scroll-reveal-delayed-2 {
+      animation: dslab-scroll-reveal auto var(--ease-out-expo) both;
+      animation-timeline: view();
+      animation-range: entry 8% entry 36%;
+    }
+
+    /* Editorial reveal for the 4:3 group photo stage */
+    @keyframes dslab-stage-reveal {
+      from {
+        opacity: 0.35;
+        scale: 0.95;
+        translate: 0 24px;
+      }
+      to {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+      }
+    }
+
+    .scroll-stage-reveal {
+      animation: dslab-stage-reveal auto var(--ease-out-expo) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 28%;
+    }
+  }
 }
 
 /* Glassmorphism helpers */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: rgba(248, 250, 252, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.92);
 }
 .dark .glass-panel {
-  background: rgba(17, 24, 39, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(31, 41, 55, 0.8);
+  background: rgba(9, 13, 22, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 41, 59, 0.9);
 }
 
 /* High-contrast logo badge container for SVGs */
@@ -102,8 +316,8 @@ body {
 
 /* Subtle glow effects */
 .glow-primary {
-  box-shadow: 0 0 35px -5px rgba(0, 134, 186, 0.3);
+  box-shadow: 0 0 35px -5px rgba(0, 134, 186, 0.28);
 }
 .dark .glow-primary {
-  box-shadow: 0 0 45px -5px rgba(0, 134, 186, 0.4);
+  box-shadow: 0 0 45px -5px rgba(0, 134, 186, 0.36);
 }

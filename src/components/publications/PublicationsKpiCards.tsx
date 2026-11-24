@@ -108,12 +108,12 @@ export function PublicationsKpiCards({
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       
       {/* Total Publications Card */}
-      <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
+      <div className="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
             Total publications
           </span>
-          <div className="mt-2 text-3xl sm:text-4xl font-black text-[#0086BA]">
+          <div className="mt-2 text-3xl sm:text-4xl font-bold tabular-nums text-[#0086BA] dark:text-[#38bdf8]">
             {totalCount}
           </div>
           <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
@@ -133,12 +133,12 @@ export function PublicationsKpiCards({
       </div>
 
       {/* Q1 Ranked Papers Card */}
-      <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
+      <div className="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
             Q1 ranked papers
           </span>
-          <div className="mt-2 text-3xl sm:text-4xl font-black text-amber-500 flex items-center gap-1.5">
+          <div className="mt-2 text-3xl sm:text-4xl font-bold tabular-nums text-amber-500 flex items-center gap-1.5">
             {q1Count}
           </div>
           <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
@@ -158,12 +158,12 @@ export function PublicationsKpiCards({
       </div>
 
       {/* Journal Articles Card with embedded sparkline */}
-      <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
+      <div className="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
             Journal articles
           </span>
-          <div className="mt-2 text-3xl sm:text-4xl font-black text-emerald-600 dark:text-emerald-400">
+          <div className="mt-2 text-3xl sm:text-4xl font-bold tabular-nums text-emerald-600 dark:text-emerald-400">
             {journalCount}
           </div>
           <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
@@ -183,12 +183,12 @@ export function PublicationsKpiCards({
       </div>
 
       {/* Conferences Card with embedded sparkline */}
-      <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
+      <div className="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden relative group hover:shadow-md transition-shadow">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
             Conferences
           </span>
-          <div className="mt-2 text-3xl sm:text-4xl font-black text-indigo-500">
+          <div className="mt-2 text-3xl sm:text-4xl font-bold tabular-nums text-indigo-500 dark:text-indigo-400">
             {confCount}
           </div>
           <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">

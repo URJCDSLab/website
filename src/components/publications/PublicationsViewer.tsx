@@ -45,17 +45,12 @@ export function PublicationsViewer({ initialPublications }: PublicationsViewerPr
     });
   }, [initialPublications, searchTerm, filterType]);
 
-  // Group by year descending
+  // Group by year descending using standard Object.groupBy()
   const groupedByYear = React.useMemo(() => {
-    const groups: { [year: number]: Publication[] } = {};
-    for (const pub of filtered) {
-      const year = pub.year || 9999;
-      if (!groups[year]) groups[year] = [];
-      groups[year].push(pub);
-    }
+    const groups = Object.groupBy(filtered, (pub) => pub.year || 9999);
     return Object.entries(groups)
-      .map(([year, pubs]) => ({ year: Number(year), pubs }))
-      .sort((a, b) => b.year - a.year);
+      .map(([year, pubs]) => ({ year: Number(year), pubs: pubs ?? [] }))
+      .toSorted((a, b) => b.year - a.year);
   }, [filtered]);
 
   // Overall counts for summary cards
@@ -144,8 +139,10 @@ export function PublicationsViewer({ initialPublications }: PublicationsViewerPr
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Filter publications by type">
             <button
+              type="button"
+              aria-pressed={filterType === "all"}
               onClick={() => setFilterType("all")}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                 filterType === "all"
@@ -157,50 +154,58 @@ export function PublicationsViewer({ initialPublications }: PublicationsViewerPr
             </button>
 
             <button
+              type="button"
+              aria-pressed={filterType === "q1"}
               onClick={() => setFilterType("q1")}
               className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                 filterType === "q1"
                   ? "bg-amber-500 text-white shadow-md shadow-amber-500/20"
-                  : "bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/30 hover:bg-amber-500/20"
+                  : "bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30 hover:bg-amber-500/20"
               }`}
             >
-              <Star className="w-3.5 h-3.5 fill-current" />
+              <Star className="w-3.5 h-3.5 fill-current" aria-hidden="true" />
               Q1 only (SJR)
             </button>
 
             <button
+              type="button"
+              aria-pressed={filterType === "journal"}
               onClick={() => setFilterType("journal")}
               className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                 filterType === "journal"
                   ? "bg-emerald-600 text-white"
-                  : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200"
+                  : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
               }`}
             >
-              <BookOpen className="w-3.5 h-3.5" />
+              <BookOpen className="w-3.5 h-3.5" aria-hidden="true" />
               Journals
             </button>
 
             <button
+              type="button"
+              aria-pressed={filterType === "conference"}
               onClick={() => setFilterType("conference")}
               className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                 filterType === "conference"
                   ? "bg-blue-600 text-white"
-                  : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200"
+                  : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
               }`}
             >
-              <Users className="w-3.5 h-3.5" />
+              <Users className="w-3.5 h-3.5" aria-hidden="true" />
               Conferences
             </button>
 
             <button
+              type="button"
+              aria-pressed={filterType === "thesis"}
               onClick={() => setFilterType("thesis")}
               className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                 filterType === "thesis"
                   ? "bg-purple-600 text-white"
-                  : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200"
+                  : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
               }`}
             >
-              <GraduationCap className="w-3.5 h-3.5" />
+              <GraduationCap className="w-3.5 h-3.5" aria-hidden="true" />
               Theses &amp; books
             </button>
           </div>

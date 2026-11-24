@@ -18,8 +18,8 @@ export default function GlobalError({
     <html lang="en">
       <body className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900 p-4 font-sans">
         <div className="max-w-md w-full text-center space-y-6">
-          <div className="text-6xl font-black text-[#E30613]">500</div>
-          <h1 className="text-3xl font-extrabold text-slate-900">
+          <div className="text-6xl font-bold tabular-nums text-[#E30613]">500</div>
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
             Internal server error
           </h1>
           <p className="text-slate-600 text-sm">

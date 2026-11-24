@@ -18,8 +18,8 @@ export default function Error({
 
   return (
     <div className="py-24 sm:py-32 max-w-2xl mx-auto px-4 text-center space-y-6">
-      <div className="text-6xl font-black text-[#E30613]">500</div>
-      <h1 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100">
+      <div className="text-6xl font-bold tabular-nums text-[#E30613]">500</div>
+      <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
         Internal server error
       </h1>
       <p className="text-slate-600 dark:text-slate-400">
