@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="Artboard_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 220 68" style="enable-background:new 0 0 220 68;" xml:space="preserve">
+<svg class="dslab-svg-centrogeo" version="1.1" id="Artboard_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 220 68" style="enable-background:new 0 0 220 68;" xml:space="preserve"><style data-dslab-theme="true">.dslab-svg-centrogeo{color-scheme:light dark;--dm-0:#000000;--dm-1:#6e3c14;}@media (prefers-color-scheme:dark){.dslab-svg-centrogeo{--dm-0:#ffffff;--dm-1:#c48b5c;}}@supports (color:light-dark(white,black)){.dslab-svg-centrogeo{--dm-0:light-dark(#000000,#ffffff);--dm-1:light-dark(#6e3c14,#c48b5c);}}</style>
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#6E3C14;}
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:var(--dm-0);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:var(--dm-1);}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#DC7828;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#6E3C14;fill-opacity:0.80;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:var(--dm-1);fill-opacity:0.80;}
 	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:url(#gradient);}
 </style>

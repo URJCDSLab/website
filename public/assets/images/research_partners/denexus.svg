@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1153 386">
+<svg class="dslab-svg-denexus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1153 386"><style data-dslab-theme="true">.dslab-svg-denexus{color-scheme:light dark;--dm-0:#2a2a4f;}@media (prefers-color-scheme:dark){.dslab-svg-denexus{--dm-0:#ffffff;}}@supports (color:light-dark(white,black)){.dslab-svg-denexus{--dm-0:light-dark(#2a2a4f,#ffffff);}}</style>
     <defs>
         <style>
             .cls-0 {
-                fill: #2a2a4f;
+                fill: var(--dm-0);
                 opacity: 1.;
-                color-scheme: light;
+                
             }
 
-            /*@media (prefers-color-scheme: dark) {
-                .cls-0 {
-                    fill: #ffffff;
-                    color-scheme: dark;
-                }
-            }*/
+            
         </style>
     </defs>
     <path class="cls-0"
