@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import { ThemeLogo } from "@/components/ui/ThemeLogo";
 
 export interface PartnerClientCardProps {
   name?: string;
@@ -11,14 +12,15 @@ export function PartnerClientCard({ name, logo, description, url }: PartnerClien
   const displayName = name || "Collaborating partner";
 
   return (
-    <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between group">
+    <div className="p-6 rounded-2xl bg-white dark:bg-[#11141c] border border-[#111827]/10 dark:border-[#eef0f5]/10 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between group">
       <div>
         {/* Centered logo */}
         <div className="h-24 w-full flex items-center justify-center mb-5">
-          <img
+          <ThemeLogo
             src={logo}
             alt={displayName}
-            className="max-h-20 max-w-[85%] object-contain"
+            instanceKey={displayName}
+            className="max-h-20 max-w-[85%] w-auto h-auto"
           />
         </div>
 
