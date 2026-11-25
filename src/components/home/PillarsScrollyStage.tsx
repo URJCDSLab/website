@@ -25,12 +25,77 @@ interface PillarChapter {
   secondaryLink: { label: string; href: string };
   copyAnimClass: string;
   visualAnimClass: string;
+  dotAnimClass: string;
 }
 
-/**
- * Minimalist architectural line emblems (unboxed, integrated directly onto the canvas).
- * Fine 1.25 stroke scales gracefully at large display sizes while staying razor-sharp.
- */
+function buildChapters(metrics: PillarsMetrics): PillarChapter[] {
+  return [
+    {
+      id: "research",
+      shortLabel: "Research",
+      title: "Research & innovation",
+      metaLine: `${metrics.publicationsCount} publications · ${metrics.researchLinesCount} research lines`,
+      description:
+        "Developing novel statistical and computational methods for scalable machine learning, combinatorial optimization, and complex data modeling.",
+      highlights: [
+        "Explainable machine learning and counterfactual reasoning",
+        "Metaheuristics and combinatorial optimization",
+        "Statistical modeling and data complexity measures",
+      ],
+      primaryLink: { label: "Research lines", href: "/research/" },
+      secondaryLink: {
+        label: `Explore ${metrics.researchProjectsCount} research projects`,
+        href: "/research/projects/",
+      },
+      copyAnimClass: "pillar-copy-1",
+      visualAnimClass: "pillar-visual-1",
+      dotAnimClass: "pillar-dot-1",
+    },
+    {
+      id: "education",
+      shortLabel: "Education",
+      title: "Education & training",
+      metaLine: `${metrics.booksCount} textbooks · ${metrics.packagesCount} open repositories`,
+      description:
+        "Equipping students, early career researchers, and practitioners with open textbooks, specialized workshops, and hands on mentorship in data science.",
+      highlights: [
+        "Open textbooks and reproducible tutorials",
+        "CRAN packages and open source data tools",
+        "Practicum program and junior talent mentorship",
+      ],
+      primaryLink: { label: "Learning resources", href: "/education/" },
+      secondaryLink: {
+        label: "Explore the Practicum",
+        href: "/education/practicum/",
+      },
+      copyAnimClass: "pillar-copy-2",
+      visualAnimClass: "pillar-visual-2",
+      dotAnimClass: "pillar-dot-2",
+    },
+    {
+      id: "consulting",
+      shortLabel: "Consulting",
+      title: "Consulting services",
+      metaLine: `${metrics.consultingProjectsCount} projects · ${metrics.consultingClientsCount} partner organizations`,
+      description:
+        "Supporting companies and public institutions in integrating reliable data science and AI systems into operations with rigorous engineering standards.",
+      highlights: [
+        "Predictive algorithms and production ML pipelines",
+        "Healthcare analytics with Hospital La Paz and RNFC",
+        "Agritech, aerospace, and industrial IoT analytics",
+      ],
+      primaryLink: { label: "Consulting projects", href: "/consulting/" },
+      secondaryLink: {
+        label: `Meet our ${metrics.consultingClientsCount} clients`,
+        href: "/consulting/clients/",
+      },
+      copyAnimClass: "pillar-copy-3",
+      visualAnimClass: "pillar-visual-3",
+      dotAnimClass: "pillar-dot-3",
+    },
+  ];
+}
+
 function PillarEmblem({
   id,
   className = "w-64 h-64",
@@ -39,14 +104,8 @@ function PillarEmblem({
   className?: string;
 }) {
   if (id === "research") {
-    // Intersecting mathematical domains & axis with DSLAB signal-red focal apex
     return (
-      <svg
-        viewBox="0 0 120 120"
-        fill="none"
-        className={className}
-        aria-hidden="true"
-      >
+      <svg viewBox="0 0 120 120" fill="none" className={className} aria-hidden="true">
         <line
           x1="14"
           y1="96"
@@ -87,14 +146,8 @@ function PillarEmblem({
   }
 
   if (id === "education") {
-    // Open scientific monograph with DSLAB signal-red focal point
     return (
-      <svg
-        viewBox="0 0 120 120"
-        fill="none"
-        className={className}
-        aria-hidden="true"
-      >
+      <svg viewBox="0 0 120 120" fill="none" className={className} aria-hidden="true">
         <path
           d="M16 34C32 34 48 38 60 46C72 38 88 34 104 34V90C88 90 72 94 60 102C48 94 32 90 16 90V34Z"
           className="stroke-[#111827]/75 dark:stroke-[#eef0f5]/75"
@@ -164,14 +217,8 @@ function PillarEmblem({
     );
   }
 
-  // Consulting: Interlocking modular structures uniting theory and applied engineering
   return (
-    <svg
-      viewBox="0 0 120 120"
-      fill="none"
-      className={className}
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 120 120" fill="none" className={className} aria-hidden="true">
       <rect
         x="18"
         y="42"
@@ -225,87 +272,223 @@ function PillarEmblem({
   );
 }
 
+function DesktopPillarsStage({
+  chapters,
+  activeIndex,
+  shellRef,
+  sentinelRefs,
+  onSelectChapter,
+}: {
+  chapters: PillarChapter[];
+  activeIndex: number;
+  shellRef: React.RefObject<HTMLDivElement | null>;
+  sentinelRefs: React.RefObject<Array<HTMLDivElement | null>>;
+  onSelectChapter: (index: number) => void;
+}) {
+  return (
+    <div className="pillars-desktop-stage">
+      <div ref={shellRef} className="pillars-scrolly-shell">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          {chapters.map((chapter, idx) => (
+            <div
+              key={chapter.id}
+              ref={(el) => {
+                sentinelRefs.current[idx] = el;
+              }}
+              data-chapter-index={idx}
+              className="h-1/3 w-full"
+            />
+          ))}
+        </div>
+
+        <div className="pillars-sticky-stage">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14">
+              <div
+                role="tablist"
+                aria-label="Core areas of the Data Science Lab"
+                className="grid grid-cols-3 gap-6 pb-4"
+              >
+                {chapters.map((chapter, idx) => {
+                  const isCurrent = activeIndex === idx;
+                  return (
+                    <button
+                      key={chapter.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={isCurrent}
+                      onClick={() => onSelectChapter(idx)}
+                      className="group text-left flex items-center gap-2.5 focus-visible:outline-2 focus-visible:outline-offset-4 rounded-sm transition-colors duration-150"
+                    >
+                      <span className="relative w-2 h-2 shrink-0" aria-hidden="true">
+                        <span className="absolute inset-0 rounded-full bg-[#111827]/20 dark:bg-[#eef0f5]/20 group-hover:bg-[#0074a3] dark:group-hover:bg-[#38bdf8] transition-colors duration-150" />
+                        <span
+                          className={`${chapter.dotAnimClass} absolute inset-0 rounded-full bg-[#E30613]`}
+                        />
+                      </span>
+                      <span
+                        className={`body-5 transition-colors duration-150 ${
+                          isCurrent
+                            ? "text-[#111827] dark:text-[#eef0f5]"
+                            : "text-[#4b5565] dark:text-[#a3a9b8] group-hover:text-[#111827] dark:group-hover:text-[#eef0f5]"
+                        }`}
+                      >
+                        {chapter.shortLabel}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div
+                className="relative h-[2px] w-full bg-[#111827]/10 dark:bg-[#eef0f5]/10 overflow-hidden"
+                aria-hidden="true"
+              >
+                <div className="pillars-rail-fill absolute inset-0 bg-[#0074a3] dark:bg-[#38bdf8]" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-12 gap-12 items-center">
+              <div className="col-span-5 pillars-stage-stack">
+                {chapters.map((chapter) => (
+                  <div
+                    key={chapter.id}
+                    className={`${chapter.visualAnimClass} flex flex-col items-center justify-center text-center`}
+                  >
+                    <PillarEmblem id={chapter.id} className="w-64 h-64 xl:w-72 xl:h-72" />
+                    <p className="mt-4 caption-2 font-mono tabular-nums text-[#647084] dark:text-[#858d9f]">
+                      {chapter.metaLine}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="col-span-7 pillars-stage-stack">
+                {chapters.map((chapter, idx) => {
+                  const isCurrent = activeIndex === idx;
+                  return (
+                    <article
+                      key={chapter.id}
+                      onFocusCapture={() => {
+                        if (!isCurrent) onSelectChapter(idx);
+                      }}
+                      className={`${chapter.copyAnimClass} flex flex-col justify-center ${
+                        isCurrent ? "z-20 pointer-events-auto" : "z-10 pointer-events-none"
+                      }`}
+                    >
+                      <h2 className="heading-2 text-[#111827] dark:text-[#eef0f5]">
+                        {chapter.title}
+                      </h2>
+                      <p className="mt-5 title-2 font-normal text-[#4b5565] dark:text-[#a3a9b8] max-w-[54ch]">
+                        {chapter.description}
+                      </p>
+                      <ul className="mt-8 pt-6 border-t border-[#111827]/8 dark:border-[#eef0f5]/8 space-y-3 body-3 text-[#111827] dark:text-[#eef0f5] max-w-[56ch]">
+                        {chapter.highlights.map((item) => (
+                          <li key={item} className="flex items-start gap-3">
+                            <span
+                              className="w-1.5 h-1.5 rounded-full bg-[#0074a3] dark:bg-[#38bdf8] mt-2.5 shrink-0"
+                              aria-hidden="true"
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-9 flex flex-wrap items-center gap-6">
+                        <Link
+                          href={chapter.primaryLink.href}
+                          className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold text-white bg-[#0074a3] hover:bg-[#005f87] dark:bg-[#38bdf8] dark:hover:bg-[#7dd3fc] dark:text-[#0b0d14] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
+                        >
+                          <span>{chapter.primaryLink.label}</span>
+                          <ArrowRight className="w-4 h-4" strokeWidth={1.5} aria-hidden="true" />
+                        </Link>
+                        <Link
+                          href={chapter.secondaryLink.href}
+                          className="inline-flex items-center gap-1.5 body-5 text-[#111827] dark:text-[#eef0f5] hover:text-[#0074a3] dark:hover:text-[#38bdf8] transition-colors duration-200"
+                        >
+                          <span>{chapter.secondaryLink.label}</span>
+                          <ArrowRight className="w-4 h-4" strokeWidth={1.5} aria-hidden="true" />
+                        </Link>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MobilePillarsStack({ chapters }: { chapters: PillarChapter[] }) {
+  return (
+    <div className="pillars-stacked-fallback py-12 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 sm:space-y-24">
+        {chapters.map((chapter) => (
+          <article
+            key={chapter.id}
+            className="pillar-mobile-chapter grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start"
+          >
+            <div className="lg:col-span-5 flex items-center lg:flex-col lg:items-center lg:justify-center lg:text-center gap-4">
+              <PillarEmblem
+                id={chapter.id}
+                className="w-24 h-24 sm:w-28 sm:h-28 lg:w-48 lg:h-48 -ml-2 lg:ml-0 shrink-0"
+              />
+              <span className="caption-2 font-mono tabular-nums text-[#647084] dark:text-[#858d9f]">
+                {chapter.metaLine}
+              </span>
+            </div>
+
+            <div className="lg:col-span-7">
+              <h2 className="heading-3 text-[#111827] dark:text-[#eef0f5]">
+                {chapter.title}
+              </h2>
+              <p className="mt-4 body-3 text-[#4b5565] dark:text-[#a3a9b8] max-w-[54ch]">
+                {chapter.description}
+              </p>
+              <ul className="mt-5 space-y-2.5 body-3 text-[#111827] dark:text-[#eef0f5]">
+                {chapter.highlights.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      className="w-1.5 h-1.5 rounded-full bg-[#0074a3] dark:bg-[#38bdf8] mt-2.5 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-7 flex flex-wrap items-center gap-5">
+                <Link
+                  href={chapter.primaryLink.href}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold text-white bg-[#0074a3] hover:bg-[#005f87] dark:bg-[#38bdf8] dark:hover:bg-[#7dd3fc] dark:text-[#0b0d14] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
+                >
+                  <span>{chapter.primaryLink.label}</span>
+                  <ArrowRight className="w-4 h-4" strokeWidth={1.5} aria-hidden="true" />
+                </Link>
+                <Link
+                  href={chapter.secondaryLink.href}
+                  className="inline-flex items-center gap-1.5 body-5 text-[#111827] dark:text-[#eef0f5] hover:text-[#0074a3] dark:hover:text-[#38bdf8] transition-colors duration-200"
+                >
+                  <span>{chapter.secondaryLink.label}</span>
+                  <ArrowRight className="w-4 h-4" strokeWidth={1.5} aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function PillarsScrollyStage({ metrics }: { metrics: PillarsMetrics }) {
   const shellRef = React.useRef<HTMLDivElement | null>(null);
   const sentinelRefs = React.useRef<Array<HTMLDivElement | null>>([]);
   const [activeIndex, setActiveIndex] = React.useState(0);
 
-  const chapters: PillarChapter[] = React.useMemo(
-    () => [
-      {
-        id: "research",
-        shortLabel: "Research",
-        title: "Research & innovation",
-        metaLine: `${metrics.publicationsCount} publications · ${metrics.researchLinesCount} research lines`,
-        description:
-          "Developing novel statistical and computational methods for scalable machine learning, combinatorial optimization, and complex data modeling.",
-        highlights: [
-          "Explainable machine learning and counterfactual reasoning",
-          "Metaheuristics and combinatorial optimization",
-          "Statistical modeling and data complexity measures",
-        ],
-        primaryLink: { label: "Research lines", href: "/research/" },
-        secondaryLink: {
-          label: `Explore ${metrics.researchProjectsCount} research projects`,
-          href: "/research/projects/",
-        },
-        copyAnimClass: "pillar-copy-1",
-        visualAnimClass: "pillar-visual-1",
-      },
-      {
-        id: "education",
-        shortLabel: "Education",
-        title: "Education & training",
-        metaLine: `${metrics.booksCount} textbooks · ${metrics.packagesCount} open repositories`,
-        description:
-          "Equipping students, early career researchers, and practitioners with open textbooks, specialized workshops, and hands on mentorship in data science.",
-        highlights: [
-          "Open textbooks and reproducible tutorials",
-          "CRAN packages and open source data tools",
-          "Practicum program and junior talent mentorship",
-        ],
-        primaryLink: { label: "Learning resources", href: "/education/" },
-        secondaryLink: {
-          label: "Explore the Practicum",
-          href: "/education/practicum/",
-        },
-        copyAnimClass: "pillar-copy-2",
-        visualAnimClass: "pillar-visual-2",
-      },
-      {
-        id: "consulting",
-        shortLabel: "Consulting",
-        title: "Consulting services",
-        metaLine: `${metrics.consultingProjectsCount} projects · ${metrics.consultingClientsCount} partner organizations`,
-        description:
-          "Supporting companies and public institutions in integrating reliable data science and AI systems into operations with rigorous engineering standards.",
-        highlights: [
-          "Predictive algorithms and production ML pipelines",
-          "Healthcare analytics with Hospital La Paz and RNFC",
-          "Agritech, aerospace, and industrial IoT analytics",
-        ],
-        primaryLink: { label: "Consulting projects", href: "/consulting/" },
-        secondaryLink: {
-          label: `Meet our ${metrics.consultingClientsCount} clients`,
-          href: "/consulting/clients/",
-        },
-        copyAnimClass: "pillar-copy-3",
-        visualAnimClass: "pillar-visual-3",
-      },
-    ],
-    [
-      metrics.booksCount,
-      metrics.consultingClientsCount,
-      metrics.consultingProjectsCount,
-      metrics.packagesCount,
-      metrics.publicationsCount,
-      metrics.researchLinesCount,
-      metrics.researchProjectsCount,
-    ]
-  );
+  const chapters = React.useMemo(() => buildChapters(metrics), [metrics]);
 
-  // Sync active chapter index via IntersectionObserver on scroll sentinels
-  // so pointer-events, aria-selected, and keyboard focus follow the visible chapter.
   React.useEffect(() => {
     const sentinels = sentinelRefs.current.filter(
       (node): node is HTMLDivElement => node !== null
@@ -317,9 +500,7 @@ export function PillarsScrollyStage({ metrics }: { metrics: PillarsMetrics }) {
         for (const entry of entries) {
           if (entry.isIntersecting) {
             const idx = Number(entry.target.getAttribute("data-chapter-index"));
-            if (!Number.isNaN(idx)) {
-              setActiveIndex(idx);
-            }
+            if (!Number.isNaN(idx)) setActiveIndex(idx);
           }
         }
       },
@@ -354,253 +535,14 @@ export function PillarsScrollyStage({ metrics }: { metrics: PillarsMetrics }) {
       aria-label="Core pillars of the Data Science Lab"
       className="relative bg-[#f5f7fa] dark:bg-[#0b0d14]"
     >
-      {/* =====================================================================
-          DESKTOP PINNED SCROLLYTELLING STAGE
-          Active ONLY on lg+ viewports when the browser supports CSS Scroll-Driven
-          Animations AND prefers-reduced-motion is no-preference.
-          ===================================================================== */}
-      <div className="pillars-desktop-stage">
-        <div ref={shellRef} className="pillars-scrolly-shell">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            aria-hidden="true"
-          >
-            {chapters.map((chapter, idx) => (
-              <div
-                key={chapter.id}
-                ref={(el) => {
-                  sentinelRefs.current[idx] = el;
-                }}
-                data-chapter-index={idx}
-                className="h-1/3 w-full"
-              />
-            ))}
-          </div>
-
-          <div className="pillars-sticky-stage">
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {/* Unordered pillar selector & continuous scroll progress rail */}
-              <div className="mb-14">
-                <div
-                  role="tablist"
-                  aria-label="Core areas of the Data Science Lab"
-                  className="grid grid-cols-3 gap-6 pb-4"
-                >
-                  {chapters.map((chapter, idx) => {
-                    const isCurrent = activeIndex === idx;
-                    const dotClass =
-                      idx === 0
-                        ? "pillar-dot-1"
-                        : idx === 1
-                          ? "pillar-dot-2"
-                          : "pillar-dot-3";
-                    return (
-                      <button
-                        key={chapter.id}
-                        type="button"
-                        role="tab"
-                        aria-selected={isCurrent}
-                        onClick={() => scrollToChapter(idx)}
-                        className="group text-left flex items-center gap-2.5 focus-visible:outline-2 focus-visible:outline-offset-4 rounded-sm transition-colors duration-150"
-                      >
-                        <span
-                          className="relative w-2 h-2 shrink-0"
-                          aria-hidden="true"
-                        >
-                          <span className="absolute inset-0 rounded-full bg-[#111827]/20 dark:bg-[#eef0f5]/20 group-hover:bg-[#0074a3] dark:group-hover:bg-[#38bdf8] transition-colors duration-150" />
-                          <span
-                            className={`${dotClass} absolute inset-0 rounded-full bg-[#E30613]`}
-                          />
-                        </span>
-                        <span
-                          className={`body-5 transition-colors duration-150 ${
-                            isCurrent
-                              ? "text-[#111827] dark:text-[#eef0f5]"
-                              : "text-[#4b5565] dark:text-[#a3a9b8] group-hover:text-[#111827] dark:group-hover:text-[#eef0f5]"
-                          }`}
-                        >
-                          {chapter.shortLabel}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Native CSS scroll-driven continuous rail */}
-                <div
-                  className="relative h-[2px] w-full bg-[#111827]/10 dark:bg-[#eef0f5]/10 overflow-hidden"
-                  aria-hidden="true"
-                >
-                  <div className="pillars-rail-fill absolute inset-0 bg-[#0074a3] dark:bg-[#38bdf8]" />
-                </div>
-              </div>
-
-              {/* Fluid open stage: large centered SVG emblem on left, copy on right */}
-              <div className="grid grid-cols-12 gap-12 items-center">
-                {/* Left: Large unboxed architectural emblem centered with right-hand copy */}
-                <div className="col-span-5 pillars-stage-stack">
-                  {chapters.map((chapter) => (
-                    <div
-                      key={chapter.id}
-                      className={`${chapter.visualAnimClass} flex flex-col items-center justify-center text-center`}
-                    >
-                      <PillarEmblem
-                        id={chapter.id}
-                        className="w-64 h-64 xl:w-72 xl:h-72"
-                      />
-
-                      <p className="mt-4 caption-2 font-mono tabular-nums text-[#647084] dark:text-[#858d9f]">
-                        {chapter.metaLine}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Right: Primary narrative copy, highlights, and actions */}
-                <div className="col-span-7 pillars-stage-stack">
-                  {chapters.map((chapter, idx) => {
-                    const isCurrent = activeIndex === idx;
-                    return (
-                      <article
-                        key={chapter.id}
-                        onFocusCapture={() => {
-                          if (!isCurrent) scrollToChapter(idx);
-                        }}
-                        className={`${chapter.copyAnimClass} flex flex-col justify-center ${
-                          isCurrent
-                            ? "z-20 pointer-events-auto"
-                            : "z-10 pointer-events-none"
-                        }`}
-                      >
-                        <h2 className="heading-2 text-[#111827] dark:text-[#eef0f5]">
-                          {chapter.title}
-                        </h2>
-
-                        <p className="mt-5 title-2 font-normal text-[#4b5565] dark:text-[#a3a9b8] max-w-[54ch]">
-                          {chapter.description}
-                        </p>
-
-                        <ul className="mt-8 pt-6 border-t border-[#111827]/8 dark:border-[#eef0f5]/8 space-y-3 body-3 text-[#111827] dark:text-[#eef0f5] max-w-[56ch]">
-                          {chapter.highlights.map((item) => (
-                            <li key={item} className="flex items-start gap-3">
-                              <span
-                                className="w-1.5 h-1.5 rounded-full bg-[#0074a3] dark:bg-[#38bdf8] mt-2.5 shrink-0"
-                                aria-hidden="true"
-                              />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-
-                        <div className="mt-9 flex flex-wrap items-center gap-6">
-                          <Link
-                            href={chapter.primaryLink.href}
-                            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold text-white bg-[#0074a3] hover:bg-[#005f87] dark:bg-[#38bdf8] dark:hover:bg-[#7dd3fc] dark:text-[#0b0d14] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
-                          >
-                            <span>{chapter.primaryLink.label}</span>
-                            <ArrowRight
-                              className="w-4 h-4"
-                              strokeWidth={1.5}
-                              aria-hidden="true"
-                            />
-                          </Link>
-
-                          <Link
-                            href={chapter.secondaryLink.href}
-                            className="inline-flex items-center gap-1.5 body-5 text-[#111827] dark:text-[#eef0f5] hover:text-[#0074a3] dark:hover:text-[#38bdf8] transition-colors duration-200"
-                          >
-                            <span>{chapter.secondaryLink.label}</span>
-                            <ArrowRight
-                              className="w-4 h-4"
-                              strokeWidth={1.5}
-                              aria-hidden="true"
-                            />
-                          </Link>
-                        </div>
-                      </article>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* =====================================================================
-          RESPONSIVE / REDUCED-MOTION / FALLBACK VERTICAL EDITORIAL SEQUENCE
-          Automatically shown on mobile & tablet (< 1024px), under
-          prefers-reduced-motion: reduce, or in browsers without
-          @supports ((animation-timeline: view()) and (animation-range: entry)).
-          ===================================================================== */}
-      <div className="pillars-stacked-fallback py-12 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 sm:space-y-24">
-          {chapters.map((chapter) => (
-            <article
-              key={chapter.id}
-              className="pillar-mobile-chapter grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start"
-            >
-              <div className="lg:col-span-5 flex items-center lg:flex-col lg:items-center lg:justify-center lg:text-center gap-4">
-                <PillarEmblem
-                  id={chapter.id}
-                  className="w-24 h-24 sm:w-28 sm:h-28 lg:w-48 lg:h-48 -ml-2 lg:ml-0 shrink-0"
-                />
-                <span className="caption-2 font-mono tabular-nums text-[#647084] dark:text-[#858d9f]">
-                  {chapter.metaLine}
-                </span>
-              </div>
-
-              <div className="lg:col-span-7">
-                <h2 className="heading-3 text-[#111827] dark:text-[#eef0f5]">
-                  {chapter.title}
-                </h2>
-
-                <p className="mt-4 body-3 text-[#4b5565] dark:text-[#a3a9b8] max-w-[54ch]">
-                  {chapter.description}
-                </p>
-
-                <ul className="mt-5 space-y-2.5 body-3 text-[#111827] dark:text-[#eef0f5]">
-                  {chapter.highlights.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span
-                        className="w-1.5 h-1.5 rounded-full bg-[#0074a3] dark:bg-[#38bdf8] mt-2.5 shrink-0"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-7 flex flex-wrap items-center gap-5">
-                  <Link
-                    href={chapter.primaryLink.href}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold text-white bg-[#0074a3] hover:bg-[#005f87] dark:bg-[#38bdf8] dark:hover:bg-[#7dd3fc] dark:text-[#0b0d14] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
-                  >
-                    <span>{chapter.primaryLink.label}</span>
-                    <ArrowRight
-                      className="w-4 h-4"
-                      strokeWidth={1.5}
-                      aria-hidden="true"
-                    />
-                  </Link>
-
-                  <Link
-                    href={chapter.secondaryLink.href}
-                    className="inline-flex items-center gap-1.5 body-5 text-[#111827] dark:text-[#eef0f5] hover:text-[#0074a3] dark:hover:text-[#38bdf8] transition-colors duration-200"
-                  >
-                    <span>{chapter.secondaryLink.label}</span>
-                    <ArrowRight
-                      className="w-4 h-4"
-                      strokeWidth={1.5}
-                      aria-hidden="true"
-                    />
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
+      <DesktopPillarsStage
+        chapters={chapters}
+        activeIndex={activeIndex}
+        shellRef={shellRef}
+        sentinelRefs={sentinelRefs}
+        onSelectChapter={scrollToChapter}
+      />
+      <MobilePillarsStack chapters={chapters} />
     </section>
   );
 }
