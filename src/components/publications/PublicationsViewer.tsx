@@ -45,9 +45,18 @@ export function PublicationsViewer({ initialPublications }: PublicationsViewerPr
     });
   }, [initialPublications, searchTerm, filterType]);
 
-  // Group by year descending using standard Object.groupBy()
+  // Group by year descending (uses native Object.groupBy with safe fallback for Node 20 / older runtimes)
   const groupedByYear = React.useMemo(() => {
-    const groups = Object.groupBy(filtered, (pub) => pub.year || 9999);
+    let groups: Partial<Record<number, Publication[]>>;
+    if (typeof Object.groupBy === "function") {
+      groups = Object.groupBy(filtered, (pub) => pub.year || 9999);
+    } else {
+      groups = {};
+      for (const pub of filtered) {
+        const key = pub.year || 9999;
+        (groups[key] ??= []).push(pub);
+      }
+    }
     return Object.entries(groups)
       .map(([year, pubs]) => ({ year: Number(year), pubs: pubs ?? [] }))
       .toSorted((a, b) => b.year - a.year);
