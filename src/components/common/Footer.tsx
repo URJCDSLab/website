@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Building } from "lucide-react";
 import { XIcon, LinkedInIcon, GithubIcon, BlueskyIcon } from "@/components/ui/icons";
+import { ThemeLogo } from "@/components/ui/ThemeLogo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,16 +12,36 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Column 1: Identity & Mission (span 2) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block rounded-lg">
-              <img
-                src="/assets/images/logos/DSLab_logo.svg"
-                alt="Data Science Lab URJC"
-                className="h-10 w-auto object-contain"
+            <div className="flex items-end gap-4">
+              <Link href="/" className="inline-flex items-center rounded-lg">
+                <img
+                  src="/assets/images/logos/DSLab_logo.svg"
+                  alt="Data Science Lab URJC"
+                  className="h-10 w-auto object-contain"
+                />
+              </Link>
+              <span
+                className="h-9 w-px bg-slate-200 dark:bg-slate-800 shrink-0 mb-0.5"
+                aria-hidden="true"
               />
-            </Link>
+              <a
+                href="https://urjc.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-end rounded-lg hover:opacity-85 transition-opacity -mb-0.5"
+                aria-label="Universidad Rey Juan Carlos"
+              >
+                <ThemeLogo
+                  src="/assets/images/research_partners/URJC.svg"
+                  alt="Universidad Rey Juan Carlos"
+                  instanceKey="footer-urjc"
+                  className="h-14 w-auto"
+                />
+              </a>
+            </div>
 
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-md">
-              Group on Foundations and Applications of Data Science (DSLAB), at Universidad Rey Juan Carlos.
+              Group on Foundations and Applications of Data Science at Universidad Rey Juan Carlos.
             </p>
 
             <nav aria-label="Institutional links" className="pt-1">
