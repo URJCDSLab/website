@@ -33,7 +33,8 @@ export function GroupCarousel({ photos }: GroupCarouselProps) {
     setCurrentIndex((prev) => (prev - 1 + total) % total);
   }, [total]);
 
-  const isAutoplayActive = !userPaused && !hoverPaused && !prefersReducedMotion && total > 1;
+  const isAutoplayActive =
+    !userPaused && !hoverPaused && !prefersReducedMotion && total > 1;
 
   React.useEffect(() => {
     if (!isAutoplayActive) return;
@@ -59,7 +60,7 @@ export function GroupCarousel({ photos }: GroupCarouselProps) {
 
   return (
     <div
-      className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/90 dark:border-slate-800 bg-slate-900 group"
+      className="relative rounded-2xl overflow-hidden bg-[#11141c] shadow-[0_12px_32px_rgba(17,24,39,0.08)] dark:shadow-none group"
       onMouseEnter={() => setHoverPaused(true)}
       onMouseLeave={() => setHoverPaused(false)}
       onKeyDown={handleKeyDown}
@@ -67,7 +68,7 @@ export function GroupCarousel({ photos }: GroupCarouselProps) {
       aria-roledescription="carousel"
       aria-label="Data Science Lab group gallery"
     >
-      {/* Native 4:3 frame matches every group image (1.33 ratio) so zero heads are cropped */}
+      {/* Native 4:3 frame matches every group photograph so zero subjects are cropped */}
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         {photos.map((src, index) => {
           const isActive = index === currentIndex;
@@ -92,49 +93,49 @@ export function GroupCarousel({ photos }: GroupCarouselProps) {
           );
         })}
 
-        {/* Integrated Floating Prev / Next Controls */}
+        {/* Overlaid Prev / Next controls */}
         <button
           type="button"
           onClick={prevSlide}
           aria-label="Previous slide"
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-950/45 hover:bg-slate-950/75 text-white border border-white/15 backdrop-blur-md shadow-md opacity-85 sm:opacity-75 group-hover:opacity-100 focus-visible:opacity-100 transition-[opacity,background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-95"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#0b0d14]/55 hover:bg-[#0b0d14]/80 text-white border border-white/15 backdrop-blur-md opacity-85 sm:opacity-75 group-hover:opacity-100 focus-visible:opacity-100 transition-[opacity,background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
         >
-          <ChevronLeft className="w-5 h-5" aria-hidden="true" />
+          <ChevronLeft className="w-5 h-5" strokeWidth={1.5} aria-hidden="true" />
         </button>
 
         <button
           type="button"
           onClick={nextSlide}
           aria-label="Next slide"
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-950/45 hover:bg-slate-950/75 text-white border border-white/15 backdrop-blur-md shadow-md opacity-85 sm:opacity-75 group-hover:opacity-100 focus-visible:opacity-100 transition-[opacity,background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-95"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#0b0d14]/55 hover:bg-[#0b0d14]/80 text-white border border-white/15 backdrop-blur-md opacity-85 sm:opacity-75 group-hover:opacity-100 focus-visible:opacity-100 transition-[opacity,background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
         >
-          <ChevronRight className="w-5 h-5" aria-hidden="true" />
+          <ChevronRight className="w-5 h-5" strokeWidth={1.5} aria-hidden="true" />
         </button>
 
-        {/* Discreet Pause / Play Floating Control (WCAG 2.2.2) */}
+        {/* Discreet overlaid Pause / Play control (WCAG 2.2.2) */}
         {!prefersReducedMotion && total > 1 && (
           <button
             type="button"
             onClick={() => setUserPaused((prev) => !prev)}
             aria-label={userPaused ? "Play slideshow" : "Pause slideshow"}
             title={userPaused ? "Play slideshow" : "Pause slideshow"}
-            className="absolute bottom-3.5 right-3.5 z-20 inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-950/45 hover:bg-slate-950/75 text-white border border-white/15 backdrop-blur-md shadow-md opacity-80 group-hover:opacity-100 focus-visible:opacity-100 transition-[opacity,background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-95"
+            className="absolute bottom-3.5 right-3.5 z-20 inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#0b0d14]/55 hover:bg-[#0b0d14]/80 text-white border border-white/15 backdrop-blur-md opacity-85 group-hover:opacity-100 focus-visible:opacity-100 transition-[opacity,background-color,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
           >
             {userPaused ? (
-              <Play className="w-4 h-4" aria-hidden="true" />
+              <Play className="w-4 h-4" strokeWidth={1.5} aria-hidden="true" />
             ) : (
-              <Pause className="w-4 h-4" aria-hidden="true" />
+              <Pause className="w-4 h-4" strokeWidth={1.5} aria-hidden="true" />
             )}
           </button>
         )}
 
-        {/* Ultra-slim integrated bottom progress line */}
+        {/* Semi-transparent bottom progress bar overlaid on the image */}
         <div
-          className="absolute inset-x-0 bottom-0 z-20 h-1 bg-slate-950/35 pointer-events-none"
+          className="absolute inset-x-0 bottom-0 z-20 h-1.5 bg-black/25 backdrop-blur-[2px] pointer-events-none"
           aria-hidden="true"
         >
           <div
-            className="h-full w-full bg-[#38bdf8] origin-left transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+            className="h-full w-full bg-[#38bdf8]/80 origin-left transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
             style={{ transform: `scaleX(${progressScale})` }}
           />
         </div>

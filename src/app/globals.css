@@ -4,27 +4,31 @@
 
 @theme inline {
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @layer base {
   :root {
     color-scheme: light dark;
-    --background: #f8fafc;
-    --foreground: #0f172a;
+    --background: #f5f7fa;
+    --foreground: #111827;
     --card: #ffffff;
-    --card-foreground: #0f172a;
-    --border: #e2e8f0;
-    --input: #e2e8f0;
+    --card-foreground: #111827;
+    --surface-raised: #eceff4;
+    --border: rgba(17, 24, 39, 0.09);
+    --border-strong: rgba(17, 24, 39, 0.16);
+    --input: #d9e0ea;
     --primary: #0086BA;
-    --primary-hover: #006d96;
+    --primary-ink: #0074a3;
+    --primary-hover: #005f87;
     --primary-foreground: #ffffff;
-    --secondary: #f1f5f9;
-    --secondary-foreground: #0f172a;
+    --secondary: #eceff4;
+    --secondary-foreground: #111827;
     --accent-red: #E30613;
     --accent-red-hover: #c40510;
-    --muted: #64748b;
-    --muted-foreground: #475569;
-    --ring: #0086BA;
+    --muted: #647084;
+    --muted-foreground: #4b5565;
+    --ring: #0074a3;
     --radius: 0.75rem;
     --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
     --scrollbar-thumb: #94a3b8;
@@ -39,24 +43,27 @@
 
   .dark {
     color-scheme: dark;
-    --background: #090d16;
-    --foreground: #f8fafc;
-    --card: #111827;
-    --card-foreground: #f8fafc;
-    --border: #1e293b;
-    --input: #1e293b;
-    --primary: #0086BA;
-    --primary-hover: #1aa0d6;
-    --primary-foreground: #ffffff;
-    --secondary: #1e293b;
-    --secondary-foreground: #f8fafc;
+    --background: #0b0d14;
+    --foreground: #eef0f5;
+    --card: #11141c;
+    --card-foreground: #eef0f5;
+    --surface-raised: #1a1e28;
+    --border: rgba(238, 240, 245, 0.09);
+    --border-strong: rgba(238, 240, 245, 0.18);
+    --input: #232838;
+    --primary: #38bdf8;
+    --primary-ink: #38bdf8;
+    --primary-hover: #7dd3fc;
+    --primary-foreground: #0b0d14;
+    --secondary: #1a1e28;
+    --secondary-foreground: #eef0f5;
     --accent-red: #E30613;
-    --accent-red-hover: #ff2d3b;
-    --muted: #94a3b8;
-    --muted-foreground: #94a3b8;
+    --accent-red-hover: #ff3b47;
+    --muted: #858d9f;
+    --muted-foreground: #a3a9b8;
     --ring: #38bdf8;
-    --scrollbar-thumb: #334155;
-    --scrollbar-thumb-hover: #475569;
+    --scrollbar-thumb: #2b3245;
+    --scrollbar-thumb-hover: #3e4760;
     --scrollbar-track: transparent;
   }
 
@@ -84,6 +91,88 @@ body {
   display: flex;
   flex-direction: column;
   transition: background-color 0.2s var(--ease-out-expo), color 0.2s var(--ease-out-expo);
+}
+
+/* Reusable named typographic roles (Tailwind scale aligned) */
+.heading-1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 640px) {
+  .heading-1 {
+    font-size: 3rem;
+    line-height: 1.04;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-1 {
+    font-size: 3.75rem;
+    line-height: 1.03;
+  }
+}
+
+.heading-2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 640px) {
+  .heading-2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-2 {
+    font-size: 3rem;
+    line-height: 1.08;
+  }
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+@media (min-width: 640px) {
+  .heading-3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.title-2 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.body-3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.body-5 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.caption-2 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.caption-4 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
 }
 
 /* Integrated arrowless scrollbar (WebKit/Blink) + thin native scrollbar (Firefox) */
@@ -167,8 +256,42 @@ dialog.dslab-modal::backdrop {
   }
 }
 
-/* CSS Scroll-Driven Animations (Baseline Newly Available, pure compositor progressive enhancement) */
+/* ============================================================================
+   CSS Scroll-Driven Animations (Native Compositor Layer)
+   Always opt-in via prefers-reduced-motion: no-preference + @supports with
+   animation-range so unsupported browsers & reduced-motion users get clean,
+   fully visible static layouts with zero content trapped at opacity: 0.
+   ============================================================================ */
+
+/* Explicit fallback defaults when CSS Scroll-Driven Animations are unsupported,
+   when viewport < 1024px, or when prefers-reduced-motion: reduce is active */
+.pillars-desktop-stage {
+  display: none;
+}
+
+.pillars-stacked-fallback {
+  display: block;
+}
+
+/* Fallback styling for word-by-word thesis reveal when JS fallback is active */
+.thesis-stage.thesis-js-fallback .thesis-word {
+  opacity: 0.24;
+  transition: opacity 420ms var(--ease-out-expo);
+}
+
+.thesis-stage.thesis-js-fallback .thesis-word[data-lit="true"] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thesis-stage.thesis-js-fallback .thesis-word {
+    opacity: 1;
+    transition: none;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
+  /* 1. Root reading progress bar in Navbar */
   @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
     @keyframes dslab-scroll-progress {
       from {
@@ -187,8 +310,9 @@ dialog.dslab-modal::backdrop {
     }
   }
 
+  /* 2. View-timeline scrollytelling effects */
   @supports ((animation-timeline: view()) and (animation-range: entry)) {
-    /* Integrated Hero scroll exit depth & parallax */
+    /* Act 1: Hero continuous exit into the narrative */
     .hero-scroll-stage {
       view-timeline: --hero-tl block;
     }
@@ -200,150 +324,81 @@ dialog.dslab-modal::backdrop {
         scale: 1;
       }
       to {
-        opacity: 0.15;
-        translate: 0 -42px;
-        scale: 0.96;
+        opacity: 0.14;
+        translate: 0 -44px;
+        scale: 0.97;
       }
     }
 
     .hero-scroll-content {
       animation: dslab-hero-content-exit auto linear both;
       animation-timeline: --hero-tl;
-      animation-range: exit 0% exit 85%;
+      animation-range: exit 0% exit 80%;
     }
 
-    @keyframes dslab-hero-canvas-parallax {
+    @keyframes dslab-hero-canvas-drift {
       from {
         translate: 0 0;
-        scale: 1;
       }
       to {
-        translate: 0 56px;
-        scale: 1.05;
+        translate: 0 48px;
       }
     }
 
     .hero-scroll-canvas {
-      animation: dslab-hero-canvas-parallax auto linear both;
+      animation: dslab-hero-canvas-drift auto linear both;
       animation-timeline: --hero-tl;
       animation-range: exit 0% exit 100%;
     }
 
-    /* BentoGrid 3-pillar converging scroll choreography */
-    .pillars-grid-stage {
-      view-timeline: --pillars-tl block;
+    /* Act 2: Word-by-word scroll-driven thesis illumination */
+    .thesis-stage {
+      view-timeline: --thesis-tl block;
     }
 
-    @keyframes dslab-pillar-mobile-in {
+    @keyframes dslab-word-illuminate {
       from {
-        opacity: 0.25;
-        translate: 0 48px;
-        scale: 0.95;
+        opacity: 0.24;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .thesis-word {
+      animation: dslab-word-illuminate auto linear both;
+      animation-timeline: --thesis-tl;
+      animation-range-start: var(--word-start, entry 15%);
+      animation-range-end: var(--word-end, cover 45%);
+    }
+
+    /* Act 3 (Mobile / Tablet): Smooth individual chapter entry reveals */
+    @keyframes dslab-chapter-card-in {
+      from {
+        opacity: 0.3;
+        translate: 0 24px;
       }
       to {
         opacity: 1;
         translate: 0 0;
-        scale: 1;
       }
     }
 
-    .pillar-card-left,
-    .pillar-card-center,
-    .pillar-card-right {
-      animation: dslab-pillar-mobile-in auto var(--ease-out-expo) both;
+    .pillar-mobile-chapter {
+      animation: dslab-chapter-card-in auto var(--ease-out-expo) both;
       animation-timeline: view();
-      animation-range: entry 0% entry 36%;
+      animation-range: entry 0% entry 28%;
     }
 
-    @keyframes dslab-watermark-parallax {
-      from {
-        transform: translateY(34px);
-      }
-      to {
-        transform: translateY(-28px);
-      }
-    }
-
-    .pillar-watermark-parallax {
-      animation: dslab-watermark-parallax auto linear both;
-      animation-timeline: --pillars-tl;
-      animation-range: entry 0% exit 100%;
-    }
-
-    @media (min-width: 768px) {
-      @keyframes dslab-pillar-left-in {
-        from {
-          opacity: 0.25;
-          translate: -64px 56px;
-          rotate: -3.5deg;
-          scale: 0.92;
-        }
-        to {
-          opacity: 1;
-          translate: 0 0;
-          rotate: 0deg;
-          scale: 1;
-        }
-      }
-
-      @keyframes dslab-pillar-center-in {
-        from {
-          opacity: 0.25;
-          translate: 0 72px;
-          scale: 0.9;
-        }
-        to {
-          opacity: 1;
-          translate: 0 0;
-          scale: 1;
-        }
-      }
-
-      @keyframes dslab-pillar-right-in {
-        from {
-          opacity: 0.25;
-          translate: 64px 56px;
-          rotate: 3.5deg;
-          scale: 0.92;
-        }
-        to {
-          opacity: 1;
-          translate: 0 0;
-          rotate: 0deg;
-          scale: 1;
-        }
-      }
-
-      .pillar-card-left {
-        animation: dslab-pillar-left-in auto var(--ease-out-expo) both;
-        animation-timeline: --pillars-tl;
-        animation-range: cover 16% cover 46%;
-      }
-
-      .pillar-card-center {
-        animation: dslab-pillar-center-in auto var(--ease-out-expo) both;
-        animation-timeline: --pillars-tl;
-        animation-range: cover 12% cover 42%;
-      }
-
-      .pillar-card-right {
-        animation: dslab-pillar-right-in auto var(--ease-out-expo) both;
-        animation-timeline: --pillars-tl;
-        animation-range: cover 20% cover 50%;
-      }
-    }
-
-    /* General section reveal */
+    /* General editorial reveals (Community & Closing) */
     @keyframes dslab-scroll-reveal {
       from {
         opacity: 0.25;
-        translate: 0 28px;
-        scale: 0.97;
+        translate: 0 24px;
       }
       to {
         opacity: 1;
         translate: 0 0;
-        scale: 1;
       }
     }
 
@@ -353,12 +408,11 @@ dialog.dslab-modal::backdrop {
       animation-range: entry 0% entry 24%;
     }
 
-    /* Editorial reveal for the 4:3 group photo stage */
     @keyframes dslab-stage-reveal {
       from {
         opacity: 0.35;
-        scale: 0.95;
-        translate: 0 24px;
+        scale: 0.97;
+        translate: 0 20px;
       }
       to {
         opacity: 1;
@@ -373,23 +427,252 @@ dialog.dslab-modal::backdrop {
       animation-range: entry 0% entry 28%;
     }
   }
+
+  /* 3. Desktop Pinned 3-Chapter Scrollytelling Stage (lg+ only, never clips mobile) */
+  @media (min-width: 1024px) {
+    @supports ((animation-timeline: view()) and (animation-range: entry)) {
+      .pillars-desktop-stage {
+        display: block;
+      }
+
+      .pillars-stacked-fallback {
+        display: none;
+      }
+
+      .pillars-scrolly-shell {
+        position: relative;
+        height: 320svh;
+        view-timeline: --pillars-track block;
+      }
+
+      .pillars-sticky-stage {
+        position: sticky;
+        top: 0;
+        height: 100svh;
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .pillars-stage-stack {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+
+      .pillars-stage-stack > * {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+      }
+
+      @keyframes dslab-rail-progress {
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+
+      .pillars-rail-fill {
+        transform-origin: left center;
+        animation: dslab-rail-progress auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      @keyframes dslab-chapter-1-copy {
+        0%, 26% {
+          opacity: 1;
+          translate: 0 0;
+        }
+        34%, 100% {
+          opacity: 0;
+          translate: 0 -22px;
+        }
+      }
+
+      @keyframes dslab-chapter-2-copy {
+        0%, 27% {
+          opacity: 0;
+          translate: 0 22px;
+        }
+        35%, 63% {
+          opacity: 1;
+          translate: 0 0;
+        }
+        71%, 100% {
+          opacity: 0;
+          translate: 0 -22px;
+        }
+      }
+
+      @keyframes dslab-chapter-3-copy {
+        0%, 64% {
+          opacity: 0;
+          translate: 0 22px;
+        }
+        72%, 100% {
+          opacity: 1;
+          translate: 0 0;
+        }
+      }
+
+      @keyframes dslab-chapter-1-visual {
+        0%, 26% {
+          opacity: 1;
+          scale: 1;
+          translate: 0 0;
+        }
+        34%, 100% {
+          opacity: 0;
+          scale: 0.96;
+          translate: 0 -14px;
+        }
+      }
+
+      @keyframes dslab-chapter-2-visual {
+        0%, 27% {
+          opacity: 0;
+          scale: 0.96;
+          translate: 0 14px;
+        }
+        35%, 63% {
+          opacity: 1;
+          scale: 1;
+          translate: 0 0;
+        }
+        71%, 100% {
+          opacity: 0;
+          scale: 0.96;
+          translate: 0 -14px;
+        }
+      }
+
+      @keyframes dslab-chapter-3-visual {
+        0%, 64% {
+          opacity: 0;
+          scale: 0.96;
+          translate: 0 14px;
+        }
+        72%, 100% {
+          opacity: 1;
+          scale: 1;
+          translate: 0 0;
+        }
+      }
+
+      .pillar-copy-1 {
+        animation: dslab-chapter-1-copy auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      .pillar-copy-2 {
+        animation: dslab-chapter-2-copy auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      .pillar-copy-3 {
+        animation: dslab-chapter-3-copy auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      .pillar-visual-1 {
+        animation: dslab-chapter-1-visual auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      .pillar-visual-2 {
+        animation: dslab-chapter-2-visual auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      .pillar-visual-3 {
+        animation: dslab-chapter-3-visual auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      /* Scroll-driven chapter red indicator dots locked to exact chapter crossfade points */
+      @keyframes dslab-dot-1 {
+        0%, 30% {
+          opacity: 1;
+          scale: 1;
+        }
+        32%, 100% {
+          opacity: 0;
+          scale: 0.7;
+        }
+      }
+
+      @keyframes dslab-dot-2 {
+        0%, 30% {
+          opacity: 0;
+          scale: 0.7;
+        }
+        32%, 67% {
+          opacity: 1;
+          scale: 1;
+        }
+        69%, 100% {
+          opacity: 0;
+          scale: 0.7;
+        }
+      }
+
+      @keyframes dslab-dot-3 {
+        0%, 67% {
+          opacity: 0;
+          scale: 0.7;
+        }
+        69%, 100% {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+
+      .pillar-dot-1 {
+        animation: dslab-dot-1 auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      .pillar-dot-2 {
+        animation: dslab-dot-2 auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+
+      .pillar-dot-3 {
+        animation: dslab-dot-3 auto linear both;
+        animation-timeline: --pillars-track;
+        animation-range: contain 0% contain 100%;
+      }
+    }
+  }
 }
 
-/* Glassmorphism helpers */
+/* Glassmorphism helpers (shared by Navbar and subpages) */
 .glass-panel {
-  background: rgba(248, 250, 252, 0.96);
+  background: rgba(245, 247, 250, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.92);
+  border: 1px solid rgba(17, 24, 39, 0.08);
 }
 .dark .glass-panel {
-  background: rgba(9, 13, 22, 0.96);
+  background: rgba(11, 13, 20, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(238, 240, 245, 0.09);
 }
 
-/* High-contrast logo badge container for SVGs */
+/* High-contrast logo badge container for SVGs (used on clients & partners subpages) */
 .logo-badge {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -406,10 +689,10 @@ dialog.dslab-modal::backdrop {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Subtle glow effects */
+/* Legacy utility preserved for subpages */
 .glow-primary {
-  box-shadow: 0 0 35px -5px rgba(0, 134, 186, 0.28);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 .dark .glow-primary {
-  box-shadow: 0 0 45px -5px rgba(0, 134, 186, 0.36);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
 }
