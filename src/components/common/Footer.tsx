@@ -234,7 +234,7 @@ export function Footer() {
         {/* Bottom Legal & Institutional Bar */}
         <div className="mt-10 pt-6 border-t border-slate-200/80 dark:border-slate-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
           <p>
-            © {currentYear} Data Science Lab (DSLAB) · Universidad Rey Juan Carlos.
+            © {currentYear} Data Science Laboratory (DSLAB) · Universidad Rey Juan Carlos.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <Link

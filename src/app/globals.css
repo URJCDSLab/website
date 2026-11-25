@@ -229,7 +229,111 @@ dialog.dslab-modal::backdrop {
       animation-range: exit 0% exit 100%;
     }
 
-    /* Section & card entry depth choreography */
+    /* BentoGrid 3-pillar converging scroll choreography */
+    .pillars-grid-stage {
+      view-timeline: --pillars-tl block;
+    }
+
+    @keyframes dslab-pillar-mobile-in {
+      from {
+        opacity: 0.25;
+        translate: 0 48px;
+        scale: 0.95;
+      }
+      to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+      }
+    }
+
+    .pillar-card-left,
+    .pillar-card-center,
+    .pillar-card-right {
+      animation: dslab-pillar-mobile-in auto var(--ease-out-expo) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 36%;
+    }
+
+    @keyframes dslab-watermark-parallax {
+      from {
+        transform: translateY(34px);
+      }
+      to {
+        transform: translateY(-28px);
+      }
+    }
+
+    .pillar-watermark-parallax {
+      animation: dslab-watermark-parallax auto linear both;
+      animation-timeline: --pillars-tl;
+      animation-range: entry 0% exit 100%;
+    }
+
+    @media (min-width: 768px) {
+      @keyframes dslab-pillar-left-in {
+        from {
+          opacity: 0.25;
+          translate: -64px 56px;
+          rotate: -3.5deg;
+          scale: 0.92;
+        }
+        to {
+          opacity: 1;
+          translate: 0 0;
+          rotate: 0deg;
+          scale: 1;
+        }
+      }
+
+      @keyframes dslab-pillar-center-in {
+        from {
+          opacity: 0.25;
+          translate: 0 72px;
+          scale: 0.9;
+        }
+        to {
+          opacity: 1;
+          translate: 0 0;
+          scale: 1;
+        }
+      }
+
+      @keyframes dslab-pillar-right-in {
+        from {
+          opacity: 0.25;
+          translate: 64px 56px;
+          rotate: 3.5deg;
+          scale: 0.92;
+        }
+        to {
+          opacity: 1;
+          translate: 0 0;
+          rotate: 0deg;
+          scale: 1;
+        }
+      }
+
+      .pillar-card-left {
+        animation: dslab-pillar-left-in auto var(--ease-out-expo) both;
+        animation-timeline: --pillars-tl;
+        animation-range: cover 16% cover 46%;
+      }
+
+      .pillar-card-center {
+        animation: dslab-pillar-center-in auto var(--ease-out-expo) both;
+        animation-timeline: --pillars-tl;
+        animation-range: cover 12% cover 42%;
+      }
+
+      .pillar-card-right {
+        animation: dslab-pillar-right-in auto var(--ease-out-expo) both;
+        animation-timeline: --pillars-tl;
+        animation-range: cover 20% cover 50%;
+      }
+    }
+
+    /* General section reveal */
     @keyframes dslab-scroll-reveal {
       from {
         opacity: 0.25;
@@ -247,18 +351,6 @@ dialog.dslab-modal::backdrop {
       animation: dslab-scroll-reveal auto var(--ease-out-expo) both;
       animation-timeline: view();
       animation-range: entry 0% entry 24%;
-    }
-
-    .scroll-reveal-delayed-1 {
-      animation: dslab-scroll-reveal auto var(--ease-out-expo) both;
-      animation-timeline: view();
-      animation-range: entry 4% entry 30%;
-    }
-
-    .scroll-reveal-delayed-2 {
-      animation: dslab-scroll-reveal auto var(--ease-out-expo) both;
-      animation-timeline: view();
-      animation-range: entry 8% entry 36%;
     }
 
     /* Editorial reveal for the 4:3 group photo stage */

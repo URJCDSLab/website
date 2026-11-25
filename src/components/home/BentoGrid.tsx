@@ -42,7 +42,7 @@ const PILLARS: PillarConfig[] = [
     primaryLink: { label: "Learning resources", href: "/education/" },
     secondaryLink: { label: "Practicum", href: "/education/practicum/", icon: Users },
     icon: GraduationCap,
-    revealClass: "scroll-reveal",
+    revealClass: "pillar-card-left",
     accentDot: "bg-emerald-500",
     watermarkColor: "text-emerald-600 dark:text-emerald-500",
     secondaryIconColor: "text-emerald-600 dark:text-emerald-400",
@@ -64,7 +64,7 @@ const PILLARS: PillarConfig[] = [
     primaryLink: { label: "Research lines", href: "/research/" },
     secondaryLink: { label: "Projects", href: "/research/projects/", icon: FolderKanban },
     icon: FlaskConical,
-    revealClass: "scroll-reveal-delayed-1",
+    revealClass: "pillar-card-center",
     accentDot: "bg-[#0086BA]",
     watermarkColor: "text-[#0086BA]",
     secondaryIconColor: "text-[#0086BA] dark:text-[#38bdf8]",
@@ -86,7 +86,7 @@ const PILLARS: PillarConfig[] = [
     primaryLink: { label: "Consulting projects", href: "/consulting/" },
     secondaryLink: { label: "Clients", href: "/consulting/clients/", icon: Building2 },
     icon: Briefcase,
-    revealClass: "scroll-reveal-delayed-2",
+    revealClass: "pillar-card-right",
     accentDot: "bg-[#E30613]",
     watermarkColor: "text-[#E30613]",
     secondaryIconColor: "text-[#E30613] dark:text-[#f87171]",
@@ -99,7 +99,7 @@ const PILLARS: PillarConfig[] = [
 
 export function BentoGrid() {
   return (
-    <section className="py-16 sm:py-24 bg-white dark:bg-[#0d1322] border-b border-slate-200/80 dark:border-slate-800/80">
+    <section className="overflow-x-clip py-16 sm:py-24 bg-white dark:bg-[#0d1322] border-b border-slate-200/80 dark:border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="scroll-reveal max-w-[680px] mx-auto text-center mb-12 sm:mb-16">
@@ -111,8 +111,8 @@ export function BentoGrid() {
           </p>
         </div>
 
-        {/* 3 Main Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {/* 3 Main Pillars Grid (shared scroll-driven view-timeline) */}
+        <div className="pillars-grid-stage grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {PILLARS.map((pillar) => {
             const Icon = pillar.icon;
             const SecondaryIcon = pillar.secondaryLink.icon;
@@ -121,12 +121,15 @@ export function BentoGrid() {
                 key={pillar.id}
                 className={`${pillar.revealClass} relative overflow-hidden rounded-2xl p-6 sm:p-8 bg-slate-50/70 dark:bg-[#111827] border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg ${pillar.hoverBorder} transition-[border-color,box-shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col group`}
               >
-                {/* Signature background watermark icon */}
+                {/* Signature background watermark icon with subtle scroll parallax */}
                 <div
-                  className={`absolute top-1/2 -translate-y-1/2 -left-16 ${pillar.watermarkColor} opacity-[0.09] dark:opacity-[0.15] pointer-events-none select-none motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-110`}
+                  className={`pillar-watermark-parallax absolute top-1/2 -translate-y-1/2 -left-16 ${pillar.watermarkColor} opacity-[0.09] dark:opacity-[0.15] pointer-events-none select-none`}
                   aria-hidden="true"
                 >
-                  <Icon className="w-64 h-64" strokeWidth={1} />
+                  <Icon
+                    className="w-64 h-64 motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-110"
+                    strokeWidth={1}
+                  />
                 </div>
 
                 <div className="relative z-10 flex flex-col justify-between flex-1">
